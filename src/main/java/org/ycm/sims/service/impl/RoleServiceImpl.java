@@ -2,17 +2,13 @@ package org.ycm.sims.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.ycm.sims.dao.RoleDao;
-import org.ycm.sims.dto.CheckDTO;
 import org.ycm.sims.dto.LoginDTO;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.enums.ResultEnum;
 import org.ycm.sims.service.RoleService;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 
 /**

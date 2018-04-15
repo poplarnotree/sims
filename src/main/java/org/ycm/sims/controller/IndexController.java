@@ -17,16 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 public class IndexController {
 
-//    @Autowired
-//    private HttpSession session;
-
     @Autowired
     private HttpServletRequest request;
 
     @RequestMapping("/")
     public String index(String loginName){
-
-        System.out.println("------------"+request.getSession().getAttribute("loginName"));
+        log.info("loginName={}",request.getSession().getAttribute("loginName"));
         return new SessionUtil().SessionUntil(request, "/index/admin_index");
     }
 }
