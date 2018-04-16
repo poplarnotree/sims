@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.ycm.sims.utils.SessionUtil;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,6 +22,6 @@ public class IndexController {
     @RequestMapping("/")
     public String index(String loginName){
         log.info("loginName={}",request.getSession().getAttribute("loginName"));
-        return new SessionUtil().SessionUntil(request, "/index/admin_index");
+        return "/index/admin_index";
     }
 }
