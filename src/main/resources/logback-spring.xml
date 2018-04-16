@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <configuration>
+
+    <property name="FILE_PATH" value="../sims/src/main/resources/log" />
+
     <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>
@@ -23,7 +26,7 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>E:/study/workspace/sims/src/main/resources/log/info.%d.log</fileNamePattern>
+            <fileNamePattern>${FILE_PATH}/info.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
 
@@ -39,7 +42,7 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>E:/study/workspace/sims/src/main/resources/log/error.%d.log</fileNamePattern>
+            <fileNamePattern>${FILE_PATH}/error.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
 
