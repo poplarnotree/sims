@@ -22,6 +22,6 @@ public class IndexController {
     @RequestMapping("/")
     public String index(String loginName){
         log.info("loginName={}",request.getSession().getAttribute("loginName"));
-        return "/index/admin_index";
+        return "/admin/index";
     }
 }

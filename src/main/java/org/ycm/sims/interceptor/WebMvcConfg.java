@@ -30,6 +30,6 @@ public class WebMvcConfg implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         log.info(">>>>>>>>>>>>>>>拦截器生效");
-        registry.addInterceptor(loginInterceptor()).addPathPatterns("/*");
+//        registry.addInterceptor(loginInterceptor()).addPathPatterns("/*");
     }
 }

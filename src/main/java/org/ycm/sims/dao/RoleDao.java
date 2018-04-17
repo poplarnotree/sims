@@ -1,6 +1,7 @@
 package org.ycm.sims.dao;
 
 
+import org.apache.ibatis.annotations.Param;
 import org.ycm.sims.entity.Role;
 
 /**
@@ -11,5 +12,7 @@ public interface RoleDao {
 
     Role findRoleByLoginName(String loginName);
 
-//    Boolean createTeacheRole();
+    int updatePassword(@Param("loginName") String loginName,
+                           @Param("loginPassword") String loginPassword);
+
 }

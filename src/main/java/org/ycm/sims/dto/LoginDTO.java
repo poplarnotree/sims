@@ -21,4 +21,11 @@ public class LoginDTO extends CheckDTO {
         this.userType = userType;
     }
 
+    @Override
+    public String toString() {
+        return "LoginDTO{" +
+                "userType=" + userType +
+                "," + super.toString() +
+                '}';
+    }
 }

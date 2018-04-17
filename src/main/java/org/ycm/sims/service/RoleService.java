@@ -10,7 +10,8 @@ import org.ycm.sims.entity.Role;
  * 2018/4/14 21:50
  */
 public interface RoleService {
-    Role findRoleByLoginName(String loginName);
 
     LoginDTO login(String loginName, String loginPassword);
+
+    CheckDTO updatePassword(String originalPassword, String newPassword);
 }

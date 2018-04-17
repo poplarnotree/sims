@@ -4,7 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.ycm.sims.dao.RoleDao">
     <select id="findRoleByLoginName" resultType="org.ycm.sims.entity.Role">
-        SELECT * FROM role WHERE login_name=#{loginName};
+        SELECT * FROM role WHERE login_name = #{loginName};
     </select>
-    <!--<insert id="createTeac"-->
+
+    <update id="updatePassword">
+        UPDATE role SET login_password = #{loginPassword} WHERE login_name = #{loginName};
+    </update>
+
 </mapper>

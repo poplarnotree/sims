@@ -39,7 +39,7 @@ CREATE TABLE teacher_information(
 
 -- department表
 CREATE TABLE department(
-  id INT NOT auto_increment NULL comment '部门id',
+  id INT NOT NULL auto_increment comment '部门id',
   name VARCHAR (10) NOT NULL comment '部门名称',
   create_time timestamp not null default current_timestamp comment '创建时间',
   PRIMARY KEY (id)
