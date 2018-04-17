@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.ycm.sims.dto.CheckDTO;
-import org.ycm.sims.dto.LoginDTO;
+import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.service.RoleService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +41,7 @@ public class RoleController {
      */
     @RequestMapping("/checkLogin")
     @ResponseBody
-    public LoginDTO checkLogin(String loginName, String loginPassword){
+    public RoleVO checkLogin(String loginName, String loginPassword){
         return roleService.login(loginName, loginPassword);
     }
 
@@ -65,9 +64,15 @@ public class RoleController {
         return "/admin/password";
     }
 
+    /**
+     * 密码修改
+     * @param originalPassword
+     * @param newPassword
+     * @return
+     */
     @RequestMapping("/updatePassword")
     @ResponseBody
-    public CheckDTO updatePassword(String originalPassword, String newPassword){
+    public RoleVO updatePassword(String originalPassword, String newPassword){
         /*TODO*/
         return null;
     }

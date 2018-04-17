@@ -1261,3 +1261,122 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2018-04-17 18:18:24,697 - Closing org.springframework.web.context.support.GenericWebApplicationContext@93081b6: startup date [Tue Apr 17 18:18:21 CST 2018]; root of context hierarchy
 2018-04-17 18:18:24,702 - sims - Shutdown initiated...
 2018-04-17 18:18:24,705 - sims - Shutdown completed.
+2018-04-17 21:42:43,665 - Starting SimsApplication on yang-PC with PID 6476 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-17 21:42:43,702 - No active profile set, falling back to default profiles: default
+2018-04-17 21:42:44,084 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@55183b20: startup date [Tue Apr 17 21:42:44 CST 2018]; root of context hierarchy
+2018-04-17 21:42:48,140 - Tomcat initialized with port(s): 8080 (http)
+2018-04-17 21:42:48,178 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-17 21:42:48,197 - Starting service [Tomcat]
+2018-04-17 21:42:48,198 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-17 21:42:48,218 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-17 21:42:48,610 - Initializing Spring embedded WebApplicationContext
+2018-04-17 21:42:48,611 - Root WebApplicationContext: initialization completed in 4526 ms
+2018-04-17 21:42:48,882 - Servlet dispatcherServlet mapped to [/]
+2018-04-17 21:42:48,888 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-17 21:42:48,889 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-17 21:42:48,889 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-17 21:42:48,889 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-17 21:42:49,882 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:42:50,254 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@55183b20: startup date [Tue Apr 17 21:42:44 CST 2018]; root of context hierarchy
+2018-04-17 21:42:50,423 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-17 21:42:50,484 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-17 21:42:50,487 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-17 21:42:50,487 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.dto.LoginDTO org.ycm.sims.controller.RoleController.checkLogin(java.lang.String,java.lang.String)
+2018-04-17 21:42:50,487 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.dto.CheckDTO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-17 21:42:50,487 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-17 21:42:50,487 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-17 21:42:50,489 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-17 21:42:50,490 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-17 21:42:50,513 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:42:50,513 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:42:51,119 - Registering beans for JMX exposure on startup
+2018-04-17 21:42:51,121 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 21:42:51,135 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 21:42:51,211 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-17 21:42:51,236 - Using a shared selector for servlet write/read
+2018-04-17 21:42:51,306 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-17 21:42:51,315 - Started SimsApplication in 9.29 seconds (JVM running for 11.767)
+2018-04-17 21:44:00,925 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-17 21:44:00,927 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-17 21:44:00,966 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2018-04-17 21:44:01,802 - loginName=null
+2018-04-17 21:45:01,886 - Starting SimsApplication on yang-PC with PID 9744 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-17 21:45:01,890 - No active profile set, falling back to default profiles: default
+2018-04-17 21:45:01,985 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72967906: startup date [Tue Apr 17 21:45:01 CST 2018]; root of context hierarchy
+2018-04-17 21:45:05,846 - Tomcat initialized with port(s): 8080 (http)
+2018-04-17 21:45:05,880 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-17 21:45:05,897 - Starting service [Tomcat]
+2018-04-17 21:45:05,897 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-17 21:45:05,904 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-17 21:45:06,162 - Initializing Spring embedded WebApplicationContext
+2018-04-17 21:45:06,162 - Root WebApplicationContext: initialization completed in 4177 ms
+2018-04-17 21:45:06,565 - Servlet dispatcherServlet mapped to [/]
+2018-04-17 21:45:06,578 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-17 21:45:06,586 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-17 21:45:06,590 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-17 21:45:06,591 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-17 21:45:08,256 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:45:08,535 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72967906: startup date [Tue Apr 17 21:45:01 CST 2018]; root of context hierarchy
+2018-04-17 21:45:08,559 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-17 21:45:08,679 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-17 21:45:08,682 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.dto.LoginDTO org.ycm.sims.controller.RoleController.checkLogin(java.lang.String,java.lang.String)
+2018-04-17 21:45:08,682 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-17 21:45:08,682 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-17 21:45:08,682 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.dto.CheckDTO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-17 21:45:08,683 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-17 21:45:08,686 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-17 21:45:08,686 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-17 21:45:08,709 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:45:08,709 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:45:08,999 - Registering beans for JMX exposure on startup
+2018-04-17 21:45:09,000 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 21:45:09,006 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 21:45:09,017 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-17 21:45:09,030 - Using a shared selector for servlet write/read
+2018-04-17 21:45:09,048 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-17 21:45:09,052 - Started SimsApplication in 8.088 seconds (JVM running for 11.299)
+2018-04-17 21:45:18,215 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-17 21:45:18,216 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-17 21:45:18,249 - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2018-04-17 21:45:18,294 - loginName=null
+2018-04-17 21:45:42,658 - Starting SimsApplication on yang-PC with PID 9772 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-17 21:45:42,662 - No active profile set, falling back to default profiles: default
+2018-04-17 21:45:42,846 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@62379589: startup date [Tue Apr 17 21:45:42 CST 2018]; root of context hierarchy
+2018-04-17 21:45:44,121 - Tomcat initialized with port(s): 8080 (http)
+2018-04-17 21:45:44,132 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-17 21:45:44,141 - Starting service [Tomcat]
+2018-04-17 21:45:44,141 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-17 21:45:44,145 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-17 21:45:44,236 - Initializing Spring embedded WebApplicationContext
+2018-04-17 21:45:44,236 - Root WebApplicationContext: initialization completed in 1390 ms
+2018-04-17 21:45:44,416 - Servlet dispatcherServlet mapped to [/]
+2018-04-17 21:45:44,419 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-17 21:45:44,420 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-17 21:45:44,420 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-17 21:45:44,420 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-17 21:45:44,819 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:45:45,056 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@62379589: startup date [Tue Apr 17 21:45:42 CST 2018]; root of context hierarchy
+2018-04-17 21:45:45,080 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-17 21:45:45,210 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-17 21:45:45,213 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-17 21:45:45,213 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.dto.CheckDTO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-17 21:45:45,213 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-17 21:45:45,213 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.dto.LoginDTO org.ycm.sims.controller.RoleController.checkLogin(java.lang.String,java.lang.String)
+2018-04-17 21:45:45,214 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-17 21:45:45,215 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-17 21:45:45,216 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-17 21:45:45,237 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:45:45,237 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-17 21:45:45,505 - Registering beans for JMX exposure on startup
+2018-04-17 21:45:45,507 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 21:45:45,512 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 21:45:45,526 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-17 21:45:45,538 - Using a shared selector for servlet write/read
+2018-04-17 21:45:45,552 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-17 21:45:45,557 - Started SimsApplication in 3.508 seconds (JVM running for 4.496)
+2018-04-17 21:45:48,737 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-17 21:45:48,738 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-17 21:45:48,754 - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2018-04-17 21:46:01,616 - sims - Starting...
+2018-04-17 21:46:02,924 - sims - Start completed.
+2018-04-17 21:54:08,315 - loginName=admin

@@ -34,9 +34,4 @@ public class MD5Util {
             return "";
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(MD5Util("123456"));
-    }
-
 }

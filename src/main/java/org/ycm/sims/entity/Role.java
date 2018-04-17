@@ -20,8 +20,19 @@ public class Role {
 
     private Integer createId;
 
-    private Integer userType;
+    private Integer roleType;
+
+    private Integer roleStatus;
 
     private Date createTime;
 
+    public Role() {
+    }
+
+    public Role(String loginName, String loginPassword, Integer createId, Integer roleType) {
+        this.loginName = loginName;
+        this.loginPassword = loginPassword;
+        this.createId = createId;
+        this.roleType = roleType;
+    }
 }

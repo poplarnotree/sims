@@ -1,9 +1,7 @@
 package org.ycm.sims.service;
 
 
-import org.ycm.sims.dto.CheckDTO;
-import org.ycm.sims.dto.LoginDTO;
-import org.ycm.sims.entity.Role;
+import org.ycm.sims.VO.RoleVO;
 
 /**
  * Create by yangchangmin
@@ -11,7 +9,13 @@ import org.ycm.sims.entity.Role;
  */
 public interface RoleService {
 
-    LoginDTO login(String loginName, String loginPassword);
+    RoleVO login(String loginName, String loginPassword);
 
-    CheckDTO updatePassword(String originalPassword, String newPassword);
+    RoleVO updatePassword(String originalPassword, String newPassword);
+
+    RoleVO createRole(String loginName, String loginPassword, int roleType);
+
+    RoleVO cancelRole(int id, int roleType);
+
+    RoleVO resetPassword(int id, int roleType);
 }
