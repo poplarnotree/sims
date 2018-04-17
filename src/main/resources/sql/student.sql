@@ -8,7 +8,6 @@ CREATE TABLE role(
   role_status int not null DEFAULT '0' comment '记录角色状态，默认为0在职，1为离职',
   create_time timestamp not null default current_timestamp comment '创建时间',
   PRIMARY KEY (id)
-  FOREIGN KEY (login_name)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='角色表';
 
 -- 插入超级管理员信息
