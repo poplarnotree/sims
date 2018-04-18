@@ -4,16 +4,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.ycm.sims.dao.RoleDao">
 
+    <resultMap id="roleList" type="org.ycm.sims.entity.Role">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="login_password" property="loginPassword" />
+        <result column="create_id" property="createId" />
+        <result column="role_type" property="roleType" />
+        <result column="role_status" property="roleStatus" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
     <!--<select id="findRoleById" resultType="org.ycm.sims.entity.Role">-->
         <!--SELECT * FROM role WHERE login_name = #{id};-->
     <!--</select>-->
 
     <select id="findRoleByLoginName" resultType="org.ycm.sims.entity.Role">
-        SELECT * FROM role WHERE login_name = #{loginName};
+        SELECT * FROM role WHERE login_name = #{loginName}
     </select>
 
     <update id="updatePassword">
-        UPDATE role SET login_password = #{loginPassword} WHERE login_name = #{loginName};
+        UPDATE role SET login_password = #{loginPassword} WHERE login_name = #{loginName}
     </update>
 
     <insert id="createRole">
@@ -30,5 +40,9 @@
     <update id="resetPassword">
         UPDATE role SET login_password = #{loginPassword} WHERE id = #{id}
     </update>
+
+    <select id="findRole" resultMap="roleList">
+        SELECT * FROM role WHERE role_type = #{roleType}
+    </select>
 
 </mapper>

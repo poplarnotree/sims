@@ -4,6 +4,8 @@ package org.ycm.sims.dao;
 import org.apache.ibatis.annotations.Param;
 import org.ycm.sims.entity.Role;
 
+import java.util.List;
+
 /**
  * Create by yangchangmin
  * 2018/4/14 21:42
@@ -24,5 +26,6 @@ public interface RoleDao {
     int resetPassword(@Param("id")int id,
                       @Param("loginPassword")String loginPassword);
 
+    List<Role> findRole(Role role);
 
 }

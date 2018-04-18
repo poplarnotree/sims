@@ -29,6 +29,10 @@ public class Role {
     public Role() {
     }
 
+    public Role(Integer roleType) {
+        this.roleType = roleType;
+    }
+
     public Role(String loginName, String loginPassword, Integer createId, Integer roleType) {
         this.loginName = loginName;
         this.loginPassword = loginPassword;

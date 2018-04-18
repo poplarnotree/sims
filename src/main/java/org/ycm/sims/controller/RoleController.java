@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.RoleVO;
+import org.ycm.sims.dto.RoleDTO;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.exception.SimsException;
@@ -40,14 +41,13 @@ public class RoleController {
 
     /**
      * 验证登录
-     * @param loginName
-     * @param loginPassword
+     * @param roleDTO
      * @return
      */
     @RequestMapping("/checkLogin")
     @ResponseBody
-    public RoleVO checkLogin(String loginName, String loginPassword){
-        return roleService.login(loginName, loginPassword);
+    public RoleVO checkLogin(RoleDTO roleDTO){
+        return roleService.login(roleDTO);
     }
 
     /**
@@ -87,30 +87,18 @@ public class RoleController {
      */
     @RequestMapping("/create")
     public String create(){
-//        int roleType = (int)request.getSession().getAttribute(ParameterEnum.ROLE_TYPE.getValue());
-//        if (roleType == 0){
-//            return "/admin/create";
-//        }
-//        if (roleType == 1 || roleType == 2){
-//            return "role/crate";
-//        }else {
-//            request.getSession().removeAttribute(ParameterEnum.LOGIN_NAME.getValue());
-//            return "/role/login";
-//        }
         return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/create", "role/crate");
     }
 
     /**
      * 创建角色
-     * @param loginName
-     * @param loginPassword
-     * @param roleType
+     * @param roleDTO
      * @return
      */
     @RequestMapping("/createRole")
     @ResponseBody
-    public RoleVO createRole(String loginName, String loginPassword, int roleType){
-        return roleService.createRole(loginName, loginPassword, roleType);
+    public RoleVO createRole(RoleDTO roleDTO){
+        return roleService.createRole(roleDTO);
     }
 
     /**

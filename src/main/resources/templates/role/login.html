@@ -20,19 +20,20 @@
 <script>
     function check() {
         var loginName = $("#inputLoginName").val();
+        var data= {
+            loginName:$("#inputLoginName").val(),
+            loginPassword:$("#inputLoginPassword").val()
+        }
         $.ajax({
             type: 'post',
             url: '/role/checkLogin',
-            data: {
-                loginName:$("#inputLoginName").val(),
-                loginPassword:$("#inputLoginPassword").val()
-            },
-            success:function (loginDTO) {
-                if (loginDTO.status == 0){
+            data: JSON.stringify(data),
+            success:function (RoleVO) {
+                if (RoleVO.status == 0){
                     document.cookie="loginName="+loginName+";path=/";
                     window.location.href = "/?loginName=" + loginName;
                 }else {
-                    alert(loginDTO.message);
+                    alert(RoleVO.message);
                 }
             },
             error:function () {

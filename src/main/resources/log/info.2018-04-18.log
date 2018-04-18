@@ -1038,3 +1038,401 @@
 2018-04-18 10:58:45,503 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
 2018-04-18 11:27:36,085 - sims - Starting...
 2018-04-18 11:27:36,226 - sims - Start completed.
+2018-04-18 11:37:09,847 - Starting SimsApplication on DESKTOP-DGH72UH with PID 10272 (D:\work\workspace\sims\target\classes started by ycm in D:\work\workspace\sims)
+2018-04-18 11:37:09,879 - No active profile set, falling back to default profiles: default
+2018-04-18 11:37:09,914 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49139829: startup date [Wed Apr 18 11:37:09 CST 2018]; root of context hierarchy
+2018-04-18 11:37:11,112 - Tomcat initialized with port(s): 8080 (http)
+2018-04-18 11:37:11,123 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-18 11:37:11,132 - Starting service [Tomcat]
+2018-04-18 11:37:11,132 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-18 11:37:11,136 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\java8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\Git\cmd;D:\Program Files\java8\bin;D:\Program Files\maven-3.5.0\bin;D:\Program Files\Microsoft SQL Server\120\DTS\Binn\;D:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;D:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Users\ycm\AppData\Local\Microsoft\WindowsApps;;.]
+2018-04-18 11:37:11,267 - Initializing Spring embedded WebApplicationContext
+2018-04-18 11:37:11,267 - Root WebApplicationContext: initialization completed in 1353 ms
+2018-04-18 11:37:11,449 - Servlet dispatcherServlet mapped to [/]
+2018-04-18 11:37:11,456 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-18 11:37:11,457 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-18 11:37:11,457 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-18 11:37:11,457 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-18 11:37:11,895 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 11:37:12,046 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49139829: startup date [Wed Apr 18 11:37:09 CST 2018]; root of context hierarchy
+2018-04-18 11:37:12,129 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 11:37:12,150 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 11:37:12,152 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 11:37:12,153 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 11:37:12,153 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 11:37:12,153 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 11:37:12,153 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 11:37:12,153 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 11:37:12,153 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(java.lang.String,java.lang.String)
+2018-04-18 11:37:12,153 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 11:37:12,154 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(java.lang.String,java.lang.String,int)
+2018-04-18 11:37:12,154 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 11:37:12,155 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 11:37:12,156 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 11:37:12,176 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 11:37:12,176 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 11:37:12,388 - Registering beans for JMX exposure on startup
+2018-04-18 11:37:12,390 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-18 11:37:12,396 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-18 11:37:12,405 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-18 11:37:12,414 - Using a shared selector for servlet write/read
+2018-04-18 11:37:12,428 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-18 11:37:12,430 - Started SimsApplication in 3.2 seconds (JVM running for 3.821)
+2018-04-18 11:37:14,597 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-18 11:37:14,597 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-18 11:37:14,610 - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-04-18 11:37:14,634 - sims - Starting...
+2018-04-18 11:37:14,810 - sims - Start completed.
+2018-04-18 17:06:47,357 - Starting SimsApplication on DESKTOP-DGH72UH with PID 10176 (D:\work\workspace\sims\target\classes started by ycm in D:\work\workspace\sims)
+2018-04-18 17:06:47,372 - No active profile set, falling back to default profiles: default
+2018-04-18 17:06:47,463 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d296da: startup date [Wed Apr 18 17:06:47 CST 2018]; root of context hierarchy
+2018-04-18 17:06:49,151 - Tomcat initialized with port(s): 8080 (http)
+2018-04-18 17:06:49,179 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-18 17:06:49,194 - Starting service [Tomcat]
+2018-04-18 17:06:49,195 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-18 17:06:49,198 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\java8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\Git\cmd;D:\Program Files\java8\bin;D:\Program Files\maven-3.5.0\bin;D:\Program Files\Microsoft SQL Server\120\DTS\Binn\;D:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;D:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Users\ycm\AppData\Local\Microsoft\WindowsApps;;.]
+2018-04-18 17:06:49,269 - Initializing Spring embedded WebApplicationContext
+2018-04-18 17:06:49,270 - Root WebApplicationContext: initialization completed in 1807 ms
+2018-04-18 17:06:49,361 - Servlet dispatcherServlet mapped to [/]
+2018-04-18 17:06:49,366 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-18 17:06:49,366 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-18 17:06:49,366 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-18 17:06:49,366 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-18 17:06:49,829 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:06:50,104 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d296da: startup date [Wed Apr 18 17:06:47 CST 2018]; root of context hierarchy
+2018-04-18 17:06:50,225 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 17:06:50,250 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 17:06:50,253 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 17:06:50,254 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 17:06:50,254 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:06:50,254 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 17:06:50,254 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 17:06:50,254 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 17:06:50,254 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 17:06:50,255 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(java.lang.String,java.lang.String,int)
+2018-04-18 17:06:50,255 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 17:06:50,255 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 17:06:50,256 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 17:06:50,257 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 17:06:50,273 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:06:50,274 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:06:50,572 - Registering beans for JMX exposure on startup
+2018-04-18 17:06:50,573 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-18 17:06:50,578 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-18 17:06:50,594 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-18 17:06:50,601 - Using a shared selector for servlet write/read
+2018-04-18 17:06:50,629 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-18 17:06:50,633 - Started SimsApplication in 4.032 seconds (JVM running for 5.216)
+2018-04-18 17:07:02,131 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-18 17:07:02,131 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-18 17:07:02,143 - FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2018-04-18 17:07:02,260 - sims - Starting...
+2018-04-18 17:07:02,482 - sims - Start completed.
+2018-04-18 17:09:21,465 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 3468 (started by ycm in D:\work\workspace\sims)
+2018-04-18 17:09:21,467 - No active profile set, falling back to default profiles: default
+2018-04-18 17:09:21,540 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Wed Apr 18 17:09:21 CST 2018]; root of context hierarchy
+2018-04-18 17:09:23,464 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:09:23,661 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Wed Apr 18 17:09:21 CST 2018]; root of context hierarchy
+2018-04-18 17:09:23,716 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 17:09:23,757 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 17:09:23,760 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 17:09:23,761 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 17:09:23,761 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 17:09:23,761 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 17:09:23,761 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 17:09:23,762 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(java.lang.String,java.lang.String,int)
+2018-04-18 17:09:23,762 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 17:09:23,762 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 17:09:23,762 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 17:09:23,762 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:09:23,765 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 17:09:23,768 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 17:09:23,795 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:09:23,795 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:09:24,229 - Started RoleServiceImplTest in 3.396 seconds (JVM running for 4.731)
+2018-04-18 17:09:24,509 - sims - Starting...
+2018-04-18 17:09:24,869 - sims - Start completed.
+2018-04-18 17:09:24,907 - roleVO=RoleVO(status=0, message=成功, roleType=0)
+2018-04-18 17:09:24,922 - Closing org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Wed Apr 18 17:09:21 CST 2018]; root of context hierarchy
+2018-04-18 17:09:24,926 - sims - Shutdown initiated...
+2018-04-18 17:09:24,929 - sims - Shutdown completed.
+2018-04-18 17:35:25,063 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 9464 (started by ycm in D:\work\workspace\sims)
+2018-04-18 17:35:25,064 - No active profile set, falling back to default profiles: default
+2018-04-18 17:35:25,140 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42e25b0b: startup date [Wed Apr 18 17:35:25 CST 2018]; root of context hierarchy
+2018-04-18 17:35:26,952 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:35:27,138 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@42e25b0b: startup date [Wed Apr 18 17:35:25 CST 2018]; root of context hierarchy
+2018-04-18 17:35:27,178 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 17:35:27,220 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 17:35:27,224 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 17:35:27,224 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 17:35:27,224 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 17:35:27,224 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 17:35:27,225 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 17:35:27,225 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 17:35:27,225 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:35:27,225 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 17:35:27,225 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 17:35:27,226 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:35:27,228 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 17:35:27,229 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 17:35:27,263 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:35:27,264 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:35:27,682 - Started RoleServiceImplTest in 3.236 seconds (JVM running for 4.282)
+2018-04-18 17:35:27,800 - sims - Starting...
+2018-04-18 17:35:28,033 - sims - Start completed.
+2018-04-18 17:35:28,076 - Closing org.springframework.web.context.support.GenericWebApplicationContext@42e25b0b: startup date [Wed Apr 18 17:35:25 CST 2018]; root of context hierarchy
+2018-04-18 17:35:28,078 - sims - Shutdown initiated...
+2018-04-18 17:35:28,081 - sims - Shutdown completed.
+2018-04-18 17:36:44,931 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 6860 (started by ycm in D:\work\workspace\sims)
+2018-04-18 17:36:44,932 - No active profile set, falling back to default profiles: default
+2018-04-18 17:36:44,998 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42e25b0b: startup date [Wed Apr 18 17:36:44 CST 2018]; root of context hierarchy
+2018-04-18 17:36:46,688 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:36:46,869 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@42e25b0b: startup date [Wed Apr 18 17:36:44 CST 2018]; root of context hierarchy
+2018-04-18 17:36:46,922 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 17:36:46,957 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 17:36:46,960 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 17:36:46,961 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 17:36:46,961 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 17:36:46,962 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 17:36:46,962 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:36:46,962 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 17:36:46,962 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 17:36:46,962 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 17:36:46,963 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 17:36:46,963 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:36:46,965 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 17:36:46,968 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 17:36:46,993 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:36:46,994 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:36:47,377 - Started RoleServiceImplTest in 3.103 seconds (JVM running for 4.072)
+2018-04-18 17:36:47,483 - sims - Starting...
+2018-04-18 17:36:47,696 - sims - Start completed.
+2018-04-18 17:36:47,723 - Closing org.springframework.web.context.support.GenericWebApplicationContext@42e25b0b: startup date [Wed Apr 18 17:36:44 CST 2018]; root of context hierarchy
+2018-04-18 17:36:47,725 - sims - Shutdown initiated...
+2018-04-18 17:36:47,729 - sims - Shutdown completed.
+2018-04-18 17:37:14,274 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 8020 (started by ycm in D:\work\workspace\sims)
+2018-04-18 17:37:14,275 - No active profile set, falling back to default profiles: default
+2018-04-18 17:37:14,343 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@72ef8d15: startup date [Wed Apr 18 17:37:14 CST 2018]; root of context hierarchy
+2018-04-18 17:37:16,252 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:37:16,428 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@72ef8d15: startup date [Wed Apr 18 17:37:14 CST 2018]; root of context hierarchy
+2018-04-18 17:37:16,472 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 17:37:16,503 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 17:37:16,507 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 17:37:16,507 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 17:37:16,507 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 17:37:16,507 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 17:37:16,508 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:37:16,508 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 17:37:16,508 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 17:37:16,508 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 17:37:16,508 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 17:37:16,509 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:37:16,511 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 17:37:16,512 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 17:37:16,538 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:37:16,538 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:37:16,925 - Started RoleServiceImplTest in 3.204 seconds (JVM running for 4.295)
+2018-04-18 17:37:17,023 - sims - Starting...
+2018-04-18 17:37:17,231 - sims - Start completed.
+2018-04-18 17:37:17,292 - roleVO=RoleVO(status=4, message=帐号已存在, roleType=0)
+2018-04-18 17:37:17,297 - Closing org.springframework.web.context.support.GenericWebApplicationContext@72ef8d15: startup date [Wed Apr 18 17:37:14 CST 2018]; root of context hierarchy
+2018-04-18 17:37:17,300 - sims - Shutdown initiated...
+2018-04-18 17:37:17,304 - sims - Shutdown completed.
+2018-04-18 17:47:42,750 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 8836 (started by ycm in D:\work\workspace\sims)
+2018-04-18 17:47:42,751 - No active profile set, falling back to default profiles: default
+2018-04-18 17:47:42,785 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 17:47:42 CST 2018]; root of context hierarchy
+2018-04-18 17:47:44,400 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:47:44,569 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 17:47:42 CST 2018]; root of context hierarchy
+2018-04-18 17:47:44,613 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 17:47:44,642 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 17:47:44,645 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 17:47:44,645 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 17:47:44,645 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:47:44,645 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 17:47:44,646 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 17:47:44,646 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 17:47:44,646 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 17:47:44,646 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 17:47:44,646 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 17:47:44,647 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:47:44,648 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 17:47:44,649 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 17:47:44,674 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:47:44,674 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:47:45,079 - Started RoleServiceImplTest in 3.067 seconds (JVM running for 4.109)
+2018-04-18 17:47:45,196 - sims - Starting...
+2018-04-18 17:47:45,403 - sims - Start completed.
+2018-04-18 17:47:45,408 - Began transaction (1) for test context [DefaultTestContext@815b41f testClass = RoleServiceImplTest, testInstance = org.ycm.sims.service.impl.RoleServiceImplTest@3e47a03, testMethod = createRole@RoleServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5542c4ed testClass = RoleServiceImplTest, locations = '{}', classes = '{class org.ycm.sims.SimsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5bfbf16f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5bcea91b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@491cc5c9, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@74a10858], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@7d9ba6c]; rollback [true]
+2018-04-18 17:47:45,522 - roleVO=RoleVO(status=0, message=成功, roleType=1)
+2018-04-18 17:47:45,594 - Rolled back transaction for test: [DefaultTestContext@815b41f testClass = RoleServiceImplTest, testInstance = org.ycm.sims.service.impl.RoleServiceImplTest@3e47a03, testMethod = createRole@RoleServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5542c4ed testClass = RoleServiceImplTest, locations = '{}', classes = '{class org.ycm.sims.SimsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5bfbf16f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5bcea91b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@491cc5c9, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@74a10858], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2018-04-18 17:47:45,601 - Closing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 17:47:42 CST 2018]; root of context hierarchy
+2018-04-18 17:47:45,603 - sims - Shutdown initiated...
+2018-04-18 17:47:45,617 - sims - Shutdown completed.
+2018-04-18 17:48:29,528 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 3492 (started by ycm in D:\work\workspace\sims)
+2018-04-18 17:48:29,529 - No active profile set, falling back to default profiles: default
+2018-04-18 17:48:29,567 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 17:48:29 CST 2018]; root of context hierarchy
+2018-04-18 17:48:31,244 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:48:31,425 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 17:48:29 CST 2018]; root of context hierarchy
+2018-04-18 17:48:31,468 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 17:48:31,496 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 17:48:31,499 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 17:48:31,499 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 17:48:31,499 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 17:48:31,500 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 17:48:31,500 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 17:48:31,500 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 17:48:31,500 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:48:31,500 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 17:48:31,500 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 17:48:31,500 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 17:48:31,503 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 17:48:31,503 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 17:48:31,529 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:48:31,529 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 17:48:32,039 - Started RoleServiceImplTest in 3.129 seconds (JVM running for 4.133)
+2018-04-18 17:48:32,141 - sims - Starting...
+2018-04-18 17:48:32,341 - sims - Start completed.
+2018-04-18 17:48:32,417 - roleVO=RoleVO(status=0, message=成功, roleType=1)
+2018-04-18 17:48:32,422 - Closing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 17:48:29 CST 2018]; root of context hierarchy
+2018-04-18 17:48:32,424 - sims - Shutdown initiated...
+2018-04-18 17:48:32,426 - sims - Shutdown completed.
+2018-04-18 18:04:44,769 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 10536 (started by ycm in D:\work\workspace\sims)
+2018-04-18 18:04:44,770 - No active profile set, falling back to default profiles: default
+2018-04-18 18:04:44,848 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3fce8fd9: startup date [Wed Apr 18 18:04:44 CST 2018]; root of context hierarchy
+2018-04-18 18:04:46,481 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:04:46,667 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3fce8fd9: startup date [Wed Apr 18 18:04:44 CST 2018]; root of context hierarchy
+2018-04-18 18:04:46,711 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 18:04:46,742 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 18:04:46,745 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 18:04:46,746 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 18:04:46,746 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 18:04:46,746 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:04:46,746 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 18:04:46,746 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 18:04:46,747 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 18:04:46,747 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 18:04:46,747 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 18:04:46,747 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:04:46,750 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 18:04:46,750 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 18:04:46,777 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:04:46,778 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:04:47,168 - Started RoleServiceImplTest in 3.008 seconds (JVM running for 4.15)
+2018-04-18 18:04:47,201 - sims - Starting...
+2018-04-18 18:04:47,399 - sims - Start completed.
+2018-04-18 18:04:47,404 - Began transaction (1) for test context [DefaultTestContext@815b41f testClass = RoleServiceImplTest, testInstance = org.ycm.sims.service.impl.RoleServiceImplTest@1702830d, testMethod = createRole@RoleServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5542c4ed testClass = RoleServiceImplTest, locations = '{}', classes = '{class org.ycm.sims.SimsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5bfbf16f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5bcea91b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@491cc5c9, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@74a10858], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@6a937336]; rollback [true]
+2018-04-18 18:04:47,559 - roleVO=RoleVO(status=4, message=帐号已存在, roleType=0)
+2018-04-18 18:04:47,565 - Rolled back transaction for test: [DefaultTestContext@815b41f testClass = RoleServiceImplTest, testInstance = org.ycm.sims.service.impl.RoleServiceImplTest@1702830d, testMethod = createRole@RoleServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5542c4ed testClass = RoleServiceImplTest, locations = '{}', classes = '{class org.ycm.sims.SimsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5bfbf16f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5bcea91b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@491cc5c9, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@74a10858], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2018-04-18 18:04:47,567 - Closing org.springframework.web.context.support.GenericWebApplicationContext@3fce8fd9: startup date [Wed Apr 18 18:04:44 CST 2018]; root of context hierarchy
+2018-04-18 18:04:47,570 - sims - Shutdown initiated...
+2018-04-18 18:04:47,576 - sims - Shutdown completed.
+2018-04-18 18:08:59,551 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 10848 (started by ycm in D:\work\workspace\sims)
+2018-04-18 18:08:59,552 - No active profile set, falling back to default profiles: default
+2018-04-18 18:08:59,589 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 18:08:59 CST 2018]; root of context hierarchy
+2018-04-18 18:09:01,325 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:09:01,555 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 18:08:59 CST 2018]; root of context hierarchy
+2018-04-18 18:09:01,607 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 18:09:01,648 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 18:09:01,653 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 18:09:01,653 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 18:09:01,653 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 18:09:01,653 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:09:01,653 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 18:09:01,653 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 18:09:01,654 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 18:09:01,654 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 18:09:01,654 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 18:09:01,654 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:09:01,656 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 18:09:01,656 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 18:09:01,683 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:09:01,683 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:09:02,051 - Started RoleServiceImplTest in 3.182 seconds (JVM running for 4.227)
+2018-04-18 18:09:02,183 - sims - Starting...
+2018-04-18 18:09:02,484 - sims - Start completed.
+2018-04-18 18:09:02,519 - Closing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 18:08:59 CST 2018]; root of context hierarchy
+2018-04-18 18:09:02,522 - sims - Shutdown initiated...
+2018-04-18 18:09:02,524 - sims - Shutdown completed.
+2018-04-18 18:09:36,674 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 3952 (started by ycm in D:\work\workspace\sims)
+2018-04-18 18:09:36,675 - No active profile set, falling back to default profiles: default
+2018-04-18 18:09:36,709 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@72ef8d15: startup date [Wed Apr 18 18:09:36 CST 2018]; root of context hierarchy
+2018-04-18 18:09:38,416 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:09:38,595 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@72ef8d15: startup date [Wed Apr 18 18:09:36 CST 2018]; root of context hierarchy
+2018-04-18 18:09:38,641 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 18:09:38,680 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 18:09:38,684 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 18:09:38,684 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 18:09:38,684 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 18:09:38,684 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 18:09:38,684 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:09:38,684 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 18:09:38,685 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 18:09:38,685 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 18:09:38,685 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 18:09:38,685 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:09:38,687 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 18:09:38,688 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 18:09:38,717 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:09:38,717 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:09:39,140 - Started RoleServiceImplTest in 3.204 seconds (JVM running for 4.272)
+2018-04-18 18:09:39,264 - sims - Starting...
+2018-04-18 18:09:39,567 - sims - Start completed.
+2018-04-18 18:09:39,601 - roleList=[Role(id=1000, loginName=admin, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=0, roleStatus=0, createTime=Wed Apr 18 10:44:02 CST 2018)]
+2018-04-18 18:09:39,605 - Closing org.springframework.web.context.support.GenericWebApplicationContext@72ef8d15: startup date [Wed Apr 18 18:09:36 CST 2018]; root of context hierarchy
+2018-04-18 18:09:39,607 - sims - Shutdown initiated...
+2018-04-18 18:09:39,610 - sims - Shutdown completed.
+2018-04-18 18:11:39,791 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 8596 (started by ycm in D:\work\workspace\sims)
+2018-04-18 18:11:39,791 - No active profile set, falling back to default profiles: default
+2018-04-18 18:11:39,830 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 18:11:39 CST 2018]; root of context hierarchy
+2018-04-18 18:11:41,701 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:11:41,899 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 18:11:39 CST 2018]; root of context hierarchy
+2018-04-18 18:11:41,952 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 18:11:41,984 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 18:11:41,986 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 18:11:41,987 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 18:11:41,987 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 18:11:41,987 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 18:11:41,987 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:11:41,987 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 18:11:41,987 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 18:11:41,987 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 18:11:41,988 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 18:11:41,988 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:11:41,990 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 18:11:41,991 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 18:11:42,019 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:11:42,019 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:11:42,515 - Started RoleServiceImplTest in 3.45 seconds (JVM running for 4.49)
+2018-04-18 18:11:42,653 - sims - Starting...
+2018-04-18 18:11:42,974 - sims - Start completed.
+2018-04-18 18:11:43,005 - roleList=[Role(id=1001, loginName=zhangsan, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 10:49:23 CST 2018), Role(id=1003, loginName=lisi, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:39:33 CST 2018), Role(id=1005, loginName=wangwu, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1006, loginName=chenliu, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1007, loginName=zhaoqi, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1008, loginName=liuba, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1009, loginName=wujiu, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1010, loginName=zhengshi, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1011, loginName=huangshiyi, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1012, loginName=yangshier, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1013, loginName=yaoshisan, loginPassword=e10adc3949ba59abbe56e057f20f883e, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:40:03 CST 2018), Role(id=1015, loginName=mashisi, loginPassword=9d916517844ac11862151ff49f698501, createId=1000, roleType=1, roleStatus=0, createTime=Wed Apr 18 17:48:32 CST 2018)]
+2018-04-18 18:11:43,011 - Closing org.springframework.web.context.support.GenericWebApplicationContext@39b43d60: startup date [Wed Apr 18 18:11:39 CST 2018]; root of context hierarchy
+2018-04-18 18:11:43,015 - sims - Shutdown initiated...
+2018-04-18 18:11:43,019 - sims - Shutdown completed.
+2018-04-18 18:17:48,165 - Starting RoleServiceImplTest on DESKTOP-DGH72UH with PID 4556 (started by ycm in D:\work\workspace\sims)
+2018-04-18 18:17:48,165 - No active profile set, falling back to default profiles: default
+2018-04-18 18:17:48,193 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3fce8fd9: startup date [Wed Apr 18 18:17:48 CST 2018]; root of context hierarchy
+2018-04-18 18:17:49,934 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:17:50,163 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3fce8fd9: startup date [Wed Apr 18 18:17:48 CST 2018]; root of context hierarchy
+2018-04-18 18:17:50,211 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-18 18:17:50,247 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-18 18:17:50,252 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-18 18:17:50,252 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-18 18:17:50,252 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.resetPassword(int,int)
+2018-04-18 18:17:50,252 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.updatePassword(java.lang.String,java.lang.String)
+2018-04-18 18:17:50,252 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-18 18:17:50,252 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.cancelRole(int,int)
+2018-04-18 18:17:50,252 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:17:50,253 - Mapped "{[/role/cancel]}" onto public java.lang.String org.ycm.sims.controller.RoleController.cancel()
+2018-04-18 18:17:50,253 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-18 18:17:50,253 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-18 18:17:50,254 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-18 18:17:50,256 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-18 18:17:50,288 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:17:50,288 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-18 18:17:50,685 - Started RoleServiceImplTest in 3.289 seconds (JVM running for 4.348)
+2018-04-18 18:17:50,865 - sims - Starting...
+2018-04-18 18:17:51,187 - sims - Start completed.
+2018-04-18 18:17:51,224 - Closing org.springframework.web.context.support.GenericWebApplicationContext@3fce8fd9: startup date [Wed Apr 18 18:17:48 CST 2018]; root of context hierarchy
+2018-04-18 18:17:51,229 - sims - Shutdown initiated...
+2018-04-18 18:17:51,232 - sims - Shutdown completed.

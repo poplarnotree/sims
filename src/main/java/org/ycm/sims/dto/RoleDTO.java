@@ -17,12 +17,20 @@ public class RoleDTO {
 
     private String loginPassword;
 
-    private Integer createId;
-
     private Integer roleType;
 
-    private Integer roleStatus;
+    public RoleDTO(Integer roleType) {
+        this.roleType = roleType;
+    }
 
-    private Date createTime;
+    public RoleDTO(String loginName, String loginPassword) {
+        this.loginName = loginName;
+        this.loginPassword = loginPassword;
+    }
 
+    public RoleDTO(String loginName, String loginPassword, Integer roleType) {
+        this.loginName = loginName;
+        this.loginPassword = loginPassword;
+        this.roleType = roleType;
+    }
 }

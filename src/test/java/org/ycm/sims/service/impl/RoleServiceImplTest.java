@@ -8,9 +8,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 import org.ycm.sims.VO.RoleVO;
+import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.entity.Role;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.service.RoleService;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 
 /**
@@ -30,7 +33,7 @@ public class RoleServiceImplTest {
 
     private String LOGIN_NAME = "admin";
 
-    private String NEW_LOGIN_NAME = "zhangsan";
+    private String NEW_LOGIN_NAME = "mashisi";
 
     private String NEW_LOGIN_NAME_1 = "lisi";
 
@@ -42,12 +45,9 @@ public class RoleServiceImplTest {
 
     @Test
     public void login() throws Exception {
-        RoleVO roleVO = roleService.login(LOGIN_NAME, LOGIN_PASSWORD);
-        RoleVO roleVO1 = roleService.login(LOGIN_NAME, UPDATE_PASSWORD);
-        RoleVO roleVO2 = roleService.login(NEW_LOGIN_NAME, UPDATE_PASSWORD);
+        RoleDTO roleDTO = new RoleDTO(LOGIN_NAME, LOGIN_PASSWORD);
+        RoleVO roleVO = roleService.login(roleDTO);
         log.info("roleVO={}",roleVO);
-        log.info("roleVO1={}",roleVO1);
-        log.info("roleVO2={}",roleVO2);
     }
 
     @Test
@@ -61,10 +61,11 @@ public class RoleServiceImplTest {
     }
 
     @Test
-//    @Transactional
+    @Transactional
     public void createRole() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleVO roleVO = roleService.createRole(NEW_LOGIN_NAME, LOGIN_PASSWORD,ParameterEnum.TEACHER_TYPE.getCode());
+        RoleDTO roleDTO = new RoleDTO(NEW_LOGIN_NAME, LOGIN_PASSWORD,ParameterEnum.TEACHER_TYPE.getCode());
+        RoleVO roleVO = roleService.createRole(roleDTO);
         log.info("roleVO={}",roleVO);
 //        RoleVO roleVO1 = roleService.createRole(NEW_LOGIN_NAME, LOGIN_PASSWORD,ParameterEnum.TEACHER_TYPE.getCode());
 //        log.info("roleVO1={}",roleVO1);
@@ -73,6 +74,7 @@ public class RoleServiceImplTest {
     }
 
     @Test
+    @Transactional
     public void cancelRole() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
         RoleVO roleVO = roleService.cancelRole(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode());
@@ -80,10 +82,19 @@ public class RoleServiceImplTest {
     }
 
     @Test
+    @Transactional
     public void resetPassword() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
         RoleVO roleVO = roleService.resetPassword(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode());
         log.info("roleVO={}",roleVO);
+    }
+
+    @Test
+    public void findRole() throws Exception {
+        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
+        RoleDTO roleDTO = new RoleDTO(1);
+        List<Role> roleList = roleService.findRole(roleDTO);
+        log.info("roleList={}", roleList);
     }
 
 }
