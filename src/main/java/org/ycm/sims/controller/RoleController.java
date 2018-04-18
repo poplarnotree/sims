@@ -1,11 +1,16 @@
 package org.ycm.sims.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.entity.Role;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.exception.SimsException;
@@ -13,6 +18,7 @@ import org.ycm.sims.service.RoleService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 角色模块
@@ -133,4 +139,5 @@ public class RoleController {
     public RoleVO resetPassword(int id, int roleType){
         return roleService.resetPassword(id, roleType);
     }
+
 }

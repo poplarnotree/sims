@@ -19,6 +19,9 @@ public class RoleDTO {
 
     private Integer roleType;
 
+    public RoleDTO() {
+    }
+
     public RoleDTO(Integer roleType) {
         this.roleType = roleType;
     }

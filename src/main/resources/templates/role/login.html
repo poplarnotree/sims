@@ -27,7 +27,7 @@
         $.ajax({
             type: 'post',
             url: '/role/checkLogin',
-            data: JSON.stringify(data),
+            data: data,
             success:function (RoleVO) {
                 if (RoleVO.status == 0){
                     document.cookie="loginName="+loginName+";path=/";
