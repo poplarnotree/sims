@@ -27,6 +27,6 @@ server:
 
 mybatis:
     mapper-locations: classpath:mapper/*.xml
-    type-aliases-package: org.ycm.entity
+    type-aliases-package: org.ycm.sims.entity
     configuration:
         map-underscore-to-camel-case: true

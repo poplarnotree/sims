@@ -1,11 +1,14 @@
 package org.ycm.sims.controller;
 
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.ycm.sims.VO.RoleVO;
+import org.ycm.sims.VO.RoleCheckVO;
 import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.entity.Role;
 import org.ycm.sims.service.RoleService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
@@ -43,7 +46,7 @@ public class RoleController {
      */
     @RequestMapping("/checkLogin")
     @ResponseBody
-    public RoleVO checkLogin(RoleDTO roleDTO){
+    public RoleCheckVO checkLogin(RoleDTO roleDTO){
         return roleService.login(roleDTO);
     }
 
@@ -74,7 +77,7 @@ public class RoleController {
      */
     @RequestMapping("/updatePassword")
     @ResponseBody
-    public RoleVO updatePassword(String originalPassword, String newPassword){
+    public RoleCheckVO updatePassword(String originalPassword, String newPassword){
         return roleService.updatePassword(originalPassword, newPassword);
     }
 
@@ -94,7 +97,7 @@ public class RoleController {
      */
     @RequestMapping("/createRole")
     @ResponseBody
-    public RoleVO createRole(RoleDTO roleDTO){
+    public RoleCheckVO createRole(RoleDTO roleDTO){
         return roleService.createRole(roleDTO);
     }
 
@@ -115,7 +118,7 @@ public class RoleController {
      */
     @RequestMapping("/cancelRole")
     @ResponseBody
-    public RoleVO cancelRole(int id, int roleType){
+    public RoleCheckVO cancelRole(int id, int roleType){
         return roleService.cancelRole(id, roleType);
     }
 
@@ -127,8 +130,20 @@ public class RoleController {
      */
     @RequestMapping("/resetPassword")
     @ResponseBody
-    public RoleVO resetPassword(int id, int roleType){
+    public RoleCheckVO resetPassword(int id, int roleType){
         return roleService.resetPassword(id, roleType);
+    }
+
+    /**
+     * 分页显示
+     * @param pageNum
+     * @return
+     */
+    @RequestMapping("/page")
+    @ResponseBody
+    public PageInfo page(@RequestParam(value = "pageNum",defaultValue = "1")Integer pageNum){
+        PageInfo<Role> roleList = roleService.findRole(new RoleDTO(1), pageNum);
+        return roleList;
     }
 
 }

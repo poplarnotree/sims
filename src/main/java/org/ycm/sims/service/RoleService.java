@@ -1,11 +1,10 @@
 package org.ycm.sims.service;
 
 
-import org.ycm.sims.VO.RoleVO;
+import com.github.pagehelper.PageInfo;
+import org.ycm.sims.VO.RoleCheckVO;
 import org.ycm.sims.dto.RoleDTO;
 import org.ycm.sims.entity.Role;
-
-import java.util.List;
 
 /**
  * Create by yangchangmin
@@ -13,15 +12,15 @@ import java.util.List;
  */
 public interface RoleService {
 
-    RoleVO login(RoleDTO roleDTO);
+    RoleCheckVO login(RoleDTO roleDTO);
 
-    RoleVO updatePassword(String originalPassword, String newPassword);
+    RoleCheckVO updatePassword(String originalPassword, String newPassword);
 
-    RoleVO createRole(RoleDTO roleDTO);
+    RoleCheckVO createRole(RoleDTO roleDTO);
 
-    RoleVO cancelRole(int id, int roleType);
+    RoleCheckVO cancelRole(int id, int roleType);
 
-    RoleVO resetPassword(int id, int roleType);
+    RoleCheckVO resetPassword(int id, int roleType);
 
-    List<Role> findRole(RoleDTO roleDTO);
+    PageInfo<Role> findRole(RoleDTO roleDTO, int page);
 }

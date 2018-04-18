@@ -1,32 +1,23 @@
 package org.ycm.sims.VO;
 
 import lombok.Data;
-import org.ycm.sims.enums.ResultEnum;
 
 /**
  * Create by yangchangmin
- * on 2018/4/18 1:09
+ * on 2018/4/19 1:36
  */
 @Data
 public class RoleVO {
 
-    /*登录验证状态，0=成功，1=失败*/
-    private int status;
+    private String loginName;
 
-    /*信息*/
-    private String message;
+    private String roleType;
 
-    /* 用户类型 */
-    private int roleType;
+    private String createTime;
 
-    public RoleVO(ResultEnum resultEnum) {
-        this.status = resultEnum.getCode();
-        this.message = resultEnum.getMessage();
-    }
-
-    public RoleVO(ResultEnum resultEnum, int roleType) {
-        this.status = resultEnum.getCode();
-        this.message = resultEnum.getMessage();
+    public RoleVO(String loginName, String roleType, String createTime) {
+        this.loginName = loginName;
         this.roleType = roleType;
+        this.createTime = createTime;
     }
 }
