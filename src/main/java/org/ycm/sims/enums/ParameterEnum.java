@@ -19,6 +19,8 @@ public enum ParameterEnum {
     LOGIN_NAME(100,"loginName"),
 
     RESET_PASSWORD(101,"123456"),
+
+    ROLE_TYPE(102, "role_type")
     ;
 
     private Integer code;

@@ -10,7 +10,7 @@ import org.ycm.sims.entity.Role;
  */
 public interface RoleDao {
 
-    Role findRoleById(int id);
+//    Role findRoleById(int id);
 
     Role findRoleByLoginName(String loginName);
 
@@ -23,4 +23,6 @@ public interface RoleDao {
 
     int resetPassword(@Param("id")int id,
                       @Param("loginPassword")String loginPassword);
+
+
 }

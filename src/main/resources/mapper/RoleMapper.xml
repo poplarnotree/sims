@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.ycm.sims.dao.RoleDao">
 
-    <select id="findRoleById" resultType="org.ycm.sims.entity.Role">
-        SELECT * FROM role WHERE login_name = #{id};
-    </select>
+    <!--<select id="findRoleById" resultType="org.ycm.sims.entity.Role">-->
+        <!--SELECT * FROM role WHERE login_name = #{id};-->
+    <!--</select>-->
 
     <select id="findRoleByLoginName" resultType="org.ycm.sims.entity.Role">
         SELECT * FROM role WHERE login_name = #{loginName};

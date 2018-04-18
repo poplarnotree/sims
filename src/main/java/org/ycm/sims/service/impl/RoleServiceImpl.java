@@ -46,6 +46,7 @@ public class RoleServiceImpl implements RoleService {
         }
         if ((MD5Util.MD5Util(loginPassword)).equals(role.getLoginPassword())) {
             request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), loginName);
+            request.getSession().setAttribute(ParameterEnum.ROLE_TYPE.getValue(), role.getRoleType());
             return new RoleVO(ResultEnum.SUCCESS, role.getRoleType());
         } else {
             return new RoleVO(ResultEnum.PASSWORD_ERROR);
@@ -98,13 +99,18 @@ public class RoleServiceImpl implements RoleService {
         }
         if (roleType - role.getRoleType() == 1){
             Role newRole = new Role(loginName, MD5Util.MD5Util(loginPassword), role.getCreateId(), roleType);
-            if (roleDao.createRole(newRole) == 1){
-                return new RoleVO(ResultEnum.SUCCESS);
+            int row = roleDao.createRole(newRole);
+            if (row == 0){
+                return new RoleVO(ResultEnum.ROLE_EXIST);
+            }
+
+            if (row == 1){
+                return new RoleVO(ResultEnum.SUCCESS, roleType);
             } else {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
             }
         }else{
-            request.getSession().removeAttribute(ParameterEnum.LOGIN_NAME.getValue());
+            request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
@@ -129,7 +135,7 @@ public class RoleServiceImpl implements RoleService {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
             }
         }else {
-            request.getSession().removeAttribute(ParameterEnum.LOGIN_NAME.getValue());
+            request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
@@ -155,7 +161,7 @@ public class RoleServiceImpl implements RoleService {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
             }
         }else {
-            request.getSession().removeAttribute(ParameterEnum.LOGIN_NAME.getValue());
+            request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
