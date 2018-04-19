@@ -3,7 +3,9 @@ package org.ycm.sims.service;
 
 import com.github.pagehelper.PageInfo;
 import org.ycm.sims.VO.RoleCheckVO;
+import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.dto.UpdatePasswordDTO;
 import org.ycm.sims.entity.Role;
 
 /**
@@ -14,13 +16,13 @@ public interface RoleService {
 
     RoleCheckVO login(RoleDTO roleDTO);
 
-    RoleCheckVO updatePassword(String originalPassword, String newPassword);
+    RoleCheckVO updatePassword(UpdatePasswordDTO updatePasswordDTO);
 
     RoleCheckVO createRole(RoleDTO roleDTO);
 
-    RoleCheckVO cancelRole(int id, int roleType);
+    RoleCheckVO cancelRole(RoleDTO roleDTO);
 
-    RoleCheckVO resetPassword(int id, int roleType);
+    RoleCheckVO resetPassword(RoleDTO roleDTO);
 
-    PageInfo<Role> findRole(RoleDTO roleDTO, int page);
+    PageInfo<RoleVO> findRole(RoleDTO roleDTO, int page);
 }

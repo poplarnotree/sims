@@ -2,8 +2,6 @@ package org.ycm.sims.dto;
 
 import lombok.Data;
 
-import java.util.Date;
-
 /**
  * Create by yangchangmin
  * on 2018/4/18 2:01
@@ -23,6 +21,11 @@ public class RoleDTO {
     }
 
     public RoleDTO(Integer roleType) {
+        this.roleType = roleType;
+    }
+
+    public RoleDTO(Integer id, Integer roleType) {
+        this.id = id;
         this.roleType = roleType;
     }
 

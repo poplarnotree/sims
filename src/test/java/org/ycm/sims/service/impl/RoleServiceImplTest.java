@@ -9,7 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 import org.ycm.sims.VO.RoleCheckVO;
+import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.dto.UpdatePasswordDTO;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.service.RoleService;
@@ -51,17 +53,15 @@ public class RoleServiceImplTest {
     }
 
     @Test
-    @Transactional
     public void updatePassword() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleCheckVO roleCheckVO = roleService.updatePassword(LOGIN_PASSWORD, UPDATE_PASSWORD);
-        RoleCheckVO roleCheckVO1 = roleService.updatePassword(LOGIN_PASSWORD, UPDATE_PASSWORD);
+        RoleCheckVO roleCheckVO = roleService.updatePassword(new UpdatePasswordDTO(LOGIN_PASSWORD, UPDATE_PASSWORD));
+//        RoleCheckVO roleCheckVO1 = roleService.updatePassword(new UpdatePasswordDTO(LOGIN_PASSWORD, UPDATE_PASSWORD));
         log.info("roleCheckVO={}", roleCheckVO);
-        log.info("roleCheckVO1={}", roleCheckVO1);
+//        log.info("roleCheckVO1={}", roleCheckVO1);
     }
 
     @Test
-    @Transactional
     public void createRole() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
         RoleDTO roleDTO = new RoleDTO(NEW_LOGIN_NAME, LOGIN_PASSWORD,ParameterEnum.TEACHER_TYPE.getCode());
@@ -74,27 +74,24 @@ public class RoleServiceImplTest {
     }
 
     @Test
-    @Transactional
     public void cancelRole() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleCheckVO roleCheckVO = roleService.cancelRole(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode());
+        RoleCheckVO roleCheckVO = roleService.cancelRole(new RoleDTO(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode()));
         log.info("roleCheckVO={}", roleCheckVO);
     }
 
     @Test
-    @Transactional
     public void resetPassword() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleCheckVO roleCheckVO = roleService.resetPassword(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode());
+        RoleCheckVO roleCheckVO = roleService.resetPassword(new RoleDTO(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode()));
         log.info("roleCheckVO={}", roleCheckVO);
     }
 
     @Test
     public void findRole() throws Exception {
         request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleDTO roleDTO = new RoleDTO(1);
-        PageInfo<Role> roleList = roleService.findRole(roleDTO);
-        log.info("roleList={}", roleList);
+        PageInfo<RoleVO> roleVOPageInfo = roleService.findRole(new RoleDTO(1),1);
+        log.info("roleVOPageInfo={}", roleVOPageInfo);
     }
 
 }

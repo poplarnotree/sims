@@ -6,18 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.ycm.sims.VO.RoleCheckVO;
+import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dao.RoleDao;
 import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.dto.UpdatePasswordDTO;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.enums.ResultEnum;
 import org.ycm.sims.exception.SimsException;
 import org.ycm.sims.service.RoleService;
+import org.ycm.sims.utils.DateUtil;
 import org.ycm.sims.utils.MD5Util;
 import org.ycm.sims.utils.SessionUtil;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -60,17 +64,16 @@ public class RoleServiceImpl implements RoleService {
 
     /**
      * 修改密码
-     * @param originalPassword
-     * @param newPassword
+     * @param updatePasswordDTO
      * @return
      */
     @Override
     @Transactional
-    public RoleCheckVO updatePassword(String originalPassword, String newPassword) {
+    public RoleCheckVO updatePassword(UpdatePasswordDTO updatePasswordDTO) {
         String sessionLoginName = (String) request.getSession().getAttribute(ParameterEnum.LOGIN_NAME.getValue());
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-        if (MD5Util.MD5Util(originalPassword).equals(role.getLoginPassword())) {
-            if (roleDao.updatePassword(sessionLoginName, MD5Util.MD5Util(newPassword))==1){
+        if (MD5Util.MD5Util(updatePasswordDTO.getOriginalPassword()).equals(role.getLoginPassword())) {
+            if (roleDao.updatePassword(sessionLoginName, MD5Util.MD5Util(updatePasswordDTO.getNewPasswor()))==1){
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else{
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
@@ -112,15 +115,15 @@ public class RoleServiceImpl implements RoleService {
 
     /**
      * 注销帐号
-     * @param id
+     * @param roleDTO
      * @return
      */
     @Override
     @Transactional
-    public RoleCheckVO cancelRole(int id, int roleType) {
+    public RoleCheckVO cancelRole(RoleDTO roleDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-        if (roleType - role.getRoleType() == 1) {
-            if (roleDao.cancelRole(id) == 1){
+        if (roleDTO.getRoleType() - role.getRoleType() == 1) {
+            if (roleDao.cancelRole(roleDTO.getId()) == 1){
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
@@ -133,16 +136,15 @@ public class RoleServiceImpl implements RoleService {
 
     /**
      * 重置密码
-     * @param id
-     * @param roleType
+     * @param roleDTO
      * @return
      */
     @Override
     @Transactional
-    public RoleCheckVO resetPassword(int id, int roleType) {
+    public RoleCheckVO resetPassword(RoleDTO roleDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-        if (roleType - role.getRoleType() == 1) {
-            if (roleDao.resetPassword(id, MD5Util.MD5Util(ParameterEnum.RESET_PASSWORD.getValue())) == 1){
+        if (roleDTO.getRoleType() - role.getRoleType() == 1) {
+            if (roleDao.resetPassword(roleDTO.getId(), MD5Util.MD5Util(ParameterEnum.RESET_PASSWORD.getValue())) == 1){
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
@@ -159,12 +161,16 @@ public class RoleServiceImpl implements RoleService {
      * @return
      */
     @Override
-    public PageInfo<Role> findRole(RoleDTO roleDTO, int page) {
+    public PageInfo<RoleVO> findRole(RoleDTO roleDTO, int page) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (roleDTO.getRoleType() - role.getRoleType() == 1){
             PageHelper.startPage(page, 10);
             List<Role> roleList = roleDao.findRole(new Role(roleDTO.getRoleType()));
-            PageInfo<Role> pageInfo = new PageInfo(roleList);
+            List<RoleVO> roleVOList = new ArrayList<RoleVO>();
+            for (Role role1: roleList){
+                roleVOList.add(new RoleVO(role1.getId(), role1.getLoginName(), role1.getRoleType(), DateUtil.DateUtil(role1.getCreateTime())));
+            }
+            PageInfo<RoleVO> pageInfo = new PageInfo(roleVOList);
             return pageInfo;
         }else {
             request.getSession().invalidate();

@@ -1,6 +1,9 @@
 package org.ycm.sims.VO;
 
 import lombok.Data;
+import org.ycm.sims.utils.DateUtil;
+
+import java.util.Date;
 
 /**
  * Create by yangchangmin
@@ -9,13 +12,19 @@ import lombok.Data;
 @Data
 public class RoleVO {
 
+    private Integer id;
+
     private String loginName;
 
-    private String roleType;
+    private int roleType;
 
     private String createTime;
 
-    public RoleVO(String loginName, String roleType, String createTime) {
+    public RoleVO() {
+    }
+
+    public RoleVO(Integer id, String loginName, int roleType, String createTime) {
+        this.id = id;
         this.loginName = loginName;
         this.roleType = roleType;
         this.createTime = createTime;
