@@ -73,7 +73,7 @@ public class RoleServiceImpl implements RoleService {
         String sessionLoginName = (String) request.getSession().getAttribute(ParameterEnum.LOGIN_NAME.getValue());
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (MD5Util.MD5Util(updatePasswordDTO.getOriginalPassword()).equals(role.getLoginPassword())) {
-            if (roleDao.updatePassword(sessionLoginName, MD5Util.MD5Util(updatePasswordDTO.getNewPasswor()))==1){
+            if (roleDao.updatePassword(sessionLoginName, MD5Util.MD5Util(updatePasswordDTO.getNewPassword()))==1){
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else{
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);

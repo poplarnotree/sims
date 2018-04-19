@@ -13,10 +13,13 @@ public class UpdatePasswordDTO {
     private String originalPassword;
 
     /* 新密码 */
-    private String newPasswor;
+    private String newPassword;
 
-    public UpdatePasswordDTO(String originalPassword, String newPasswor) {
+    public UpdatePasswordDTO() {
+    }
+
+    public UpdatePasswordDTO(String originalPassword, String newPassword) {
         this.originalPassword = originalPassword;
-        this.newPasswor = newPasswor;
+        this.newPassword = newPassword;
     }
 }
