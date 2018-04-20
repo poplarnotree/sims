@@ -1,46 +1,79 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:include="@{~/framework/head.html}"></head>
-<link th:href="@{~/css/signin.css}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" th:href="@{~/layui/css/style.css}" media="all">
 <body>
-<div class="container">
-    <div class="form-signin">
-        <h2 class="form-signin-heading" style="text-align: center">欢迎进入</h2>
-        <h2 class="form-signin-heading" style="text-align: center">学生信息管理系统</h2>
-        <input type="text" id="inputLoginName" class="form-control" placeholder="请输入登录名..." required autofocus>
-        <input type="password" id="inputLoginPassword" class="form-control" placeholder="请输入密码..." required>
-        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="check()">登录</button>
+<div class="login layui-anim-up">
+    <div class="login-main">
+        <div class="login-box login-header">
+            <h2>欢迎进入</h2>
+            <p>学生信息管理系统</p>
+        </div>
+        <div class="login-box login-body">
+            <form action="" class=" layui-form">
+                <div class="layui-form-item">
+                    <label class="login-icon layui-icon layui-icon-username" for="inputLoginName"></label>
+                    <input type="text" name="inputLoginName" id="inputLoginName" maxlength="32" lay-verify="required"
+                           placeholder="请输入登录名..." class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label class="login-icon layui-icon layui-icon-password" for="inputLoginPassword"></label>
+                    <input type="password" name="inputLoginPassword" id="inputLoginPassword" maxlength="16" minlength="6"
+                           lay-verify="required" placeholder="请输入密码..." class="layui-input">
+                </div>
+                <hr>
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="layform">登 录 系 统</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-<!--尾部-->
-<footer class="footer" th:include="@{~/framework/foot.html}"></footer>
+<div class="login-footer">
+    <hr>
+    <p><span>Copyright ©2018 Student Information Management System. YangCHangMin 20144779.</span></p>
+</div>
+<script type="text/javascript">
+    layui.use('form', function(){
+        var form = layui.form;
 
-</body>
-<script th:src="@{~/js/jquery.min.js}"></script>
-<script>
-    function check() {
-        var loginName = $("#inputLoginName").val();
-        var data= {
-            loginName:$("#inputLoginName").val(),
-            loginPassword:$("#inputLoginPassword").val()
-        }
-        $.ajax({
-            type: 'post',
-            url: '/role/checkLogin',
-            data: data,
-            success:function (RoleCheckVO) {
-                if (RoleCheckVO.status == 0){
-                    window.location.href = "/?loginName=" + loginName;
-                }else {
-                    alert(RoleCheckVO.message);
-                }
-            },
-            error:function () {
-                alert("系统错误，请稍后重试！")
-                return false;
+        //监听提交
+        form.on('submit(layform)', function(data){
+            var loginName = $("#inputLoginName").val();
+            var data= {
+                loginName:$("#inputLoginName").val(),
+                loginPassword:$("#inputLoginPassword").val()
             }
-        })
-    }
+            $.ajax({
+                type: 'post',
+                url: '/role/checkLogin',
+                data: data,
+                success:function (RoleCheckVO) {
+                    if (RoleCheckVO.status == 0){
+                        window.location.href = "/?loginName=" + loginName;
+                    }else {
+                        layer.open({
+                            title: '提示'
+                            ,content: RoleCheckVO.message
+                        });
+                    }
+                },
+                error:function () {
+                    layer.open({
+                        title: '提示'
+                        ,content: "系统错误，请稍后重试！"
+                    });
+                    return false;
+                }
+            })
+            return false;
+        });
+    });
+
+
+
 
 </script>
+</body>
+
 </html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/admin_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/admin_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <div class="demoTable">
+                搜索登录帐号：
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">搜索</button>
+            </div>
+            <table id="role" class="layui-hide" lay-filter="role"></table>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="resetPassword">重置密码</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="cancelRole">注销</a>
+</script>
+<script th:inline="none">
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    layui.use('table', function(){
+        var table = layui.table;
+        //第一个实例
+        table.render({
+            elem: '#role'
+            ,url: '/role/page' //数据接口
+            ,page: true //开启分页
+            ,where: {
+                roleType: 1
+            }
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true}
+                ,{field: 'loginName', title: '登录帐号'}
+                ,{field: 'roleType', title: '角色类型'}
+                ,{field: 'createTime', title: '创建时间', sort: true}
+                ,{fixed: 'right', title: '操作', align:'center', toolbar: '#barDemo'}
+            ]]
+            ,id: 'Reload'
+        });
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('Reload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        loginName: demoReload.val()
+                    }
+                });
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        //监听工具条
+        table.on('tool(role)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'resetPassword'){
+                layer.confirm('确定要重置' + data.roleType + data.loginName + "的密码吗？", function(index){
+                    $.ajax({
+                        type: 'post',
+                        url: '/role/resetPassword',
+                        data: {
+                            id: data.id,
+                            roleType: data.roleType
+                        },
+                        success:function (RoleCheckVO) {
+                            if (RoleCheckVO.status == 0){
+                                layer.open({
+                                    title: '提示'
+                                    ,content: RoleCheckVO.message
+                                });
+                            }else {
+                                layer.open({
+                                    title: '提示'
+                                    ,content: RoleCheckVO.message
+                                });
+                            }
+                        },
+                        error:function () {
+                            layer.open({
+                                title: '提示'
+                                ,content: "系统错误，请稍后重试！"
+                            });
+                            return false;
+                        }
+                    });
+                    layer.close(index);
+                });
+            }else if(obj.event === 'cancelRole'){
+                layer.confirm('真的要注销' + data.roleType + data.loginName + "的帐号吗？", function(index){
+                    $.ajax({
+                        type: 'post',
+                        url: '/role/cancelRole',
+                        data: {
+                            id: data.id,
+                            roleType: data.roleType
+                        },
+                        success:function (RoleCheckVO) {
+                            if (RoleCheckVO.status == 0){
+                                layer.open({
+                                    title: '提示'
+                                    ,content: RoleCheckVO.message
+                                });
+                            }else {
+                                layer.open({
+                                    title: '提示'
+                                    ,content: RoleCheckVO.message
+                                });
+                            }
+                        },
+                        error:function () {
+                            layer.open({
+                                title: '提示'
+                                ,content: "系统错误，请稍后重试！"
+                            });
+                            return false;
+                        }
+                    });
+                    layer.close(index);
+                });
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

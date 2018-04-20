@@ -63,10 +63,10 @@ public class RoleServiceImplTest {
 
     @Test
     public void createRole() throws Exception {
-        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleDTO roleDTO = new RoleDTO(NEW_LOGIN_NAME, LOGIN_PASSWORD,ParameterEnum.TEACHER_TYPE.getCode());
-        RoleCheckVO roleCheckVO = roleService.createRole(roleDTO);
-        log.info("roleCheckVO={}", roleCheckVO);
+//        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
+//        RoleDTO roleDTO = new RoleDTO(NEW_LOGIN_NAME, LOGIN_PASSWORD,ParameterEnum.TEACHER_TYPE.getCode());
+//        RoleCheckVO roleCheckVO = roleService.createRole(roleDTO);
+//        log.info("roleCheckVO={}", roleCheckVO);
 //        RoleCheckVO roleVO1 = roleService.createRole(NEW_LOGIN_NAME, LOGIN_PASSWORD,ParameterEnum.TEACHER_TYPE.getCode());
 //        log.info("roleVO1={}",roleVO1);
 //        RoleCheckVO roleVO2 = roleService.createRole(NEW_LOGIN_NAME_1, LOGIN_PASSWORD, ParameterEnum.STUDENT_TYPE.getCode());
@@ -75,23 +75,16 @@ public class RoleServiceImplTest {
 
     @Test
     public void cancelRole() throws Exception {
-        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleCheckVO roleCheckVO = roleService.cancelRole(new RoleDTO(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode()));
-        log.info("roleCheckVO={}", roleCheckVO);
+//        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
+//        RoleCheckVO roleCheckVO = roleService.cancelRole(new RoleDTO(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode()));
+//        log.info("roleCheckVO={}", roleCheckVO);
     }
 
     @Test
     public void resetPassword() throws Exception {
-        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        RoleCheckVO roleCheckVO = roleService.resetPassword(new RoleDTO(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode()));
-        log.info("roleCheckVO={}", roleCheckVO);
-    }
-
-    @Test
-    public void findRole() throws Exception {
-        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
-        PageInfo<RoleVO> roleVOPageInfo = roleService.findRole(new RoleDTO(1),1);
-        log.info("roleVOPageInfo={}", roleVOPageInfo);
+//        request.getSession().setAttribute(ParameterEnum.LOGIN_NAME.getValue(), LOGIN_NAME);
+//        RoleCheckVO roleCheckVO = roleService.resetPassword(new RoleDTO(zhangsan_id, ParameterEnum.TEACHER_TYPE.getCode()));
+//        log.info("roleCheckVO={}", roleCheckVO);
     }
 
 }

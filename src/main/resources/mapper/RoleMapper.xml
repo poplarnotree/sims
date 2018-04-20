@@ -42,7 +42,21 @@
     </update>
 
     <select id="findRole" resultMap="roleList">
-        SELECT * FROM role WHERE role_type = #{roleType}
+        SELECT * FROM role WHERE
+          <if test="loginName != null">
+              login_name = #{loginName} AND
+          </if>
+              role_type = #{roleType}
+              AND role_status = 0
+    </select>
+
+    <select id="roleCount" resultType="Integer">
+        SELECT count(*) FROM role WHERE
+        <if test="loginName != null">
+            login_name = #{loginName} AND
+        </if>
+            role_type = #{roleType}
+            AND role_status = 0
     </select>
 
 </mapper>

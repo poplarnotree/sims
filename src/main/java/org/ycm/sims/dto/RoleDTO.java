@@ -15,16 +15,16 @@ public class RoleDTO {
 
     private String loginPassword;
 
-    private Integer roleType;
+    private String roleType;
 
     public RoleDTO() {
     }
 
-    public RoleDTO(Integer roleType) {
+    public RoleDTO(String roleType) {
         this.roleType = roleType;
     }
 
-    public RoleDTO(Integer id, Integer roleType) {
+    public RoleDTO(Integer id, String roleType) {
         this.id = id;
         this.roleType = roleType;
     }
@@ -34,7 +34,7 @@ public class RoleDTO {
         this.loginPassword = loginPassword;
     }
 
-    public RoleDTO(String loginName, String loginPassword, Integer roleType) {
+    public RoleDTO(String loginName, String loginPassword, String roleType) {
         this.loginName = loginName;
         this.loginPassword = loginPassword;
         this.roleType = roleType;

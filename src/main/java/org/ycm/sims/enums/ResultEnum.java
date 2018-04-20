@@ -9,15 +9,18 @@ import lombok.Getter;
  */
 @Getter
 public enum  ResultEnum {
-    SUCCESS(0,"成功"),
+    SUCCESS(0,"成功")
 
-    PASSWORD_ERROR(1, "密码错误"),
+    ,PASSWORD_ERROR(1, "密码错误")
 
-    ROLE_NULL(2, "帐号不存在"),
+    ,ROLE_NULL(2, "帐号不存在")
 
-    ROLE_INVALID(3, "无效账户"),
+    ,ROLE_INVALID(3, "无效账户")
 
-    ROLE_EXIST(4, "帐号已存在")
+    ,ROLE_EXIST(4, "帐号已存在")
+
+    ,
+
     ;
 
     private Integer code;

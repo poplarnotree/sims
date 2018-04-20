@@ -16,16 +16,16 @@ public interface RoleDao {
 
     Role findRoleByLoginName(String loginName);
 
-    int updatePassword(@Param("loginName") String loginName,
-                       @Param("loginPassword") String loginPassword);
+    int updatePassword(Role role);
 
     int createRole(Role role);
 
     int cancelRole(int id);
 
-    int resetPassword(@Param("id")int id,
-                      @Param("loginPassword")String loginPassword);
+    int resetPassword(Role role);
 
     List<Role> findRole(Role role);
+
+    int roleCount(Role role);
 
 }
