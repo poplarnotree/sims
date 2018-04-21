@@ -1884,3 +1884,53 @@
 2018-04-21 18:16:29,911 - sims - Starting...
 2018-04-21 18:16:30,075 - sims - Start completed.
 2018-04-21 18:16:30,199 - loginName=admin
+2018-04-21 20:44:27,384 - Starting SimsApplication on yang-PC with PID 4704 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-21 20:44:27,389 - No active profile set, falling back to default profiles: default
+2018-04-21 20:44:27,483 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c19aaa5: startup date [Sat Apr 21 20:44:27 CST 2018]; root of context hierarchy
+2018-04-21 20:44:29,777 - Tomcat initialized with port(s): 8080 (http)
+2018-04-21 20:44:29,790 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-21 20:44:29,800 - Starting service [Tomcat]
+2018-04-21 20:44:29,800 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-21 20:44:29,804 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-21 20:44:29,920 - Initializing Spring embedded WebApplicationContext
+2018-04-21 20:44:29,921 - Root WebApplicationContext: initialization completed in 2438 ms
+2018-04-21 20:44:30,099 - Servlet dispatcherServlet mapped to [/]
+2018-04-21 20:44:30,105 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-21 20:44:30,106 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-21 20:44:30,106 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-21 20:44:30,106 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-21 20:44:30,724 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-21 20:44:30,955 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c19aaa5: startup date [Sat Apr 21 20:44:27 CST 2018]; root of context hierarchy
+2018-04-21 20:44:31,127 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-21 20:44:31,164 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-21 20:44:31,172 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-21 20:44:31,172 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-21 20:44:31,172 - Mapped "{[/role/createRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.createRole(org.ycm.sims.dto.RoleDTO)
+2018-04-21 20:44:31,172 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-21 20:44:31,172 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-21 20:44:31,173 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-21 20:44:31,173 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-21 20:44:31,173 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-21 20:44:31,173 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-21 20:44:31,174 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-21 20:44:31,174 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-21 20:44:31,177 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-21 20:44:31,177 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-21 20:44:31,210 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-21 20:44:31,211 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-21 20:44:31,533 - Registering beans for JMX exposure on startup
+2018-04-21 20:44:31,536 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-21 20:44:31,543 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-21 20:44:31,556 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-21 20:44:31,567 - Using a shared selector for servlet write/read
+2018-04-21 20:44:31,589 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-21 20:44:31,593 - Started SimsApplication in 4.834 seconds (JVM running for 5.902)
+2018-04-21 20:54:49,201 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-21 20:54:49,201 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-21 20:54:49,220 - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-04-21 20:54:50,805 - sims - Starting...
+2018-04-21 20:54:50,983 - sims - Start completed.
+2018-04-21 20:54:51,067 - loginName=admin
+2018-04-21 21:27:33,974 - loginName=admin
+2018-04-21 22:08:49,702 - loginName=admin
+2018-04-21 22:08:51,333 - loginName=admin

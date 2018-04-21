@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:include="@{~/framework/head.html}"></head>
+<link th:href="@{~/layui/css/select.css}" rel="stylesheet">
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <!--头部-->
@@ -12,48 +13,48 @@
         <!-- 内容主体区域 -->
         <div style="padding:15px;">
             <h1 class="site-h1">角色 / 创建教师角色</h1>
-            <form class="layui-form" action="">
-                <fieldset>
+            <form class="layui-form">
+                <fieldset class="layui-elem-field">
                     <legend>
                         <a>帐号信息</a>
                     </legend>
                     <div class="layui-form-item">
                         <label class="layui-form-label">登录帐号</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
+                            <input type="text" name="loginName" required  lay-verify="required" placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
                         </div>
-                        <div class="layui-form-mid layui-word-aux">请输入登录帐号</div>
+                        <div class="layui-form-mid layui-word-aux">设置教师登录帐号</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">密码</label>
                         <div class="layui-input-inline">
-                            <input type="password" name="password" required lay-verify="required" placeholder="请输入登录密码..." autocomplete="off" class="layui-input">
+                            <input type="password" name="loginPassword" required lay-verify="required" placeholder="请输入登录密码..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入登录密码</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">密码</label>
                         <div class="layui-input-inline">
-                            <input type="password" name="password" required lay-verify="required" placeholder="请再次输入登录密码..." autocomplete="off" class="layui-input">
+                            <input type="password" name="loginPassword1" required lay-verify="required" placeholder="请再次输入登录密码..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请再次输入登录密码</div>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset class="layui-elem-field">
                     <legend>
                         <a>教师信息</a>
                     </legend>
                     <div class="layui-form-item">
                         <label class="layui-form-label">工号</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入工号..." autocomplete="off" class="layui-input">
+                            <input type="text" name="number" required  lay-verify="required" placeholder="请输入工号..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入工号</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">教师姓名</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入教师姓名..." autocomplete="off" class="layui-input">
+                            <input type="text" name="name" required  lay-verify="required" placeholder="请输入教师姓名..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入教师姓名</div>
                     </div>
@@ -67,14 +68,14 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">身份证号</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入身份证号..." autocomplete="off" class="layui-input">
+                            <input type="text" name="idCart" required  lay-verify="required" placeholder="请输入身份证号..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入身份证号</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">职称</label>
                         <div class="layui-input-inline">
-                            <select name="city" lay-verify="required">
+                            <select name="positionalTitles" lay-verify="required">
                                 <option value="">请选择职称</option>
                                 <option value="中学正高级教师">中学正高级教师</option>
                                 <option value="中学高级教师">中学高级教师</option>
@@ -88,7 +89,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">民族</label>
                         <div class="layui-input-inline">
-                            <select name="city" multiple lay-verify="required" lay-search>
+                            <select name="nation" lay-verify="required" lay-search>
                                 <option value="">请选择民族</option>
                                 <option value="汉族">汉族</option>
                                 <option value="满族">满族</option>
@@ -112,37 +113,72 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">籍贯</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
+                            <input type="text" name="place" required  lay-verify="required" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入籍贯</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">地址</label>
                         <div class="layui-input-inline" style="width: 500px;">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入地址..." autocomplete="off" class="layui-input">
+                            <input type="text" name="address" required  lay-verify="required" placeholder="请输入地址..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入地址</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">出生日期</label>
                         <div class="layui-input-inline">
-                            <input type="text"  id="test1" name="date" required lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                            <input type="text"  id="birthday" name="birthday" required lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入出生日期</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">联系电话</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required|phone" placeholder="请输入联系电话..." autocomplete="off" class="layui-input">
+                            <input type="text" name="phone" required  lay-verify="required|phone" placeholder="请输入联系电话..." autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">请输入联系电话</div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">籍贯</label>
+                        <label class="layui-form-label">部门</label>
+                            <div class="layui-input-inline">
+                                <select id="department" name="department" multiple>
+                                    <option value="">请选择部门</option>
+                                    <option value="学生处">学生处</option>
+                                    <option value="教研组">教研组</option>
+                                </select>
+                            </div>
+                        <div class="layui-form-mid layui-word-aux">请选择部门</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">班级</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
+                            <select name="classes" multiple>
+                                <option value="">请选择班级</option>
+                                <option value="高一(1)班">高一(1)班</option>
+                                <option value="高二(1)班">高二(1)班</option>
+                                <option value="高三(1)班">高三(1)班</option>
+                                <option value="高三(3)班">高三(3)班</option>
+                            </select>
                         </div>
-                        <div class="layui-form-mid layui-word-aux">请输入籍贯</div>
+                        <div class="layui-form-mid layui-word-aux">请选择班级</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学科</label>
+                        <div class="layui-input-inline">
+                            <select name="subject" lay-verify="required" lay-search>
+                                <option value="">请选择学科</option>
+                                <option value="语文">语文</option>
+                                <option value="数学">数学</option>
+                                <option value="英语">英语</option>
+                                <option value="物理">物理</option>
+                                <option value="化学">化学</option>
+                                <option value="生物">生物</option>
+                                <option value="政治">政治</option>
+                                <option value="地理">地理</option>
+                                <option value="历史">历史</option>
+                            </select>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请选择学科</div>
                     </div>
                 </fieldset>
                 <hr>
@@ -161,25 +197,41 @@
 </div>
 <script>
     //JavaScript代码区域
-    layui.use('element', function(){
+    layui.use(['element', 'form', 'laydate'], function(){
         var element = layui.element;
-    });
-    layui.use('form', function(){
-        var form = layui.form;
 
+        var form = layui.form;
         //监听提交
         form.on('submit(formDemo)', function(data){
             layer.msg(JSON.stringify(data.field));
             return false;
         });
-    });
-    layui.use('laydate', function(){
-        var laydate = layui.laydate;
 
+        var laydate = layui.laydate;
         //执行一个laydate实例
         laydate.render({
-            elem: '#test1' //指定元素
+            elem: '#birthday' //指定元素
         });
+
+        // 动态添加下拉框
+        $.ajax({
+            type: 'get',
+            url: '/information/department',
+            success: function (department) {
+                for(var i = 0; i < department.length; i++){
+                    $("#department").append("<option value='"+department[i].name+"'>"+department[i].name+"</option>");
+                }
+                renderForm();
+
+            }
+        })
+        function renderForm(){
+            layui.use('form', function(){
+                var form = layui.form;//高版本建议把括号去掉，有的低版本，需要加()
+                form.render();
+            });
+        }
+
     });
 </script>
 </body>
