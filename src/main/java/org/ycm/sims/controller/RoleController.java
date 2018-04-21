@@ -91,7 +91,7 @@ public class RoleController {
      */
     @RequestMapping("/create")
     public String create(){
-        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/create", "role/crate");
+        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/create_teacher", "role/crate");
     }
 
     /**
@@ -103,15 +103,6 @@ public class RoleController {
     @ResponseBody
     public RoleCheckVO createRole(RoleDTO roleDTO){
         return roleService.createRole(roleDTO);
-    }
-
-    /**
-     * 注销帐号页面
-     * @return
-     */
-    @RequestMapping("/cancel")
-    public String cancel(){
-        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/cancel", "role/cancel");
     }
 
     /**
@@ -136,10 +127,13 @@ public class RoleController {
         return roleService.resetPassword(roleDTO);
     }
 
+    /**
+     * 角色管理页面
+     * @return
+     */
     @RequestMapping("/roleList")
     public String roleList(){
         return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/roleList", "role/roleList");
-
     }
 
     /**

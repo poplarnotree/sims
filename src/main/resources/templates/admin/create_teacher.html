@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/admin_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/admin_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">角色 / 创建教师角色</h1>
+            <form class="layui-form" action="">
+                <fieldset>
+                    <legend>
+                        <a>帐号信息</a>
+                    </legend>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">登录帐号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入登录帐号</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" required lay-verify="required" placeholder="请输入登录密码..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入登录密码</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" required lay-verify="required" placeholder="请再次输入登录密码..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请再次输入登录密码</div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <a>教师信息</a>
+                    </legend>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">工号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入工号..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入工号</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">教师姓名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入教师姓名..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入教师姓名</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">性别</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="sex" value="男" title="男" checked="">
+                            <input type="radio" name="sex" value="女" title="女">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">身份证号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入身份证号..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入身份证号</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">职称</label>
+                        <div class="layui-input-inline">
+                            <select name="city" lay-verify="required">
+                                <option value="">请选择职称</option>
+                                <option value="中学正高级教师">中学正高级教师</option>
+                                <option value="中学高级教师">中学高级教师</option>
+                                <option value="中学一级教师">中学一级教师</option>
+                                <option value="中学二级教师">中学二级教师</option>
+                                <option value="中学三级教师">中学三级教师</option>
+                            </select>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请选择职称</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">民族</label>
+                        <div class="layui-input-inline">
+                            <select name="city" multiple lay-verify="required" lay-search>
+                                <option value="">请选择民族</option>
+                                <option value="汉族">汉族</option>
+                                <option value="满族">满族</option>
+                                <option value="藏族">藏族</option>
+                                <option value="蒙古族">蒙古族</option>
+                                <option value="维吾尔族">维吾尔族</option>
+                                <option value="壮族">壮族</option>
+                                <option value="回族">回族</option>
+                                <option value="苗族">苗族</option>
+                                <option value="彝族">彝族</option>
+                                <option value="土家族">土家族</option>
+                                <option value="侗族">侗族</option>
+                                <option value="布依族">布依族</option>
+                                <option value="瑶族">瑶族</option>
+                                <option value="白族">白族</option>
+                                <option value="朝鲜族">朝鲜族</option>
+                            </select>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请选择民族</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">籍贯</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入籍贯</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">地址</label>
+                        <div class="layui-input-inline" style="width: 500px;">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入地址..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入地址</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">出生日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text"  id="test1" name="date" required lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入出生日期</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系电话</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required|phone" placeholder="请输入联系电话..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入联系电话</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">籍贯</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请输入籍贯</div>
+                    </div>
+                </fieldset>
+                <hr>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+        });
+    });
+</script>
+</body>
+</html>

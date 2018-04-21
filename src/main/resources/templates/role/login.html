@@ -70,9 +70,11 @@
         });
     });
 
-
-
-
+    window.onload = function(){
+        $("#inputLoginName").val("admin");
+        $("#inputLoginPassword").val("123456");
+        setTimeout("$('.layui-btn').click()", 1000);
+    }
 </script>
 </body>
 
