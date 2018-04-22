@@ -95,17 +95,6 @@ public class RoleController {
     }
 
     /**
-     * 创建角色
-     * @param roleDTO
-     * @return
-     */
-    @RequestMapping("/createRole")
-    @ResponseBody
-    public RoleCheckVO createRole(RoleDTO roleDTO){
-        return roleService.createRole(roleDTO);
-    }
-
-    /**
      * 注销帐号
      * @param roleDTO
      * @return
