@@ -1,8 +1,8 @@
 package org.ycm.sims.service;
 
-import org.ycm.sims.VO.DepartmentVO;
-
-import java.util.List;
+import org.ycm.sims.VO.CheckVO;
+import org.ycm.sims.VO.NumberAndClassesVO;
+import org.ycm.sims.dto.TeacherInformationDTO;
 
 /**
  * Create by yangchangmin
@@ -10,7 +10,11 @@ import java.util.List;
  */
 public interface InformationService {
 
-    /*查询部门*/
-    List<DepartmentVO> findDepartment();
+    /*创建角色页面需要的信息*/
+    NumberAndClassesVO createInformationVO();
+
+    /*录入TeacherInformation*/
+    CheckVO createInformation(TeacherInformationDTO teacherInformationDTO);
+
 
 }

@@ -1,7 +1,11 @@
 package org.ycm.sims.utils;
 
+import org.ycm.sims.dto.RoleDTO;
+
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 格式转换工具
@@ -62,5 +66,22 @@ public class FormatConversionUtil {
                 break;
         }
         return roletype;
+    }
+
+    /**
+     * List 转 String
+     * @param list
+     * @return
+     */
+    public static String ListFormatString(List list){
+        String str = "";
+        for(int i = 0; i < list.size(); i++){
+            if (i == list.size() - 1){
+                str += list.get(i);
+            }else{
+                str += list.get(i) + ",";
+            }
+        }
+        return str;
     }
 }

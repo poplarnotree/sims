@@ -20,7 +20,7 @@ VALUES
 CREATE TABLE teacher_information(
   id INT NOT NULL AUTO_INCREMENT COMMENT '信息id',
   login_name varchar(20) not null unique comment '登录名',
-  number int NOT NULL comment '工号',
+  number VARCHAR(5) NOT NULL unique comment '工号',
   name VARCHAR(10) NOT NULL comment '姓名',
   sex VARCHAR(2) NOT NULL comment '性别',
   id_cart VARCHAR(18) NOT NULL comment '身份证号',
@@ -38,18 +38,18 @@ CREATE TABLE teacher_information(
   FOREIGN KEY (login_name) REFERENCES role(login_name)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='教师信息表';
 
--- department表
-CREATE TABLE department(
-  id INT NOT NULL auto_increment comment '部门id',
-  name VARCHAR (10) NOT NULL comment '部门名称',
+-- classes 表
+CREATE TABLE classes(
+  id INT NOT NULL auto_increment comment '班级id',
+  name VARCHAR (20) NOT NULL comment '班级名称',
   create_time timestamp not null default current_timestamp comment '创建时间',
   PRIMARY KEY (id)
-)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='部门表';
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='班级表';
 
--- 插入3个部门表数据，学生处，教研组，学生部
+-- 插入三条班级记录
 INSERT INTO
-  department(name)
-VALUES
-  ('学生处'),
-  ('教研组'),
-  ('学生部')
+    classes(name)
+  VALUES
+    ('高一(1)班'),
+    ('高二(1)班'),
+    ('高三(1)班')

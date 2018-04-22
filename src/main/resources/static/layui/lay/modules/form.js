@@ -242,7 +242,6 @@ layui.define('layer', function(exports){
                             setTimeout(function(){
                                 notOption(input.val(), function(none){
                                     if(none && !initValue){
-                                        // input.val(''); //todo 不知道什么用处，影响到我的简化多选下拉框了
                                     }
                                 }, 'blur');
                             }, 200);

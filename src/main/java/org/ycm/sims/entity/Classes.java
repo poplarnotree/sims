@@ -2,22 +2,22 @@ package org.ycm.sims.entity;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * Create by yangchangmin
- * on 2018/4/22 0:58
+ * on 2018/4/22 17:02
  */
 @Data
-public class Department {
+public class Classes {
 
     /*id*/
-    private int id;
+    private Integer id;
 
-    /*部门名称*/
+    /*班级名称*/
     private String name;
 
     /*创建时间*/
-    private Data createTime;
+    private Date createTime;
 
-    public Department() {
-    }
 }

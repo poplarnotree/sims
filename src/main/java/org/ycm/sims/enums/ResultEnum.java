@@ -19,8 +19,9 @@ public enum  ResultEnum {
 
     ,ROLE_EXIST(4, "帐号已存在")
 
-    ,
+    ,INFORMATION_EXIST(5, "信息已存在")
 
+    ,NUMBER_EXIST(6, "工号已存在")
     ;
 
     private Integer code;

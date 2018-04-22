@@ -34,4 +34,5 @@ public interface RoleDao {
     /*查询角色记录数*/
     int roleCount(Role role);
 
+
 }

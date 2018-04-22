@@ -17,6 +17,7 @@ import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.enums.ResultEnum;
 import org.ycm.sims.exception.SimsException;
+import org.ycm.sims.service.InformationService;
 import org.ycm.sims.service.RoleService;
 import org.ycm.sims.utils.FormatConversionUtil;
 import org.ycm.sims.utils.MD5Util;
@@ -39,6 +40,9 @@ public class RoleServiceImpl implements RoleService {
 
     @Autowired
     private RoleDao roleDao;
+
+    @Autowired
+    private InformationService informationService;
 
     /**
      * 登录
@@ -97,7 +101,8 @@ public class RoleServiceImpl implements RoleService {
         if (roleDao.findRoleByLoginName(roleDTO.getLoginName()) != null){
             return new RoleCheckVO(ResultEnum.ROLE_EXIST);
         }
-        if (FormatConversionUtil.roleTypeFormatUitl(roleDTO.getRoleType()) - role.getRoleType() == 1){
+        String roleType = roleDTO.getRoleType();
+        if (FormatConversionUtil.roleTypeFormatUitl(roleType) - role.getRoleType() == 1){
             Role newRole = new Role(roleDTO.getLoginName(), MD5Util.MD5Util(roleDTO.getLoginName()), role.getCreateId(), FormatConversionUtil.roleTypeFormatUitl(roleDTO.getRoleType()));
             int row = roleDao.createRole(newRole);
             if (row == 0){

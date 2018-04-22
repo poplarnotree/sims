@@ -3,9 +3,32 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.ycm.sims.dao.InformationDao">
+    <insert id="createInformation">
+        INSERT INTO
+          teacher_information
+            (login_name, number, name, sex, id_cart, positional_titles, nation, place, address, birthday, phone, department, classes, subject)
+          VALUES
+            (#{loginName}, #{number}, #{name}, #{sex}, #{idCart}, #{positionalTitles}, #{nation}, #{place}, #{address}, #{birthday}, #{phone}, #{department}, #{classes}, #{subject})
+    </insert>
 
-    <select id="findDepartment" resultType="org.ycm.sims.entity.Department">
-        SELECT name FROM department;
+    <select id="findClasses" resultType="java.lang.String">
+        SELECT name FROM classes;
     </select>
+
+    <select id="findNumberMax" resultType="java.lang.String">
+        select MAX(number) number from teacher_information;
+    </select>
+
+    <select id="findByInformation" resultType="org.ycm.sims.entity.TeacherInformation">
+        SELECT * form teacher_information where login_name = #{loginName};
+    </select>
+
+    <select id="findInformationLoginName" resultType="java.lang.Integer">
+        SELECT COUNT(login_name) FROM teacher_information WHERE login_name = #{loginName}
+    </select>
+    <select id="findInformationNumber" resultType="java.lang.Integer">
+        SELECT COUNT(number) FROM teacher_information WHERE number = #{number}
+    </select>
+
 
 </mapper>
