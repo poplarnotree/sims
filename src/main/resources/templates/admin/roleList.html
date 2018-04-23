@@ -38,7 +38,6 @@
     });
     layui.use('table', function(){
         var table = layui.table;
-        //第一个实例
         table.render({
             elem: '#role'
             ,url: '/role/page' //数据接口
@@ -96,6 +95,7 @@
                                     title: '提示'
                                     ,content: RoleCheckVO.message
                                 });
+                                location.reload();
                             }else {
                                 layer.open({
                                     title: '提示'
@@ -128,6 +128,7 @@
                                     title: '提示'
                                     ,content: RoleCheckVO.message
                                 });
+                                location.reload();
                             }else {
                                 layer.open({
                                     title: '提示'

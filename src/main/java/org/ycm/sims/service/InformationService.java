@@ -2,6 +2,9 @@ package org.ycm.sims.service;
 
 import org.ycm.sims.VO.CheckVO;
 import org.ycm.sims.VO.NumberAndClassesVO;
+import org.ycm.sims.VO.PageVO;
+import org.ycm.sims.VO.TeacherInformationVO;
+import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.TeacherInformationDTO;
 
 /**
@@ -15,6 +18,9 @@ public interface InformationService {
 
     /*录入TeacherInformation*/
     CheckVO createInformation(TeacherInformationDTO teacherInformationDTO);
+
+    /*查询所有教师信息*/
+    PageVO<TeacherInformationVO> teacherInformationPage(PageDTO pageDTO);
 
 
 }

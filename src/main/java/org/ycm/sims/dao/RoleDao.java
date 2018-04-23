@@ -1,6 +1,7 @@
 package org.ycm.sims.dao;
 
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.ycm.sims.entity.Role;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * Create by yangchangmin
  * 2018/4/14 21:42
  */
+@Mapper
 public interface RoleDao {
 
 //    Role findRoleById(int id);
@@ -32,7 +34,7 @@ public interface RoleDao {
     List<Role> findRole(Role role);
 
     /*查询角色记录数*/
-    int roleCount(Role role);
+    Integer roleCount(Role role);
 
 
 }

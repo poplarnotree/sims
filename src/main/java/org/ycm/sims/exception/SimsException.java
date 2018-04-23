@@ -16,4 +16,9 @@ public class SimsException extends RuntimeException {
         super(exceptionEnum.getMessage());
         this.code = exceptionEnum.getCode();
     }
+
+    public SimsException(ResultEnum resultEnum){
+        super(resultEnum.getMessage());
+        this.code = resultEnum.getCode();
+    }
 }

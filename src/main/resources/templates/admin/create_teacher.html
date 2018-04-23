@@ -208,12 +208,12 @@
             $("#loginPassword").val("123456");
             $("#loginPassword1").val("123456");
             $("#loginName").val("zhangsan");
-            $("#number").val("111");
-            $("#name").val("zhangsan");
-            $("#idCart").val("522628199602156613");
-            $("#place").val("asdsf");
-            $("#address").val("asfdas");
-            $("#birthday").val("2012-10-10");
+            $("#number").val("T-001");
+            $("#name").val("张三");
+            $("#idCart").val("522628197706162213");
+            $("#place").val("天津西青");
+            $("#address").val("天津市西青区宾水西道延长线399号天津理工大学");
+            $("#birthday").val("1977-06-16");
             $("#phone").val("18312345678")
         }
 
@@ -275,6 +275,12 @@
                             ,content: CheckVO.message
                         });
                     }
+                },
+                error: function (XMLHttpRequest) {
+                    layer.open({
+                        title: '提示'
+                        ,content: XMLHttpRequest.responseJSON.message
+                    });
                 }
             })
             return false;

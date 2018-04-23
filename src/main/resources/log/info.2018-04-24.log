@@ -1,0 +1,1968 @@
+2018-04-24 00:31:52,645 - Starting InformationServiceImplTest on yang-PC with PID 9536 (started by yang in E:\study\workspace\sims)
+2018-04-24 00:31:52,647 - No active profile set, falling back to default profiles: default
+2018-04-24 00:31:52,788 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@44a59da3: startup date [Tue Apr 24 00:31:52 CST 2018]; root of context hierarchy
+2018-04-24 00:31:56,348 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:31:56,691 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@44a59da3: startup date [Tue Apr 24 00:31:52 CST 2018]; root of context hierarchy
+2018-04-24 00:31:56,777 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:31:56,842 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:31:56,849 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:31:56,849 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:31:56,855 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:31:56,855 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:31:56,855 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:31:56,856 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:31:56,856 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:31:56,856 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:31:56,857 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:31:56,857 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:31:56,857 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:31:56,857 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:31:56,861 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:31:56,862 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:31:56,926 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:31:56,926 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:31:58,143 - Started InformationServiceImplTest in 6.745 seconds (JVM running for 9.426)
+2018-04-24 00:31:58,585 - sims - Starting...
+2018-04-24 00:31:59,152 - sims - Start completed.
+2018-04-24 00:31:59,174 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:31:59,240 - ==> Parameters: null
+2018-04-24 00:31:59,308 - <==      Total: 0
+2018-04-24 00:31:59,485 - Closing org.springframework.web.context.support.GenericWebApplicationContext@44a59da3: startup date [Tue Apr 24 00:31:52 CST 2018]; root of context hierarchy
+2018-04-24 00:31:59,502 - sims - Shutdown initiated...
+2018-04-24 00:31:59,526 - sims - Shutdown completed.
+2018-04-24 00:32:39,376 - Starting InformationServiceImplTest on yang-PC with PID 8748 (started by yang in E:\study\workspace\sims)
+2018-04-24 00:32:39,377 - No active profile set, falling back to default profiles: default
+2018-04-24 00:32:39,463 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@27e47833: startup date [Tue Apr 24 00:32:39 CST 2018]; root of context hierarchy
+2018-04-24 00:32:43,609 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:32:43,987 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@27e47833: startup date [Tue Apr 24 00:32:39 CST 2018]; root of context hierarchy
+2018-04-24 00:32:44,075 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:32:44,138 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:32:44,140 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:32:44,142 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:32:44,147 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:32:44,147 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:32:44,147 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:32:44,147 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:32:44,148 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:32:44,148 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:32:44,148 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:32:44,149 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:32:44,150 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:32:44,152 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:32:44,158 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:32:44,161 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:32:44,225 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:32:44,225 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:32:45,115 - Started InformationServiceImplTest in 7.721 seconds (JVM running for 9.445)
+2018-04-24 00:32:45,324 - sims - Starting...
+2018-04-24 00:32:45,860 - sims - Start completed.
+2018-04-24 00:32:45,870 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:32:45,896 - ==> Parameters: admin(String)
+2018-04-24 00:32:45,931 - <==      Total: 1
+2018-04-24 00:32:45,934 - ==>  Preparing: SELECT count(*) FROM teacher_information; 
+2018-04-24 00:32:45,935 - ==> Parameters: 
+2018-04-24 00:32:45,937 - <==      Total: 1
+2018-04-24 00:32:46,029 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 00:32:46,032 - ==> Parameters: 
+2018-04-24 00:32:46,040 - <==      Total: 1
+2018-04-24 00:32:46,047 - ==>  Preparing: SELECT * FROM teacher_information; LIMIT ?, ? 
+2018-04-24 00:32:46,054 - ==> Parameters: 9(Integer), 1(Integer)
+2018-04-24 00:32:46,120 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-04-24 00:32:46,247 - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2018-04-24 00:32:46,279 - Closing org.springframework.web.context.support.GenericWebApplicationContext@27e47833: startup date [Tue Apr 24 00:32:39 CST 2018]; root of context hierarchy
+2018-04-24 00:32:46,286 - sims - Shutdown initiated...
+2018-04-24 00:32:46,301 - sims - Shutdown completed.
+2018-04-24 00:39:45,243 - Starting InformationServiceImplTest on yang-PC with PID 1680 (started by yang in E:\study\workspace\sims)
+2018-04-24 00:39:45,244 - No active profile set, falling back to default profiles: default
+2018-04-24 00:39:45,432 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@404bbcbd: startup date [Tue Apr 24 00:39:45 CST 2018]; root of context hierarchy
+2018-04-24 00:39:48,653 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:39:48,960 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@404bbcbd: startup date [Tue Apr 24 00:39:45 CST 2018]; root of context hierarchy
+2018-04-24 00:39:49,031 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:39:49,098 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:39:49,101 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:39:49,101 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:39:49,105 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:39:49,106 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:39:49,106 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:39:49,106 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:39:49,107 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:39:49,107 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:39:49,107 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:39:49,108 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:39:49,108 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:39:49,109 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:39:49,112 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:39:49,113 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:39:49,158 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:39:49,158 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:39:50,056 - Started InformationServiceImplTest in 6.003 seconds (JVM running for 7.62)
+2018-04-24 00:39:50,268 - sims - Starting...
+2018-04-24 00:39:50,691 - sims - Start completed.
+2018-04-24 00:39:50,701 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:39:50,729 - ==> Parameters: admin(String)
+2018-04-24 00:39:50,753 - <==      Total: 1
+2018-04-24 00:39:50,757 - ==>  Preparing: SELECT count(*) FROM teacher_information; 
+2018-04-24 00:39:50,757 - ==> Parameters: 
+2018-04-24 00:39:50,761 - <==      Total: 1
+2018-04-24 00:39:50,901 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 00:39:50,901 - ==> Parameters: 
+2018-04-24 00:39:50,904 - <==      Total: 1
+2018-04-24 00:39:50,907 - ==>  Preparing: SELECT * FROM teacher_information; LIMIT ?, ? 
+2018-04-24 00:39:50,908 - ==> Parameters: 9(Integer), 1(Integer)
+2018-04-24 00:39:50,934 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-04-24 00:39:50,989 - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2018-04-24 00:39:51,019 - Closing org.springframework.web.context.support.GenericWebApplicationContext@404bbcbd: startup date [Tue Apr 24 00:39:45 CST 2018]; root of context hierarchy
+2018-04-24 00:39:51,025 - sims - Shutdown initiated...
+2018-04-24 00:39:51,034 - sims - Shutdown completed.
+2018-04-24 00:44:49,536 - Starting InformationServiceImplTest on yang-PC with PID 3048 (started by yang in E:\study\workspace\sims)
+2018-04-24 00:44:49,541 - No active profile set, falling back to default profiles: default
+2018-04-24 00:44:49,688 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2d9caaeb: startup date [Tue Apr 24 00:44:49 CST 2018]; root of context hierarchy
+2018-04-24 00:44:53,212 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:44:53,561 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2d9caaeb: startup date [Tue Apr 24 00:44:49 CST 2018]; root of context hierarchy
+2018-04-24 00:44:53,630 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:44:53,684 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:44:53,688 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:44:53,689 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:44:53,695 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:44:53,696 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:44:53,696 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:44:53,696 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:44:53,696 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:44:53,697 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:44:53,697 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:44:53,698 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:44:53,699 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:44:53,699 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:44:53,726 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:44:53,727 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:44:53,779 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:44:53,780 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:44:54,739 - Started InformationServiceImplTest in 6.914 seconds (JVM running for 8.697)
+2018-04-24 00:44:54,952 - sims - Starting...
+2018-04-24 00:44:55,492 - sims - Start completed.
+2018-04-24 00:44:55,501 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:44:55,543 - ==> Parameters: admin(String)
+2018-04-24 00:44:55,577 - <==      Total: 1
+2018-04-24 00:44:55,580 - ==>  Preparing: SELECT count(*) FROM teacher_information; 
+2018-04-24 00:44:55,580 - ==> Parameters: 
+2018-04-24 00:44:55,585 - <==      Total: 1
+2018-04-24 00:44:55,712 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 00:44:55,713 - ==> Parameters: 
+2018-04-24 00:44:55,714 - <==      Total: 1
+2018-04-24 00:44:55,716 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 00:44:55,717 - ==> Parameters: 9(Integer), 1(Integer)
+2018-04-24 00:44:55,720 - <==      Total: 1
+2018-04-24 00:44:55,730 - teacherInformationVOPageVO = PageVO(code=0, msg=成功, count=22, data=[TeacherInformationVO(id=1013, loginName=mashi, roleType=null, number=T-010, name=马十, sex=男, idCart=522628198706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1987-06-16, phone=18312345678, department=教研组, classes=暂无班级, subject=地理, createTime=2018-04-24 12:44:55)])
+2018-04-24 00:44:55,737 - Closing org.springframework.web.context.support.GenericWebApplicationContext@2d9caaeb: startup date [Tue Apr 24 00:44:49 CST 2018]; root of context hierarchy
+2018-04-24 00:44:55,742 - sims - Shutdown initiated...
+2018-04-24 00:44:55,754 - sims - Shutdown completed.
+2018-04-24 00:45:34,142 - Starting InformationServiceImplTest on yang-PC with PID 3764 (started by yang in E:\study\workspace\sims)
+2018-04-24 00:45:34,145 - No active profile set, falling back to default profiles: default
+2018-04-24 00:45:34,256 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@27e47833: startup date [Tue Apr 24 00:45:34 CST 2018]; root of context hierarchy
+2018-04-24 00:45:37,281 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:45:37,715 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@27e47833: startup date [Tue Apr 24 00:45:34 CST 2018]; root of context hierarchy
+2018-04-24 00:45:37,788 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:45:37,846 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:45:37,849 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:45:37,850 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:45:37,854 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:45:37,855 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:45:37,855 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:45:37,855 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:45:37,856 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:45:37,856 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:45:37,857 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:45:37,857 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:45:37,857 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:45:37,858 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:45:37,869 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:45:37,870 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:45:37,935 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:45:37,935 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:45:38,800 - Started InformationServiceImplTest in 6.243 seconds (JVM running for 8.107)
+2018-04-24 00:45:39,001 - sims - Starting...
+2018-04-24 00:45:39,403 - sims - Start completed.
+2018-04-24 00:45:39,413 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:45:39,450 - ==> Parameters: admin(String)
+2018-04-24 00:45:39,469 - <==      Total: 1
+2018-04-24 00:45:39,472 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 00:45:39,472 - ==> Parameters: 
+2018-04-24 00:45:39,474 - <==      Total: 1
+2018-04-24 00:45:39,606 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 00:45:39,616 - ==> Parameters: 
+2018-04-24 00:45:39,618 - <==      Total: 1
+2018-04-24 00:45:39,621 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 00:45:39,622 - ==> Parameters: 10(Integer)
+2018-04-24 00:45:39,634 - <==      Total: 10
+2018-04-24 00:45:39,646 - teacherInformationVOPageVO = PageVO(code=0, msg=成功, count=22, data=[TeacherInformationVO(id=1004, loginName=zhangsan, roleType=null, number=T-001, name=张三, sex=男, idCart=522628197706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-16, phone=18312345678, department=学生处,教研组, classes=暂无班级, subject=语文, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1005, loginName=lisi, roleType=null, number=T-002, name=李四, sex=男, idCart=522628197806162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1978-06-16, phone=18312345678, department=学生处, classes=暂无班级, subject=数学, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1006, loginName=chenliu, roleType=null, number=T-003, name=陈六, sex=男, idCart=522628197906162213, positionalTitles=中学一级教师, nation=苗族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1979-06-16, phone=18312345678, department=教研组, classes=高一(1)班, subject=英语, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1007, loginName=wangwu, roleType=null, number=T-004, name=王五, sex=男, idCart=522628197606162213, positionalTitles=中学二级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1976-06-16, phone=18312345678, department=学生处, classes=高二(1)班, subject=物理, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1008, loginName=tianqi, roleType=null, number=T-005, name=田七, sex=男, idCart=522628197706172213, positionalTitles=中学三级教师, nation=土家族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-17, phone=18312345678, department=教研组, classes=高三(1)班, subject=语文, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1009, loginName=liuba, roleType=null, number=T-006, name=刘八, sex=男, idCart=522628197705162213, positionalTitles=中学三级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-05-16, phone=18312345678, department=教研组, classes=暂无班级, subject=政治, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1010, loginName=wuqi, roleType=null, number=T-007, name=吴起, sex=男, idCart=522628198706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1987-06-16, phone=18312345678, department=教研组, classes=暂无班级, subject=物理, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1011, loginName=chenjiu, roleType=null, number=T-008, name=陈酒, sex=男, idCart=522628197708162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-08-16, phone=18312345678, department=学生处, classes=暂无班级, subject=生物, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1012, loginName=yaoshisan, roleType=null, number=T-009, name=尧十三, sex=男, idCart=522628198206162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-16, phone=18312345678, department=学生处, classes=暂无班级, subject=语文, createTime=2018-04-24 12:45:39), TeacherInformationVO(id=1013, loginName=mashi, roleType=null, number=T-010, name=马十, sex=男, idCart=522628198706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1987-06-16, phone=18312345678, department=教研组, classes=暂无班级, subject=地理, createTime=2018-04-24 12:45:39)])
+2018-04-24 00:45:39,654 - Closing org.springframework.web.context.support.GenericWebApplicationContext@27e47833: startup date [Tue Apr 24 00:45:34 CST 2018]; root of context hierarchy
+2018-04-24 00:45:39,660 - sims - Shutdown initiated...
+2018-04-24 00:45:39,672 - sims - Shutdown completed.
+2018-04-24 00:50:35,203 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:50:35,249 - ==> Parameters: admin(String)
+2018-04-24 00:50:35,267 - <==      Total: 1
+2018-04-24 00:50:35,285 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:50:35,286 - ==> Parameters: admin(String)
+2018-04-24 00:50:35,288 - <==      Total: 1
+2018-04-24 00:50:35,493 - loginName=admin
+2018-04-24 00:50:35,502 - loginName=admin
+2018-04-24 00:50:37,215 - Starting InformationServiceImplTest on yang-PC with PID 10120 (started by yang in E:\study\workspace\sims)
+2018-04-24 00:50:37,216 - No active profile set, falling back to default profiles: default
+2018-04-24 00:50:37,315 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6f6745d6: startup date [Tue Apr 24 00:50:37 CST 2018]; root of context hierarchy
+2018-04-24 00:50:37,805 - loginName=admin
+2018-04-24 00:50:41,768 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:50:42,344 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6f6745d6: startup date [Tue Apr 24 00:50:37 CST 2018]; root of context hierarchy
+2018-04-24 00:50:42,422 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:50:42,497 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:50:42,501 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:50:42,501 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:50:42,501 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 00:50:42,502 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:50:42,511 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:50:42,513 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:50:42,513 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:50:42,514 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:50:42,515 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:50:42,515 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:50:42,515 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:50:42,516 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:50:42,516 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:50:42,517 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:50:42,527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:50:42,528 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:50:42,580 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:50:42,580 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:50:43,554 - Started InformationServiceImplTest in 8.058 seconds (JVM running for 10.676)
+2018-04-24 00:50:43,848 - sims - Starting...
+2018-04-24 00:50:44,401 - sims - Start completed.
+2018-04-24 00:50:44,409 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:50:44,461 - ==> Parameters: admin(String)
+2018-04-24 00:50:44,837 - <==      Total: 1
+2018-04-24 00:50:44,866 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 00:50:44,868 - ==> Parameters: 
+2018-04-24 00:50:44,925 - <==      Total: 1
+2018-04-24 00:50:45,247 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 00:50:45,247 - ==> Parameters: 
+2018-04-24 00:50:45,249 - <==      Total: 1
+2018-04-24 00:50:45,251 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 00:50:45,251 - ==> Parameters: 10(Integer)
+2018-04-24 00:50:45,257 - <==      Total: 10
+2018-04-24 00:50:45,272 - teacherInformationVOPageVO = PageVO(code=0, msg=成功, count=22, data=[TeacherInformationVO(id=1004, loginName=zhangsan, roleType=null, number=T-001, name=张三, sex=男, idCart=522628197706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-16, phone=18312345678, department=学生处,教研组, classes=暂无班级, subject=语文, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1005, loginName=lisi, roleType=null, number=T-002, name=李四, sex=男, idCart=522628197806162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1978-06-16, phone=18312345678, department=学生处, classes=暂无班级, subject=数学, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1006, loginName=chenliu, roleType=null, number=T-003, name=陈六, sex=男, idCart=522628197906162213, positionalTitles=中学一级教师, nation=苗族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1979-06-16, phone=18312345678, department=教研组, classes=高一(1)班, subject=英语, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1007, loginName=wangwu, roleType=null, number=T-004, name=王五, sex=男, idCart=522628197606162213, positionalTitles=中学二级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1976-06-16, phone=18312345678, department=学生处, classes=高二(1)班, subject=物理, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1008, loginName=tianqi, roleType=null, number=T-005, name=田七, sex=男, idCart=522628197706172213, positionalTitles=中学三级教师, nation=土家族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-17, phone=18312345678, department=教研组, classes=高三(1)班, subject=语文, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1009, loginName=liuba, roleType=null, number=T-006, name=刘八, sex=男, idCart=522628197705162213, positionalTitles=中学三级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-05-16, phone=18312345678, department=教研组, classes=暂无班级, subject=政治, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1010, loginName=wuqi, roleType=null, number=T-007, name=吴起, sex=男, idCart=522628198706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1987-06-16, phone=18312345678, department=教研组, classes=暂无班级, subject=物理, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1011, loginName=chenjiu, roleType=null, number=T-008, name=陈酒, sex=男, idCart=522628197708162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-08-16, phone=18312345678, department=学生处, classes=暂无班级, subject=生物, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1012, loginName=yaoshisan, roleType=null, number=T-009, name=尧十三, sex=男, idCart=522628198206162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-16, phone=18312345678, department=学生处, classes=暂无班级, subject=语文, createTime=2018-04-24 12:50:45), TeacherInformationVO(id=1013, loginName=mashi, roleType=null, number=T-010, name=马十, sex=男, idCart=522628198706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1987-06-16, phone=18312345678, department=教研组, classes=暂无班级, subject=地理, createTime=2018-04-24 12:50:45)])
+2018-04-24 00:50:45,285 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6f6745d6: startup date [Tue Apr 24 00:50:37 CST 2018]; root of context hierarchy
+2018-04-24 00:50:45,289 - sims - Shutdown initiated...
+2018-04-24 00:50:45,302 - sims - Shutdown completed.
+2018-04-24 00:51:11,220 - loginName=admin
+2018-04-24 00:51:58,222 - Starting InformationServiceImplTest on yang-PC with PID 3344 (started by yang in E:\study\workspace\sims)
+2018-04-24 00:51:58,223 - No active profile set, falling back to default profiles: default
+2018-04-24 00:51:58,350 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79c97cb: startup date [Tue Apr 24 00:51:58 CST 2018]; root of context hierarchy
+2018-04-24 00:52:01,888 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:52:02,459 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@79c97cb: startup date [Tue Apr 24 00:51:58 CST 2018]; root of context hierarchy
+2018-04-24 00:52:02,546 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:52:02,620 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:52:02,625 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:52:02,626 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:52:02,626 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 00:52:02,626 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:52:02,631 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:52:02,631 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:52:02,631 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:52:02,632 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:52:02,634 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:52:02,634 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:52:02,634 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:52:02,635 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:52:02,635 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:52:02,635 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:52:02,645 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:52:02,646 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:52:02,737 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:52:02,737 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:52:03,843 - Started InformationServiceImplTest in 7.3 seconds (JVM running for 9.22)
+2018-04-24 00:52:04,105 - sims - Starting...
+2018-04-24 00:52:04,652 - sims - Start completed.
+2018-04-24 00:52:04,662 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:52:04,690 - ==> Parameters: admin(String)
+2018-04-24 00:52:04,712 - <==      Total: 1
+2018-04-24 00:52:04,716 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 00:52:04,716 - ==> Parameters: 
+2018-04-24 00:52:04,721 - <==      Total: 1
+2018-04-24 00:52:04,794 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 00:52:04,795 - ==> Parameters: 
+2018-04-24 00:52:04,797 - <==      Total: 1
+2018-04-24 00:52:04,801 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 00:52:04,867 - ==> Parameters: 10(Integer)
+2018-04-24 00:52:04,882 - <==      Total: 10
+2018-04-24 00:52:04,892 - teacherInformationVOPageVO = PageVO(code=0, msg=成功, count=22, data=[TeacherInformationVO(id=1004, loginName=zhangsan, roleType=null, number=T-001, name=张三, sex=男, idCart=522628197706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-16, phone=18312345678, department=学生处,教研组, classes=暂无班级, subject=语文, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1005, loginName=lisi, roleType=null, number=T-002, name=李四, sex=男, idCart=522628197806162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1978-06-16, phone=18312345678, department=学生处, classes=暂无班级, subject=数学, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1006, loginName=chenliu, roleType=null, number=T-003, name=陈六, sex=男, idCart=522628197906162213, positionalTitles=中学一级教师, nation=苗族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1979-06-16, phone=18312345678, department=教研组, classes=高一(1)班, subject=英语, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1007, loginName=wangwu, roleType=null, number=T-004, name=王五, sex=男, idCart=522628197606162213, positionalTitles=中学二级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1976-06-16, phone=18312345678, department=学生处, classes=高二(1)班, subject=物理, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1008, loginName=tianqi, roleType=null, number=T-005, name=田七, sex=男, idCart=522628197706172213, positionalTitles=中学三级教师, nation=土家族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-17, phone=18312345678, department=教研组, classes=高三(1)班, subject=语文, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1009, loginName=liuba, roleType=null, number=T-006, name=刘八, sex=男, idCart=522628197705162213, positionalTitles=中学三级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-05-16, phone=18312345678, department=教研组, classes=暂无班级, subject=政治, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1010, loginName=wuqi, roleType=null, number=T-007, name=吴起, sex=男, idCart=522628198706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1987-06-16, phone=18312345678, department=教研组, classes=暂无班级, subject=物理, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1011, loginName=chenjiu, roleType=null, number=T-008, name=陈酒, sex=男, idCart=522628197708162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-08-16, phone=18312345678, department=学生处, classes=暂无班级, subject=生物, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1012, loginName=yaoshisan, roleType=null, number=T-009, name=尧十三, sex=男, idCart=522628198206162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1977-06-16, phone=18312345678, department=学生处, classes=暂无班级, subject=语文, createTime=2018-04-24 12:52:04), TeacherInformationVO(id=1013, loginName=mashi, roleType=null, number=T-010, name=马十, sex=男, idCart=522628198706162213, positionalTitles=中学高级教师, nation=汉族, place=天津西青, address=天津市西青区宾水西道延长线399号天津理工大学, birthday=1987-06-16, phone=18312345678, department=教研组, classes=暂无班级, subject=地理, createTime=2018-04-24 12:52:04)])
+2018-04-24 00:52:04,928 - Closing org.springframework.web.context.support.GenericWebApplicationContext@79c97cb: startup date [Tue Apr 24 00:51:58 CST 2018]; root of context hierarchy
+2018-04-24 00:52:04,938 - sims - Shutdown initiated...
+2018-04-24 00:52:04,961 - sims - Shutdown completed.
+2018-04-24 00:52:09,304 - loginName=admin
+2018-04-24 00:52:09,932 - loginName=admin
+2018-04-24 00:52:10,388 - loginName=admin
+2018-04-24 00:52:10,745 - loginName=admin
+2018-04-24 00:52:10,953 - loginName=admin
+2018-04-24 00:52:21,353 - Starting SimsApplication on yang-PC with PID 9552 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 00:52:21,359 - No active profile set, falling back to default profiles: default
+2018-04-24 00:52:21,484 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Tue Apr 24 00:52:21 CST 2018]; root of context hierarchy
+2018-04-24 00:52:23,298 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 00:52:23,311 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 00:52:23,321 - Starting service [Tomcat]
+2018-04-24 00:52:23,321 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 00:52:23,326 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 00:52:23,431 - Initializing Spring embedded WebApplicationContext
+2018-04-24 00:52:23,431 - Root WebApplicationContext: initialization completed in 1947 ms
+2018-04-24 00:52:23,550 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 00:52:23,554 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 00:52:23,555 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 00:52:23,555 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 00:52:23,555 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 00:52:24,087 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:52:24,406 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Tue Apr 24 00:52:21 CST 2018]; root of context hierarchy
+2018-04-24 00:52:24,431 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 00:52:24,456 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 00:52:24,459 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 00:52:24,460 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:52:24,460 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 00:52:24,461 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 00:52:24,465 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 00:52:24,465 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 00:52:24,465 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 00:52:24,465 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:52:24,465 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 00:52:24,465 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 00:52:24,466 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:52:24,466 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 00:52:24,466 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 00:52:24,466 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 00:52:24,470 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 00:52:24,470 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 00:52:24,495 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:52:24,495 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 00:52:24,807 - Registering beans for JMX exposure on startup
+2018-04-24 00:52:24,808 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 00:52:24,814 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 00:52:24,825 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 00:52:24,837 - Using a shared selector for servlet write/read
+2018-04-24 00:52:24,853 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 00:52:24,856 - Started SimsApplication in 4.309 seconds (JVM running for 5.643)
+2018-04-24 00:52:24,963 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 00:52:24,964 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 00:52:24,987 - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2018-04-24 00:52:26,470 - sims - Starting...
+2018-04-24 00:52:26,639 - sims - Start completed.
+2018-04-24 00:52:26,650 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:52:26,650 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:52:26,671 - ==> Parameters: admin(String)
+2018-04-24 00:52:26,671 - ==> Parameters: admin(String)
+2018-04-24 00:52:26,691 - <==      Total: 1
+2018-04-24 00:52:26,692 - <==      Total: 1
+2018-04-24 00:52:26,804 - loginName=admin
+2018-04-24 00:52:27,935 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:52:27,936 - ==> Parameters: admin(String)
+2018-04-24 00:52:27,938 - <==      Total: 1
+2018-04-24 00:52:27,953 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 00:52:27,954 - ==> Parameters: 1(Integer)
+2018-04-24 00:52:27,955 - <==      Total: 1
+2018-04-24 00:52:27,981 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 00:52:27,982 - ==> Parameters: 1(Integer)
+2018-04-24 00:52:27,983 - <==      Total: 1
+2018-04-24 00:52:27,985 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
+2018-04-24 00:52:27,985 - ==> Parameters: 1(Integer), 10(Integer)
+2018-04-24 00:52:27,988 - <==      Total: 10
+2018-04-24 00:59:22,321 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:59:22,322 - ==> Parameters: admin(String)
+2018-04-24 00:59:22,323 - <==      Total: 1
+2018-04-24 00:59:22,324 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 00:59:22,324 - ==> Parameters: 
+2018-04-24 00:59:22,346 - <==      Total: 1
+2018-04-24 00:59:22,348 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 00:59:22,348 - ==> Parameters: 
+2018-04-24 00:59:22,349 - <==      Total: 1
+2018-04-24 00:59:22,350 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 00:59:22,351 - ==> Parameters: 10(Integer)
+2018-04-24 00:59:22,356 - <==      Total: 10
+2018-04-24 00:59:36,520 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 00:59:36,520 - ==> Parameters: admin(String)
+2018-04-24 00:59:36,522 - <==      Total: 1
+2018-04-24 01:00:36,747 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:00:36,748 - ==> Parameters: admin(String)
+2018-04-24 01:00:36,752 - <==      Total: 1
+2018-04-24 01:00:36,753 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:00:36,753 - ==> Parameters: 
+2018-04-24 01:00:36,754 - <==      Total: 1
+2018-04-24 01:00:36,756 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:00:36,756 - ==> Parameters: 
+2018-04-24 01:00:36,757 - <==      Total: 1
+2018-04-24 01:00:36,758 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:00:36,758 - ==> Parameters: 10(Integer)
+2018-04-24 01:00:36,764 - <==      Total: 10
+2018-04-24 01:00:37,656 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:00:37,658 - ==> Parameters: admin(String)
+2018-04-24 01:00:37,661 - <==      Total: 1
+2018-04-24 01:00:37,664 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:00:37,665 - ==> Parameters: 
+2018-04-24 01:00:37,666 - <==      Total: 1
+2018-04-24 01:00:37,667 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:00:37,668 - ==> Parameters: 
+2018-04-24 01:00:37,669 - <==      Total: 1
+2018-04-24 01:00:37,670 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:00:37,670 - ==> Parameters: 10(Integer)
+2018-04-24 01:00:37,675 - <==      Total: 10
+2018-04-24 01:00:44,789 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:00:44,790 - ==> Parameters: admin(String)
+2018-04-24 01:00:44,792 - <==      Total: 1
+2018-04-24 01:00:44,792 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:00:44,793 - ==> Parameters: 
+2018-04-24 01:00:44,794 - <==      Total: 1
+2018-04-24 01:00:44,795 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:00:44,795 - ==> Parameters: 
+2018-04-24 01:00:44,796 - <==      Total: 1
+2018-04-24 01:00:44,797 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:00:44,798 - ==> Parameters: 10(Integer)
+2018-04-24 01:00:44,801 - <==      Total: 10
+2018-04-24 01:01:27,294 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:01:27,295 - ==> Parameters: admin(String)
+2018-04-24 01:01:27,297 - <==      Total: 1
+2018-04-24 01:01:53,509 - Starting SimsApplication on yang-PC with PID 2712 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:01:53,514 - No active profile set, falling back to default profiles: default
+2018-04-24 01:01:53,611 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Tue Apr 24 01:01:53 CST 2018]; root of context hierarchy
+2018-04-24 01:01:55,378 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:01:55,389 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:01:55,399 - Starting service [Tomcat]
+2018-04-24 01:01:55,399 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:01:55,403 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:01:55,514 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:01:55,515 - Root WebApplicationContext: initialization completed in 1904 ms
+2018-04-24 01:01:55,633 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:01:55,637 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:01:55,638 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:01:55,638 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:01:55,638 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:01:56,049 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:01:56,330 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Tue Apr 24 01:01:53 CST 2018]; root of context hierarchy
+2018-04-24 01:01:56,355 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:01:56,379 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:01:56,381 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:01:56,382 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:01:56,382 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:01:56,382 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:01:56,384 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:01:56,384 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:01:56,384 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:01:56,385 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:01:56,385 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:01:56,385 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:01:56,385 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:01:56,385 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:01:56,385 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:01:56,386 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:01:56,389 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:01:56,390 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:01:56,413 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:01:56,413 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:01:56,700 - Registering beans for JMX exposure on startup
+2018-04-24 01:01:56,701 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 01:01:56,706 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 01:01:56,717 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:01:56,727 - Using a shared selector for servlet write/read
+2018-04-24 01:01:56,742 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 01:01:56,746 - Started SimsApplication in 3.938 seconds (JVM running for 4.983)
+2018-04-24 01:01:59,723 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 01:01:59,723 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 01:01:59,743 - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-04-24 01:01:59,801 - sims - Starting...
+2018-04-24 01:01:59,968 - sims - Start completed.
+2018-04-24 01:01:59,972 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:01:59,988 - ==> Parameters: null
+2018-04-24 01:01:59,998 - <==      Total: 0
+2018-04-24 01:02:01,553 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:02:01,553 - ==> Parameters: admin(String)
+2018-04-24 01:02:01,557 - <==      Total: 1
+2018-04-24 01:02:01,626 - loginName=admin
+2018-04-24 01:02:03,809 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:02:03,810 - ==> Parameters: admin(String)
+2018-04-24 01:02:03,811 - <==      Total: 1
+2018-04-24 01:02:03,813 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:02:03,813 - ==> Parameters: 
+2018-04-24 01:02:03,818 - <==      Total: 1
+2018-04-24 01:02:03,856 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:02:03,857 - ==> Parameters: 
+2018-04-24 01:02:03,858 - <==      Total: 1
+2018-04-24 01:02:03,860 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:02:03,860 - ==> Parameters: 10(Integer)
+2018-04-24 01:02:03,869 - <==      Total: 10
+2018-04-24 01:03:21,419 - Starting SimsApplication on yang-PC with PID 9644 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:03:21,424 - No active profile set, falling back to default profiles: default
+2018-04-24 01:03:21,492 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13e547a9: startup date [Tue Apr 24 01:03:21 CST 2018]; root of context hierarchy
+2018-04-24 01:03:22,885 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:03:22,906 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:03:22,921 - Starting service [Tomcat]
+2018-04-24 01:03:22,921 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:03:22,927 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:03:23,085 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:03:23,086 - Root WebApplicationContext: initialization completed in 1593 ms
+2018-04-24 01:03:23,282 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:03:23,290 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:03:23,290 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:03:23,290 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:03:23,290 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:03:24,014 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:03:24,423 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13e547a9: startup date [Tue Apr 24 01:03:21 CST 2018]; root of context hierarchy
+2018-04-24 01:03:24,458 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:03:24,500 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:03:24,504 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:03:24,505 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:03:24,505 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:03:24,506 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:03:24,509 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:03:24,510 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:03:24,510 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:03:24,510 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:03:24,510 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:03:24,511 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:03:24,511 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:03:24,511 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:03:24,511 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:03:24,512 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:03:24,519 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:03:24,520 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:03:24,560 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:03:24,560 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:03:25,045 - Registering beans for JMX exposure on startup
+2018-04-24 01:03:25,051 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 01:03:25,092 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 01:03:25,115 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:03:25,134 - Using a shared selector for servlet write/read
+2018-04-24 01:03:25,167 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 01:03:25,177 - Started SimsApplication in 4.867 seconds (JVM running for 8.048)
+2018-04-24 01:03:37,033 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 01:03:37,034 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 01:03:37,065 - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2018-04-24 01:03:38,900 - sims - Starting...
+2018-04-24 01:03:39,111 - sims - Start completed.
+2018-04-24 01:03:39,123 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:03:39,123 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:03:39,147 - ==> Parameters: admin(String)
+2018-04-24 01:03:39,147 - ==> Parameters: admin(String)
+2018-04-24 01:03:39,165 - <==      Total: 1
+2018-04-24 01:03:39,167 - <==      Total: 1
+2018-04-24 01:03:39,290 - loginName=admin
+2018-04-24 01:03:50,228 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:03:50,238 - ==> Parameters: admin(String)
+2018-04-24 01:03:50,296 - <==      Total: 1
+2018-04-24 01:04:16,881 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:04:16,888 - ==> Parameters: 
+2018-04-24 01:04:16,929 - <==      Total: 1
+2018-04-24 01:04:22,951 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:04:22,959 - ==> Parameters: 
+2018-04-24 01:04:22,995 - <==      Total: 1
+2018-04-24 01:04:23,041 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:04:23,048 - ==> Parameters: 10(Integer)
+2018-04-24 01:04:23,326 - <==      Total: 10
+2018-04-24 01:04:47,268 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:04:47,268 - ==> Parameters: admin(String)
+2018-04-24 01:04:47,270 - <==      Total: 1
+2018-04-24 01:04:58,210 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:04:58,234 - ==> Parameters: admin(String)
+2018-04-24 01:04:58,279 - <==      Total: 1
+2018-04-24 01:05:16,952 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:05:16,953 - ==> Parameters: admin(String)
+2018-04-24 01:05:16,955 - <==      Total: 1
+2018-04-24 01:05:16,956 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:05:16,957 - ==> Parameters: 
+2018-04-24 01:05:16,957 - <==      Total: 1
+2018-04-24 01:05:16,958 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:05:16,959 - ==> Parameters: 
+2018-04-24 01:05:16,960 - <==      Total: 1
+2018-04-24 01:05:16,961 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:05:16,962 - ==> Parameters: 10(Integer)
+2018-04-24 01:05:16,971 - <==      Total: 10
+2018-04-24 01:05:17,446 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:05:17,446 - ==> Parameters: admin(String)
+2018-04-24 01:05:17,448 - <==      Total: 1
+2018-04-24 01:05:17,449 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:05:17,449 - ==> Parameters: 
+2018-04-24 01:05:17,451 - <==      Total: 1
+2018-04-24 01:05:17,453 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:05:17,453 - ==> Parameters: 
+2018-04-24 01:05:17,455 - <==      Total: 1
+2018-04-24 01:05:17,456 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:05:17,456 - ==> Parameters: 10(Integer)
+2018-04-24 01:05:17,461 - <==      Total: 10
+2018-04-24 01:05:27,743 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:05:27,744 - ==> Parameters: admin(String)
+2018-04-24 01:05:27,747 - <==      Total: 1
+2018-04-24 01:05:27,749 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:05:27,750 - ==> Parameters: 
+2018-04-24 01:05:27,751 - <==      Total: 1
+2018-04-24 01:05:27,755 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:05:27,755 - ==> Parameters: 
+2018-04-24 01:05:27,756 - <==      Total: 1
+2018-04-24 01:05:27,756 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:05:27,757 - ==> Parameters: 10(Integer)
+2018-04-24 01:05:27,760 - <==      Total: 10
+2018-04-24 01:05:56,650 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:05:56,650 - ==> Parameters: admin(String)
+2018-04-24 01:05:56,652 - <==      Total: 1
+2018-04-24 01:05:56,653 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:05:56,653 - ==> Parameters: 
+2018-04-24 01:05:56,654 - <==      Total: 1
+2018-04-24 01:05:56,655 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:05:56,656 - ==> Parameters: 
+2018-04-24 01:05:56,656 - <==      Total: 1
+2018-04-24 01:05:56,657 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:05:56,657 - ==> Parameters: 10(Integer)
+2018-04-24 01:05:56,660 - <==      Total: 10
+2018-04-24 01:05:57,659 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:05:57,659 - ==> Parameters: admin(String)
+2018-04-24 01:05:57,661 - <==      Total: 1
+2018-04-24 01:05:57,662 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:05:57,663 - ==> Parameters: 
+2018-04-24 01:05:57,663 - <==      Total: 1
+2018-04-24 01:05:57,665 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:05:57,665 - ==> Parameters: 
+2018-04-24 01:05:57,666 - <==      Total: 1
+2018-04-24 01:05:57,667 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:05:57,667 - ==> Parameters: 10(Integer)
+2018-04-24 01:05:57,670 - <==      Total: 10
+2018-04-24 01:05:58,446 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:05:58,447 - ==> Parameters: admin(String)
+2018-04-24 01:05:58,448 - <==      Total: 1
+2018-04-24 01:05:58,449 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:05:58,449 - ==> Parameters: 
+2018-04-24 01:05:58,450 - <==      Total: 1
+2018-04-24 01:05:58,451 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:05:58,451 - ==> Parameters: 
+2018-04-24 01:05:58,452 - <==      Total: 1
+2018-04-24 01:05:58,453 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:05:58,453 - ==> Parameters: 10(Integer)
+2018-04-24 01:05:58,456 - <==      Total: 10
+2018-04-24 01:06:05,066 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:06:05,067 - ==> Parameters: admin(String)
+2018-04-24 01:06:05,068 - <==      Total: 1
+2018-04-24 01:06:05,068 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:06:05,068 - ==> Parameters: 
+2018-04-24 01:06:05,069 - <==      Total: 1
+2018-04-24 01:06:05,072 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:06:05,073 - ==> Parameters: 
+2018-04-24 01:06:05,074 - <==      Total: 1
+2018-04-24 01:06:05,075 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 01:06:05,075 - ==> Parameters: 10(Integer), 10(Integer)
+2018-04-24 01:06:05,077 - <==      Total: 10
+2018-04-24 01:06:06,027 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:06:06,028 - ==> Parameters: admin(String)
+2018-04-24 01:06:06,029 - <==      Total: 1
+2018-04-24 01:06:06,030 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:06:06,030 - ==> Parameters: 
+2018-04-24 01:06:06,031 - <==      Total: 1
+2018-04-24 01:06:06,032 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:06:06,032 - ==> Parameters: 
+2018-04-24 01:06:06,034 - <==      Total: 1
+2018-04-24 01:06:06,035 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:06:06,035 - ==> Parameters: 10(Integer)
+2018-04-24 01:06:06,038 - <==      Total: 10
+2018-04-24 01:07:09,029 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:07:09,030 - ==> Parameters: admin(String)
+2018-04-24 01:07:09,032 - <==      Total: 1
+2018-04-24 01:07:09,033 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:07:09,033 - ==> Parameters: 
+2018-04-24 01:07:09,035 - <==      Total: 1
+2018-04-24 01:07:09,036 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:07:09,036 - ==> Parameters: 
+2018-04-24 01:07:09,037 - <==      Total: 1
+2018-04-24 01:07:09,038 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:07:09,038 - ==> Parameters: 10(Integer)
+2018-04-24 01:07:09,041 - <==      Total: 10
+2018-04-24 01:07:18,137 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:07:18,138 - ==> Parameters: admin(String)
+2018-04-24 01:07:18,139 - <==      Total: 1
+2018-04-24 01:07:18,139 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:07:18,140 - ==> Parameters: 
+2018-04-24 01:07:18,141 - <==      Total: 1
+2018-04-24 01:07:18,141 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:07:18,142 - ==> Parameters: 
+2018-04-24 01:07:18,142 - <==      Total: 1
+2018-04-24 01:07:18,143 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:07:18,143 - ==> Parameters: 10(Integer)
+2018-04-24 01:07:18,145 - <==      Total: 10
+2018-04-24 01:07:36,771 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:07:36,771 - ==> Parameters: admin(String)
+2018-04-24 01:07:36,774 - <==      Total: 1
+2018-04-24 01:07:36,775 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:07:36,775 - ==> Parameters: 
+2018-04-24 01:07:36,776 - <==      Total: 1
+2018-04-24 01:07:36,777 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:07:36,777 - ==> Parameters: 
+2018-04-24 01:07:36,779 - <==      Total: 1
+2018-04-24 01:07:36,780 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:07:36,781 - ==> Parameters: 10(Integer)
+2018-04-24 01:07:36,783 - <==      Total: 10
+2018-04-24 01:08:05,863 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:08:05,863 - ==> Parameters: admin(String)
+2018-04-24 01:08:05,865 - <==      Total: 1
+2018-04-24 01:08:05,866 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:08:05,866 - ==> Parameters: 
+2018-04-24 01:08:05,867 - <==      Total: 1
+2018-04-24 01:08:05,868 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:08:05,868 - ==> Parameters: 
+2018-04-24 01:08:05,869 - <==      Total: 1
+2018-04-24 01:08:05,870 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:08:05,870 - ==> Parameters: 10(Integer)
+2018-04-24 01:08:05,873 - <==      Total: 10
+2018-04-24 01:08:30,907 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:08:30,907 - ==> Parameters: admin(String)
+2018-04-24 01:08:30,909 - <==      Total: 1
+2018-04-24 01:08:30,909 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:08:30,910 - ==> Parameters: 
+2018-04-24 01:08:30,911 - <==      Total: 1
+2018-04-24 01:08:30,912 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:08:30,912 - ==> Parameters: 
+2018-04-24 01:08:30,913 - <==      Total: 1
+2018-04-24 01:08:30,914 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:08:30,915 - ==> Parameters: 10(Integer)
+2018-04-24 01:08:30,917 - <==      Total: 10
+2018-04-24 01:10:04,090 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:10:04,091 - ==> Parameters: admin(String)
+2018-04-24 01:10:04,092 - <==      Total: 1
+2018-04-24 01:10:04,093 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:10:04,093 - ==> Parameters: 
+2018-04-24 01:10:04,094 - <==      Total: 1
+2018-04-24 01:10:04,095 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:10:04,096 - ==> Parameters: 
+2018-04-24 01:10:04,096 - <==      Total: 1
+2018-04-24 01:10:04,097 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:10:04,098 - ==> Parameters: 10(Integer)
+2018-04-24 01:10:04,100 - <==      Total: 10
+2018-04-24 01:10:29,907 - loginName=admin
+2018-04-24 01:10:30,467 - loginName=admin
+2018-04-24 01:10:31,238 - loginName=admin
+2018-04-24 01:10:32,276 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:10:32,276 - ==> Parameters: admin(String)
+2018-04-24 01:10:32,277 - <==      Total: 1
+2018-04-24 01:10:32,278 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:10:32,278 - ==> Parameters: 
+2018-04-24 01:10:32,279 - <==      Total: 1
+2018-04-24 01:10:32,280 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:10:32,280 - ==> Parameters: 
+2018-04-24 01:10:32,282 - <==      Total: 1
+2018-04-24 01:10:32,284 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:10:32,284 - ==> Parameters: 10(Integer)
+2018-04-24 01:10:32,286 - <==      Total: 10
+2018-04-24 01:10:41,083 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:10:41,083 - ==> Parameters: admin(String)
+2018-04-24 01:10:41,084 - <==      Total: 1
+2018-04-24 01:10:41,085 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:10:41,085 - ==> Parameters: 
+2018-04-24 01:10:41,087 - <==      Total: 1
+2018-04-24 01:10:41,088 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:10:41,089 - ==> Parameters: 
+2018-04-24 01:10:41,090 - <==      Total: 1
+2018-04-24 01:10:41,090 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:10:41,091 - ==> Parameters: 10(Integer)
+2018-04-24 01:10:41,093 - <==      Total: 10
+2018-04-24 01:10:56,437 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:10:56,437 - ==> Parameters: admin(String)
+2018-04-24 01:10:56,439 - <==      Total: 1
+2018-04-24 01:10:56,439 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:10:56,439 - ==> Parameters: 
+2018-04-24 01:10:56,440 - <==      Total: 1
+2018-04-24 01:10:56,441 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:10:56,442 - ==> Parameters: 
+2018-04-24 01:10:56,442 - <==      Total: 1
+2018-04-24 01:10:56,443 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:10:56,444 - ==> Parameters: 10(Integer)
+2018-04-24 01:10:56,447 - <==      Total: 10
+2018-04-24 01:11:13,160 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:11:13,160 - ==> Parameters: admin(String)
+2018-04-24 01:11:13,161 - <==      Total: 1
+2018-04-24 01:11:13,162 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:11:13,162 - ==> Parameters: 
+2018-04-24 01:11:13,162 - <==      Total: 1
+2018-04-24 01:11:13,164 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:11:13,164 - ==> Parameters: 
+2018-04-24 01:11:13,164 - <==      Total: 1
+2018-04-24 01:11:13,165 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:11:13,165 - ==> Parameters: 10(Integer)
+2018-04-24 01:11:13,167 - <==      Total: 10
+2018-04-24 01:11:31,945 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:11:31,946 - ==> Parameters: admin(String)
+2018-04-24 01:11:31,947 - <==      Total: 1
+2018-04-24 01:11:31,947 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:11:31,948 - ==> Parameters: 
+2018-04-24 01:11:31,948 - <==      Total: 1
+2018-04-24 01:11:31,949 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:11:31,949 - ==> Parameters: 
+2018-04-24 01:11:31,950 - <==      Total: 1
+2018-04-24 01:11:31,951 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:11:31,951 - ==> Parameters: 10(Integer)
+2018-04-24 01:11:31,953 - <==      Total: 10
+2018-04-24 01:11:34,637 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:11:34,638 - ==> Parameters: admin(String)
+2018-04-24 01:11:34,639 - <==      Total: 1
+2018-04-24 01:11:34,639 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:11:34,639 - ==> Parameters: 
+2018-04-24 01:11:34,640 - <==      Total: 1
+2018-04-24 01:11:34,641 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:11:34,642 - ==> Parameters: 
+2018-04-24 01:11:34,642 - <==      Total: 1
+2018-04-24 01:11:34,643 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:11:34,643 - ==> Parameters: 10(Integer)
+2018-04-24 01:11:34,646 - <==      Total: 10
+2018-04-24 01:12:27,740 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:12:27,740 - ==> Parameters: admin(String)
+2018-04-24 01:12:27,742 - <==      Total: 1
+2018-04-24 01:12:27,742 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:12:27,742 - ==> Parameters: 
+2018-04-24 01:12:27,743 - <==      Total: 1
+2018-04-24 01:12:27,744 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:12:27,744 - ==> Parameters: 
+2018-04-24 01:12:27,746 - <==      Total: 1
+2018-04-24 01:12:27,747 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:12:27,748 - ==> Parameters: 10(Integer)
+2018-04-24 01:12:27,749 - <==      Total: 10
+2018-04-24 01:12:29,002 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:12:29,002 - ==> Parameters: admin(String)
+2018-04-24 01:12:29,003 - <==      Total: 1
+2018-04-24 01:12:29,004 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:12:29,004 - ==> Parameters: 
+2018-04-24 01:12:29,005 - <==      Total: 1
+2018-04-24 01:12:29,007 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:12:29,007 - ==> Parameters: 
+2018-04-24 01:12:29,008 - <==      Total: 1
+2018-04-24 01:12:29,009 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:12:29,009 - ==> Parameters: 10(Integer)
+2018-04-24 01:12:29,011 - <==      Total: 10
+2018-04-24 01:12:30,234 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:12:30,234 - ==> Parameters: admin(String)
+2018-04-24 01:12:30,235 - <==      Total: 1
+2018-04-24 01:12:30,236 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:12:30,236 - ==> Parameters: 
+2018-04-24 01:12:30,237 - <==      Total: 1
+2018-04-24 01:12:30,237 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:12:30,238 - ==> Parameters: 
+2018-04-24 01:12:30,238 - <==      Total: 1
+2018-04-24 01:12:30,239 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:12:30,240 - ==> Parameters: 10(Integer)
+2018-04-24 01:12:30,242 - <==      Total: 10
+2018-04-24 01:14:17,257 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:14:17,258 - ==> Parameters: admin(String)
+2018-04-24 01:14:17,259 - <==      Total: 1
+2018-04-24 01:14:17,260 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:14:17,261 - ==> Parameters: 
+2018-04-24 01:14:17,262 - <==      Total: 1
+2018-04-24 01:14:17,263 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:14:17,263 - ==> Parameters: 
+2018-04-24 01:14:17,264 - <==      Total: 1
+2018-04-24 01:14:17,265 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:14:17,265 - ==> Parameters: 10(Integer)
+2018-04-24 01:14:17,267 - <==      Total: 10
+2018-04-24 01:14:32,136 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:14:32,136 - ==> Parameters: admin(String)
+2018-04-24 01:14:32,138 - <==      Total: 1
+2018-04-24 01:14:32,138 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:14:32,138 - ==> Parameters: 
+2018-04-24 01:14:32,139 - <==      Total: 1
+2018-04-24 01:14:32,141 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:14:32,141 - ==> Parameters: 
+2018-04-24 01:14:32,143 - <==      Total: 1
+2018-04-24 01:14:32,144 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:14:32,144 - ==> Parameters: 10(Integer)
+2018-04-24 01:14:32,146 - <==      Total: 10
+2018-04-24 01:14:33,661 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:14:33,661 - ==> Parameters: admin(String)
+2018-04-24 01:14:33,663 - <==      Total: 1
+2018-04-24 01:14:33,663 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:14:33,663 - ==> Parameters: 
+2018-04-24 01:14:33,664 - <==      Total: 1
+2018-04-24 01:14:33,665 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:14:33,665 - ==> Parameters: 
+2018-04-24 01:14:33,666 - <==      Total: 1
+2018-04-24 01:14:33,667 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:14:33,667 - ==> Parameters: 10(Integer)
+2018-04-24 01:14:33,670 - <==      Total: 10
+2018-04-24 01:15:12,188 - Starting SimsApplication on yang-PC with PID 9088 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:15:12,251 - No active profile set, falling back to default profiles: default
+2018-04-24 01:15:12,590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71454b9d: startup date [Tue Apr 24 01:15:12 CST 2018]; root of context hierarchy
+2018-04-24 01:15:14,798 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:15:14,844 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:15:14,861 - Starting service [Tomcat]
+2018-04-24 01:15:14,861 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:15:14,866 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:15:14,996 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:15:14,996 - Root WebApplicationContext: initialization completed in 2406 ms
+2018-04-24 01:15:15,212 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:15:15,217 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:15:15,218 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:15:15,218 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:15:15,218 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:15:16,128 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:15:16,673 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71454b9d: startup date [Tue Apr 24 01:15:12 CST 2018]; root of context hierarchy
+2018-04-24 01:15:16,720 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:15:16,765 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:15:16,769 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:15:16,769 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:15:16,769 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:15:16,770 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:15:16,773 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:15:16,774 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:15:16,774 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:15:16,775 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:15:16,775 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:15:16,775 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:15:16,775 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:15:16,775 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:15:16,776 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:15:16,776 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:15:16,783 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:15:16,784 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:15:16,837 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:15:16,838 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:15:17,336 - Registering beans for JMX exposure on startup
+2018-04-24 01:15:17,337 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 01:15:17,350 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 01:15:17,369 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:15:17,400 - Using a shared selector for servlet write/read
+2018-04-24 01:15:17,449 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 01:15:17,484 - Started SimsApplication in 6.248 seconds (JVM running for 7.905)
+2018-04-24 01:15:24,431 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 01:15:24,432 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 01:15:24,463 - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2018-04-24 01:15:26,370 - sims - Starting...
+2018-04-24 01:15:26,570 - sims - Start completed.
+2018-04-24 01:15:26,586 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:15:26,586 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:15:26,613 - ==> Parameters: admin(String)
+2018-04-24 01:15:26,613 - ==> Parameters: admin(String)
+2018-04-24 01:15:26,630 - <==      Total: 1
+2018-04-24 01:15:26,630 - <==      Total: 1
+2018-04-24 01:15:26,728 - loginName=admin
+2018-04-24 01:15:28,493 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:15:28,494 - ==> Parameters: admin(String)
+2018-04-24 01:15:28,497 - <==      Total: 1
+2018-04-24 01:15:28,498 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:15:28,498 - ==> Parameters: 
+2018-04-24 01:15:28,500 - <==      Total: 1
+2018-04-24 01:15:28,545 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:15:28,546 - ==> Parameters: 
+2018-04-24 01:15:28,550 - <==      Total: 1
+2018-04-24 01:15:28,553 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:15:28,553 - ==> Parameters: 10(Integer)
+2018-04-24 01:15:28,557 - <==      Total: 10
+2018-04-24 01:16:12,363 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:16:12,364 - ==> Parameters: admin(String)
+2018-04-24 01:16:12,365 - <==      Total: 1
+2018-04-24 01:16:12,367 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:16:12,367 - ==> Parameters: 
+2018-04-24 01:16:12,368 - <==      Total: 1
+2018-04-24 01:16:12,369 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:16:12,370 - ==> Parameters: 
+2018-04-24 01:16:12,371 - <==      Total: 1
+2018-04-24 01:16:12,372 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:16:12,372 - ==> Parameters: 10(Integer)
+2018-04-24 01:16:12,381 - <==      Total: 10
+2018-04-24 01:16:13,515 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:16:13,515 - ==> Parameters: admin(String)
+2018-04-24 01:16:13,518 - <==      Total: 1
+2018-04-24 01:16:13,519 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:16:13,520 - ==> Parameters: 
+2018-04-24 01:16:13,523 - <==      Total: 1
+2018-04-24 01:16:13,524 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:16:13,525 - ==> Parameters: 
+2018-04-24 01:16:13,526 - <==      Total: 1
+2018-04-24 01:16:13,527 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:16:13,527 - ==> Parameters: 10(Integer)
+2018-04-24 01:16:13,531 - <==      Total: 10
+2018-04-24 01:16:14,853 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:16:14,853 - ==> Parameters: admin(String)
+2018-04-24 01:16:14,855 - <==      Total: 1
+2018-04-24 01:16:14,856 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:16:14,856 - ==> Parameters: 
+2018-04-24 01:16:14,858 - <==      Total: 1
+2018-04-24 01:16:14,859 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:16:14,860 - ==> Parameters: 
+2018-04-24 01:16:14,863 - <==      Total: 1
+2018-04-24 01:16:14,865 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:16:14,866 - ==> Parameters: 10(Integer)
+2018-04-24 01:16:14,869 - <==      Total: 10
+2018-04-24 01:16:55,587 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:16:55,587 - ==> Parameters: admin(String)
+2018-04-24 01:16:55,591 - <==      Total: 1
+2018-04-24 01:16:55,593 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:16:55,593 - ==> Parameters: 
+2018-04-24 01:16:55,594 - <==      Total: 1
+2018-04-24 01:16:55,595 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:16:55,595 - ==> Parameters: 
+2018-04-24 01:16:55,596 - <==      Total: 1
+2018-04-24 01:16:55,597 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:16:55,597 - ==> Parameters: 10(Integer)
+2018-04-24 01:16:55,604 - <==      Total: 10
+2018-04-24 01:17:16,437 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:17:16,437 - ==> Parameters: admin(String)
+2018-04-24 01:17:16,439 - <==      Total: 1
+2018-04-24 01:17:16,439 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:17:16,439 - ==> Parameters: 
+2018-04-24 01:17:16,440 - <==      Total: 1
+2018-04-24 01:17:16,441 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:17:16,441 - ==> Parameters: 
+2018-04-24 01:17:16,442 - <==      Total: 1
+2018-04-24 01:17:16,443 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:17:16,443 - ==> Parameters: 10(Integer)
+2018-04-24 01:17:16,446 - <==      Total: 10
+2018-04-24 01:18:41,076 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:18:41,076 - ==> Parameters: admin(String)
+2018-04-24 01:18:41,078 - <==      Total: 1
+2018-04-24 01:18:41,079 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:18:41,079 - ==> Parameters: 
+2018-04-24 01:18:41,080 - <==      Total: 1
+2018-04-24 01:18:41,081 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:18:41,081 - ==> Parameters: 
+2018-04-24 01:18:41,082 - <==      Total: 1
+2018-04-24 01:18:41,083 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:18:41,084 - ==> Parameters: 10(Integer)
+2018-04-24 01:18:41,087 - <==      Total: 10
+2018-04-24 01:18:43,554 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:18:43,554 - ==> Parameters: admin(String)
+2018-04-24 01:18:43,555 - <==      Total: 1
+2018-04-24 01:18:43,556 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:18:43,556 - ==> Parameters: 
+2018-04-24 01:18:43,557 - <==      Total: 1
+2018-04-24 01:18:43,558 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:18:43,558 - ==> Parameters: 
+2018-04-24 01:18:43,559 - <==      Total: 1
+2018-04-24 01:18:43,560 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 01:18:43,560 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 01:18:43,562 - <==      Total: 2
+2018-04-24 01:18:44,503 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:18:44,504 - ==> Parameters: admin(String)
+2018-04-24 01:18:44,505 - <==      Total: 1
+2018-04-24 01:18:44,506 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:18:44,506 - ==> Parameters: 
+2018-04-24 01:18:44,507 - <==      Total: 1
+2018-04-24 01:18:44,508 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:18:44,509 - ==> Parameters: 
+2018-04-24 01:18:44,510 - <==      Total: 1
+2018-04-24 01:18:44,511 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 01:18:44,511 - ==> Parameters: 10(Integer), 10(Integer)
+2018-04-24 01:18:44,514 - <==      Total: 10
+2018-04-24 01:18:45,466 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:18:45,466 - ==> Parameters: admin(String)
+2018-04-24 01:18:45,467 - <==      Total: 1
+2018-04-24 01:18:45,468 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:18:45,468 - ==> Parameters: 
+2018-04-24 01:18:45,469 - <==      Total: 1
+2018-04-24 01:18:45,470 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:18:45,470 - ==> Parameters: 
+2018-04-24 01:18:45,471 - <==      Total: 1
+2018-04-24 01:18:45,472 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:18:45,473 - ==> Parameters: 10(Integer)
+2018-04-24 01:18:45,475 - <==      Total: 10
+2018-04-24 01:18:48,064 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:18:48,065 - ==> Parameters: admin(String)
+2018-04-24 01:18:48,066 - <==      Total: 1
+2018-04-24 01:18:48,066 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:18:48,067 - ==> Parameters: 
+2018-04-24 01:18:48,068 - <==      Total: 1
+2018-04-24 01:18:48,069 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:18:48,069 - ==> Parameters: 
+2018-04-24 01:18:48,071 - <==      Total: 1
+2018-04-24 01:18:48,072 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:18:48,072 - ==> Parameters: 30(Integer)
+2018-04-24 01:18:48,076 - <==      Total: 22
+2018-04-24 01:19:41,748 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:19:41,749 - ==> Parameters: admin(String)
+2018-04-24 01:19:41,750 - <==      Total: 1
+2018-04-24 01:19:41,751 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:19:41,751 - ==> Parameters: 
+2018-04-24 01:19:41,752 - <==      Total: 1
+2018-04-24 01:19:41,753 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:19:41,754 - ==> Parameters: 
+2018-04-24 01:19:41,756 - <==      Total: 1
+2018-04-24 01:19:41,758 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:19:41,758 - ==> Parameters: 10(Integer)
+2018-04-24 01:19:41,761 - <==      Total: 10
+2018-04-24 01:20:20,421 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:20:20,421 - ==> Parameters: admin(String)
+2018-04-24 01:20:20,424 - <==      Total: 1
+2018-04-24 01:20:20,425 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:20:20,426 - ==> Parameters: 
+2018-04-24 01:20:20,427 - <==      Total: 1
+2018-04-24 01:20:20,428 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:20:20,428 - ==> Parameters: 
+2018-04-24 01:20:20,429 - <==      Total: 1
+2018-04-24 01:20:20,430 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:20:20,430 - ==> Parameters: 10(Integer)
+2018-04-24 01:20:20,432 - <==      Total: 10
+2018-04-24 01:20:53,537 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:20:53,538 - ==> Parameters: admin(String)
+2018-04-24 01:20:53,542 - <==      Total: 1
+2018-04-24 01:20:53,569 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 01:20:53,570 - ==> Parameters: 1(Integer)
+2018-04-24 01:20:53,571 - <==      Total: 1
+2018-04-24 01:20:53,581 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 01:20:53,582 - ==> Parameters: 1(Integer)
+2018-04-24 01:20:53,583 - <==      Total: 1
+2018-04-24 01:20:53,584 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
+2018-04-24 01:20:53,584 - ==> Parameters: 1(Integer), 10(Integer)
+2018-04-24 01:20:53,586 - <==      Total: 10
+2018-04-24 01:21:14,047 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:14,047 - ==> Parameters: admin(String)
+2018-04-24 01:21:14,049 - <==      Total: 1
+2018-04-24 01:21:14,050 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:14,051 - ==> Parameters: 
+2018-04-24 01:21:14,052 - <==      Total: 1
+2018-04-24 01:21:14,053 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:14,053 - ==> Parameters: 
+2018-04-24 01:21:14,054 - <==      Total: 1
+2018-04-24 01:21:14,055 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:14,055 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:14,057 - <==      Total: 10
+2018-04-24 01:21:16,263 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:16,263 - ==> Parameters: admin(String)
+2018-04-24 01:21:16,264 - <==      Total: 1
+2018-04-24 01:21:16,265 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:16,265 - ==> Parameters: 
+2018-04-24 01:21:16,266 - <==      Total: 1
+2018-04-24 01:21:16,268 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:16,269 - ==> Parameters: 
+2018-04-24 01:21:16,271 - <==      Total: 1
+2018-04-24 01:21:16,272 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:16,273 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:16,276 - <==      Total: 10
+2018-04-24 01:21:27,683 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:27,684 - ==> Parameters: admin(String)
+2018-04-24 01:21:27,685 - <==      Total: 1
+2018-04-24 01:21:27,686 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:27,686 - ==> Parameters: 
+2018-04-24 01:21:27,687 - <==      Total: 1
+2018-04-24 01:21:27,688 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:27,689 - ==> Parameters: 
+2018-04-24 01:21:27,690 - <==      Total: 1
+2018-04-24 01:21:27,691 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:27,692 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:27,694 - <==      Total: 10
+2018-04-24 01:21:28,965 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:28,965 - ==> Parameters: admin(String)
+2018-04-24 01:21:28,966 - <==      Total: 1
+2018-04-24 01:21:28,967 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:28,967 - ==> Parameters: 
+2018-04-24 01:21:28,968 - <==      Total: 1
+2018-04-24 01:21:28,969 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:28,969 - ==> Parameters: 
+2018-04-24 01:21:28,971 - <==      Total: 1
+2018-04-24 01:21:28,972 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:28,972 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:28,975 - <==      Total: 10
+2018-04-24 01:21:37,239 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:37,239 - ==> Parameters: admin(String)
+2018-04-24 01:21:37,240 - <==      Total: 1
+2018-04-24 01:21:37,241 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:37,241 - ==> Parameters: 
+2018-04-24 01:21:37,242 - <==      Total: 1
+2018-04-24 01:21:37,243 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:37,243 - ==> Parameters: 
+2018-04-24 01:21:37,244 - <==      Total: 1
+2018-04-24 01:21:37,245 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:37,245 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:37,247 - <==      Total: 10
+2018-04-24 01:21:41,530 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:41,531 - ==> Parameters: admin(String)
+2018-04-24 01:21:41,532 - <==      Total: 1
+2018-04-24 01:21:41,533 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:41,533 - ==> Parameters: 
+2018-04-24 01:21:41,534 - <==      Total: 1
+2018-04-24 01:21:41,535 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:41,535 - ==> Parameters: 
+2018-04-24 01:21:41,536 - <==      Total: 1
+2018-04-24 01:21:41,537 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:41,537 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:41,539 - <==      Total: 10
+2018-04-24 01:21:51,057 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:51,057 - ==> Parameters: admin(String)
+2018-04-24 01:21:51,058 - <==      Total: 1
+2018-04-24 01:21:51,059 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:51,059 - ==> Parameters: 
+2018-04-24 01:21:51,060 - <==      Total: 1
+2018-04-24 01:21:51,061 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:51,061 - ==> Parameters: 
+2018-04-24 01:21:51,062 - <==      Total: 1
+2018-04-24 01:21:51,063 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:51,063 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:51,065 - <==      Total: 10
+2018-04-24 01:21:54,698 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:21:54,698 - ==> Parameters: admin(String)
+2018-04-24 01:21:54,699 - <==      Total: 1
+2018-04-24 01:21:54,700 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:21:54,700 - ==> Parameters: 
+2018-04-24 01:21:54,701 - <==      Total: 1
+2018-04-24 01:21:54,702 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:21:54,702 - ==> Parameters: 
+2018-04-24 01:21:54,704 - <==      Total: 1
+2018-04-24 01:21:54,705 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:21:54,705 - ==> Parameters: 10(Integer)
+2018-04-24 01:21:54,707 - <==      Total: 10
+2018-04-24 01:22:01,917 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:01,917 - ==> Parameters: admin(String)
+2018-04-24 01:22:01,918 - <==      Total: 1
+2018-04-24 01:22:01,919 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:01,919 - ==> Parameters: 
+2018-04-24 01:22:01,919 - <==      Total: 1
+2018-04-24 01:22:01,921 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:01,921 - ==> Parameters: 
+2018-04-24 01:22:01,922 - <==      Total: 1
+2018-04-24 01:22:01,923 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:01,923 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:01,926 - <==      Total: 10
+2018-04-24 01:22:06,294 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:06,294 - ==> Parameters: admin(String)
+2018-04-24 01:22:06,295 - <==      Total: 1
+2018-04-24 01:22:06,296 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:06,296 - ==> Parameters: 
+2018-04-24 01:22:06,297 - <==      Total: 1
+2018-04-24 01:22:06,297 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:06,298 - ==> Parameters: 
+2018-04-24 01:22:06,298 - <==      Total: 1
+2018-04-24 01:22:06,299 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:06,299 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:06,302 - <==      Total: 10
+2018-04-24 01:22:09,773 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:09,774 - ==> Parameters: admin(String)
+2018-04-24 01:22:09,775 - <==      Total: 1
+2018-04-24 01:22:09,775 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:09,775 - ==> Parameters: 
+2018-04-24 01:22:09,776 - <==      Total: 1
+2018-04-24 01:22:09,778 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:09,778 - ==> Parameters: 
+2018-04-24 01:22:09,780 - <==      Total: 1
+2018-04-24 01:22:09,781 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:09,781 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:09,783 - <==      Total: 10
+2018-04-24 01:22:13,448 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:13,448 - ==> Parameters: admin(String)
+2018-04-24 01:22:13,449 - <==      Total: 1
+2018-04-24 01:22:13,449 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:13,450 - ==> Parameters: 
+2018-04-24 01:22:13,450 - <==      Total: 1
+2018-04-24 01:22:13,451 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:13,451 - ==> Parameters: 
+2018-04-24 01:22:13,452 - <==      Total: 1
+2018-04-24 01:22:13,453 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:13,453 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:13,455 - <==      Total: 10
+2018-04-24 01:22:14,174 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:14,175 - ==> Parameters: admin(String)
+2018-04-24 01:22:14,176 - <==      Total: 1
+2018-04-24 01:22:14,176 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:14,176 - ==> Parameters: 
+2018-04-24 01:22:14,177 - <==      Total: 1
+2018-04-24 01:22:14,179 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:14,179 - ==> Parameters: 
+2018-04-24 01:22:14,180 - <==      Total: 1
+2018-04-24 01:22:14,181 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:14,181 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:14,184 - <==      Total: 10
+2018-04-24 01:22:14,354 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:14,354 - ==> Parameters: admin(String)
+2018-04-24 01:22:14,355 - <==      Total: 1
+2018-04-24 01:22:14,356 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:14,356 - ==> Parameters: 
+2018-04-24 01:22:14,357 - <==      Total: 1
+2018-04-24 01:22:14,358 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:14,358 - ==> Parameters: 
+2018-04-24 01:22:14,359 - <==      Total: 1
+2018-04-24 01:22:14,360 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:14,360 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:14,362 - <==      Total: 10
+2018-04-24 01:22:18,085 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:18,086 - ==> Parameters: admin(String)
+2018-04-24 01:22:18,087 - <==      Total: 1
+2018-04-24 01:22:18,087 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:18,087 - ==> Parameters: 
+2018-04-24 01:22:18,088 - <==      Total: 1
+2018-04-24 01:22:18,089 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:18,089 - ==> Parameters: 
+2018-04-24 01:22:18,090 - <==      Total: 1
+2018-04-24 01:22:18,091 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:18,091 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:18,093 - <==      Total: 10
+2018-04-24 01:22:33,399 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:33,400 - ==> Parameters: admin(String)
+2018-04-24 01:22:33,401 - <==      Total: 1
+2018-04-24 01:22:33,401 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:33,402 - ==> Parameters: 
+2018-04-24 01:22:33,402 - <==      Total: 1
+2018-04-24 01:22:33,403 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:33,404 - ==> Parameters: 
+2018-04-24 01:22:33,404 - <==      Total: 1
+2018-04-24 01:22:33,406 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:33,406 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:33,408 - <==      Total: 10
+2018-04-24 01:22:50,299 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:50,300 - ==> Parameters: admin(String)
+2018-04-24 01:22:50,301 - <==      Total: 1
+2018-04-24 01:22:50,301 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:50,301 - ==> Parameters: 
+2018-04-24 01:22:50,302 - <==      Total: 1
+2018-04-24 01:22:50,303 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:50,303 - ==> Parameters: 
+2018-04-24 01:22:50,303 - <==      Total: 1
+2018-04-24 01:22:50,304 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:50,304 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:50,306 - <==      Total: 10
+2018-04-24 01:22:58,066 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:22:58,066 - ==> Parameters: admin(String)
+2018-04-24 01:22:58,068 - <==      Total: 1
+2018-04-24 01:22:58,069 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:22:58,070 - ==> Parameters: 
+2018-04-24 01:22:58,071 - <==      Total: 1
+2018-04-24 01:22:58,072 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:22:58,072 - ==> Parameters: 
+2018-04-24 01:22:58,072 - <==      Total: 1
+2018-04-24 01:22:58,073 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:22:58,073 - ==> Parameters: 10(Integer)
+2018-04-24 01:22:58,075 - <==      Total: 10
+2018-04-24 01:23:06,210 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:23:06,210 - ==> Parameters: admin(String)
+2018-04-24 01:23:06,211 - <==      Total: 1
+2018-04-24 01:23:06,211 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:23:06,211 - ==> Parameters: 
+2018-04-24 01:23:06,212 - <==      Total: 1
+2018-04-24 01:23:06,213 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:23:06,213 - ==> Parameters: 
+2018-04-24 01:23:06,214 - <==      Total: 1
+2018-04-24 01:23:06,215 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:23:06,215 - ==> Parameters: 10(Integer)
+2018-04-24 01:23:06,216 - <==      Total: 10
+2018-04-24 01:23:06,853 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:23:06,853 - ==> Parameters: admin(String)
+2018-04-24 01:23:06,854 - <==      Total: 1
+2018-04-24 01:23:06,855 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:23:06,855 - ==> Parameters: 
+2018-04-24 01:23:06,857 - <==      Total: 1
+2018-04-24 01:23:06,858 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:23:06,858 - ==> Parameters: 
+2018-04-24 01:23:06,860 - <==      Total: 1
+2018-04-24 01:23:06,861 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:23:06,861 - ==> Parameters: 10(Integer)
+2018-04-24 01:23:06,863 - <==      Total: 10
+2018-04-24 01:23:25,952 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:23:25,952 - ==> Parameters: admin(String)
+2018-04-24 01:23:25,953 - <==      Total: 1
+2018-04-24 01:23:25,954 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:23:25,954 - ==> Parameters: 
+2018-04-24 01:23:25,955 - <==      Total: 1
+2018-04-24 01:23:25,956 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:23:25,956 - ==> Parameters: 
+2018-04-24 01:23:25,956 - <==      Total: 1
+2018-04-24 01:23:25,957 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:23:25,957 - ==> Parameters: 10(Integer)
+2018-04-24 01:23:25,959 - <==      Total: 10
+2018-04-24 01:23:30,668 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:23:30,668 - ==> Parameters: admin(String)
+2018-04-24 01:23:30,670 - <==      Total: 1
+2018-04-24 01:23:30,670 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:23:30,671 - ==> Parameters: 
+2018-04-24 01:23:30,671 - <==      Total: 1
+2018-04-24 01:23:30,672 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:23:30,672 - ==> Parameters: 
+2018-04-24 01:23:30,673 - <==      Total: 1
+2018-04-24 01:23:30,674 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:23:30,674 - ==> Parameters: 10(Integer)
+2018-04-24 01:23:30,675 - <==      Total: 10
+2018-04-24 01:23:50,254 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:23:50,254 - ==> Parameters: admin(String)
+2018-04-24 01:23:50,255 - <==      Total: 1
+2018-04-24 01:23:50,255 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:23:50,255 - ==> Parameters: 
+2018-04-24 01:23:50,256 - <==      Total: 1
+2018-04-24 01:23:50,257 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:23:50,257 - ==> Parameters: 
+2018-04-24 01:23:50,258 - <==      Total: 1
+2018-04-24 01:23:50,258 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:23:50,259 - ==> Parameters: 10(Integer)
+2018-04-24 01:23:50,261 - <==      Total: 10
+2018-04-24 01:23:51,472 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:23:51,474 - ==> Parameters: admin(String)
+2018-04-24 01:23:51,476 - <==      Total: 1
+2018-04-24 01:23:51,476 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:23:51,476 - ==> Parameters: 
+2018-04-24 01:23:51,477 - <==      Total: 1
+2018-04-24 01:23:51,478 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:23:51,478 - ==> Parameters: 
+2018-04-24 01:23:51,479 - <==      Total: 1
+2018-04-24 01:23:51,480 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:23:51,480 - ==> Parameters: 10(Integer)
+2018-04-24 01:23:51,482 - <==      Total: 10
+2018-04-24 01:24:10,251 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:24:10,251 - ==> Parameters: admin(String)
+2018-04-24 01:24:10,252 - <==      Total: 1
+2018-04-24 01:24:10,253 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:24:10,253 - ==> Parameters: 
+2018-04-24 01:24:10,254 - <==      Total: 1
+2018-04-24 01:24:10,255 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:24:10,256 - ==> Parameters: 
+2018-04-24 01:24:10,256 - <==      Total: 1
+2018-04-24 01:24:10,257 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:24:10,257 - ==> Parameters: 10(Integer)
+2018-04-24 01:24:10,259 - <==      Total: 10
+2018-04-24 01:24:37,082 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:24:37,082 - ==> Parameters: admin(String)
+2018-04-24 01:24:37,083 - <==      Total: 1
+2018-04-24 01:24:37,084 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:24:37,084 - ==> Parameters: 
+2018-04-24 01:24:37,085 - <==      Total: 1
+2018-04-24 01:24:37,086 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:24:37,086 - ==> Parameters: 
+2018-04-24 01:24:37,087 - <==      Total: 1
+2018-04-24 01:24:37,087 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:24:37,088 - ==> Parameters: 10(Integer)
+2018-04-24 01:24:37,089 - <==      Total: 10
+2018-04-24 01:25:43,330 - Starting SimsApplication on yang-PC with PID 4488 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:25:43,339 - No active profile set, falling back to default profiles: default
+2018-04-24 01:25:43,640 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1253e7cb: startup date [Tue Apr 24 01:25:43 CST 2018]; root of context hierarchy
+2018-04-24 01:25:46,699 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:25:46,765 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:25:46,789 - Starting service [Tomcat]
+2018-04-24 01:25:46,790 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:25:46,798 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:25:47,078 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:25:47,078 - Root WebApplicationContext: initialization completed in 3438 ms
+2018-04-24 01:25:47,389 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:25:47,397 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:25:47,398 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:25:47,398 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:25:47,398 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:25:48,594 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:25:49,085 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1253e7cb: startup date [Tue Apr 24 01:25:43 CST 2018]; root of context hierarchy
+2018-04-24 01:25:49,115 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:25:49,147 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:25:49,150 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:25:49,151 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:25:49,151 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:25:49,151 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:25:49,154 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:25:49,154 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:25:49,154 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:25:49,154 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:25:49,154 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:25:49,154 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:25:49,154 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:25:49,155 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:25:49,155 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:25:49,155 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:25:49,159 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:25:49,160 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:25:49,212 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:25:49,212 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:25:49,664 - Registering beans for JMX exposure on startup
+2018-04-24 01:25:49,666 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 01:25:49,672 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 01:25:49,684 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:25:49,697 - Using a shared selector for servlet write/read
+2018-04-24 01:25:49,717 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 01:25:49,724 - Started SimsApplication in 7.38 seconds (JVM running for 8.723)
+2018-04-24 01:25:49,810 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 01:25:49,810 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 01:25:49,834 - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-04-24 01:25:51,632 - sims - Starting...
+2018-04-24 01:25:51,826 - sims - Start completed.
+2018-04-24 01:25:51,833 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:25:51,855 - ==> Parameters: admin(String)
+2018-04-24 01:25:51,871 - <==      Total: 1
+2018-04-24 01:25:51,967 - loginName=admin
+2018-04-24 01:25:54,526 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:25:54,527 - ==> Parameters: admin(String)
+2018-04-24 01:25:54,528 - <==      Total: 1
+2018-04-24 01:25:54,529 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:25:54,529 - ==> Parameters: 
+2018-04-24 01:25:54,531 - <==      Total: 1
+2018-04-24 01:25:54,572 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:25:54,572 - ==> Parameters: 
+2018-04-24 01:25:54,575 - <==      Total: 1
+2018-04-24 01:25:54,577 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:25:54,578 - ==> Parameters: 10(Integer)
+2018-04-24 01:25:54,584 - <==      Total: 10
+2018-04-24 01:28:32,334 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:28:32,335 - ==> Parameters: admin(String)
+2018-04-24 01:28:32,337 - <==      Total: 1
+2018-04-24 01:28:32,338 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:28:32,338 - ==> Parameters: 
+2018-04-24 01:28:32,339 - <==      Total: 1
+2018-04-24 01:28:32,342 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:28:32,342 - ==> Parameters: 
+2018-04-24 01:28:32,343 - <==      Total: 1
+2018-04-24 01:28:32,344 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:28:32,344 - ==> Parameters: 10(Integer)
+2018-04-24 01:28:32,355 - <==      Total: 10
+2018-04-24 01:28:41,358 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:28:41,358 - ==> Parameters: admin(String)
+2018-04-24 01:28:41,360 - <==      Total: 1
+2018-04-24 01:28:41,361 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:28:41,361 - ==> Parameters: 
+2018-04-24 01:28:41,362 - <==      Total: 1
+2018-04-24 01:28:41,363 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:28:41,363 - ==> Parameters: 
+2018-04-24 01:28:41,364 - <==      Total: 1
+2018-04-24 01:28:41,365 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:28:41,366 - ==> Parameters: 10(Integer)
+2018-04-24 01:28:41,371 - <==      Total: 10
+2018-04-24 01:28:44,530 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:28:44,531 - ==> Parameters: admin(String)
+2018-04-24 01:28:44,532 - <==      Total: 1
+2018-04-24 01:28:44,534 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:28:44,534 - ==> Parameters: 
+2018-04-24 01:28:44,536 - <==      Total: 1
+2018-04-24 01:28:44,537 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:28:44,538 - ==> Parameters: 
+2018-04-24 01:28:44,579 - <==      Total: 1
+2018-04-24 01:28:44,581 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:28:44,582 - ==> Parameters: 10(Integer)
+2018-04-24 01:28:44,585 - <==      Total: 10
+2018-04-24 01:29:37,978 - Starting SimsApplication on yang-PC with PID 9580 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:29:37,986 - No active profile set, falling back to default profiles: default
+2018-04-24 01:29:38,179 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6138e79a: startup date [Tue Apr 24 01:29:38 CST 2018]; root of context hierarchy
+2018-04-24 01:29:39,903 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:29:39,917 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:29:39,929 - Starting service [Tomcat]
+2018-04-24 01:29:39,929 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:29:39,935 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:29:40,134 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:29:40,135 - Root WebApplicationContext: initialization completed in 1956 ms
+2018-04-24 01:29:40,318 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:29:40,326 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:29:40,328 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:29:40,328 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:29:40,328 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:29:40,842 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:29:41,199 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6138e79a: startup date [Tue Apr 24 01:29:38 CST 2018]; root of context hierarchy
+2018-04-24 01:29:41,230 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:29:41,264 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:29:41,267 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:29:41,267 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:29:41,267 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:29:41,268 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:29:41,271 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:29:41,271 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:29:41,271 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:29:41,271 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:29:41,271 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:29:41,271 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:29:41,271 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:29:41,272 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:29:41,272 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:29:41,272 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:29:41,277 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:29:41,277 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:29:41,308 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:29:41,309 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:29:41,764 - Registering beans for JMX exposure on startup
+2018-04-24 01:29:41,766 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 01:29:41,775 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 01:29:41,788 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:29:41,803 - Using a shared selector for servlet write/read
+2018-04-24 01:29:41,824 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 01:29:41,829 - Started SimsApplication in 5.026 seconds (JVM running for 6.535)
+2018-04-24 01:30:49,933 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 01:30:49,934 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 01:30:49,960 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2018-04-24 01:30:51,315 - sims - Starting...
+2018-04-24 01:30:51,505 - sims - Start completed.
+2018-04-24 01:30:51,513 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:30:51,540 - ==> Parameters: admin(String)
+2018-04-24 01:30:51,543 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:30:51,544 - ==> Parameters: admin(String)
+2018-04-24 01:30:51,561 - <==      Total: 1
+2018-04-24 01:30:51,561 - <==      Total: 1
+2018-04-24 01:30:51,677 - loginName=admin
+2018-04-24 01:30:53,143 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 01:30:53,144 - ==> Parameters: 
+2018-04-24 01:30:53,146 - <==      Total: 3
+2018-04-24 01:30:53,147 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 01:30:53,148 - ==> Parameters: 
+2018-04-24 01:30:53,149 - <==      Total: 1
+2018-04-24 01:30:54,321 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:30:54,322 - ==> Parameters: admin(String)
+2018-04-24 01:30:54,324 - <==      Total: 1
+2018-04-24 01:30:54,325 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:30:54,325 - ==> Parameters: 
+2018-04-24 01:30:54,326 - <==      Total: 1
+2018-04-24 01:30:54,363 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:30:54,363 - ==> Parameters: 
+2018-04-24 01:30:54,365 - <==      Total: 1
+2018-04-24 01:30:54,368 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:30:54,368 - ==> Parameters: 10(Integer)
+2018-04-24 01:30:54,375 - <==      Total: 10
+2018-04-24 01:32:20,750 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:32:20,750 - ==> Parameters: admin(String)
+2018-04-24 01:32:20,752 - <==      Total: 1
+2018-04-24 01:32:20,753 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:32:20,754 - ==> Parameters: 
+2018-04-24 01:32:20,754 - <==      Total: 1
+2018-04-24 01:32:20,756 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:32:20,756 - ==> Parameters: 
+2018-04-24 01:32:20,757 - <==      Total: 1
+2018-04-24 01:32:20,758 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:32:20,758 - ==> Parameters: 10(Integer)
+2018-04-24 01:32:20,769 - <==      Total: 10
+2018-04-24 01:32:40,473 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:32:40,474 - ==> Parameters: admin(String)
+2018-04-24 01:32:40,475 - <==      Total: 1
+2018-04-24 01:32:40,476 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:32:40,476 - ==> Parameters: 
+2018-04-24 01:32:40,477 - <==      Total: 1
+2018-04-24 01:32:40,479 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:32:40,479 - ==> Parameters: 
+2018-04-24 01:32:40,480 - <==      Total: 1
+2018-04-24 01:32:40,481 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:32:40,482 - ==> Parameters: 10(Integer)
+2018-04-24 01:32:40,487 - <==      Total: 10
+2018-04-24 01:33:06,074 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:33:06,075 - ==> Parameters: admin(String)
+2018-04-24 01:33:06,077 - <==      Total: 1
+2018-04-24 01:33:06,079 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:33:06,079 - ==> Parameters: 
+2018-04-24 01:33:06,081 - <==      Total: 1
+2018-04-24 01:33:06,082 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:33:06,082 - ==> Parameters: 
+2018-04-24 01:33:06,083 - <==      Total: 1
+2018-04-24 01:33:06,085 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:33:06,086 - ==> Parameters: 10(Integer)
+2018-04-24 01:33:06,090 - <==      Total: 10
+2018-04-24 01:35:45,265 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:35:45,266 - ==> Parameters: admin(String)
+2018-04-24 01:35:45,272 - <==      Total: 1
+2018-04-24 01:35:45,273 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:35:45,273 - ==> Parameters: 
+2018-04-24 01:35:45,274 - <==      Total: 1
+2018-04-24 01:35:45,275 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:35:45,275 - ==> Parameters: 
+2018-04-24 01:35:45,276 - <==      Total: 1
+2018-04-24 01:35:45,277 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:35:45,278 - ==> Parameters: 10(Integer)
+2018-04-24 01:35:45,281 - <==      Total: 10
+2018-04-24 01:35:53,666 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:35:53,666 - ==> Parameters: admin(String)
+2018-04-24 01:35:53,668 - <==      Total: 1
+2018-04-24 01:35:53,670 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:35:53,671 - ==> Parameters: 
+2018-04-24 01:35:53,673 - <==      Total: 1
+2018-04-24 01:35:53,675 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:35:53,675 - ==> Parameters: 
+2018-04-24 01:35:53,676 - <==      Total: 1
+2018-04-24 01:35:53,678 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:35:53,678 - ==> Parameters: 10(Integer)
+2018-04-24 01:35:53,681 - <==      Total: 10
+2018-04-24 01:36:15,808 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:36:15,808 - ==> Parameters: admin(String)
+2018-04-24 01:36:15,809 - <==      Total: 1
+2018-04-24 01:36:15,810 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:36:15,810 - ==> Parameters: 
+2018-04-24 01:36:15,811 - <==      Total: 1
+2018-04-24 01:36:15,813 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:36:15,814 - ==> Parameters: 
+2018-04-24 01:36:15,815 - <==      Total: 1
+2018-04-24 01:36:15,816 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:36:15,817 - ==> Parameters: 10(Integer)
+2018-04-24 01:36:15,821 - <==      Total: 10
+2018-04-24 01:36:21,803 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:36:21,803 - ==> Parameters: admin(String)
+2018-04-24 01:36:21,805 - <==      Total: 1
+2018-04-24 01:36:21,806 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:36:21,806 - ==> Parameters: 
+2018-04-24 01:36:21,806 - <==      Total: 1
+2018-04-24 01:36:21,807 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:36:21,808 - ==> Parameters: 
+2018-04-24 01:36:21,809 - <==      Total: 1
+2018-04-24 01:36:21,809 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:36:21,810 - ==> Parameters: 10(Integer)
+2018-04-24 01:36:21,812 - <==      Total: 10
+2018-04-24 01:36:22,464 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:36:22,464 - ==> Parameters: admin(String)
+2018-04-24 01:36:22,466 - <==      Total: 1
+2018-04-24 01:36:22,466 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:36:22,466 - ==> Parameters: 
+2018-04-24 01:36:22,467 - <==      Total: 1
+2018-04-24 01:36:22,468 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:36:22,468 - ==> Parameters: 
+2018-04-24 01:36:22,469 - <==      Total: 1
+2018-04-24 01:36:22,470 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:36:22,470 - ==> Parameters: 10(Integer)
+2018-04-24 01:36:22,473 - <==      Total: 10
+2018-04-24 01:36:30,079 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:36:30,079 - ==> Parameters: admin(String)
+2018-04-24 01:36:30,081 - <==      Total: 1
+2018-04-24 01:36:30,081 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:36:30,082 - ==> Parameters: 
+2018-04-24 01:36:30,083 - <==      Total: 1
+2018-04-24 01:36:30,084 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:36:30,084 - ==> Parameters: 
+2018-04-24 01:36:30,085 - <==      Total: 1
+2018-04-24 01:36:30,086 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:36:30,087 - ==> Parameters: 10(Integer)
+2018-04-24 01:36:30,090 - <==      Total: 10
+2018-04-24 01:37:26,315 - Starting SimsApplication on yang-PC with PID 7208 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:37:26,324 - No active profile set, falling back to default profiles: default
+2018-04-24 01:37:26,462 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b0c9195: startup date [Tue Apr 24 01:37:26 CST 2018]; root of context hierarchy
+2018-04-24 01:37:29,299 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:37:29,319 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:37:29,333 - Starting service [Tomcat]
+2018-04-24 01:37:29,333 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:37:29,341 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:37:29,611 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:37:29,611 - Root WebApplicationContext: initialization completed in 3149 ms
+2018-04-24 01:37:29,797 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:37:29,802 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:37:29,803 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:37:29,803 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:37:29,803 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:37:30,462 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:37:31,006 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b0c9195: startup date [Tue Apr 24 01:37:26 CST 2018]; root of context hierarchy
+2018-04-24 01:37:31,080 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:37:31,141 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:37:31,145 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:37:31,146 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:37:31,146 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:37:31,146 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:37:31,150 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:37:31,150 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:37:31,151 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:37:31,151 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:37:31,151 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:37:31,152 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:37:31,152 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:37:31,152 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:37:31,153 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:37:31,154 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:37:31,162 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:37:31,162 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:37:35,848 - Starting SimsApplication on yang-PC with PID 7580 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:37:35,855 - No active profile set, falling back to default profiles: default
+2018-04-24 01:37:36,140 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b4c1d96: startup date [Tue Apr 24 01:37:36 CST 2018]; root of context hierarchy
+2018-04-24 01:37:37,869 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:37:37,884 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:37:37,896 - Starting service [Tomcat]
+2018-04-24 01:37:37,897 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:37:37,902 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:37:38,048 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:37:38,049 - Root WebApplicationContext: initialization completed in 1909 ms
+2018-04-24 01:37:38,202 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:37:38,209 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:37:38,209 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:37:38,209 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:37:38,210 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:37:38,747 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:37:39,096 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b4c1d96: startup date [Tue Apr 24 01:37:36 CST 2018]; root of context hierarchy
+2018-04-24 01:37:39,129 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:37:39,162 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:37:39,165 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:37:39,165 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:37:39,166 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:37:39,166 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:37:39,168 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:37:39,169 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:37:39,169 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:37:39,170 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:37:39,171 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:37:39,171 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:37:39,172 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:37:39,172 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:37:39,172 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:37:39,173 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:37:39,178 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:37:39,178 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:37:39,213 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:37:39,213 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:37:39,632 - Registering beans for JMX exposure on startup
+2018-04-24 01:37:39,633 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 01:37:39,639 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 01:37:39,652 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:37:39,665 - Using a shared selector for servlet write/read
+2018-04-24 01:37:39,685 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 01:37:39,689 - Started SimsApplication in 4.648 seconds (JVM running for 5.871)
+2018-04-24 01:38:22,068 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 01:38:22,068 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 01:38:22,101 - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2018-04-24 01:38:23,906 - sims - Starting...
+2018-04-24 01:38:24,103 - sims - Start completed.
+2018-04-24 01:38:24,114 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:38:24,144 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:38:24,162 - ==> Parameters: admin(String)
+2018-04-24 01:38:24,162 - ==> Parameters: admin(String)
+2018-04-24 01:38:24,180 - <==      Total: 1
+2018-04-24 01:38:24,180 - <==      Total: 1
+2018-04-24 01:38:24,301 - loginName=admin
+2018-04-24 01:38:27,185 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:38:27,186 - ==> Parameters: admin(String)
+2018-04-24 01:38:27,188 - <==      Total: 1
+2018-04-24 01:38:27,222 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:38:27,223 - ==> Parameters: 
+2018-04-24 01:38:27,224 - <==      Total: 1
+2018-04-24 01:38:27,271 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:38:27,273 - ==> Parameters: 
+2018-04-24 01:38:27,275 - <==      Total: 1
+2018-04-24 01:38:27,281 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:38:27,281 - ==> Parameters: 10(Integer)
+2018-04-24 01:38:27,288 - <==      Total: 10
+2018-04-24 01:38:31,667 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:38:31,668 - ==> Parameters: admin(String)
+2018-04-24 01:38:31,669 - <==      Total: 1
+2018-04-24 01:38:31,671 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:38:31,671 - ==> Parameters: 
+2018-04-24 01:38:31,672 - <==      Total: 1
+2018-04-24 01:38:31,674 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:38:31,674 - ==> Parameters: 
+2018-04-24 01:38:31,675 - <==      Total: 1
+2018-04-24 01:38:31,676 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:38:31,677 - ==> Parameters: 10(Integer)
+2018-04-24 01:38:31,689 - <==      Total: 10
+2018-04-24 01:38:32,415 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:38:32,415 - ==> Parameters: admin(String)
+2018-04-24 01:38:32,417 - <==      Total: 1
+2018-04-24 01:38:32,418 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:38:32,418 - ==> Parameters: 
+2018-04-24 01:38:32,419 - <==      Total: 1
+2018-04-24 01:38:32,421 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:38:32,422 - ==> Parameters: 
+2018-04-24 01:38:32,423 - <==      Total: 1
+2018-04-24 01:38:32,424 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:38:32,424 - ==> Parameters: 10(Integer)
+2018-04-24 01:38:32,428 - <==      Total: 10
+2018-04-24 01:39:46,807 - Starting SimsApplication on yang-PC with PID 8056 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 01:39:46,817 - No active profile set, falling back to default profiles: default
+2018-04-24 01:39:46,919 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@126945f9: startup date [Tue Apr 24 01:39:46 CST 2018]; root of context hierarchy
+2018-04-24 01:39:48,681 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 01:39:48,696 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:39:48,708 - Starting service [Tomcat]
+2018-04-24 01:39:48,708 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 01:39:48,714 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 01:39:48,842 - Initializing Spring embedded WebApplicationContext
+2018-04-24 01:39:48,842 - Root WebApplicationContext: initialization completed in 1923 ms
+2018-04-24 01:39:48,987 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 01:39:48,993 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 01:39:48,994 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 01:39:48,994 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 01:39:48,994 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 01:39:49,563 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:39:49,941 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@126945f9: startup date [Tue Apr 24 01:39:46 CST 2018]; root of context hierarchy
+2018-04-24 01:39:49,974 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 01:39:50,008 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 01:39:50,011 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 01:39:50,011 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 01:39:50,012 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 01:39:50,012 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:39:50,015 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 01:39:50,015 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 01:39:50,015 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:39:50,015 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 01:39:50,016 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 01:39:50,016 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:39:50,016 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 01:39:50,016 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 01:39:50,016 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 01:39:50,016 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 01:39:50,023 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 01:39:50,024 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 01:39:50,056 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:39:50,056 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 01:39:50,544 - Registering beans for JMX exposure on startup
+2018-04-24 01:39:50,545 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 01:39:50,552 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 01:39:50,564 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 01:39:50,577 - Using a shared selector for servlet write/read
+2018-04-24 01:39:50,597 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 01:39:50,603 - Started SimsApplication in 4.71 seconds (JVM running for 6.002)
+2018-04-24 01:39:51,851 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 01:39:51,852 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 01:39:51,889 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2018-04-24 01:39:53,428 - sims - Starting...
+2018-04-24 01:39:53,627 - sims - Start completed.
+2018-04-24 01:39:53,637 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:39:53,657 - ==> Parameters: admin(String)
+2018-04-24 01:39:53,672 - <==      Total: 1
+2018-04-24 01:39:53,677 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:39:53,678 - ==> Parameters: admin(String)
+2018-04-24 01:39:53,681 - <==      Total: 1
+2018-04-24 01:39:53,792 - loginName=admin
+2018-04-24 01:39:55,473 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 01:39:55,474 - ==> Parameters: 
+2018-04-24 01:39:55,479 - <==      Total: 3
+2018-04-24 01:39:55,481 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 01:39:55,481 - ==> Parameters: 
+2018-04-24 01:39:55,482 - <==      Total: 1
+2018-04-24 01:39:56,606 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:39:56,607 - ==> Parameters: admin(String)
+2018-04-24 01:39:56,611 - <==      Total: 1
+2018-04-24 01:39:56,649 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:39:56,650 - ==> Parameters: 
+2018-04-24 01:39:56,651 - <==      Total: 1
+2018-04-24 01:39:56,713 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:39:56,713 - ==> Parameters: 
+2018-04-24 01:39:56,715 - <==      Total: 1
+2018-04-24 01:39:56,717 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:39:56,717 - ==> Parameters: 10(Integer)
+2018-04-24 01:39:56,724 - <==      Total: 10
+2018-04-24 01:39:59,587 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:39:59,588 - ==> Parameters: admin(String)
+2018-04-24 01:39:59,590 - <==      Total: 1
+2018-04-24 01:39:59,594 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? 
+2018-04-24 01:39:59,594 - ==> Parameters: zhangsan(String)
+2018-04-24 01:39:59,595 - <==      Total: 1
+2018-04-24 01:39:59,601 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name = ? 
+2018-04-24 01:39:59,602 - ==> Parameters: zhangsan(String)
+2018-04-24 01:39:59,633 - <==      Total: 1
+2018-04-24 01:39:59,634 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? LIMIT ? 
+2018-04-24 01:39:59,634 - ==> Parameters: zhangsan(String), 10(Integer)
+2018-04-24 01:39:59,636 - <==      Total: 1
+2018-04-24 01:40:01,752 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:40:01,752 - ==> Parameters: admin(String)
+2018-04-24 01:40:01,754 - <==      Total: 1
+2018-04-24 01:40:01,755 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:40:01,755 - ==> Parameters: 
+2018-04-24 01:40:01,756 - <==      Total: 1
+2018-04-24 01:40:01,759 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:40:01,760 - ==> Parameters: 
+2018-04-24 01:40:01,761 - <==      Total: 1
+2018-04-24 01:40:01,762 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:40:01,763 - ==> Parameters: 10(Integer)
+2018-04-24 01:40:01,772 - <==      Total: 10
+2018-04-24 01:41:00,447 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 01:41:00,448 - ==> Parameters: 
+2018-04-24 01:41:00,449 - <==      Total: 3
+2018-04-24 01:41:00,450 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 01:41:00,450 - ==> Parameters: 
+2018-04-24 01:41:00,451 - <==      Total: 1
+2018-04-24 01:41:03,160 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:41:03,160 - ==> Parameters: admin(String)
+2018-04-24 01:41:03,162 - <==      Total: 1
+2018-04-24 01:41:03,164 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 01:41:03,164 - ==> Parameters: 
+2018-04-24 01:41:03,165 - <==      Total: 1
+2018-04-24 01:41:03,166 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 01:41:03,166 - ==> Parameters: 
+2018-04-24 01:41:03,172 - <==      Total: 1
+2018-04-24 01:41:03,174 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 01:41:03,175 - ==> Parameters: 10(Integer)
+2018-04-24 01:41:03,180 - <==      Total: 10
+2018-04-24 01:41:09,442 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:41:09,443 - ==> Parameters: admin(String)
+2018-04-24 01:41:09,445 - <==      Total: 1
+2018-04-24 01:41:09,446 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 01:41:09,446 - ==> Parameters: 1(Integer)
+2018-04-24 01:41:09,447 - <==      Total: 1
+2018-04-24 01:41:09,451 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 01:41:09,452 - ==> Parameters: 1(Integer)
+2018-04-24 01:41:09,453 - <==      Total: 1
+2018-04-24 01:41:09,454 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
+2018-04-24 01:41:09,455 - ==> Parameters: 1(Integer), 10(Integer)
+2018-04-24 01:41:09,462 - <==      Total: 10
+2018-04-24 01:41:26,248 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 01:41:26,250 - ==> Parameters: admin(String)
+2018-04-24 01:41:26,253 - <==      Total: 1
+2018-04-24 01:41:26,254 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 01:41:26,255 - ==> Parameters: 1(Integer)
+2018-04-24 01:41:26,256 - <==      Total: 1
+2018-04-24 01:41:26,257 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 01:41:26,258 - ==> Parameters: 1(Integer)
+2018-04-24 01:41:26,258 - <==      Total: 1
+2018-04-24 01:41:26,259 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
+2018-04-24 01:41:26,260 - ==> Parameters: 1(Integer), 10(Integer)
+2018-04-24 01:41:26,262 - <==      Total: 10

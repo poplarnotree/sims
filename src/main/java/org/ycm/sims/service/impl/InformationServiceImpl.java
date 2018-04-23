@@ -1,16 +1,17 @@
 package org.ycm.sims.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.ycm.sims.VO.CheckVO;
-import org.ycm.sims.VO.NumberAndClassesVO;
-import org.ycm.sims.VO.RoleCheckVO;
+import org.ycm.sims.VO.*;
 import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
+import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleDTO;
 import org.ycm.sims.dto.TeacherInformationDTO;
+import org.ycm.sims.entity.Role;
 import org.ycm.sims.entity.TeacherInformation;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ResultEnum;
@@ -18,7 +19,10 @@ import org.ycm.sims.exception.SimsException;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.service.RoleService;
 import org.ycm.sims.utils.FormatConversionUtil;
+import org.ycm.sims.utils.SessionUtil;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +31,9 @@ import java.util.List;
  */
 @Service
 public class InformationServiceImpl implements InformationService {
+
+    @Autowired
+    private HttpServletRequest request;
 
     @Autowired
     private RoleDao roleDao;
@@ -56,10 +63,10 @@ public class InformationServiceImpl implements InformationService {
             return new CheckVO(roleCheckVO.getStatus(), roleCheckVO.getMessage());
         }
         if (informationDao.findInformationLoginName(teacherInformationDTO.getLoginName()) >= 1){
-            return new CheckVO(ResultEnum.INFORMATION_EXIST);
+            throw new SimsException(ResultEnum.INFORMATION_EXIST);
         }
         if (informationDao.findInformationNumber(teacherInformationDTO.getNumber()) >= 1){
-            return new CheckVO(ResultEnum.NUMBER_EXIST);
+            throw new SimsException(ResultEnum.NUMBER_EXIST);
         }
         TeacherInformation teacherInformation = new TeacherInformation();
         BeanUtils.copyProperties(teacherInformationDTO, teacherInformation);
@@ -69,6 +76,28 @@ public class InformationServiceImpl implements InformationService {
             return new CheckVO(ResultEnum.SUCCESS);
         }else {
             throw new SimsException(ExceptionEnum.SYSTEM_ERROR);
+        }
+    }
+
+    @Override
+    public PageVO<TeacherInformationVO> teacherInformationPage(PageDTO pageDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        if (pageDTO.getRoleType() - role.getRoleType() == 1){
+            int count = informationDao.teacherInformationCount(pageDTO);
+            PageHelper.startPage(pageDTO.getPage(), pageDTO.getLimit());
+            List<TeacherInformation> teacherInformationList = informationDao.teacherInformationList(pageDTO);
+            List<TeacherInformationVO> teacherInformationVOList = new ArrayList<TeacherInformationVO>();
+            for (TeacherInformation teacherInformation: teacherInformationList){
+                TeacherInformationVO teacherInformationVO = new TeacherInformationVO();
+                BeanUtils.copyProperties(teacherInformation, teacherInformationVO);
+                teacherInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(teacherInformation.getCreateTime()));
+                teacherInformationVOList.add(teacherInformationVO);
+            }
+            PageVO<TeacherInformationVO> pageVO = new PageVO(ResultEnum.SUCCESS, count,teacherInformationVOList);
+            return pageVO;
+        }else {
+            request.getSession().invalidate();
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
 }

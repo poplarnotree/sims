@@ -3,6 +3,26 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.ycm.sims.dao.InformationDao">
+
+    <resultMap id="teacherInformationList" type="org.ycm.sims.entity.TeacherInformation">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="number" property="number" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="id_cart" property="idCart" />
+        <result column="positional_titles" property="positionalTitles" />
+        <result column="nation" property="nation" />
+        <result column="place" property="place" />
+        <result column="address" property="address" />
+        <result column="birthday" property="birthday" />
+        <result column="phone" property="phone" />
+        <result column="department" property="department" />
+        <result column="classes" property="classes"/>
+        <result column="subject" property="subject"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
     <insert id="createInformation">
         INSERT INTO
           teacher_information
@@ -28,6 +48,18 @@
     </select>
     <select id="findInformationNumber" resultType="java.lang.Integer">
         SELECT COUNT(number) FROM teacher_information WHERE number = #{number}
+    </select>
+    <select id="teacherInformationList" resultMap="teacherInformationList">
+        SELECT * FROM teacher_information
+        <if test="loginName != null and loginName != ''">
+            WHERE login_name = #{loginName}
+        </if>
+    </select>
+    <select id="teacherInformationCount" resultType="java.lang.Integer">
+        SELECT count(*) FROM teacher_information
+        <if test="loginName != null and loginName != ''">
+            WHERE login_name = #{loginName}
+        </if>
     </select>
 
 
