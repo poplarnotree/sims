@@ -1966,3 +1966,1972 @@
 2018-04-24 01:41:26,259 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
 2018-04-24 01:41:26,260 - ==> Parameters: 1(Integer), 10(Integer)
 2018-04-24 01:41:26,262 - <==      Total: 10
+2018-04-24 22:46:01,396 - Starting SimsApplication on yang-PC with PID 2880 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-04-24 22:46:01,426 - No active profile set, falling back to default profiles: default
+2018-04-24 22:46:01,682 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@235834f2: startup date [Tue Apr 24 22:46:01 CST 2018]; root of context hierarchy
+2018-04-24 22:46:04,084 - Tomcat initialized with port(s): 8080 (http)
+2018-04-24 22:46:04,172 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-24 22:46:04,228 - Starting service [Tomcat]
+2018-04-24 22:46:04,229 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-24 22:46:04,285 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-04-24 22:46:04,435 - Initializing Spring embedded WebApplicationContext
+2018-04-24 22:46:04,435 - Root WebApplicationContext: initialization completed in 2753 ms
+2018-04-24 22:46:04,643 - Servlet dispatcherServlet mapped to [/]
+2018-04-24 22:46:04,649 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-24 22:46:04,649 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-24 22:46:04,650 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-24 22:46:04,650 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-24 22:46:05,734 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 22:46:06,097 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@235834f2: startup date [Tue Apr 24 22:46:01 CST 2018]; root of context hierarchy
+2018-04-24 22:46:06,121 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-24 22:46:06,263 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-24 22:46:06,266 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-24 22:46:06,266 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-24 22:46:06,266 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-24 22:46:06,267 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-24 22:46:06,271 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-24 22:46:06,272 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-24 22:46:06,272 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-24 22:46:06,272 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-24 22:46:06,273 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-24 22:46:06,273 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-24 22:46:06,273 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-24 22:46:06,274 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-24 22:46:06,274 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-24 22:46:06,274 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-24 22:46:06,279 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-24 22:46:06,280 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-24 22:46:06,328 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 22:46:06,329 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-24 22:46:06,779 - Registering beans for JMX exposure on startup
+2018-04-24 22:46:06,780 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-24 22:46:06,786 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-24 22:46:06,805 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-24 22:46:06,817 - Using a shared selector for servlet write/read
+2018-04-24 22:46:06,864 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-24 22:46:06,870 - Started SimsApplication in 10.407 seconds (JVM running for 19.426)
+2018-04-24 22:46:16,834 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-24 22:46:16,834 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-24 22:46:16,868 - FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2018-04-24 22:46:19,603 - sims - Starting...
+2018-04-24 22:46:20,160 - sims - Start completed.
+2018-04-24 22:46:20,181 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:46:20,181 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:46:20,198 - ==> Parameters: admin(String)
+2018-04-24 22:46:20,198 - ==> Parameters: admin(String)
+2018-04-24 22:46:20,321 - <==      Total: 1
+2018-04-24 22:46:20,321 - <==      Total: 1
+2018-04-24 22:46:20,499 - loginName=admin
+2018-04-24 22:46:22,228 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:46:22,229 - ==> Parameters: admin(String)
+2018-04-24 22:46:22,231 - <==      Total: 1
+2018-04-24 22:46:22,366 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 22:46:22,366 - ==> Parameters: 1(Integer)
+2018-04-24 22:46:22,425 - <==      Total: 1
+2018-04-24 22:46:22,586 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0 
+2018-04-24 22:46:22,586 - ==> Parameters: 1(Integer)
+2018-04-24 22:46:22,588 - <==      Total: 1
+2018-04-24 22:46:22,589 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
+2018-04-24 22:46:22,590 - ==> Parameters: 1(Integer), 10(Integer)
+2018-04-24 22:46:22,594 - <==      Total: 10
+2018-04-24 22:46:24,675 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:46:24,675 - ==> Parameters: admin(String)
+2018-04-24 22:46:24,677 - <==      Total: 1
+2018-04-24 22:46:24,678 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:46:24,678 - ==> Parameters: 
+2018-04-24 22:46:24,683 - <==      Total: 1
+2018-04-24 22:46:24,684 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:46:24,685 - ==> Parameters: 
+2018-04-24 22:46:24,686 - <==      Total: 1
+2018-04-24 22:46:24,687 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:46:24,688 - ==> Parameters: 10(Integer)
+2018-04-24 22:46:24,692 - <==      Total: 10
+2018-04-24 22:49:15,985 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:49:15,985 - ==> Parameters: admin(String)
+2018-04-24 22:49:15,987 - <==      Total: 1
+2018-04-24 22:49:15,988 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:49:15,988 - ==> Parameters: 
+2018-04-24 22:49:15,989 - <==      Total: 1
+2018-04-24 22:49:15,990 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:49:15,991 - ==> Parameters: 
+2018-04-24 22:49:15,991 - <==      Total: 1
+2018-04-24 22:49:15,992 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:49:15,993 - ==> Parameters: 10(Integer)
+2018-04-24 22:49:16,003 - <==      Total: 10
+2018-04-24 22:51:53,976 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:51:53,977 - ==> Parameters: admin(String)
+2018-04-24 22:51:53,982 - <==      Total: 1
+2018-04-24 22:51:53,983 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:51:53,984 - ==> Parameters: 
+2018-04-24 22:51:53,985 - <==      Total: 1
+2018-04-24 22:51:53,988 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:51:53,988 - ==> Parameters: 
+2018-04-24 22:51:53,990 - <==      Total: 1
+2018-04-24 22:51:53,992 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:51:53,993 - ==> Parameters: 10(Integer)
+2018-04-24 22:51:53,996 - <==      Total: 10
+2018-04-24 22:52:44,369 - loginName=admin
+2018-04-24 22:54:59,576 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:54:59,576 - ==> Parameters: admin(String)
+2018-04-24 22:54:59,578 - <==      Total: 1
+2018-04-24 22:54:59,579 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:54:59,579 - ==> Parameters: 
+2018-04-24 22:54:59,580 - <==      Total: 1
+2018-04-24 22:54:59,582 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:54:59,582 - ==> Parameters: 
+2018-04-24 22:54:59,587 - <==      Total: 1
+2018-04-24 22:54:59,588 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:54:59,589 - ==> Parameters: 10(Integer)
+2018-04-24 22:54:59,592 - <==      Total: 10
+2018-04-24 22:55:37,918 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:55:37,918 - ==> Parameters: admin(String)
+2018-04-24 22:55:37,919 - <==      Total: 1
+2018-04-24 22:55:37,920 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:55:37,920 - ==> Parameters: 
+2018-04-24 22:55:37,921 - <==      Total: 1
+2018-04-24 22:55:37,922 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:55:37,923 - ==> Parameters: 
+2018-04-24 22:55:37,924 - <==      Total: 1
+2018-04-24 22:55:37,925 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:55:37,925 - ==> Parameters: 10(Integer)
+2018-04-24 22:55:37,927 - <==      Total: 10
+2018-04-24 22:56:03,409 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:56:03,409 - ==> Parameters: 
+2018-04-24 22:56:03,413 - <==      Total: 3
+2018-04-24 22:56:03,414 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:56:03,414 - ==> Parameters: 
+2018-04-24 22:56:03,461 - <==      Total: 1
+2018-04-24 22:57:01,965 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:57:01,965 - ==> Parameters: 
+2018-04-24 22:57:01,966 - <==      Total: 3
+2018-04-24 22:57:01,967 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:57:01,967 - ==> Parameters: 
+2018-04-24 22:57:01,968 - <==      Total: 1
+2018-04-24 22:57:04,698 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:57:04,698 - ==> Parameters: admin(String)
+2018-04-24 22:57:04,699 - <==      Total: 1
+2018-04-24 22:57:04,700 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:57:04,700 - ==> Parameters: 
+2018-04-24 22:57:04,703 - <==      Total: 1
+2018-04-24 22:57:04,704 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:57:04,705 - ==> Parameters: 
+2018-04-24 22:57:04,705 - <==      Total: 1
+2018-04-24 22:57:04,706 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:57:04,706 - ==> Parameters: 10(Integer)
+2018-04-24 22:57:04,708 - <==      Total: 10
+2018-04-24 22:57:05,595 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:57:05,596 - ==> Parameters: 
+2018-04-24 22:57:05,597 - <==      Total: 3
+2018-04-24 22:57:05,597 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:57:05,598 - ==> Parameters: 
+2018-04-24 22:57:05,599 - <==      Total: 1
+2018-04-24 22:57:51,642 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:57:51,642 - ==> Parameters: admin(String)
+2018-04-24 22:57:51,644 - <==      Total: 1
+2018-04-24 22:57:51,645 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:57:51,645 - ==> Parameters: 
+2018-04-24 22:57:51,646 - <==      Total: 1
+2018-04-24 22:57:51,647 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:57:51,647 - ==> Parameters: 
+2018-04-24 22:57:51,648 - <==      Total: 1
+2018-04-24 22:57:51,650 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:57:51,650 - ==> Parameters: 10(Integer)
+2018-04-24 22:57:51,653 - <==      Total: 10
+2018-04-24 22:57:56,728 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:57:56,729 - ==> Parameters: 
+2018-04-24 22:57:56,729 - <==      Total: 3
+2018-04-24 22:57:56,730 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:57:56,730 - ==> Parameters: 
+2018-04-24 22:57:56,731 - <==      Total: 1
+2018-04-24 22:58:21,691 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:58:21,691 - ==> Parameters: admin(String)
+2018-04-24 22:58:21,693 - <==      Total: 1
+2018-04-24 22:58:21,693 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:58:21,694 - ==> Parameters: 
+2018-04-24 22:58:21,694 - <==      Total: 1
+2018-04-24 22:58:21,696 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:58:21,696 - ==> Parameters: 
+2018-04-24 22:58:21,697 - <==      Total: 1
+2018-04-24 22:58:21,698 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:58:21,698 - ==> Parameters: 10(Integer)
+2018-04-24 22:58:21,701 - <==      Total: 10
+2018-04-24 22:58:22,515 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:58:22,515 - ==> Parameters: 
+2018-04-24 22:58:22,516 - <==      Total: 3
+2018-04-24 22:58:22,517 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:58:22,517 - ==> Parameters: 
+2018-04-24 22:58:22,518 - <==      Total: 1
+2018-04-24 22:58:28,832 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:58:28,832 - ==> Parameters: admin(String)
+2018-04-24 22:58:28,833 - <==      Total: 1
+2018-04-24 22:58:28,834 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:58:28,834 - ==> Parameters: 
+2018-04-24 22:58:28,835 - <==      Total: 1
+2018-04-24 22:58:28,837 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:58:28,837 - ==> Parameters: 
+2018-04-24 22:58:28,838 - <==      Total: 1
+2018-04-24 22:58:28,839 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:58:28,839 - ==> Parameters: 10(Integer)
+2018-04-24 22:58:28,842 - <==      Total: 10
+2018-04-24 22:58:30,156 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:58:30,156 - ==> Parameters: 
+2018-04-24 22:58:30,157 - <==      Total: 3
+2018-04-24 22:58:30,158 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:58:30,158 - ==> Parameters: 
+2018-04-24 22:58:30,159 - <==      Total: 1
+2018-04-24 22:58:34,083 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:58:34,084 - ==> Parameters: admin(String)
+2018-04-24 22:58:34,085 - <==      Total: 1
+2018-04-24 22:58:34,086 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:58:34,086 - ==> Parameters: 
+2018-04-24 22:58:34,087 - <==      Total: 1
+2018-04-24 22:58:34,089 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:58:34,089 - ==> Parameters: 
+2018-04-24 22:58:34,090 - <==      Total: 1
+2018-04-24 22:58:34,091 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:58:34,091 - ==> Parameters: 10(Integer)
+2018-04-24 22:58:34,093 - <==      Total: 10
+2018-04-24 22:58:39,562 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:58:39,563 - ==> Parameters: 
+2018-04-24 22:58:39,563 - <==      Total: 3
+2018-04-24 22:58:39,564 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:58:39,564 - ==> Parameters: 
+2018-04-24 22:58:39,565 - <==      Total: 1
+2018-04-24 22:58:44,507 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 22:58:44,507 - ==> Parameters: admin(String)
+2018-04-24 22:58:44,508 - <==      Total: 1
+2018-04-24 22:58:44,509 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 22:58:44,509 - ==> Parameters: 
+2018-04-24 22:58:44,510 - <==      Total: 1
+2018-04-24 22:58:44,512 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 22:58:44,512 - ==> Parameters: 
+2018-04-24 22:58:44,513 - <==      Total: 1
+2018-04-24 22:58:44,514 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 22:58:44,514 - ==> Parameters: 10(Integer)
+2018-04-24 22:58:44,516 - <==      Total: 10
+2018-04-24 22:58:45,666 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 22:58:45,667 - ==> Parameters: 
+2018-04-24 22:58:45,668 - <==      Total: 3
+2018-04-24 22:58:45,668 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 22:58:45,669 - ==> Parameters: 
+2018-04-24 22:58:45,669 - <==      Total: 1
+2018-04-24 23:02:06,054 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:02:06,054 - ==> Parameters: admin(String)
+2018-04-24 23:02:06,056 - <==      Total: 1
+2018-04-24 23:02:06,056 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:02:06,057 - ==> Parameters: 
+2018-04-24 23:02:06,058 - <==      Total: 1
+2018-04-24 23:02:06,060 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:02:06,061 - ==> Parameters: 
+2018-04-24 23:02:06,062 - <==      Total: 1
+2018-04-24 23:02:06,063 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:02:06,063 - ==> Parameters: 10(Integer)
+2018-04-24 23:02:06,066 - <==      Total: 10
+2018-04-24 23:02:07,117 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:02:07,118 - ==> Parameters: 
+2018-04-24 23:02:07,119 - <==      Total: 3
+2018-04-24 23:02:07,119 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:02:07,120 - ==> Parameters: 
+2018-04-24 23:02:07,120 - <==      Total: 1
+2018-04-24 23:02:36,704 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:02:36,705 - ==> Parameters: admin(String)
+2018-04-24 23:02:36,706 - <==      Total: 1
+2018-04-24 23:02:36,706 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:02:36,707 - ==> Parameters: 
+2018-04-24 23:02:36,708 - <==      Total: 1
+2018-04-24 23:02:36,709 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:02:36,710 - ==> Parameters: 
+2018-04-24 23:02:36,710 - <==      Total: 1
+2018-04-24 23:02:36,711 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:02:36,712 - ==> Parameters: 10(Integer)
+2018-04-24 23:02:36,714 - <==      Total: 10
+2018-04-24 23:02:37,403 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:02:37,403 - ==> Parameters: 
+2018-04-24 23:02:37,404 - <==      Total: 3
+2018-04-24 23:02:37,404 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:02:37,404 - ==> Parameters: 
+2018-04-24 23:02:37,405 - <==      Total: 1
+2018-04-24 23:03:30,746 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:03:30,746 - ==> Parameters: 
+2018-04-24 23:03:30,747 - <==      Total: 3
+2018-04-24 23:03:30,748 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:03:30,748 - ==> Parameters: 
+2018-04-24 23:03:30,749 - <==      Total: 1
+2018-04-24 23:04:23,522 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:04:23,522 - ==> Parameters: 
+2018-04-24 23:04:23,523 - <==      Total: 3
+2018-04-24 23:04:23,523 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:04:23,523 - ==> Parameters: 
+2018-04-24 23:04:23,524 - <==      Total: 1
+2018-04-24 23:04:24,752 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:04:24,753 - ==> Parameters: admin(String)
+2018-04-24 23:04:24,754 - <==      Total: 1
+2018-04-24 23:04:24,755 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:04:24,755 - ==> Parameters: 
+2018-04-24 23:04:24,756 - <==      Total: 1
+2018-04-24 23:04:24,757 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:04:24,757 - ==> Parameters: 
+2018-04-24 23:04:24,758 - <==      Total: 1
+2018-04-24 23:04:24,760 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:04:24,761 - ==> Parameters: 10(Integer)
+2018-04-24 23:04:24,766 - <==      Total: 10
+2018-04-24 23:05:06,312 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:05:06,312 - ==> Parameters: admin(String)
+2018-04-24 23:05:06,314 - <==      Total: 1
+2018-04-24 23:05:06,314 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:05:06,315 - ==> Parameters: 
+2018-04-24 23:05:06,316 - <==      Total: 1
+2018-04-24 23:05:06,317 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:05:06,317 - ==> Parameters: 
+2018-04-24 23:05:06,318 - <==      Total: 1
+2018-04-24 23:05:06,319 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:05:06,320 - ==> Parameters: 10(Integer)
+2018-04-24 23:05:06,322 - <==      Total: 10
+2018-04-24 23:05:07,746 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:05:07,747 - ==> Parameters: admin(String)
+2018-04-24 23:05:07,749 - <==      Total: 1
+2018-04-24 23:05:07,750 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:05:07,751 - ==> Parameters: 
+2018-04-24 23:05:07,752 - <==      Total: 1
+2018-04-24 23:05:07,752 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:05:07,753 - ==> Parameters: 
+2018-04-24 23:05:07,754 - <==      Total: 1
+2018-04-24 23:05:07,755 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:05:07,755 - ==> Parameters: 10(Integer)
+2018-04-24 23:05:07,758 - <==      Total: 10
+2018-04-24 23:05:17,692 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:05:17,693 - ==> Parameters: admin(String)
+2018-04-24 23:05:17,694 - <==      Total: 1
+2018-04-24 23:05:17,695 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:05:17,695 - ==> Parameters: 
+2018-04-24 23:05:17,696 - <==      Total: 1
+2018-04-24 23:05:17,697 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:05:17,697 - ==> Parameters: 
+2018-04-24 23:05:17,698 - <==      Total: 1
+2018-04-24 23:05:17,699 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:05:17,699 - ==> Parameters: 10(Integer)
+2018-04-24 23:05:17,701 - <==      Total: 10
+2018-04-24 23:05:43,618 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:05:43,618 - ==> Parameters: admin(String)
+2018-04-24 23:05:43,619 - <==      Total: 1
+2018-04-24 23:05:43,620 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:05:43,620 - ==> Parameters: 
+2018-04-24 23:05:43,621 - <==      Total: 1
+2018-04-24 23:05:43,622 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:05:43,622 - ==> Parameters: 
+2018-04-24 23:05:43,623 - <==      Total: 1
+2018-04-24 23:05:43,624 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:05:43,624 - ==> Parameters: 10(Integer)
+2018-04-24 23:05:43,627 - <==      Total: 10
+2018-04-24 23:06:02,472 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:06:02,472 - ==> Parameters: 
+2018-04-24 23:06:02,473 - <==      Total: 3
+2018-04-24 23:06:02,473 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:06:02,473 - ==> Parameters: 
+2018-04-24 23:06:02,474 - <==      Total: 1
+2018-04-24 23:07:26,925 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:07:26,925 - ==> Parameters: admin(String)
+2018-04-24 23:07:26,927 - <==      Total: 1
+2018-04-24 23:07:26,927 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:07:26,928 - ==> Parameters: 
+2018-04-24 23:07:26,928 - <==      Total: 1
+2018-04-24 23:07:26,930 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:07:26,930 - ==> Parameters: 
+2018-04-24 23:07:26,931 - <==      Total: 1
+2018-04-24 23:07:26,932 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:07:26,932 - ==> Parameters: 10(Integer)
+2018-04-24 23:07:26,934 - <==      Total: 10
+2018-04-24 23:07:28,172 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:07:28,172 - ==> Parameters: 
+2018-04-24 23:07:28,173 - <==      Total: 3
+2018-04-24 23:07:28,174 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:07:28,174 - ==> Parameters: 
+2018-04-24 23:07:28,175 - <==      Total: 1
+2018-04-24 23:08:55,644 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:08:55,645 - ==> Parameters: admin(String)
+2018-04-24 23:08:55,647 - <==      Total: 1
+2018-04-24 23:08:55,648 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:08:55,648 - ==> Parameters: 
+2018-04-24 23:08:55,649 - <==      Total: 1
+2018-04-24 23:08:55,651 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:08:55,651 - ==> Parameters: 
+2018-04-24 23:08:55,652 - <==      Total: 1
+2018-04-24 23:08:55,652 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:08:55,653 - ==> Parameters: 10(Integer)
+2018-04-24 23:08:55,655 - <==      Total: 10
+2018-04-24 23:08:56,312 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:08:56,312 - ==> Parameters: 
+2018-04-24 23:08:56,313 - <==      Total: 3
+2018-04-24 23:08:56,313 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:08:56,314 - ==> Parameters: 
+2018-04-24 23:08:56,314 - <==      Total: 1
+2018-04-24 23:09:01,534 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:09:01,535 - ==> Parameters: admin(String)
+2018-04-24 23:09:01,536 - <==      Total: 1
+2018-04-24 23:09:01,537 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:09:01,537 - ==> Parameters: 
+2018-04-24 23:09:01,538 - <==      Total: 1
+2018-04-24 23:09:01,539 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:09:01,539 - ==> Parameters: 
+2018-04-24 23:09:01,540 - <==      Total: 1
+2018-04-24 23:09:01,541 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:09:01,541 - ==> Parameters: 10(Integer)
+2018-04-24 23:09:01,543 - <==      Total: 10
+2018-04-24 23:09:02,444 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:09:02,444 - ==> Parameters: 
+2018-04-24 23:09:02,445 - <==      Total: 3
+2018-04-24 23:09:02,445 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:09:02,445 - ==> Parameters: 
+2018-04-24 23:09:02,446 - <==      Total: 1
+2018-04-24 23:10:32,647 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:10:32,648 - ==> Parameters: 
+2018-04-24 23:10:32,649 - <==      Total: 3
+2018-04-24 23:10:32,649 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:10:32,649 - ==> Parameters: 
+2018-04-24 23:10:32,650 - <==      Total: 1
+2018-04-24 23:11:53,886 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:11:53,887 - ==> Parameters: admin(String)
+2018-04-24 23:11:53,888 - <==      Total: 1
+2018-04-24 23:11:53,889 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:11:53,889 - ==> Parameters: 
+2018-04-24 23:11:53,889 - <==      Total: 1
+2018-04-24 23:11:53,890 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:11:53,891 - ==> Parameters: 
+2018-04-24 23:11:53,891 - <==      Total: 1
+2018-04-24 23:11:53,892 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:11:53,892 - ==> Parameters: 10(Integer)
+2018-04-24 23:11:53,894 - <==      Total: 10
+2018-04-24 23:11:55,029 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:11:55,030 - ==> Parameters: 
+2018-04-24 23:11:55,030 - <==      Total: 3
+2018-04-24 23:11:55,031 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:11:55,031 - ==> Parameters: 
+2018-04-24 23:11:55,032 - <==      Total: 1
+2018-04-24 23:12:03,740 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:12:03,741 - ==> Parameters: admin(String)
+2018-04-24 23:12:03,742 - <==      Total: 1
+2018-04-24 23:12:03,743 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:12:03,743 - ==> Parameters: 
+2018-04-24 23:12:03,745 - <==      Total: 1
+2018-04-24 23:12:03,747 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:12:03,747 - ==> Parameters: 
+2018-04-24 23:12:03,748 - <==      Total: 1
+2018-04-24 23:12:03,748 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:12:03,749 - ==> Parameters: 10(Integer)
+2018-04-24 23:12:03,751 - <==      Total: 10
+2018-04-24 23:12:04,689 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:12:04,689 - ==> Parameters: 
+2018-04-24 23:12:04,690 - <==      Total: 3
+2018-04-24 23:12:04,691 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:12:04,691 - ==> Parameters: 
+2018-04-24 23:12:04,691 - <==      Total: 1
+2018-04-24 23:13:27,446 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:13:27,447 - ==> Parameters: admin(String)
+2018-04-24 23:13:27,448 - <==      Total: 1
+2018-04-24 23:13:27,449 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:13:27,449 - ==> Parameters: 
+2018-04-24 23:13:27,450 - <==      Total: 1
+2018-04-24 23:13:27,451 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:13:27,451 - ==> Parameters: 
+2018-04-24 23:13:27,452 - <==      Total: 1
+2018-04-24 23:13:27,453 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:13:27,453 - ==> Parameters: 10(Integer)
+2018-04-24 23:13:27,455 - <==      Total: 10
+2018-04-24 23:13:28,409 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:13:28,410 - ==> Parameters: 
+2018-04-24 23:13:28,410 - <==      Total: 3
+2018-04-24 23:13:28,411 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:13:28,411 - ==> Parameters: 
+2018-04-24 23:13:28,412 - <==      Total: 1
+2018-04-24 23:14:40,199 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:14:40,200 - ==> Parameters: admin(String)
+2018-04-24 23:14:40,202 - <==      Total: 1
+2018-04-24 23:14:40,203 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:14:40,203 - ==> Parameters: 
+2018-04-24 23:14:40,204 - <==      Total: 1
+2018-04-24 23:14:40,205 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:14:40,205 - ==> Parameters: 
+2018-04-24 23:14:40,206 - <==      Total: 1
+2018-04-24 23:14:40,207 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:14:40,207 - ==> Parameters: 10(Integer)
+2018-04-24 23:14:40,209 - <==      Total: 10
+2018-04-24 23:14:41,094 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:14:41,095 - ==> Parameters: 
+2018-04-24 23:14:41,099 - <==      Total: 3
+2018-04-24 23:14:41,100 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:14:41,100 - ==> Parameters: 
+2018-04-24 23:14:41,101 - <==      Total: 1
+2018-04-24 23:17:17,502 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:17:17,503 - ==> Parameters: admin(String)
+2018-04-24 23:17:17,507 - <==      Total: 1
+2018-04-24 23:17:17,508 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:17:17,508 - ==> Parameters: 
+2018-04-24 23:17:17,513 - <==      Total: 1
+2018-04-24 23:17:17,514 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:17:17,514 - ==> Parameters: 
+2018-04-24 23:17:17,514 - <==      Total: 1
+2018-04-24 23:17:17,515 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:17:17,516 - ==> Parameters: 10(Integer)
+2018-04-24 23:17:17,518 - <==      Total: 10
+2018-04-24 23:17:19,255 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:17:19,256 - ==> Parameters: 
+2018-04-24 23:17:19,260 - <==      Total: 3
+2018-04-24 23:17:19,260 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:17:19,260 - ==> Parameters: 
+2018-04-24 23:17:19,261 - <==      Total: 1
+2018-04-24 23:17:45,548 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:17:45,549 - ==> Parameters: admin(String)
+2018-04-24 23:17:45,550 - <==      Total: 1
+2018-04-24 23:17:45,551 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:17:45,551 - ==> Parameters: 
+2018-04-24 23:17:45,552 - <==      Total: 1
+2018-04-24 23:17:45,553 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:17:45,554 - ==> Parameters: 
+2018-04-24 23:17:45,555 - <==      Total: 1
+2018-04-24 23:17:45,556 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:17:45,557 - ==> Parameters: 10(Integer)
+2018-04-24 23:17:45,559 - <==      Total: 10
+2018-04-24 23:17:46,173 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:17:46,173 - ==> Parameters: 
+2018-04-24 23:17:46,174 - <==      Total: 3
+2018-04-24 23:17:46,174 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:17:46,175 - ==> Parameters: 
+2018-04-24 23:17:46,176 - <==      Total: 1
+2018-04-24 23:19:17,366 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:19:17,367 - ==> Parameters: admin(String)
+2018-04-24 23:19:17,368 - <==      Total: 1
+2018-04-24 23:19:17,369 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:19:17,369 - ==> Parameters: 
+2018-04-24 23:19:17,370 - <==      Total: 1
+2018-04-24 23:19:17,371 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:19:17,371 - ==> Parameters: 
+2018-04-24 23:19:17,372 - <==      Total: 1
+2018-04-24 23:19:17,373 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:19:17,373 - ==> Parameters: 10(Integer)
+2018-04-24 23:19:17,375 - <==      Total: 10
+2018-04-24 23:19:17,854 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:19:17,854 - ==> Parameters: 
+2018-04-24 23:19:17,855 - <==      Total: 3
+2018-04-24 23:19:17,855 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:19:17,855 - ==> Parameters: 
+2018-04-24 23:19:17,856 - <==      Total: 1
+2018-04-24 23:19:35,023 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:19:35,024 - ==> Parameters: admin(String)
+2018-04-24 23:19:35,025 - <==      Total: 1
+2018-04-24 23:19:35,026 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:19:35,026 - ==> Parameters: 
+2018-04-24 23:19:35,027 - <==      Total: 1
+2018-04-24 23:19:35,028 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:19:35,029 - ==> Parameters: 
+2018-04-24 23:19:35,029 - <==      Total: 1
+2018-04-24 23:19:35,030 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:19:35,030 - ==> Parameters: 10(Integer)
+2018-04-24 23:19:35,032 - <==      Total: 10
+2018-04-24 23:19:36,047 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:19:36,047 - ==> Parameters: 
+2018-04-24 23:19:36,048 - <==      Total: 3
+2018-04-24 23:19:36,048 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:19:36,048 - ==> Parameters: 
+2018-04-24 23:19:36,049 - <==      Total: 1
+2018-04-24 23:19:37,112 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:19:37,112 - ==> Parameters: admin(String)
+2018-04-24 23:19:37,113 - <==      Total: 1
+2018-04-24 23:19:37,114 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:19:37,114 - ==> Parameters: 
+2018-04-24 23:19:37,115 - <==      Total: 1
+2018-04-24 23:19:37,116 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:19:37,116 - ==> Parameters: 
+2018-04-24 23:19:37,117 - <==      Total: 1
+2018-04-24 23:19:37,117 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:19:37,117 - ==> Parameters: 10(Integer)
+2018-04-24 23:19:37,119 - <==      Total: 10
+2018-04-24 23:19:41,615 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:19:41,615 - ==> Parameters: 
+2018-04-24 23:19:41,616 - <==      Total: 3
+2018-04-24 23:19:41,616 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:19:41,617 - ==> Parameters: 
+2018-04-24 23:19:41,617 - <==      Total: 1
+2018-04-24 23:19:42,519 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:19:42,519 - ==> Parameters: admin(String)
+2018-04-24 23:19:42,520 - <==      Total: 1
+2018-04-24 23:19:42,520 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:19:42,520 - ==> Parameters: 
+2018-04-24 23:19:42,521 - <==      Total: 1
+2018-04-24 23:19:42,522 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:19:42,522 - ==> Parameters: 
+2018-04-24 23:19:42,523 - <==      Total: 1
+2018-04-24 23:19:42,524 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:19:42,524 - ==> Parameters: 10(Integer)
+2018-04-24 23:19:42,526 - <==      Total: 10
+2018-04-24 23:19:43,706 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:19:43,706 - ==> Parameters: 
+2018-04-24 23:19:43,707 - <==      Total: 3
+2018-04-24 23:19:43,707 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:19:43,708 - ==> Parameters: 
+2018-04-24 23:19:43,708 - <==      Total: 1
+2018-04-24 23:19:44,659 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:19:44,659 - ==> Parameters: admin(String)
+2018-04-24 23:19:44,660 - <==      Total: 1
+2018-04-24 23:19:44,661 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:19:44,661 - ==> Parameters: 
+2018-04-24 23:19:44,662 - <==      Total: 1
+2018-04-24 23:19:44,664 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:19:44,664 - ==> Parameters: 
+2018-04-24 23:19:44,665 - <==      Total: 1
+2018-04-24 23:19:44,666 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:19:44,666 - ==> Parameters: 10(Integer)
+2018-04-24 23:19:44,668 - <==      Total: 10
+2018-04-24 23:20:02,863 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:20:02,863 - ==> Parameters: admin(String)
+2018-04-24 23:20:02,864 - <==      Total: 1
+2018-04-24 23:20:02,865 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:20:02,865 - ==> Parameters: 
+2018-04-24 23:20:02,865 - <==      Total: 1
+2018-04-24 23:20:02,866 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:20:02,867 - ==> Parameters: 
+2018-04-24 23:20:02,867 - <==      Total: 1
+2018-04-24 23:20:02,868 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:20:02,869 - ==> Parameters: 10(Integer)
+2018-04-24 23:20:02,871 - <==      Total: 10
+2018-04-24 23:20:03,729 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:20:03,730 - ==> Parameters: 
+2018-04-24 23:20:03,730 - <==      Total: 3
+2018-04-24 23:20:03,731 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:20:03,731 - ==> Parameters: 
+2018-04-24 23:20:03,731 - <==      Total: 1
+2018-04-24 23:20:04,841 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:20:04,841 - ==> Parameters: admin(String)
+2018-04-24 23:20:04,843 - <==      Total: 1
+2018-04-24 23:20:04,843 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:20:04,843 - ==> Parameters: 
+2018-04-24 23:20:04,844 - <==      Total: 1
+2018-04-24 23:20:04,845 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:20:04,846 - ==> Parameters: 
+2018-04-24 23:20:04,846 - <==      Total: 1
+2018-04-24 23:20:04,847 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:20:04,848 - ==> Parameters: 10(Integer)
+2018-04-24 23:20:04,850 - <==      Total: 10
+2018-04-24 23:20:18,244 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:20:18,244 - ==> Parameters: admin(String)
+2018-04-24 23:20:18,245 - <==      Total: 1
+2018-04-24 23:20:18,246 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:20:18,246 - ==> Parameters: 
+2018-04-24 23:20:18,247 - <==      Total: 1
+2018-04-24 23:20:18,248 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:20:18,248 - ==> Parameters: 
+2018-04-24 23:20:18,249 - <==      Total: 1
+2018-04-24 23:20:18,250 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:20:18,250 - ==> Parameters: 10(Integer)
+2018-04-24 23:20:18,252 - <==      Total: 10
+2018-04-24 23:20:18,924 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:20:18,925 - ==> Parameters: 
+2018-04-24 23:20:18,925 - <==      Total: 3
+2018-04-24 23:20:18,926 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:20:18,926 - ==> Parameters: 
+2018-04-24 23:20:18,927 - <==      Total: 1
+2018-04-24 23:21:31,863 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:21:31,864 - ==> Parameters: admin(String)
+2018-04-24 23:21:31,865 - <==      Total: 1
+2018-04-24 23:21:31,865 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:21:31,866 - ==> Parameters: 
+2018-04-24 23:21:31,866 - <==      Total: 1
+2018-04-24 23:21:31,867 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:21:31,867 - ==> Parameters: 
+2018-04-24 23:21:31,868 - <==      Total: 1
+2018-04-24 23:21:31,869 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:21:31,869 - ==> Parameters: 10(Integer)
+2018-04-24 23:21:31,871 - <==      Total: 10
+2018-04-24 23:21:32,765 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:21:32,765 - ==> Parameters: 
+2018-04-24 23:21:32,766 - <==      Total: 3
+2018-04-24 23:21:32,767 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:21:32,767 - ==> Parameters: 
+2018-04-24 23:21:32,768 - <==      Total: 1
+2018-04-24 23:21:38,559 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:21:38,559 - ==> Parameters: 
+2018-04-24 23:21:38,560 - <==      Total: 3
+2018-04-24 23:21:38,561 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:21:38,561 - ==> Parameters: 
+2018-04-24 23:21:38,561 - <==      Total: 1
+2018-04-24 23:21:46,844 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:21:46,844 - ==> Parameters: 
+2018-04-24 23:21:46,844 - <==      Total: 3
+2018-04-24 23:21:46,845 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:21:46,845 - ==> Parameters: 
+2018-04-24 23:21:46,845 - <==      Total: 1
+2018-04-24 23:23:27,278 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:23:27,278 - ==> Parameters: admin(String)
+2018-04-24 23:23:27,280 - <==      Total: 1
+2018-04-24 23:23:27,280 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:23:27,280 - ==> Parameters: 
+2018-04-24 23:23:27,281 - <==      Total: 1
+2018-04-24 23:23:27,282 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:23:27,283 - ==> Parameters: 
+2018-04-24 23:23:27,283 - <==      Total: 1
+2018-04-24 23:23:27,284 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:23:27,285 - ==> Parameters: 10(Integer)
+2018-04-24 23:23:27,287 - <==      Total: 10
+2018-04-24 23:23:27,858 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:23:27,858 - ==> Parameters: 
+2018-04-24 23:23:27,859 - <==      Total: 3
+2018-04-24 23:23:27,859 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:23:27,860 - ==> Parameters: 
+2018-04-24 23:23:27,861 - <==      Total: 1
+2018-04-24 23:23:39,091 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:23:39,091 - ==> Parameters: 
+2018-04-24 23:23:39,092 - <==      Total: 3
+2018-04-24 23:23:39,092 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:23:39,092 - ==> Parameters: 
+2018-04-24 23:23:39,093 - <==      Total: 1
+2018-04-24 23:23:52,817 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:23:52,817 - ==> Parameters: 
+2018-04-24 23:23:52,818 - <==      Total: 3
+2018-04-24 23:23:52,819 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:23:52,819 - ==> Parameters: 
+2018-04-24 23:23:52,820 - <==      Total: 1
+2018-04-24 23:24:13,188 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:24:13,188 - ==> Parameters: 
+2018-04-24 23:24:13,189 - <==      Total: 3
+2018-04-24 23:24:13,189 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:24:13,189 - ==> Parameters: 
+2018-04-24 23:24:13,190 - <==      Total: 1
+2018-04-24 23:25:58,405 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:25:58,405 - ==> Parameters: admin(String)
+2018-04-24 23:25:58,406 - <==      Total: 1
+2018-04-24 23:25:58,407 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:25:58,407 - ==> Parameters: 
+2018-04-24 23:25:58,408 - <==      Total: 1
+2018-04-24 23:25:58,409 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:25:58,409 - ==> Parameters: 
+2018-04-24 23:25:58,410 - <==      Total: 1
+2018-04-24 23:25:58,411 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:25:58,411 - ==> Parameters: 10(Integer)
+2018-04-24 23:25:58,413 - <==      Total: 10
+2018-04-24 23:25:59,403 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:25:59,403 - ==> Parameters: 
+2018-04-24 23:25:59,404 - <==      Total: 3
+2018-04-24 23:25:59,405 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:25:59,405 - ==> Parameters: 
+2018-04-24 23:25:59,405 - <==      Total: 1
+2018-04-24 23:26:06,762 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:26:06,763 - ==> Parameters: 
+2018-04-24 23:26:06,763 - <==      Total: 3
+2018-04-24 23:26:06,764 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:26:06,764 - ==> Parameters: 
+2018-04-24 23:26:06,764 - <==      Total: 1
+2018-04-24 23:27:36,082 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:27:36,082 - ==> Parameters: 
+2018-04-24 23:27:36,083 - <==      Total: 3
+2018-04-24 23:27:36,083 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:27:36,083 - ==> Parameters: 
+2018-04-24 23:27:36,084 - <==      Total: 1
+2018-04-24 23:28:26,000 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:28:26,000 - ==> Parameters: admin(String)
+2018-04-24 23:28:26,003 - <==      Total: 1
+2018-04-24 23:28:26,004 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:28:26,004 - ==> Parameters: 
+2018-04-24 23:28:26,005 - <==      Total: 1
+2018-04-24 23:28:26,006 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:28:26,006 - ==> Parameters: 
+2018-04-24 23:28:26,007 - <==      Total: 1
+2018-04-24 23:28:26,007 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:28:26,007 - ==> Parameters: 10(Integer)
+2018-04-24 23:28:26,009 - <==      Total: 10
+2018-04-24 23:28:27,090 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:28:27,090 - ==> Parameters: 
+2018-04-24 23:28:27,091 - <==      Total: 3
+2018-04-24 23:28:27,091 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:28:27,091 - ==> Parameters: 
+2018-04-24 23:28:27,092 - <==      Total: 1
+2018-04-24 23:32:18,140 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:32:18,140 - ==> Parameters: admin(String)
+2018-04-24 23:32:18,141 - <==      Total: 1
+2018-04-24 23:32:18,142 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:32:18,142 - ==> Parameters: 
+2018-04-24 23:32:18,143 - <==      Total: 1
+2018-04-24 23:32:18,144 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:32:18,144 - ==> Parameters: 
+2018-04-24 23:32:18,145 - <==      Total: 1
+2018-04-24 23:32:18,145 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:32:18,145 - ==> Parameters: 10(Integer)
+2018-04-24 23:32:18,147 - <==      Total: 10
+2018-04-24 23:32:18,633 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:32:18,633 - ==> Parameters: 
+2018-04-24 23:32:18,634 - <==      Total: 3
+2018-04-24 23:32:18,634 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:32:18,635 - ==> Parameters: 
+2018-04-24 23:32:18,636 - <==      Total: 1
+2018-04-24 23:32:50,219 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:32:50,219 - ==> Parameters: admin(String)
+2018-04-24 23:32:50,220 - <==      Total: 1
+2018-04-24 23:32:50,221 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:32:50,221 - ==> Parameters: 
+2018-04-24 23:32:50,222 - <==      Total: 1
+2018-04-24 23:32:50,223 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:32:50,223 - ==> Parameters: 
+2018-04-24 23:32:50,224 - <==      Total: 1
+2018-04-24 23:32:50,225 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:32:50,225 - ==> Parameters: 10(Integer)
+2018-04-24 23:32:50,227 - <==      Total: 10
+2018-04-24 23:32:50,948 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:32:50,949 - ==> Parameters: 
+2018-04-24 23:32:50,950 - <==      Total: 3
+2018-04-24 23:32:50,951 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:32:50,952 - ==> Parameters: 
+2018-04-24 23:32:50,953 - <==      Total: 1
+2018-04-24 23:32:52,037 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:32:52,037 - ==> Parameters: admin(String)
+2018-04-24 23:32:52,038 - <==      Total: 1
+2018-04-24 23:32:52,039 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:32:52,040 - ==> Parameters: 
+2018-04-24 23:32:52,041 - <==      Total: 1
+2018-04-24 23:32:52,042 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:32:52,042 - ==> Parameters: 
+2018-04-24 23:32:52,043 - <==      Total: 1
+2018-04-24 23:32:52,044 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:32:52,044 - ==> Parameters: 10(Integer)
+2018-04-24 23:32:52,046 - <==      Total: 10
+2018-04-24 23:35:41,769 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:35:41,770 - ==> Parameters: admin(String)
+2018-04-24 23:35:41,771 - <==      Total: 1
+2018-04-24 23:35:41,771 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:35:41,772 - ==> Parameters: 
+2018-04-24 23:35:41,772 - <==      Total: 1
+2018-04-24 23:35:41,773 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:35:41,773 - ==> Parameters: 
+2018-04-24 23:35:41,774 - <==      Total: 1
+2018-04-24 23:35:41,775 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:35:41,775 - ==> Parameters: 10(Integer)
+2018-04-24 23:35:41,866 - <==      Total: 10
+2018-04-24 23:35:42,426 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:35:42,426 - ==> Parameters: 
+2018-04-24 23:35:42,427 - <==      Total: 3
+2018-04-24 23:35:42,428 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:35:42,428 - ==> Parameters: 
+2018-04-24 23:35:42,428 - <==      Total: 1
+2018-04-24 23:35:45,383 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:35:45,384 - ==> Parameters: admin(String)
+2018-04-24 23:35:45,384 - <==      Total: 1
+2018-04-24 23:35:45,385 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:35:45,385 - ==> Parameters: 
+2018-04-24 23:35:45,386 - <==      Total: 1
+2018-04-24 23:35:45,387 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:35:45,387 - ==> Parameters: 
+2018-04-24 23:35:45,388 - <==      Total: 1
+2018-04-24 23:35:45,388 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:35:45,388 - ==> Parameters: 10(Integer)
+2018-04-24 23:35:45,390 - <==      Total: 10
+2018-04-24 23:35:46,752 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:35:46,753 - ==> Parameters: 
+2018-04-24 23:35:46,754 - <==      Total: 3
+2018-04-24 23:35:46,754 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:35:46,755 - ==> Parameters: 
+2018-04-24 23:35:46,756 - <==      Total: 1
+2018-04-24 23:36:21,393 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:36:21,393 - ==> Parameters: admin(String)
+2018-04-24 23:36:21,394 - <==      Total: 1
+2018-04-24 23:36:21,394 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:36:21,394 - ==> Parameters: 
+2018-04-24 23:36:21,395 - <==      Total: 1
+2018-04-24 23:36:21,396 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:36:21,396 - ==> Parameters: 
+2018-04-24 23:36:21,397 - <==      Total: 1
+2018-04-24 23:36:21,398 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:36:21,398 - ==> Parameters: 10(Integer)
+2018-04-24 23:36:21,400 - <==      Total: 10
+2018-04-24 23:36:22,034 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:36:22,034 - ==> Parameters: 
+2018-04-24 23:36:22,035 - <==      Total: 3
+2018-04-24 23:36:22,035 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:36:22,035 - ==> Parameters: 
+2018-04-24 23:36:22,036 - <==      Total: 1
+2018-04-24 23:36:23,554 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:36:23,555 - ==> Parameters: admin(String)
+2018-04-24 23:36:23,556 - <==      Total: 1
+2018-04-24 23:36:23,556 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:36:23,557 - ==> Parameters: 
+2018-04-24 23:36:23,557 - <==      Total: 1
+2018-04-24 23:36:23,558 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:36:23,558 - ==> Parameters: 
+2018-04-24 23:36:23,559 - <==      Total: 1
+2018-04-24 23:36:23,560 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:36:23,560 - ==> Parameters: 10(Integer)
+2018-04-24 23:36:23,562 - <==      Total: 10
+2018-04-24 23:36:24,334 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:36:24,334 - ==> Parameters: admin(String)
+2018-04-24 23:36:24,335 - <==      Total: 1
+2018-04-24 23:36:24,335 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:36:24,335 - ==> Parameters: 
+2018-04-24 23:36:24,336 - <==      Total: 1
+2018-04-24 23:36:24,337 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:36:24,337 - ==> Parameters: 
+2018-04-24 23:36:24,337 - <==      Total: 1
+2018-04-24 23:36:24,338 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:36:24,338 - ==> Parameters: 10(Integer)
+2018-04-24 23:36:24,340 - <==      Total: 10
+2018-04-24 23:36:24,766 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:36:24,766 - ==> Parameters: 
+2018-04-24 23:36:24,767 - <==      Total: 3
+2018-04-24 23:36:24,767 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:36:24,767 - ==> Parameters: 
+2018-04-24 23:36:24,768 - <==      Total: 1
+2018-04-24 23:37:11,200 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:37:11,200 - ==> Parameters: admin(String)
+2018-04-24 23:37:11,201 - <==      Total: 1
+2018-04-24 23:37:11,202 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:37:11,202 - ==> Parameters: 
+2018-04-24 23:37:11,202 - <==      Total: 1
+2018-04-24 23:37:11,203 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:37:11,203 - ==> Parameters: 
+2018-04-24 23:37:11,204 - <==      Total: 1
+2018-04-24 23:37:11,205 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:37:11,205 - ==> Parameters: 10(Integer)
+2018-04-24 23:37:11,207 - <==      Total: 10
+2018-04-24 23:37:11,841 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:37:11,841 - ==> Parameters: 
+2018-04-24 23:37:11,842 - <==      Total: 3
+2018-04-24 23:37:11,842 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:37:11,843 - ==> Parameters: 
+2018-04-24 23:37:11,843 - <==      Total: 1
+2018-04-24 23:37:30,959 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:37:30,960 - ==> Parameters: admin(String)
+2018-04-24 23:37:30,961 - <==      Total: 1
+2018-04-24 23:37:30,961 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:37:30,961 - ==> Parameters: 
+2018-04-24 23:37:30,962 - <==      Total: 1
+2018-04-24 23:37:30,963 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:37:30,963 - ==> Parameters: 
+2018-04-24 23:37:30,964 - <==      Total: 1
+2018-04-24 23:37:30,964 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:37:30,965 - ==> Parameters: 10(Integer)
+2018-04-24 23:37:30,966 - <==      Total: 10
+2018-04-24 23:37:32,102 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:37:32,102 - ==> Parameters: 
+2018-04-24 23:37:32,103 - <==      Total: 3
+2018-04-24 23:37:32,103 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:37:32,103 - ==> Parameters: 
+2018-04-24 23:37:32,104 - <==      Total: 1
+2018-04-24 23:39:20,607 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:39:20,607 - ==> Parameters: admin(String)
+2018-04-24 23:39:20,609 - <==      Total: 1
+2018-04-24 23:39:20,609 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:39:20,610 - ==> Parameters: 
+2018-04-24 23:39:20,610 - <==      Total: 1
+2018-04-24 23:39:20,611 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:39:20,611 - ==> Parameters: 
+2018-04-24 23:39:20,612 - <==      Total: 1
+2018-04-24 23:39:20,613 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:39:20,613 - ==> Parameters: 10(Integer)
+2018-04-24 23:39:20,615 - <==      Total: 10
+2018-04-24 23:39:21,274 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:39:21,274 - ==> Parameters: 
+2018-04-24 23:39:21,275 - <==      Total: 3
+2018-04-24 23:39:21,275 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:39:21,275 - ==> Parameters: 
+2018-04-24 23:39:21,277 - <==      Total: 1
+2018-04-24 23:41:08,413 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:41:08,414 - ==> Parameters: admin(String)
+2018-04-24 23:41:08,414 - <==      Total: 1
+2018-04-24 23:41:08,415 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:41:08,415 - ==> Parameters: 
+2018-04-24 23:41:08,416 - <==      Total: 1
+2018-04-24 23:41:08,417 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:41:08,417 - ==> Parameters: 
+2018-04-24 23:41:08,418 - <==      Total: 1
+2018-04-24 23:41:08,419 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:41:08,419 - ==> Parameters: 10(Integer)
+2018-04-24 23:41:08,420 - <==      Total: 10
+2018-04-24 23:41:09,037 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:41:09,037 - ==> Parameters: 
+2018-04-24 23:41:09,037 - <==      Total: 3
+2018-04-24 23:41:09,038 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:41:09,038 - ==> Parameters: 
+2018-04-24 23:41:09,039 - <==      Total: 1
+2018-04-24 23:41:16,597 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:41:16,598 - ==> Parameters: admin(String)
+2018-04-24 23:41:16,598 - <==      Total: 1
+2018-04-24 23:41:16,599 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:41:16,599 - ==> Parameters: 
+2018-04-24 23:41:16,600 - <==      Total: 1
+2018-04-24 23:41:16,601 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:41:16,601 - ==> Parameters: 
+2018-04-24 23:41:16,602 - <==      Total: 1
+2018-04-24 23:41:16,602 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:41:16,603 - ==> Parameters: 10(Integer), 10(Integer)
+2018-04-24 23:41:16,604 - <==      Total: 10
+2018-04-24 23:41:19,339 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:41:19,340 - ==> Parameters: admin(String)
+2018-04-24 23:41:19,340 - <==      Total: 1
+2018-04-24 23:41:19,341 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:41:19,341 - ==> Parameters: 
+2018-04-24 23:41:19,341 - <==      Total: 1
+2018-04-24 23:41:19,342 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:41:19,342 - ==> Parameters: 
+2018-04-24 23:41:19,342 - <==      Total: 1
+2018-04-24 23:41:19,343 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:41:19,343 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:41:19,359 - <==      Total: 2
+2018-04-24 23:41:22,063 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:41:22,063 - ==> Parameters: 
+2018-04-24 23:41:22,064 - <==      Total: 3
+2018-04-24 23:41:22,064 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:41:22,064 - ==> Parameters: 
+2018-04-24 23:41:22,065 - <==      Total: 1
+2018-04-24 23:41:29,236 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:41:29,237 - ==> Parameters: admin(String)
+2018-04-24 23:41:29,237 - <==      Total: 1
+2018-04-24 23:41:29,237 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:41:29,238 - ==> Parameters: zhangsan(String)
+2018-04-24 23:41:29,238 - <==      Total: 1
+2018-04-24 23:42:09,655 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:42:09,655 - ==> Parameters: admin(String)
+2018-04-24 23:42:09,656 - <==      Total: 1
+2018-04-24 23:42:09,657 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:42:09,657 - ==> Parameters: huanger(String)
+2018-04-24 23:42:09,657 - <==      Total: 0
+2018-04-24 23:42:09,658 - ==>  Preparing: INSERT INTO role (login_name, login_password, create_id, role_type) VALUES (?, ?, ?, ?) 
+2018-04-24 23:42:09,659 - ==> Parameters: huanger(String), aa62e1ce62865a1a2148985587da25bb(String), 1000(Integer), 1(Integer)
+2018-04-24 23:42:09,794 - <==    Updates: 1
+2018-04-24 23:42:09,794 - ==>  Preparing: SELECT COUNT(login_name) FROM teacher_information WHERE login_name = ? 
+2018-04-24 23:42:09,794 - ==> Parameters: huanger(String)
+2018-04-24 23:42:09,795 - <==      Total: 1
+2018-04-24 23:42:09,795 - ==>  Preparing: SELECT COUNT(number) FROM teacher_information WHERE number = ? 
+2018-04-24 23:42:09,796 - ==> Parameters: T-001(String)
+2018-04-24 23:42:09,796 - <==      Total: 1
+2018-04-24 23:42:15,056 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:42:15,056 - ==> Parameters: admin(String)
+2018-04-24 23:42:15,057 - <==      Total: 1
+2018-04-24 23:42:15,057 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:42:15,057 - ==> Parameters: huanger(String)
+2018-04-24 23:42:15,058 - <==      Total: 0
+2018-04-24 23:42:15,058 - ==>  Preparing: INSERT INTO role (login_name, login_password, create_id, role_type) VALUES (?, ?, ?, ?) 
+2018-04-24 23:42:15,059 - ==> Parameters: huanger(String), aa62e1ce62865a1a2148985587da25bb(String), 1000(Integer), 1(Integer)
+2018-04-24 23:42:15,060 - <==    Updates: 1
+2018-04-24 23:42:15,060 - ==>  Preparing: SELECT COUNT(login_name) FROM teacher_information WHERE login_name = ? 
+2018-04-24 23:42:15,060 - ==> Parameters: huanger(String)
+2018-04-24 23:42:15,062 - <==      Total: 1
+2018-04-24 23:42:15,062 - ==>  Preparing: SELECT COUNT(number) FROM teacher_information WHERE number = ? 
+2018-04-24 23:42:15,063 - ==> Parameters: T-023(String)
+2018-04-24 23:42:15,064 - <==      Total: 1
+2018-04-24 23:42:15,072 - ==>  Preparing: INSERT INTO teacher_information (login_name, number, name, sex, id_cart, positional_titles, nation, place, address, birthday, phone, department, classes, subject) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-24 23:42:15,073 - ==> Parameters: huanger(String), T-023(String), 晃儿(String), 男(String), 522628199101062213(String), 中学二级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1999-01-06(String), 18312345678(String), 学生处(String), 高一(1)班,高二(1)班,高三(1)班(String), 语文(String)
+2018-04-24 23:42:15,117 - <==    Updates: 1
+2018-04-24 23:42:16,042 - loginName=admin
+2018-04-24 23:42:17,225 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:42:17,225 - ==> Parameters: admin(String)
+2018-04-24 23:42:17,226 - <==      Total: 1
+2018-04-24 23:42:17,227 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:42:17,227 - ==> Parameters: 
+2018-04-24 23:42:17,227 - <==      Total: 1
+2018-04-24 23:42:17,228 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:42:17,229 - ==> Parameters: 
+2018-04-24 23:42:17,230 - <==      Total: 1
+2018-04-24 23:42:17,230 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:42:17,230 - ==> Parameters: 10(Integer)
+2018-04-24 23:42:17,232 - <==      Total: 10
+2018-04-24 23:42:18,372 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:42:18,372 - ==> Parameters: admin(String)
+2018-04-24 23:42:18,373 - <==      Total: 1
+2018-04-24 23:42:18,374 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:42:18,374 - ==> Parameters: 
+2018-04-24 23:42:18,374 - <==      Total: 1
+2018-04-24 23:42:18,375 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:42:18,375 - ==> Parameters: 
+2018-04-24 23:42:18,376 - <==      Total: 1
+2018-04-24 23:42:18,376 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:42:18,377 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:42:18,378 - <==      Total: 3
+2018-04-24 23:42:23,625 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:42:23,625 - ==> Parameters: 
+2018-04-24 23:42:23,626 - <==      Total: 3
+2018-04-24 23:42:23,626 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:42:23,626 - ==> Parameters: 
+2018-04-24 23:42:23,627 - <==      Total: 1
+2018-04-24 23:43:07,606 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:43:07,607 - ==> Parameters: admin(String)
+2018-04-24 23:43:07,608 - <==      Total: 1
+2018-04-24 23:43:07,608 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:43:07,608 - ==> Parameters: 
+2018-04-24 23:43:07,609 - <==      Total: 1
+2018-04-24 23:43:07,610 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:43:07,610 - ==> Parameters: 
+2018-04-24 23:43:07,611 - <==      Total: 1
+2018-04-24 23:43:07,612 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:43:07,612 - ==> Parameters: 10(Integer)
+2018-04-24 23:43:07,614 - <==      Total: 10
+2018-04-24 23:43:09,420 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:43:09,420 - ==> Parameters: 
+2018-04-24 23:43:09,421 - <==      Total: 3
+2018-04-24 23:43:09,422 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:43:09,422 - ==> Parameters: 
+2018-04-24 23:43:09,423 - <==      Total: 1
+2018-04-24 23:43:29,716 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:43:29,716 - ==> Parameters: admin(String)
+2018-04-24 23:43:29,717 - <==      Total: 1
+2018-04-24 23:43:29,718 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:43:29,718 - ==> Parameters: 
+2018-04-24 23:43:29,719 - <==      Total: 1
+2018-04-24 23:43:29,720 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:43:29,720 - ==> Parameters: 
+2018-04-24 23:43:29,721 - <==      Total: 1
+2018-04-24 23:43:29,721 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:43:29,722 - ==> Parameters: 10(Integer)
+2018-04-24 23:43:29,723 - <==      Total: 10
+2018-04-24 23:43:32,856 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:43:32,856 - ==> Parameters: admin(String)
+2018-04-24 23:43:32,857 - <==      Total: 1
+2018-04-24 23:43:32,858 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:43:32,858 - ==> Parameters: 
+2018-04-24 23:43:32,859 - <==      Total: 1
+2018-04-24 23:43:32,860 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:43:32,860 - ==> Parameters: 
+2018-04-24 23:43:32,861 - <==      Total: 1
+2018-04-24 23:43:32,861 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:43:32,862 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:43:32,863 - <==      Total: 3
+2018-04-24 23:43:34,007 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:43:34,007 - ==> Parameters: 
+2018-04-24 23:43:34,008 - <==      Total: 3
+2018-04-24 23:43:34,008 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:43:34,008 - ==> Parameters: 
+2018-04-24 23:43:34,009 - <==      Total: 1
+2018-04-24 23:44:02,001 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:44:02,002 - ==> Parameters: admin(String)
+2018-04-24 23:44:02,003 - <==      Total: 1
+2018-04-24 23:44:02,003 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:44:02,003 - ==> Parameters: 
+2018-04-24 23:44:02,004 - <==      Total: 1
+2018-04-24 23:44:02,005 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:44:02,005 - ==> Parameters: 
+2018-04-24 23:44:02,006 - <==      Total: 1
+2018-04-24 23:44:02,007 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:44:02,007 - ==> Parameters: 10(Integer)
+2018-04-24 23:44:02,010 - <==      Total: 10
+2018-04-24 23:44:03,802 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:44:03,802 - ==> Parameters: admin(String)
+2018-04-24 23:44:03,803 - <==      Total: 1
+2018-04-24 23:44:03,804 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:44:03,804 - ==> Parameters: 
+2018-04-24 23:44:03,805 - <==      Total: 1
+2018-04-24 23:44:03,808 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:44:03,808 - ==> Parameters: 
+2018-04-24 23:44:03,808 - <==      Total: 1
+2018-04-24 23:44:03,809 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:44:03,809 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:44:03,811 - <==      Total: 3
+2018-04-24 23:44:04,830 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:44:04,830 - ==> Parameters: 
+2018-04-24 23:44:04,831 - <==      Total: 3
+2018-04-24 23:44:04,832 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:44:04,832 - ==> Parameters: 
+2018-04-24 23:44:04,833 - <==      Total: 1
+2018-04-24 23:45:30,915 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:45:30,916 - ==> Parameters: admin(String)
+2018-04-24 23:45:30,920 - <==      Total: 1
+2018-04-24 23:45:30,921 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:45:30,921 - ==> Parameters: 
+2018-04-24 23:45:30,925 - <==      Total: 1
+2018-04-24 23:45:30,927 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:45:30,927 - ==> Parameters: 
+2018-04-24 23:45:30,928 - <==      Total: 1
+2018-04-24 23:45:30,929 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:45:30,929 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:45:30,930 - <==      Total: 3
+2018-04-24 23:45:31,460 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:45:31,460 - ==> Parameters: admin(String)
+2018-04-24 23:45:31,461 - <==      Total: 1
+2018-04-24 23:45:31,462 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:45:31,462 - ==> Parameters: 
+2018-04-24 23:45:31,462 - <==      Total: 1
+2018-04-24 23:45:31,463 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:45:31,464 - ==> Parameters: 
+2018-04-24 23:45:31,464 - <==      Total: 1
+2018-04-24 23:45:31,466 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:45:31,466 - ==> Parameters: 10(Integer)
+2018-04-24 23:45:31,468 - <==      Total: 10
+2018-04-24 23:45:33,671 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:45:33,672 - ==> Parameters: 
+2018-04-24 23:45:33,675 - <==      Total: 3
+2018-04-24 23:45:33,676 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:45:33,676 - ==> Parameters: 
+2018-04-24 23:45:33,676 - <==      Total: 1
+2018-04-24 23:45:49,058 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:45:49,058 - ==> Parameters: 
+2018-04-24 23:45:49,061 - <==      Total: 3
+2018-04-24 23:45:49,061 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:45:49,061 - ==> Parameters: 
+2018-04-24 23:45:49,064 - <==      Total: 1
+2018-04-24 23:46:08,933 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:46:08,934 - ==> Parameters: admin(String)
+2018-04-24 23:46:08,938 - <==      Total: 1
+2018-04-24 23:46:08,938 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:46:08,938 - ==> Parameters: 
+2018-04-24 23:46:08,942 - <==      Total: 1
+2018-04-24 23:46:08,943 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:46:08,943 - ==> Parameters: 
+2018-04-24 23:46:08,944 - <==      Total: 1
+2018-04-24 23:46:08,945 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:46:08,945 - ==> Parameters: 10(Integer)
+2018-04-24 23:46:08,947 - <==      Total: 10
+2018-04-24 23:46:09,827 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:46:09,827 - ==> Parameters: 
+2018-04-24 23:46:09,831 - <==      Total: 3
+2018-04-24 23:46:09,832 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:46:09,832 - ==> Parameters: 
+2018-04-24 23:46:09,833 - <==      Total: 1
+2018-04-24 23:46:15,113 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:46:15,114 - ==> Parameters: admin(String)
+2018-04-24 23:46:15,119 - <==      Total: 1
+2018-04-24 23:46:15,119 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:46:15,119 - ==> Parameters: 
+2018-04-24 23:46:15,122 - <==      Total: 1
+2018-04-24 23:46:15,123 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:46:15,123 - ==> Parameters: 
+2018-04-24 23:46:15,124 - <==      Total: 1
+2018-04-24 23:46:15,125 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:46:15,125 - ==> Parameters: 10(Integer)
+2018-04-24 23:46:15,127 - <==      Total: 10
+2018-04-24 23:46:16,790 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:46:16,790 - ==> Parameters: 
+2018-04-24 23:46:16,793 - <==      Total: 3
+2018-04-24 23:46:16,794 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:46:16,794 - ==> Parameters: 
+2018-04-24 23:46:16,794 - <==      Total: 1
+2018-04-24 23:46:19,300 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:46:19,300 - ==> Parameters: admin(String)
+2018-04-24 23:46:19,301 - <==      Total: 1
+2018-04-24 23:46:19,302 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:46:19,302 - ==> Parameters: 
+2018-04-24 23:46:19,302 - <==      Total: 1
+2018-04-24 23:46:19,303 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:46:19,304 - ==> Parameters: 
+2018-04-24 23:46:19,304 - <==      Total: 1
+2018-04-24 23:46:19,305 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:46:19,305 - ==> Parameters: 10(Integer)
+2018-04-24 23:46:19,306 - <==      Total: 10
+2018-04-24 23:46:20,405 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:46:20,406 - ==> Parameters: 
+2018-04-24 23:46:20,406 - <==      Total: 3
+2018-04-24 23:46:20,407 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:46:20,407 - ==> Parameters: 
+2018-04-24 23:46:20,407 - <==      Total: 1
+2018-04-24 23:47:19,866 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:47:19,866 - ==> Parameters: admin(String)
+2018-04-24 23:47:19,867 - <==      Total: 1
+2018-04-24 23:47:19,868 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:47:19,868 - ==> Parameters: 
+2018-04-24 23:47:19,868 - <==      Total: 1
+2018-04-24 23:47:19,869 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:47:19,869 - ==> Parameters: 
+2018-04-24 23:47:19,870 - <==      Total: 1
+2018-04-24 23:47:19,871 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:47:19,871 - ==> Parameters: 10(Integer)
+2018-04-24 23:47:19,873 - <==      Total: 10
+2018-04-24 23:47:20,886 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:47:20,886 - ==> Parameters: 
+2018-04-24 23:47:20,886 - <==      Total: 3
+2018-04-24 23:47:20,887 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:47:20,887 - ==> Parameters: 
+2018-04-24 23:47:20,888 - <==      Total: 1
+2018-04-24 23:47:21,933 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:47:21,933 - ==> Parameters: admin(String)
+2018-04-24 23:47:21,934 - <==      Total: 1
+2018-04-24 23:47:21,934 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:47:21,934 - ==> Parameters: 
+2018-04-24 23:47:21,935 - <==      Total: 1
+2018-04-24 23:47:21,936 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:47:21,936 - ==> Parameters: 
+2018-04-24 23:47:21,936 - <==      Total: 1
+2018-04-24 23:47:21,937 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:47:21,937 - ==> Parameters: 10(Integer)
+2018-04-24 23:47:21,939 - <==      Total: 10
+2018-04-24 23:47:22,687 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:47:22,687 - ==> Parameters: 
+2018-04-24 23:47:22,688 - <==      Total: 3
+2018-04-24 23:47:22,688 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:47:22,688 - ==> Parameters: 
+2018-04-24 23:47:22,689 - <==      Total: 1
+2018-04-24 23:47:42,993 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:47:42,994 - ==> Parameters: admin(String)
+2018-04-24 23:47:42,995 - <==      Total: 1
+2018-04-24 23:47:42,995 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:47:42,995 - ==> Parameters: 
+2018-04-24 23:47:42,996 - <==      Total: 1
+2018-04-24 23:47:42,997 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:47:42,997 - ==> Parameters: 
+2018-04-24 23:47:42,998 - <==      Total: 1
+2018-04-24 23:47:42,998 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:47:42,999 - ==> Parameters: 10(Integer)
+2018-04-24 23:47:43,000 - <==      Total: 10
+2018-04-24 23:47:44,354 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:47:44,354 - ==> Parameters: 
+2018-04-24 23:47:44,355 - <==      Total: 3
+2018-04-24 23:47:44,355 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:47:44,355 - ==> Parameters: 
+2018-04-24 23:47:44,356 - <==      Total: 1
+2018-04-24 23:47:45,700 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:47:45,700 - ==> Parameters: admin(String)
+2018-04-24 23:47:45,701 - <==      Total: 1
+2018-04-24 23:47:45,701 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:47:45,702 - ==> Parameters: 
+2018-04-24 23:47:45,702 - <==      Total: 1
+2018-04-24 23:47:45,703 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:47:45,703 - ==> Parameters: 
+2018-04-24 23:47:45,704 - <==      Total: 1
+2018-04-24 23:47:45,704 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:47:45,705 - ==> Parameters: 10(Integer)
+2018-04-24 23:47:45,706 - <==      Total: 10
+2018-04-24 23:48:16,164 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:48:16,164 - ==> Parameters: admin(String)
+2018-04-24 23:48:16,165 - <==      Total: 1
+2018-04-24 23:48:16,166 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:48:16,166 - ==> Parameters: 
+2018-04-24 23:48:16,167 - <==      Total: 1
+2018-04-24 23:48:16,168 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:48:16,168 - ==> Parameters: 
+2018-04-24 23:48:16,169 - <==      Total: 1
+2018-04-24 23:48:16,170 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:48:16,170 - ==> Parameters: 10(Integer)
+2018-04-24 23:48:16,172 - <==      Total: 10
+2018-04-24 23:48:17,072 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:48:17,072 - ==> Parameters: 
+2018-04-24 23:48:17,073 - <==      Total: 3
+2018-04-24 23:48:17,074 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:48:17,074 - ==> Parameters: 
+2018-04-24 23:48:17,114 - <==      Total: 1
+2018-04-24 23:48:19,382 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:48:19,382 - ==> Parameters: admin(String)
+2018-04-24 23:48:19,383 - <==      Total: 1
+2018-04-24 23:48:19,384 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:48:19,384 - ==> Parameters: 
+2018-04-24 23:48:19,384 - <==      Total: 1
+2018-04-24 23:48:19,385 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:48:19,385 - ==> Parameters: 
+2018-04-24 23:48:19,386 - <==      Total: 1
+2018-04-24 23:48:19,387 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:48:19,387 - ==> Parameters: 10(Integer)
+2018-04-24 23:48:19,389 - <==      Total: 10
+2018-04-24 23:48:20,468 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:48:20,469 - ==> Parameters: admin(String)
+2018-04-24 23:48:20,470 - <==      Total: 1
+2018-04-24 23:48:20,470 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:48:20,470 - ==> Parameters: 
+2018-04-24 23:48:20,471 - <==      Total: 1
+2018-04-24 23:48:20,472 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:48:20,472 - ==> Parameters: 
+2018-04-24 23:48:20,473 - <==      Total: 1
+2018-04-24 23:48:20,473 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:48:20,473 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:48:20,475 - <==      Total: 3
+2018-04-24 23:48:21,797 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:48:21,797 - ==> Parameters: 
+2018-04-24 23:48:21,798 - <==      Total: 3
+2018-04-24 23:48:21,798 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:48:21,798 - ==> Parameters: 
+2018-04-24 23:48:21,799 - <==      Total: 1
+2018-04-24 23:48:27,303 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:48:27,304 - ==> Parameters: admin(String)
+2018-04-24 23:48:27,304 - <==      Total: 1
+2018-04-24 23:48:27,305 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:48:27,305 - ==> Parameters: 
+2018-04-24 23:48:27,306 - <==      Total: 1
+2018-04-24 23:48:27,307 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:48:27,307 - ==> Parameters: 
+2018-04-24 23:48:27,307 - <==      Total: 1
+2018-04-24 23:48:27,308 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:48:27,308 - ==> Parameters: 10(Integer)
+2018-04-24 23:48:27,310 - <==      Total: 10
+2018-04-24 23:48:28,850 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:48:28,851 - ==> Parameters: 
+2018-04-24 23:48:28,851 - <==      Total: 3
+2018-04-24 23:48:28,852 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:48:28,852 - ==> Parameters: 
+2018-04-24 23:48:28,853 - <==      Total: 1
+2018-04-24 23:49:27,345 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:49:27,346 - ==> Parameters: admin(String)
+2018-04-24 23:49:27,347 - <==      Total: 1
+2018-04-24 23:49:27,347 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:49:27,348 - ==> Parameters: 
+2018-04-24 23:49:27,348 - <==      Total: 1
+2018-04-24 23:49:27,349 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:49:27,349 - ==> Parameters: 
+2018-04-24 23:49:27,350 - <==      Total: 1
+2018-04-24 23:49:27,351 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:49:27,351 - ==> Parameters: 10(Integer)
+2018-04-24 23:49:27,353 - <==      Total: 10
+2018-04-24 23:49:29,869 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:49:29,869 - ==> Parameters: 
+2018-04-24 23:49:29,869 - <==      Total: 3
+2018-04-24 23:49:29,870 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:49:29,870 - ==> Parameters: 
+2018-04-24 23:49:29,870 - <==      Total: 1
+2018-04-24 23:49:37,237 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:49:37,238 - ==> Parameters: admin(String)
+2018-04-24 23:49:37,238 - <==      Total: 1
+2018-04-24 23:49:37,239 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:49:37,239 - ==> Parameters: 
+2018-04-24 23:49:37,239 - <==      Total: 1
+2018-04-24 23:49:37,240 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:49:37,241 - ==> Parameters: 
+2018-04-24 23:49:37,241 - <==      Total: 1
+2018-04-24 23:49:37,242 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:49:37,242 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:49:37,243 - <==      Total: 3
+2018-04-24 23:49:38,205 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:49:38,205 - ==> Parameters: 
+2018-04-24 23:49:38,206 - <==      Total: 3
+2018-04-24 23:49:38,206 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:49:38,207 - ==> Parameters: 
+2018-04-24 23:49:38,207 - <==      Total: 1
+2018-04-24 23:49:50,536 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:49:50,537 - ==> Parameters: admin(String)
+2018-04-24 23:49:50,538 - <==      Total: 1
+2018-04-24 23:49:50,538 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:49:50,538 - ==> Parameters: 
+2018-04-24 23:49:50,539 - <==      Total: 1
+2018-04-24 23:49:50,540 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:49:50,540 - ==> Parameters: 
+2018-04-24 23:49:50,541 - <==      Total: 1
+2018-04-24 23:49:50,542 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:49:50,542 - ==> Parameters: 10(Integer)
+2018-04-24 23:49:50,544 - <==      Total: 10
+2018-04-24 23:49:51,323 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:49:51,323 - ==> Parameters: 
+2018-04-24 23:49:51,324 - <==      Total: 3
+2018-04-24 23:49:51,324 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:49:51,325 - ==> Parameters: 
+2018-04-24 23:49:51,325 - <==      Total: 1
+2018-04-24 23:49:52,281 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:49:52,282 - ==> Parameters: admin(String)
+2018-04-24 23:49:52,282 - <==      Total: 1
+2018-04-24 23:49:52,283 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:49:52,283 - ==> Parameters: 
+2018-04-24 23:49:52,284 - <==      Total: 1
+2018-04-24 23:49:52,285 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:49:52,285 - ==> Parameters: 
+2018-04-24 23:49:52,286 - <==      Total: 1
+2018-04-24 23:49:52,287 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:49:52,287 - ==> Parameters: 10(Integer)
+2018-04-24 23:49:52,289 - <==      Total: 10
+2018-04-24 23:49:53,201 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:49:53,201 - ==> Parameters: 
+2018-04-24 23:49:53,202 - <==      Total: 3
+2018-04-24 23:49:53,202 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:49:53,202 - ==> Parameters: 
+2018-04-24 23:49:53,203 - <==      Total: 1
+2018-04-24 23:49:54,069 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:49:54,069 - ==> Parameters: admin(String)
+2018-04-24 23:49:54,070 - <==      Total: 1
+2018-04-24 23:49:54,071 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:49:54,071 - ==> Parameters: 
+2018-04-24 23:49:54,072 - <==      Total: 1
+2018-04-24 23:49:54,073 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:49:54,073 - ==> Parameters: 
+2018-04-24 23:49:54,074 - <==      Total: 1
+2018-04-24 23:49:54,075 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:49:54,076 - ==> Parameters: 10(Integer)
+2018-04-24 23:49:54,077 - <==      Total: 10
+2018-04-24 23:49:54,575 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:49:54,575 - ==> Parameters: 
+2018-04-24 23:49:54,576 - <==      Total: 3
+2018-04-24 23:49:54,576 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:49:54,576 - ==> Parameters: 
+2018-04-24 23:49:54,577 - <==      Total: 1
+2018-04-24 23:49:55,226 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:49:55,226 - ==> Parameters: admin(String)
+2018-04-24 23:49:55,227 - <==      Total: 1
+2018-04-24 23:49:55,227 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:49:55,227 - ==> Parameters: 
+2018-04-24 23:49:55,228 - <==      Total: 1
+2018-04-24 23:49:55,229 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:49:55,230 - ==> Parameters: 
+2018-04-24 23:49:55,230 - <==      Total: 1
+2018-04-24 23:49:55,231 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:49:55,231 - ==> Parameters: 10(Integer)
+2018-04-24 23:49:55,233 - <==      Total: 10
+2018-04-24 23:50:06,516 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:50:06,516 - ==> Parameters: admin(String)
+2018-04-24 23:50:06,517 - <==      Total: 1
+2018-04-24 23:50:06,517 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:50:06,517 - ==> Parameters: 
+2018-04-24 23:50:06,518 - <==      Total: 1
+2018-04-24 23:50:06,519 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:50:06,519 - ==> Parameters: 
+2018-04-24 23:50:06,520 - <==      Total: 1
+2018-04-24 23:50:06,520 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:50:06,521 - ==> Parameters: 10(Integer)
+2018-04-24 23:50:06,523 - <==      Total: 10
+2018-04-24 23:50:08,068 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:50:08,068 - ==> Parameters: 
+2018-04-24 23:50:08,068 - <==      Total: 3
+2018-04-24 23:50:08,069 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:50:08,069 - ==> Parameters: 
+2018-04-24 23:50:08,069 - <==      Total: 1
+2018-04-24 23:50:36,862 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:50:36,862 - ==> Parameters: admin(String)
+2018-04-24 23:50:36,863 - <==      Total: 1
+2018-04-24 23:50:36,863 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:50:36,863 - ==> Parameters: 
+2018-04-24 23:50:36,864 - <==      Total: 1
+2018-04-24 23:50:36,865 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:50:36,865 - ==> Parameters: 
+2018-04-24 23:50:36,865 - <==      Total: 1
+2018-04-24 23:50:36,866 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:50:36,866 - ==> Parameters: 10(Integer)
+2018-04-24 23:50:36,868 - <==      Total: 10
+2018-04-24 23:50:37,555 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:50:37,555 - ==> Parameters: admin(String)
+2018-04-24 23:50:37,556 - <==      Total: 1
+2018-04-24 23:50:37,557 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:50:37,557 - ==> Parameters: 
+2018-04-24 23:50:37,558 - <==      Total: 1
+2018-04-24 23:50:37,559 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:50:37,559 - ==> Parameters: 
+2018-04-24 23:50:37,560 - <==      Total: 1
+2018-04-24 23:50:37,561 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:50:37,561 - ==> Parameters: 10(Integer)
+2018-04-24 23:50:37,562 - <==      Total: 10
+2018-04-24 23:50:38,014 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:50:38,014 - ==> Parameters: 
+2018-04-24 23:50:38,015 - <==      Total: 3
+2018-04-24 23:50:38,016 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:50:38,016 - ==> Parameters: 
+2018-04-24 23:50:38,016 - <==      Total: 1
+2018-04-24 23:50:50,366 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:50:50,366 - ==> Parameters: admin(String)
+2018-04-24 23:50:50,367 - <==      Total: 1
+2018-04-24 23:50:50,367 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:50:50,367 - ==> Parameters: 
+2018-04-24 23:50:50,368 - <==      Total: 1
+2018-04-24 23:50:50,369 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:50:50,369 - ==> Parameters: 
+2018-04-24 23:50:50,370 - <==      Total: 1
+2018-04-24 23:50:50,370 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:50:50,371 - ==> Parameters: 10(Integer)
+2018-04-24 23:50:50,372 - <==      Total: 10
+2018-04-24 23:50:51,112 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:50:51,112 - ==> Parameters: 
+2018-04-24 23:50:51,113 - <==      Total: 3
+2018-04-24 23:50:51,114 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:50:51,114 - ==> Parameters: 
+2018-04-24 23:50:51,115 - <==      Total: 1
+2018-04-24 23:50:52,228 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:50:52,229 - ==> Parameters: admin(String)
+2018-04-24 23:50:52,230 - <==      Total: 1
+2018-04-24 23:50:52,230 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:50:52,230 - ==> Parameters: 
+2018-04-24 23:50:52,231 - <==      Total: 1
+2018-04-24 23:50:52,232 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:50:52,232 - ==> Parameters: 
+2018-04-24 23:50:52,233 - <==      Total: 1
+2018-04-24 23:50:52,234 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:50:52,234 - ==> Parameters: 10(Integer)
+2018-04-24 23:50:52,236 - <==      Total: 10
+2018-04-24 23:51:02,750 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:51:02,750 - ==> Parameters: admin(String)
+2018-04-24 23:51:02,751 - <==      Total: 1
+2018-04-24 23:51:02,752 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:51:02,752 - ==> Parameters: 
+2018-04-24 23:51:02,753 - <==      Total: 1
+2018-04-24 23:51:02,753 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:51:02,754 - ==> Parameters: 
+2018-04-24 23:51:02,755 - <==      Total: 1
+2018-04-24 23:51:02,756 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:51:02,756 - ==> Parameters: 10(Integer)
+2018-04-24 23:51:02,757 - <==      Total: 10
+2018-04-24 23:51:03,760 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:51:03,760 - ==> Parameters: 
+2018-04-24 23:51:03,760 - <==      Total: 3
+2018-04-24 23:51:03,761 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:51:03,761 - ==> Parameters: 
+2018-04-24 23:51:03,761 - <==      Total: 1
+2018-04-24 23:51:04,724 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:51:04,724 - ==> Parameters: admin(String)
+2018-04-24 23:51:04,725 - <==      Total: 1
+2018-04-24 23:51:04,725 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:51:04,725 - ==> Parameters: 
+2018-04-24 23:51:04,726 - <==      Total: 1
+2018-04-24 23:51:04,727 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:51:04,728 - ==> Parameters: 
+2018-04-24 23:51:04,729 - <==      Total: 1
+2018-04-24 23:51:04,730 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:51:04,730 - ==> Parameters: 10(Integer)
+2018-04-24 23:51:04,732 - <==      Total: 10
+2018-04-24 23:51:37,434 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:51:37,435 - ==> Parameters: admin(String)
+2018-04-24 23:51:37,436 - <==      Total: 1
+2018-04-24 23:51:37,436 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:51:37,436 - ==> Parameters: 
+2018-04-24 23:51:37,437 - <==      Total: 1
+2018-04-24 23:51:37,438 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:51:37,438 - ==> Parameters: 
+2018-04-24 23:51:37,439 - <==      Total: 1
+2018-04-24 23:51:37,440 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:51:37,440 - ==> Parameters: 10(Integer)
+2018-04-24 23:51:37,441 - <==      Total: 10
+2018-04-24 23:51:38,452 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:51:38,452 - ==> Parameters: 
+2018-04-24 23:51:38,452 - <==      Total: 3
+2018-04-24 23:51:38,453 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:51:38,453 - ==> Parameters: 
+2018-04-24 23:51:38,453 - <==      Total: 1
+2018-04-24 23:51:40,943 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:51:40,943 - ==> Parameters: admin(String)
+2018-04-24 23:51:40,945 - <==      Total: 1
+2018-04-24 23:51:40,945 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:51:40,945 - ==> Parameters: 
+2018-04-24 23:51:40,946 - <==      Total: 1
+2018-04-24 23:51:40,947 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:51:40,947 - ==> Parameters: 
+2018-04-24 23:51:40,947 - <==      Total: 1
+2018-04-24 23:51:40,948 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:51:40,948 - ==> Parameters: 10(Integer)
+2018-04-24 23:51:40,949 - <==      Total: 10
+2018-04-24 23:51:46,799 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:51:46,799 - ==> Parameters: admin(String)
+2018-04-24 23:51:46,800 - <==      Total: 1
+2018-04-24 23:51:46,800 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:51:46,800 - ==> Parameters: 
+2018-04-24 23:51:46,801 - <==      Total: 1
+2018-04-24 23:51:46,802 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:51:46,802 - ==> Parameters: 
+2018-04-24 23:51:46,803 - <==      Total: 1
+2018-04-24 23:51:46,803 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:51:46,804 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:51:46,805 - <==      Total: 3
+2018-04-24 23:51:47,694 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:51:47,694 - ==> Parameters: 
+2018-04-24 23:51:47,695 - <==      Total: 3
+2018-04-24 23:51:47,695 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:51:47,695 - ==> Parameters: 
+2018-04-24 23:51:47,696 - <==      Total: 1
+2018-04-24 23:51:59,507 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:51:59,507 - ==> Parameters: admin(String)
+2018-04-24 23:51:59,508 - <==      Total: 1
+2018-04-24 23:51:59,508 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:51:59,508 - ==> Parameters: 
+2018-04-24 23:51:59,509 - <==      Total: 1
+2018-04-24 23:51:59,510 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:51:59,510 - ==> Parameters: 
+2018-04-24 23:51:59,510 - <==      Total: 1
+2018-04-24 23:51:59,511 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:51:59,512 - ==> Parameters: 10(Integer)
+2018-04-24 23:51:59,513 - <==      Total: 10
+2018-04-24 23:52:00,223 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:52:00,223 - ==> Parameters: 
+2018-04-24 23:52:00,224 - <==      Total: 3
+2018-04-24 23:52:00,224 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:52:00,224 - ==> Parameters: 
+2018-04-24 23:52:00,225 - <==      Total: 1
+2018-04-24 23:52:02,228 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:52:02,228 - ==> Parameters: admin(String)
+2018-04-24 23:52:02,229 - <==      Total: 1
+2018-04-24 23:52:02,229 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:52:02,229 - ==> Parameters: 
+2018-04-24 23:52:02,230 - <==      Total: 1
+2018-04-24 23:52:02,231 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:52:02,231 - ==> Parameters: 
+2018-04-24 23:52:02,232 - <==      Total: 1
+2018-04-24 23:52:02,232 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:52:02,232 - ==> Parameters: 10(Integer)
+2018-04-24 23:52:02,234 - <==      Total: 10
+2018-04-24 23:52:38,901 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:52:38,901 - ==> Parameters: admin(String)
+2018-04-24 23:52:38,902 - <==      Total: 1
+2018-04-24 23:52:38,903 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:52:38,903 - ==> Parameters: 
+2018-04-24 23:52:38,904 - <==      Total: 1
+2018-04-24 23:52:38,905 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:52:38,905 - ==> Parameters: 
+2018-04-24 23:52:38,906 - <==      Total: 1
+2018-04-24 23:52:38,906 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:52:38,906 - ==> Parameters: 10(Integer)
+2018-04-24 23:52:38,908 - <==      Total: 10
+2018-04-24 23:52:40,654 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:52:40,654 - ==> Parameters: admin(String)
+2018-04-24 23:52:40,655 - <==      Total: 1
+2018-04-24 23:52:40,655 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:52:40,655 - ==> Parameters: 
+2018-04-24 23:52:40,656 - <==      Total: 1
+2018-04-24 23:52:40,657 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:52:40,657 - ==> Parameters: 
+2018-04-24 23:52:40,658 - <==      Total: 1
+2018-04-24 23:52:40,659 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:52:40,659 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:52:40,660 - <==      Total: 3
+2018-04-24 23:52:41,581 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:52:41,581 - ==> Parameters: 
+2018-04-24 23:52:41,582 - <==      Total: 3
+2018-04-24 23:52:41,582 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:52:41,582 - ==> Parameters: 
+2018-04-24 23:52:41,583 - <==      Total: 1
+2018-04-24 23:52:44,662 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:52:44,662 - ==> Parameters: 
+2018-04-24 23:52:44,662 - <==      Total: 3
+2018-04-24 23:52:44,663 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:52:44,663 - ==> Parameters: 
+2018-04-24 23:52:44,663 - <==      Total: 1
+2018-04-24 23:53:22,245 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:53:22,245 - ==> Parameters: admin(String)
+2018-04-24 23:53:22,246 - <==      Total: 1
+2018-04-24 23:53:22,246 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:53:22,247 - ==> Parameters: 
+2018-04-24 23:53:22,247 - <==      Total: 1
+2018-04-24 23:53:22,248 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:53:22,248 - ==> Parameters: 
+2018-04-24 23:53:22,249 - <==      Total: 1
+2018-04-24 23:53:22,250 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:53:22,250 - ==> Parameters: 10(Integer)
+2018-04-24 23:53:22,251 - <==      Total: 10
+2018-04-24 23:53:24,786 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:53:24,786 - ==> Parameters: 
+2018-04-24 23:53:24,786 - <==      Total: 3
+2018-04-24 23:53:24,787 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:53:24,787 - ==> Parameters: 
+2018-04-24 23:53:24,788 - <==      Total: 1
+2018-04-24 23:53:27,623 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:53:27,623 - ==> Parameters: 
+2018-04-24 23:53:27,624 - <==      Total: 3
+2018-04-24 23:53:27,624 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:53:27,624 - ==> Parameters: 
+2018-04-24 23:53:27,625 - <==      Total: 1
+2018-04-24 23:53:31,416 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:53:31,417 - ==> Parameters: admin(String)
+2018-04-24 23:53:31,417 - <==      Total: 1
+2018-04-24 23:53:31,418 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:53:31,418 - ==> Parameters: 
+2018-04-24 23:53:31,418 - <==      Total: 1
+2018-04-24 23:53:31,419 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:53:31,419 - ==> Parameters: 
+2018-04-24 23:53:31,420 - <==      Total: 1
+2018-04-24 23:53:31,421 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:53:31,421 - ==> Parameters: 10(Integer)
+2018-04-24 23:53:31,422 - <==      Total: 10
+2018-04-24 23:55:31,906 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:55:31,906 - ==> Parameters: admin(String)
+2018-04-24 23:55:31,907 - <==      Total: 1
+2018-04-24 23:55:31,908 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:55:31,908 - ==> Parameters: 
+2018-04-24 23:55:31,909 - <==      Total: 1
+2018-04-24 23:55:31,910 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:55:31,910 - ==> Parameters: 
+2018-04-24 23:55:31,911 - <==      Total: 1
+2018-04-24 23:55:31,912 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:55:31,912 - ==> Parameters: 10(Integer)
+2018-04-24 23:55:31,913 - <==      Total: 10
+2018-04-24 23:55:32,603 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:55:32,603 - ==> Parameters: 
+2018-04-24 23:55:32,604 - <==      Total: 3
+2018-04-24 23:55:32,604 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:55:32,605 - ==> Parameters: 
+2018-04-24 23:55:32,605 - <==      Total: 1
+2018-04-24 23:55:40,761 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:55:40,761 - ==> Parameters: admin(String)
+2018-04-24 23:55:40,762 - <==      Total: 1
+2018-04-24 23:55:40,763 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:55:40,763 - ==> Parameters: 
+2018-04-24 23:55:40,764 - <==      Total: 1
+2018-04-24 23:55:40,765 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:55:40,765 - ==> Parameters: 
+2018-04-24 23:55:40,766 - <==      Total: 1
+2018-04-24 23:55:40,766 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:55:40,766 - ==> Parameters: 10(Integer)
+2018-04-24 23:55:40,768 - <==      Total: 10
+2018-04-24 23:55:42,169 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:55:42,170 - ==> Parameters: 
+2018-04-24 23:55:42,170 - <==      Total: 3
+2018-04-24 23:55:42,171 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:55:42,171 - ==> Parameters: 
+2018-04-24 23:55:42,171 - <==      Total: 1
+2018-04-24 23:55:52,287 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:55:52,287 - ==> Parameters: admin(String)
+2018-04-24 23:55:52,288 - <==      Total: 1
+2018-04-24 23:55:52,289 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:55:52,289 - ==> Parameters: 
+2018-04-24 23:55:52,289 - <==      Total: 1
+2018-04-24 23:55:52,290 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:55:52,291 - ==> Parameters: 
+2018-04-24 23:55:52,291 - <==      Total: 1
+2018-04-24 23:55:52,292 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:55:52,292 - ==> Parameters: 10(Integer)
+2018-04-24 23:55:52,294 - <==      Total: 10
+2018-04-24 23:55:53,418 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:55:53,418 - ==> Parameters: 
+2018-04-24 23:55:53,419 - <==      Total: 3
+2018-04-24 23:55:53,419 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:55:53,419 - ==> Parameters: 
+2018-04-24 23:55:53,420 - <==      Total: 1
+2018-04-24 23:55:54,588 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:55:54,588 - ==> Parameters: admin(String)
+2018-04-24 23:55:54,589 - <==      Total: 1
+2018-04-24 23:55:54,589 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:55:54,589 - ==> Parameters: 
+2018-04-24 23:55:54,590 - <==      Total: 1
+2018-04-24 23:55:54,591 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:55:54,591 - ==> Parameters: 
+2018-04-24 23:55:54,592 - <==      Total: 1
+2018-04-24 23:55:54,593 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:55:54,593 - ==> Parameters: 10(Integer)
+2018-04-24 23:55:54,595 - <==      Total: 10
+2018-04-24 23:56:55,873 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:56:55,873 - ==> Parameters: admin(String)
+2018-04-24 23:56:55,874 - <==      Total: 1
+2018-04-24 23:56:55,875 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:56:55,875 - ==> Parameters: 
+2018-04-24 23:56:55,875 - <==      Total: 1
+2018-04-24 23:56:55,876 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:56:55,876 - ==> Parameters: 
+2018-04-24 23:56:55,877 - <==      Total: 1
+2018-04-24 23:56:55,878 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:56:55,878 - ==> Parameters: 10(Integer)
+2018-04-24 23:56:55,879 - <==      Total: 10
+2018-04-24 23:56:56,596 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:56:56,596 - ==> Parameters: 
+2018-04-24 23:56:56,597 - <==      Total: 3
+2018-04-24 23:56:56,597 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:56:56,597 - ==> Parameters: 
+2018-04-24 23:56:56,598 - <==      Total: 1
+2018-04-24 23:56:59,128 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:56:59,128 - ==> Parameters: admin(String)
+2018-04-24 23:56:59,129 - <==      Total: 1
+2018-04-24 23:56:59,130 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:56:59,130 - ==> Parameters: 
+2018-04-24 23:56:59,131 - <==      Total: 1
+2018-04-24 23:56:59,132 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:56:59,133 - ==> Parameters: 
+2018-04-24 23:56:59,133 - <==      Total: 1
+2018-04-24 23:56:59,134 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:56:59,135 - ==> Parameters: 10(Integer)
+2018-04-24 23:56:59,137 - <==      Total: 10
+2018-04-24 23:57:00,079 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:57:00,079 - ==> Parameters: admin(String)
+2018-04-24 23:57:00,080 - <==      Total: 1
+2018-04-24 23:57:00,081 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:57:00,081 - ==> Parameters: 
+2018-04-24 23:57:00,082 - <==      Total: 1
+2018-04-24 23:57:00,082 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:57:00,083 - ==> Parameters: 
+2018-04-24 23:57:00,083 - <==      Total: 1
+2018-04-24 23:57:00,084 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:57:00,084 - ==> Parameters: 10(Integer)
+2018-04-24 23:57:00,086 - <==      Total: 10
+2018-04-24 23:57:00,633 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:57:00,633 - ==> Parameters: 
+2018-04-24 23:57:00,634 - <==      Total: 3
+2018-04-24 23:57:00,634 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:57:00,634 - ==> Parameters: 
+2018-04-24 23:57:00,635 - <==      Total: 1
+2018-04-24 23:57:01,386 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:57:01,386 - ==> Parameters: admin(String)
+2018-04-24 23:57:01,387 - <==      Total: 1
+2018-04-24 23:57:01,387 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:57:01,387 - ==> Parameters: 
+2018-04-24 23:57:01,388 - <==      Total: 1
+2018-04-24 23:57:01,388 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:57:01,388 - ==> Parameters: 
+2018-04-24 23:57:01,389 - <==      Total: 1
+2018-04-24 23:57:01,390 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:57:01,390 - ==> Parameters: 10(Integer)
+2018-04-24 23:57:01,391 - <==      Total: 10
+2018-04-24 23:57:06,100 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:57:06,100 - ==> Parameters: 
+2018-04-24 23:57:06,101 - <==      Total: 3
+2018-04-24 23:57:06,101 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:57:06,102 - ==> Parameters: 
+2018-04-24 23:57:06,102 - <==      Total: 1
+2018-04-24 23:58:18,236 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:58:18,237 - ==> Parameters: admin(String)
+2018-04-24 23:58:18,238 - <==      Total: 1
+2018-04-24 23:58:18,238 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:58:18,238 - ==> Parameters: 
+2018-04-24 23:58:18,239 - <==      Total: 1
+2018-04-24 23:58:18,240 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:58:18,240 - ==> Parameters: 
+2018-04-24 23:58:18,241 - <==      Total: 1
+2018-04-24 23:58:18,241 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:58:18,241 - ==> Parameters: 10(Integer)
+2018-04-24 23:58:18,243 - <==      Total: 10
+2018-04-24 23:58:20,113 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:58:20,114 - ==> Parameters: 
+2018-04-24 23:58:20,114 - <==      Total: 3
+2018-04-24 23:58:20,115 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:58:20,115 - ==> Parameters: 
+2018-04-24 23:58:20,115 - <==      Total: 1
+2018-04-24 23:59:01,719 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:59:01,720 - ==> Parameters: admin(String)
+2018-04-24 23:59:01,721 - <==      Total: 1
+2018-04-24 23:59:01,721 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:59:01,721 - ==> Parameters: 
+2018-04-24 23:59:01,722 - <==      Total: 1
+2018-04-24 23:59:01,722 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:59:01,723 - ==> Parameters: 
+2018-04-24 23:59:01,723 - <==      Total: 1
+2018-04-24 23:59:01,724 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:59:01,724 - ==> Parameters: 10(Integer)
+2018-04-24 23:59:01,726 - <==      Total: 10
+2018-04-24 23:59:04,242 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:59:04,242 - ==> Parameters: admin(String)
+2018-04-24 23:59:04,243 - <==      Total: 1
+2018-04-24 23:59:04,243 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:59:04,244 - ==> Parameters: 
+2018-04-24 23:59:04,244 - <==      Total: 1
+2018-04-24 23:59:04,245 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:59:04,245 - ==> Parameters: 
+2018-04-24 23:59:04,246 - <==      Total: 1
+2018-04-24 23:59:04,247 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:59:04,247 - ==> Parameters: 10(Integer)
+2018-04-24 23:59:04,249 - <==      Total: 10
+2018-04-24 23:59:05,565 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:59:05,566 - ==> Parameters: 
+2018-04-24 23:59:05,566 - <==      Total: 3
+2018-04-24 23:59:05,566 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:59:05,567 - ==> Parameters: 
+2018-04-24 23:59:05,567 - <==      Total: 1
+2018-04-24 23:59:12,092 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:59:12,092 - ==> Parameters: admin(String)
+2018-04-24 23:59:12,093 - <==      Total: 1
+2018-04-24 23:59:12,093 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:59:12,093 - ==> Parameters: 
+2018-04-24 23:59:12,094 - <==      Total: 1
+2018-04-24 23:59:12,094 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:59:12,094 - ==> Parameters: 
+2018-04-24 23:59:12,095 - <==      Total: 1
+2018-04-24 23:59:12,096 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:59:12,096 - ==> Parameters: 10(Integer)
+2018-04-24 23:59:12,097 - <==      Total: 10
+2018-04-24 23:59:13,898 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:59:13,898 - ==> Parameters: 
+2018-04-24 23:59:13,898 - <==      Total: 3
+2018-04-24 23:59:13,899 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:59:13,899 - ==> Parameters: 
+2018-04-24 23:59:13,899 - <==      Total: 1
+2018-04-24 23:59:18,255 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:59:18,255 - ==> Parameters: admin(String)
+2018-04-24 23:59:18,255 - <==      Total: 1
+2018-04-24 23:59:18,256 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:59:18,256 - ==> Parameters: 
+2018-04-24 23:59:18,257 - <==      Total: 1
+2018-04-24 23:59:18,258 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:59:18,258 - ==> Parameters: 
+2018-04-24 23:59:18,259 - <==      Total: 1
+2018-04-24 23:59:18,259 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-24 23:59:18,260 - ==> Parameters: 10(Integer)
+2018-04-24 23:59:18,261 - <==      Total: 10
+2018-04-24 23:59:19,845 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-24 23:59:19,845 - ==> Parameters: admin(String)
+2018-04-24 23:59:19,845 - <==      Total: 1
+2018-04-24 23:59:19,846 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-24 23:59:19,846 - ==> Parameters: 
+2018-04-24 23:59:19,846 - <==      Total: 1
+2018-04-24 23:59:19,847 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-24 23:59:19,847 - ==> Parameters: 
+2018-04-24 23:59:19,848 - <==      Total: 1
+2018-04-24 23:59:19,848 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ?, ? 
+2018-04-24 23:59:19,849 - ==> Parameters: 20(Integer), 10(Integer)
+2018-04-24 23:59:19,850 - <==      Total: 3
+2018-04-24 23:59:20,570 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-24 23:59:20,571 - ==> Parameters: 
+2018-04-24 23:59:20,571 - <==      Total: 3
+2018-04-24 23:59:20,572 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-24 23:59:20,572 - ==> Parameters: 
+2018-04-24 23:59:20,572 - <==      Total: 1
