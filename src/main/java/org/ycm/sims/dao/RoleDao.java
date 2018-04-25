@@ -2,7 +2,6 @@ package org.ycm.sims.dao;
 
 
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 import org.ycm.sims.entity.Role;
 
 import java.util.List;

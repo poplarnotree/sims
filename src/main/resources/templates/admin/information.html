@@ -152,10 +152,10 @@
                    }
                    ,tipsMore: true
                    ,yes: function (index, layero) {
-                       //判断登录名
-                       var log = new RegExp("^[a-z]*$");
-                       if(!log.test($("#loginName").val()) || $("#loginName").val() == ''){
-                           alert('请检查教师登录名！');
+                       //            判断工号格式
+                       var reg = new RegExp("^T-\\d{3}$");
+                       if (!reg.test($("#number").val()) || $("#number").val()!= '') {
+                           alert('工号格式不正确，正确格式：T-XXX');
                            return false;
                        }
                        //判断姓名
@@ -200,11 +200,8 @@
                            alert('请为教师填写联系电话！');
                            return false;
                        }
-                       if ($("#subject").val() == ''){
-                           alert('请为教师选择学科！');
-                           return false;
-                       }
-                       // 判断部门，班级不为空
+
+                       // 判断部门，班级，学科不为空
                        if ($("#classes").val() == null){
                            alert('请为教师分配班级！');
                            return false;
@@ -213,41 +210,39 @@
                            alert('请为教师分配部门!');
                            return false;
                        }
-                       //            判断工号格式
-                       var reg = new RegExp("^T-\\d{3}$");
-                       if (!reg.test($("#number").val()) || $("#number").val()!= '') {
-                           alert('工号格式不正确，正确格式：T-XXX');
+                       if ($("#subject").val() == ''){
+                           alert('请为教师选择学科！');
                            return false;
                        }
-//                       $.ajax({
-//                           type: 'post',
-//                           url: '/information/create',
-//                           dataType:'json',
-//                           contentType: 'application/json',
-//                           data: JSON.stringify(data.field),
-//                           success: function (CheckVO) {
-//                               if (CheckVO.status == 0){
-//                                   layer.open({
-//                                       title: '提示'
-//                                       ,content: CheckVO.message
-//                                       ,end: function () {
-//                                           window.location.href = "/"
-//                                       }
-//                                   });
-//                               }else{
-//                                   layer.open({
-//                                       title: '提示'
-//                                       ,content: CheckVO.message
-//                                   });
-//                               }
-//                           },
-//                           error: function (XMLHttpRequest) {
-//                               layer.open({
-//                                   title: '提示'
-//                                   ,content: XMLHttpRequest.responseJSON.message
-//                               });
-//                           }
-//                       })
+                      $.ajax({
+                          type: 'post',
+                          url: '/information/create',
+                          dataType:'json',
+                          contentType: 'application/json',
+                          data: JSON.stringify(data.field),
+                          success: function (CheckVO) {
+                              if (CheckVO.status == 0){
+                                  layer.open({
+                                      title: '提示'
+                                      ,content: CheckVO.message
+                                      ,end: function () {
+                                          window.location.href = "/"
+                                      }
+                                  });
+                              }else{
+                                  layer.open({
+                                      title: '提示'
+                                      ,content: CheckVO.message
+                                  });
+                              }
+                          },
+                          error: function (XMLHttpRequest) {
+                              layer.open({
+                                  title: '提示'
+                                  ,content: XMLHttpRequest.responseJSON.message
+                              });
+                          }
+                      })
                    }
                    ,btn2: function(index, layero){
                    }
@@ -264,9 +259,9 @@
         <div class="layui-form-item">
             <label class="layui-form-label">登录帐号</label>
             <div class="layui-input-inline">
-                <input type="text" id="loginName" name="loginName" required  lay-verify="required" placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
+                <input type="text" id="loginName" name="loginName" required  lay-verify="required" disabled placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
             </div>
-            <div class="layui-form-mid layui-word-aux">请填写教师姓名拼音，格式：张三（zhangsan）</div>
+            <div class="layui-form-mid layui-word-aux">登录帐号不可修改</div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">工号</label>

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.*;
 import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.TeacherInformationDTO;
-import org.ycm.sims.enums.ResultEnum;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 

@@ -1,11 +1,8 @@
 package org.ycm.sims.dao;
 
-import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.TeacherInformationDTO;
-import org.ycm.sims.entity.Classes;
 import org.ycm.sims.entity.TeacherInformation;
 
 import java.util.List;
@@ -40,6 +37,9 @@ public interface InformationDao {
 
     /*查询教师信息数*/
     Integer teacherInformationCount(PageDTO pageDTO);
+
+    /*超管修改教师信息*/
+    Integer updateTeacherInformation(TeacherInformationDTO teacherInformationDTO);
 
 
 }

@@ -100,4 +100,18 @@ public class InformationServiceImpl implements InformationService {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
+
+    @Override
+    public CheckVO updateTeacherInformation(TeacherInformationDTO teacherInformationDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        if (FormatConversionUtil.roleTypeFormatUitl(teacherInformationDTO.getRoleType()) - role.getRoleType() == 1){
+
+
+
+        }else {
+            request.getSession().invalidate();
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+        return null;
+    }
 }
