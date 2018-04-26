@@ -64,21 +64,21 @@
 
     <update id="updateTeacherInformation">
         UPDATE teacher_information
-          <set>
-              <if test="number != null and number != ''">number = #{number}</if>
-              <if test="name != null and name != ''">name = #{name}</if>
-              <if test="sex != null and sex != ''">sex = #{sex}</if>
-              <if test="idCart != null and idCart != ''">id_cart = #{idCart}</if>
-              <if test="positionalTitles != null and positionalTitles != ''">positional_titles = #{positionalTitles}</if>
-              <if test="nation != null and nation != ''">nation = #{nation}</if>
-              <if test="place != null and place != ''">place = #{place}</if>
-              <if test="address != null and address != ''">address = #{address}</if>
-              <if test="birthday != null and birthday != ''">birthday = #{birthday}</if>
-              <if test="phone != null and phone != ''">phone = #{phone}</if>
-              <if test="department != null and department != ''">department = #{department}</if>
-              <if test="classes != null and classes != ''">classes = #{classes}</if>
-              <if test="subject != null and subject != ''">subject = #{subject}</if>
-          </set>
+        <trim prefix="set" suffixOverrides=",">
+              <if test="number != null and number != ''">number = #{number},</if>
+              <if test="name != null and name != ''">name = #{name},</if>
+              <if test="sex != null and sex != ''">sex = #{sex},</if>
+              <if test="idCart != null and idCart != ''">id_cart = #{idCart},</if>
+              <if test="positionalTitles != null and positionalTitles != ''">positional_titles = #{positionalTitles},</if>
+              <if test="nation != null and nation != ''">nation = #{nation},</if>
+              <if test="place != null and place != ''">place = #{place},</if>
+              <if test="address != null and address != ''">address = #{address},</if>
+              <if test="birthday != null and birthday != ''">birthday = #{birthday},</if>
+              <if test="phone != null and phone != ''">phone = #{phone},</if>
+              <if test="department != null and department != ''">department = #{department},</if>
+              <if test="classes != null and classes != ''">classes = #{classes},</if>
+              <if test="subject != null and subject != ''">subject = #{subject},</if>
+        </trim>
         WHERE login_name = #{loginName}
     </update>
 

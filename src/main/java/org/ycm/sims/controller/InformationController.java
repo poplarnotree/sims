@@ -47,7 +47,13 @@ public class InformationController {
     @RequestMapping("/teacherPage")
     @ResponseBody
     public PageVO<TeacherInformationVO> teacherPage(PageDTO pageDTO){
-        System.out.println("-----------"+pageDTO);
         return informationService.teacherInformationPage(pageDTO);
+    }
+
+    @RequestMapping("/updateTeacher")
+    @ResponseBody
+    public CheckVO updateTeacher(@RequestBody TeacherInformationDTO teacherInformationDTO){
+        System.out.println(teacherInformationDTO);
+        return informationService.updateTeacherInformation(teacherInformationDTO);
     }
 }

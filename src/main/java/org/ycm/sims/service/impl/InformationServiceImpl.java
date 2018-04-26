@@ -83,7 +83,7 @@ public class InformationServiceImpl implements InformationService {
     public PageVO<TeacherInformationVO> teacherInformationPage(PageDTO pageDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (pageDTO.getRoleType() - role.getRoleType() == 1){
-            int count = informationDao.teacherInformationCount(pageDTO);
+            int count = informationDao.teacherInformationCount(new TeacherInformation(pageDTO.getLoginName()));
             PageHelper.startPage(pageDTO.getPage(), pageDTO.getLimit());
             List<TeacherInformation> teacherInformationList = informationDao.teacherInformationList(pageDTO);
             List<TeacherInformationVO> teacherInformationVOList = new ArrayList<TeacherInformationVO>();
@@ -105,13 +105,19 @@ public class InformationServiceImpl implements InformationService {
     public CheckVO updateTeacherInformation(TeacherInformationDTO teacherInformationDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (FormatConversionUtil.roleTypeFormatUitl(teacherInformationDTO.getRoleType()) - role.getRoleType() == 1){
-
-
-
+            TeacherInformation teacherInformation = new TeacherInformation();
+            BeanUtils.copyProperties(teacherInformationDTO, teacherInformation);
+            teacherInformation.setDepartment(FormatConversionUtil.ListFormatString(teacherInformationDTO.getDepartment()));
+            teacherInformation.setClasses(FormatConversionUtil.ListFormatString(teacherInformationDTO.getClasses()));
+            int row = informationDao.updateTeacherInformation(teacherInformation);
+            if (row == 1){
+                return new CheckVO(ResultEnum.SUCCESS);
+            }else{
+                throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+            }
         }else {
             request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
-        return null;
     }
 }

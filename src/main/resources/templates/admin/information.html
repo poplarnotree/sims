@@ -93,13 +93,12 @@
         });
         //监听工具条
        table.on('tool(teacher)', function(obj) {
-           var data = obj.data;
            if(obj.event === 'update'){
                layer.open({
                    title: '修改'
                    ,content: $('#opens').html()
                    ,area: ['70%']
-                   ,btn: ['提交','返回']
+                   ,btn: ['提交','关闭']
                    ,success: function () {
                        laydate.render({
                            elem: '#birthday' //指定元素
@@ -108,14 +107,14 @@
                            type: 'get',
                            url: '/information/classes',
                            success: function (classes) {
-                               for(var i = 0; i < classes.classesName.length; i++){
+                               for (var i = 0; i < classes.classesName.length; i++) {
                                    var cla = obj.data.classes;
                                    var clas = cla.split(",");
-                                   for (var j = 0; j < clas.length; j++){
-                                       if (clas[j] == classes.classesName[i]){
-                                           $("#classes").append("<option selected value='"+classes.classesName[i]+"'>"+classes.classesName[i]+"</option>");
-                                       }else {
-                                           $("#classes").append("<option value='"+classes.classesName[i]+"'>"+classes.classesName[i]+"</option>");
+                                   for (var j = 0; j < clas.length; j++) {
+                                       if (clas[j] == classes.classesName[i]) {
+                                           $("#classes").append("<option selected value='" + classes.classesName[i] + "'>" + classes.classesName[i] + "</option>");
+                                       } else {
+                                           $("#classes").append("<option value='" + classes.classesName[i] + "'>" + classes.classesName[i] + "</option>");
                                        }
                                    }
                                }
@@ -124,18 +123,19 @@
 
                            }
                        });
+
                        // 表单重新渲染
-                       function renderForm(){
-                           layui.use('form', function(){
+                       function renderForm() {
+                           layui.use('form', function () {
                                var form = layui.form;//高版本建议把括号去掉，有的低版本，需要加()
                                form.render();
                            });
-
                        }
+
                        $("#loginName").val(obj.data.loginName);
                        $("#number").val(obj.data.number);
                        $("#name").val(obj.data.name);
-                       $("input[name='sex'][value = "+obj.data.sex+"]").attr("checked",true);
+                       $("input[name='sex'][value = " + obj.data.sex + "]").attr("checked", true);
                        $("#idCart").val(obj.data.idCart);
                        $("#positionalTitles").val(obj.data.positionalTitles);
                        $("#nation").val(obj.data.nation);
@@ -144,110 +144,100 @@
                        $("#birthday").val(obj.data.birthday);
                        $("#phone").val(obj.data.phone)
                        var dep = obj.data.department;
-                       var department=dep.split(",");
-                       for (var i = 0; i<department.length; i++){
-                           $("#department").find("option[value="+department[i]+"]").attr("selected",true);
+                       var department = dep.split(",");
+                       for (var i = 0; i < department.length; i++) {
+                           $("#department").find("option[value=" + department[i] + "]").attr("selected", true);
                        }
                        $("#subject").val(obj.data.subject);
                    }
-                   ,tipsMore: true
-                   ,yes: function (index, layero) {
-                       //            判断工号格式
-                       var reg = new RegExp("^T-\\d{3}$");
-                       if (!reg.test($("#number").val()) || $("#number").val()!= '') {
-                           alert('工号格式不正确，正确格式：T-XXX');
-                           return false;
-                       }
-                       //判断姓名
-                       var n = new RegExp("[\u4e00-\u9fa5]");
-                       if(!n.test($("#name").val()) || $("#name").val() == ''){
-                           alert('请检查教师姓名！');
-                           return false;
-                       }
-                        //判断身份证
-                       var i = new RegExp("^(\\d{6})(\\d{4})(\\d{2})(\\d{2})(\\d{3})([0-9]|X)$");
-                       if(!i.test($("#idCart").val()) || $("#idCart").val() == ''){
-                           alert('请检查教师身份证!');
-                           return false;
-                       }
-                       //职称
-                       if ($("#positionalTitles").val() == ''){
-                           alert('请为教师选择职称！');
-                           return false;
-                       }
-                       //民族
-                       if ($("#nation").val() == ''){
-                           alert('请为教师选择民族！');
-                           return false;
-                       }
-                       //籍贯
-                       if ($("#place").val() == ''){
-                           alert('请为教师填写籍贯！');
-                           return false;
-                       }
-                       //地址
-                       if ($("#address").val() == ''){
-                           alert('请为教师填写地址！');
-                           return false;
-                       }
-                       if ($("#birthday").val() == ''){
-                           alert('请为教师选择出生日期！');
-                           return false;
-                       }
-                       //电话
-                       var p = new RegExp("\\d{3}-\\d{8}|\\d{4}-\\{7,8}");
-                       if (!p.test($("#phone").val()) || $("#phone").val() == ''){
-                           alert('请为教师填写联系电话！');
-                           return false;
-                       }
-
-                       // 判断部门，班级，学科不为空
-                       if ($("#classes").val() == null){
-                           alert('请为教师分配班级！');
-                           return false;
-                       }
-                       if ($("#department").val() == null){
-                           alert('请为教师分配部门!');
-                           return false;
-                       }
-                       if ($("#subject").val() == ''){
-                           alert('请为教师选择学科！');
-                           return false;
-                       }
-                      $.ajax({
-                          type: 'post',
-                          url: '/information/create',
-                          dataType:'json',
-                          contentType: 'application/json',
-                          data: JSON.stringify(data.field),
-                          success: function (CheckVO) {
-                              if (CheckVO.status == 0){
-                                  layer.open({
-                                      title: '提示'
-                                      ,content: CheckVO.message
-                                      ,end: function () {
-                                          window.location.href = "/"
-                                      }
-                                  });
-                              }else{
-                                  layer.open({
-                                      title: '提示'
-                                      ,content: CheckVO.message
-                                  });
-                              }
-                          },
-                          error: function (XMLHttpRequest) {
-                              layer.open({
-                                  title: '提示'
-                                  ,content: XMLHttpRequest.responseJSON.message
-                              });
-                          }
-                      })
-                   }
-                   ,btn2: function(index, layero){
+                   ,yes: function () {
+                       $(".layui-btn").click();
                    }
                });
+               form.on('submit(formDemo)', function (data) {
+                   //            判断工号格式
+                   var reg = new RegExp("^T-\\d{3}$");
+                   if (!reg.test($("#number").val()) || $("#number").val() == '') {
+                       alert('工号格式不正确，正确格式：T-XXX');
+                       return false;
+                   }
+                   //判断姓名
+                   var n = new RegExp("[\u4e00-\u9fa5]");
+                   if (!n.test($("#name").val()) || $("#name").val() == '') {
+                       alert('请检查教师姓名！');
+                       return false;
+                   }
+                   //判断身份证
+                   var i = new RegExp("^(\\d{6})(\\d{4})(\\d{2})(\\d{2})(\\d{3})([0-9]|X)$");
+                   if (!i.test($("#idCart").val()) || $("#idCart").val() == '') {
+                       alert('请检查教师身份证!');
+                       return false;
+                   }
+                   //职称
+                   if ($("#positionalTitles").val() == '') {
+                       alert('请为教师选择职称！');
+                       return false;
+                   }
+                   //民族
+                   if ($("#nation").val() == '') {
+                       alert('请为教师选择民族！');
+                       return false;
+                   }
+                   //籍贯
+                   if ($("#place").val() == '') {
+                       alert('请为教师填写籍贯！');
+                       return false;
+                   }
+                   //地址
+                   if ($("#address").val() == '') {
+                       alert('请为教师填写地址！');
+                       return false;
+                   }
+                   if ($("#birthday").val() == '') {
+                       alert('请为教师选择出生日期！');
+                       return false;
+                   }
+                   //电话
+                   var p = new RegExp("^1\\d{10}$");
+                   if (!p.test($("#phone").val()) || $("#phone").val() == '') {
+                       alert('请为教师填写联系电话！');
+                       return false;
+                   }
 
+                   // 判断部门，班级，学科不为空
+                   if ($("#classes").val() == null) {
+                       alert('请为教师分配班级！');
+                       return false;
+                   }
+                   if ($("#department").val() == null) {
+                       alert('请为教师分配部门!');
+                       return false;
+                   }
+                   if ($("#subject").val() == '') {
+                       alert('请为教师选择学科！');
+                       return false;
+                   }
+                   $.ajax({
+                       type: 'post',
+                       url: '/information/updateTeacher',
+                       dataType: 'json',
+                       contentType: 'application/json',
+                       data: JSON.stringify(data.field),
+                       success: function (CheckVO) {
+                           if (CheckVO.status == 0) {
+                               alert(CheckVO.message);
+                               return false;
+                           } else {
+                               alert(CheckVO.message);
+                               return false;
+                           }
+                           return false;
+                       },
+                       error: function (XMLHttpRequest) {
+                           alert(XMLHttpRequest.responseJSON.message);
+                       }
+                   })
+               })
            }
        });
 
@@ -255,25 +245,30 @@
 
 </script>
 <script type="text/html" id="opens">
-    <form class="layui-form" action="">
+    <form id="f" class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-input-inline">
+                <input type="text" id="roleType" name="roleType" autocomplete="off" class="layui-input" value="教师" style="display: none">
+            </div>
+        </div>
         <div class="layui-form-item">
             <label class="layui-form-label">登录帐号</label>
             <div class="layui-input-inline">
-                <input type="text" id="loginName" name="loginName" required  lay-verify="required" disabled placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
+                <input type="text" id="loginName" name="loginName" disabled placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">登录帐号不可修改</div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">工号</label>
             <div class="layui-input-inline">
-                <input type="text" id="number" name="number" required lay-verify="required" placeholder="请输入工号..." autocomplete="off" class="layui-input">
+                <input type="text" id="number" name="number" placeholder="请输入工号..." autocomplete="off" class="layui-input">
             </div>
             <div id="numberdiv" class="layui-form-mid layui-word-aux"></div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-inline">
-                <input type="text" id="name" name="name" required  lay-verify="required" placeholder="请输入教师姓名..." autocomplete="off" class="layui-input">
+                <input type="text" id="name" name="name" placeholder="请输入教师姓名..." autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">请填写教师姓名</div>
         </div>
@@ -287,14 +282,14 @@
         <div class="layui-form-item">
             <label class="layui-form-label">身份证号</label>
             <div class="layui-input-inline">
-                <input type="text" id="idCart" name="idCart" required  lay-verify="required|identity" placeholder="请输入身份证号..." autocomplete="off" class="layui-input">
+                <input type="text" id="idCart" name="idCart" placeholder="请输入身份证号..." autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">请填写教师身份证号</div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">职称</label>
             <div class="layui-input-inline">
-                <select id="positionalTitles" name="positionalTitles" lay-verify="required">
+                <select id="positionalTitles" name="positionalTitles">
                     <option value="">请选择职称</option>
                     <option value="中学正高级教师">中学正高级教师</option>
                     <option value="中学高级教师">中学高级教师</option>
@@ -308,7 +303,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">民族</label>
             <div class="layui-input-inline">
-                <select id="nation" name="nation" lay-verify="required" lay-search>
+                <select id="nation" name="nation" lay-search>
                     <option value="">请选择民族</option>
                     <option value="汉族">汉族</option>
                     <option value="满族">满族</option>
@@ -332,28 +327,28 @@
         <div class="layui-form-item">
             <label class="layui-form-label">籍贯</label>
             <div class="layui-input-inline">
-                <input type="text" id="place" name="place" required  lay-verify="required" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
+                <input type="text" id="place" name="place" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">请填写教师籍贯</div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">地址</label>
             <div class="layui-input-inline" style="width: 500px;">
-                <input type="text" id="address" name="address" required  lay-verify="required" placeholder="请输入地址..." autocomplete="off" class="layui-input">
+                <input type="text" id="address" name="address" placeholder="请输入地址..." autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">请填写教师地址</div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">出生日期</label>
             <div class="layui-input-inline">
-                <input type="text"  id="birthday" name="birthday" required lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                <input type="text"  id="birthday" name="birthday" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">请选择教师出生日期</div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">联系电话</label>
             <div class="layui-input-inline">
-                <input type="text" id="phone" name="phone" required  lay-verify="required|phone" placeholder="请输入联系电话..." autocomplete="off" class="layui-input">
+                <input type="text" id="phone" name="phone" placeholder="请输入联系电话..." autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">请填写教师联系电话</div>
         </div>
@@ -380,7 +375,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">学科</label>
             <div class="layui-input-inline">
-                <select id="subject" name="subject" lay-verify="required" lay-search>
+                <select id="subject" name="subject" lay-search>
                     <option value="">请选择学科</option>
                     <option value="语文">语文</option>
                     <option value="数学">数学</option>
@@ -396,6 +391,11 @@
             <div class="layui-form-mid layui-word-aux">请选择教师执教的学科</div>
         </div>
         <hr>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" style="display: none" lay-submit lay-filter="formDemo">立即提交</button>
+            </div>
+        </div>
     </form>
 </script>
 </body>

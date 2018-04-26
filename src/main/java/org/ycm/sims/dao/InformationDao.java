@@ -36,10 +36,10 @@ public interface InformationDao {
     List<TeacherInformation> teacherInformationList(PageDTO pageDTO);
 
     /*查询教师信息数*/
-    Integer teacherInformationCount(PageDTO pageDTO);
+    Integer teacherInformationCount(TeacherInformation teacherInformation);
 
     /*超管修改教师信息*/
-    Integer updateTeacherInformation(TeacherInformationDTO teacherInformationDTO);
+    Integer updateTeacherInformation(TeacherInformation teacherInformation);
 
 
 }
