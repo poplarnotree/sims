@@ -25,5 +25,7 @@ public interface InformationService {
     /*超管修改教师信息*/
     CheckVO updateTeacherInformation(TeacherInformationDTO teacherInformationDTO);
 
+    /*创建班级*/
+    CheckVO createClass(String name);
 
 }

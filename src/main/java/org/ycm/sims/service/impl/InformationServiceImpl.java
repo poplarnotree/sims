@@ -102,6 +102,7 @@ public class InformationServiceImpl implements InformationService {
     }
 
     @Override
+    @Transactional
     public CheckVO updateTeacherInformation(TeacherInformationDTO teacherInformationDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (FormatConversionUtil.roleTypeFormatUitl(teacherInformationDTO.getRoleType()) - role.getRoleType() == 1){
@@ -117,6 +118,26 @@ public class InformationServiceImpl implements InformationService {
             }
         }else {
             request.getSession().invalidate();
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+    }
+
+    @Override
+    @Transactional
+    public CheckVO createClass(String name) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        int departmentCount = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), "学生处"));
+        int classCount = informationDao.findClassByName(name);
+        if (classCount == 1){
+            return new CheckVO(ResultEnum.CLASS_EXIST);
+        }
+        if (role.getRoleType() == 0 || departmentCount == 1){
+            int row = informationDao.createClass(name);
+            if (row == 1){
+                return new CheckVO(ResultEnum.SUCCESS);
+            }
+            throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+        }else {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }

@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.ycm.sims.VO.CheckVO;
 import org.ycm.sims.VO.PageVO;
 import org.ycm.sims.VO.TeacherInformationVO;
 import org.ycm.sims.dto.PageDTO;
@@ -52,4 +53,10 @@ public class InformationServiceImplTest {
 
     }
 
+    @Test
+    public void createClass() {
+        request.getSession().setAttribute("loginName","zhangsan");
+         CheckVO checkVO = informationService.createClass("高三(3)班");
+        log.info("checkVO={}", checkVO);
+    }
 }

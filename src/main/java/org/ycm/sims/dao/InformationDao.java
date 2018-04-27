@@ -17,6 +17,16 @@ public interface InformationDao {
     /*查询班级*/
     List<String> findClasses();
 
+    /*创建班级*/
+    Integer createClass(String name);
+
+    /*修改班级名称*/
+    /*TODO*/
+    Integer updateClass(int id, String name);
+
+    /*根据班级名称查询班级*/
+    Integer findClassByName(String name);
+
     /*查询最大工号*/
     String findNumberMax();
 
@@ -40,6 +50,9 @@ public interface InformationDao {
 
     /*超管修改教师信息*/
     Integer updateTeacherInformation(TeacherInformation teacherInformation);
+
+    /*查询教师部门*/
+    Integer findTeacherDepartment(TeacherInformation teacherInformation);
 
 
 }

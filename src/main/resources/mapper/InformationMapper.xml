@@ -32,8 +32,12 @@
     </insert>
 
     <select id="findClasses" resultType="java.lang.String">
-        SELECT name FROM classes;
+        SELECT name FROM classes order by name
     </select>
+
+    <insert id="createClass">
+        INSERT INTO classes(name) values (#{name})
+    </insert>
 
     <select id="findNumberMax" resultType="java.lang.String">
         select MAX(number) number from teacher_information;
@@ -81,5 +85,13 @@
         </trim>
         WHERE login_name = #{loginName}
     </update>
+
+    <select id="findTeacherDepartment" resultType="java.lang.Integer">
+        SELECT count(*) FROM teacher_information WHERE login_name = #{loginName} and department LIKE CONCAT(CONCAT('%',#{department},'%'))
+    </select>
+    
+    <select id="findClassByName" resultType="java.lang.Integer">
+        select count(*) from classes where name = #{name}
+    </select>
 
 </mapper>

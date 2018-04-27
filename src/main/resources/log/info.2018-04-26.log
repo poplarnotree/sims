@@ -1,0 +1,224 @@
+2018-04-26 11:51:59,924 - Starting SimsApplication on DESKTOP-DGH72UH with PID 11724 (D:\work\workspace\sims\target\classes started by ycm in D:\work\workspace\sims)
+2018-04-26 11:51:59,936 - No active profile set, falling back to default profiles: default
+2018-04-26 11:51:59,990 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Thu Apr 26 11:51:59 CST 2018]; root of context hierarchy
+2018-04-26 11:52:01,581 - Tomcat initialized with port(s): 8080 (http)
+2018-04-26 11:52:01,593 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:01,601 - Starting service [Tomcat]
+2018-04-26 11:52:01,601 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-26 11:52:01,604 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\java8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\Git\cmd;D:\Program Files\java8\bin;D:\Program Files\maven-3.5.0\bin;D:\Program Files\Microsoft SQL Server\120\DTS\Binn\;D:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;D:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Users\ycm\AppData\Local\Microsoft\WindowsApps;;.]
+2018-04-26 11:52:01,718 - Initializing Spring embedded WebApplicationContext
+2018-04-26 11:52:01,719 - Root WebApplicationContext: initialization completed in 1728 ms
+2018-04-26 11:52:01,959 - Servlet dispatcherServlet mapped to [/]
+2018-04-26 11:52:01,965 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 11:52:01,965 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 11:52:01,965 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 11:52:01,965 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 11:52:02,549 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:02,865 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Thu Apr 26 11:51:59 CST 2018]; root of context hierarchy
+2018-04-26 11:52:02,918 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-26 11:52:02,956 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-26 11:52:02,958 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-26 11:52:02,959 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-26 11:52:02,959 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-26 11:52:02,959 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-26 11:52:02,959 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-26 11:52:02,962 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-26 11:52:02,962 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-26 11:52:02,964 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:02,964 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-26 11:52:02,965 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-26 11:52:02,966 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-26 11:52:02,966 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:02,966 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-26 11:52:02,967 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-26 11:52:02,967 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:02,969 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 11:52:02,970 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 11:52:02,989 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:02,989 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:03,372 - Registering beans for JMX exposure on startup
+2018-04-26 11:52:03,373 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-26 11:52:03,379 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-26 11:52:03,401 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:03,426 - Pausing ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:03,426 - Stopping service [Tomcat]
+2018-04-26 11:52:03,439 - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2018-04-26 11:52:03,439 - Stopping ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:03,439 - Destroying ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:03,442 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-26 11:52:03,451 - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Thu Apr 26 11:51:59 CST 2018]; root of context hierarchy
+2018-04-26 11:52:03,454 - Unregistering JMX-exposed beans on shutdown
+2018-04-26 11:52:03,454 - Unregistering JMX-exposed beans
+2018-04-26 11:52:16,971 - Starting SimsApplication on DESKTOP-DGH72UH with PID 10756 (D:\work\workspace\sims\target\classes started by ycm in D:\work\workspace\sims)
+2018-04-26 11:52:16,974 - No active profile set, falling back to default profiles: default
+2018-04-26 11:52:17,222 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5656be13: startup date [Thu Apr 26 11:52:17 CST 2018]; root of context hierarchy
+2018-04-26 11:52:18,189 - Tomcat initialized with port(s): 8080 (http)
+2018-04-26 11:52:18,199 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:18,206 - Starting service [Tomcat]
+2018-04-26 11:52:18,207 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-26 11:52:18,210 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\java8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\Git\cmd;D:\Program Files\java8\bin;D:\Program Files\maven-3.5.0\bin;D:\Program Files\Microsoft SQL Server\120\DTS\Binn\;D:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;D:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Users\ycm\AppData\Local\Microsoft\WindowsApps;;.]
+2018-04-26 11:52:18,278 - Initializing Spring embedded WebApplicationContext
+2018-04-26 11:52:18,278 - Root WebApplicationContext: initialization completed in 1056 ms
+2018-04-26 11:52:18,358 - Servlet dispatcherServlet mapped to [/]
+2018-04-26 11:52:18,361 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 11:52:18,362 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 11:52:18,362 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 11:52:18,362 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 11:52:18,721 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:18,941 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5656be13: startup date [Thu Apr 26 11:52:17 CST 2018]; root of context hierarchy
+2018-04-26 11:52:18,992 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-26 11:52:19,020 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-26 11:52:19,022 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-26 11:52:19,023 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-26 11:52:19,023 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-26 11:52:19,023 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-26 11:52:19,023 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-26 11:52:19,026 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-26 11:52:19,026 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-26 11:52:19,026 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:19,026 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-26 11:52:19,026 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-26 11:52:19,027 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:19,027 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:19,027 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-26 11:52:19,028 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-26 11:52:19,028 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-26 11:52:19,032 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 11:52:19,033 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 11:52:19,057 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:19,057 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:19,379 - Registering beans for JMX exposure on startup
+2018-04-26 11:52:19,380 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-26 11:52:19,384 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-26 11:52:19,393 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:19,414 - Pausing ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:19,414 - Stopping service [Tomcat]
+2018-04-26 11:52:19,420 - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2018-04-26 11:52:19,420 - Stopping ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:19,420 - Destroying ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:19,422 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-26 11:52:19,426 - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5656be13: startup date [Thu Apr 26 11:52:17 CST 2018]; root of context hierarchy
+2018-04-26 11:52:19,428 - Unregistering JMX-exposed beans on shutdown
+2018-04-26 11:52:19,428 - Unregistering JMX-exposed beans
+2018-04-26 11:52:30,814 - Starting SimsApplication on DESKTOP-DGH72UH with PID 12292 (D:\work\workspace\sims\target\classes started by ycm in D:\work\workspace\sims)
+2018-04-26 11:52:30,820 - No active profile set, falling back to default profiles: default
+2018-04-26 11:52:30,905 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Thu Apr 26 11:52:30 CST 2018]; root of context hierarchy
+2018-04-26 11:52:31,876 - Tomcat initialized with port(s): 8080 (http)
+2018-04-26 11:52:31,886 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:31,893 - Starting service [Tomcat]
+2018-04-26 11:52:31,893 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-26 11:52:31,896 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\java8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\Git\cmd;D:\Program Files\java8\bin;D:\Program Files\maven-3.5.0\bin;D:\Program Files\Microsoft SQL Server\120\DTS\Binn\;D:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files\Microsoft SQL Server\120\Tools\Binn\;D:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;D:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Users\ycm\AppData\Local\Microsoft\WindowsApps;;.]
+2018-04-26 11:52:31,998 - Initializing Spring embedded WebApplicationContext
+2018-04-26 11:52:31,998 - Root WebApplicationContext: initialization completed in 1093 ms
+2018-04-26 11:52:32,094 - Servlet dispatcherServlet mapped to [/]
+2018-04-26 11:52:32,098 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 11:52:32,099 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 11:52:32,099 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 11:52:32,099 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 11:52:32,433 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:32,625 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@662ac478: startup date [Thu Apr 26 11:52:30 CST 2018]; root of context hierarchy
+2018-04-26 11:52:32,653 - >>>>>>>>>>>>>>>拦截器生效
+2018-04-26 11:52:32,673 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-04-26 11:52:32,675 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-26 11:52:32,676 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-04-26 11:52:32,676 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-04-26 11:52:32,676 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.PageDTO)
+2018-04-26 11:52:32,676 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.department()
+2018-04-26 11:52:32,679 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-04-26 11:52:32,679 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-04-26 11:52:32,679 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:32,679 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.PageDTO)
+2018-04-26 11:52:32,680 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-04-26 11:52:32,680 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-04-26 11:52:32,680 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-04-26 11:52:32,680 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:32,681 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-04-26 11:52:32,681 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-04-26 11:52:32,683 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 11:52:32,684 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 11:52:32,702 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:32,703 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 11:52:32,953 - Registering beans for JMX exposure on startup
+2018-04-26 11:52:32,954 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-26 11:52:32,961 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-26 11:52:32,975 - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-26 11:52:32,984 - Using a shared selector for servlet write/read
+2018-04-26 11:52:33,016 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-04-26 11:52:33,019 - Started SimsApplication in 2.689 seconds (JVM running for 3.232)
+2018-04-26 11:52:39,735 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-26 11:52:39,735 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-26 11:52:39,747 - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-04-26 11:52:41,903 - sims - Starting...
+2018-04-26 11:52:42,133 - sims - Start completed.
+2018-04-26 11:52:42,138 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-26 11:52:42,152 - ==> Parameters: admin(String)
+2018-04-26 11:52:42,183 - <==      Total: 1
+2018-04-26 11:52:42,356 - loginName=admin
+2018-04-26 11:52:42,393 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-26 11:52:42,394 - ==> Parameters: admin(String)
+2018-04-26 11:52:42,417 - <==      Total: 1
+2018-04-26 11:52:42,422 - loginName=admin
+2018-04-26 11:52:44,025 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-26 11:52:44,026 - ==> Parameters: admin(String)
+2018-04-26 11:52:44,027 - <==      Total: 1
+2018-04-26 11:52:44,052 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-26 11:52:44,052 - ==> Parameters: 
+2018-04-26 11:52:44,119 - <==      Total: 1
+2018-04-26 11:52:44,156 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-26 11:52:44,156 - ==> Parameters: 
+2018-04-26 11:52:44,157 - <==      Total: 1
+2018-04-26 11:52:44,158 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-26 11:52:44,158 - ==> Parameters: 10(Integer)
+2018-04-26 11:52:44,159 - <==      Total: 1
+2018-04-26 11:52:45,226 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-26 11:52:45,226 - ==> Parameters: 
+2018-04-26 11:52:45,273 - <==      Total: 3
+2018-04-26 11:52:45,275 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-26 11:52:45,277 - ==> Parameters: 
+2018-04-26 11:52:45,278 - <==      Total: 1
+2018-04-26 11:54:21,088 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-26 11:54:21,089 - ==> Parameters: admin(String)
+2018-04-26 11:54:21,090 - <==      Total: 1
+2018-04-26 11:54:21,091 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-26 11:54:21,092 - ==> Parameters: 
+2018-04-26 11:54:21,092 - <==      Total: 1
+2018-04-26 11:54:21,093 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-26 11:54:21,093 - ==> Parameters: 
+2018-04-26 11:54:21,094 - <==      Total: 1
+2018-04-26 11:54:21,094 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-26 11:54:21,094 - ==> Parameters: 10(Integer)
+2018-04-26 11:54:21,095 - <==      Total: 1
+2018-04-26 11:54:23,696 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-26 11:54:23,697 - ==> Parameters: 
+2018-04-26 11:54:23,697 - <==      Total: 3
+2018-04-26 11:54:23,698 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-26 11:54:23,698 - ==> Parameters: 
+2018-04-26 11:54:23,699 - <==      Total: 1
+2018-04-26 11:54:29,749 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-26 11:54:29,749 - ==> Parameters: 
+2018-04-26 11:54:29,750 - <==      Total: 3
+2018-04-26 11:54:29,750 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-26 11:54:29,751 - ==> Parameters: 
+2018-04-26 11:54:29,752 - <==      Total: 1
+2018-04-26 11:55:29,515 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-04-26 11:55:29,515 - ==> Parameters: admin(String)
+2018-04-26 11:55:29,516 - <==      Total: 1
+2018-04-26 11:55:29,517 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-04-26 11:55:29,517 - ==> Parameters: 
+2018-04-26 11:55:29,517 - <==      Total: 1
+2018-04-26 11:55:29,519 - ==>  Preparing: SELECT count(0) FROM teacher_information 
+2018-04-26 11:55:29,519 - ==> Parameters: 
+2018-04-26 11:55:29,519 - <==      Total: 1
+2018-04-26 11:55:29,520 - ==>  Preparing: SELECT * FROM teacher_information LIMIT ? 
+2018-04-26 11:55:29,520 - ==> Parameters: 10(Integer)
+2018-04-26 11:55:29,523 - <==      Total: 1
+2018-04-26 11:55:31,846 - ==>  Preparing: SELECT name FROM classes; 
+2018-04-26 11:55:31,846 - ==> Parameters: 
+2018-04-26 11:55:31,847 - <==      Total: 3
+2018-04-26 11:55:31,848 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-04-26 11:55:31,848 - ==> Parameters: 
+2018-04-26 11:55:31,849 - <==      Total: 1

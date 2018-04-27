@@ -22,6 +22,8 @@ public enum  ResultEnum {
     ,INFORMATION_EXIST(5, "信息已存在")
 
     ,NUMBER_EXIST(6, "工号已存在")
+
+    ,CLASS_EXIST(7, "班级已存在")
     ;
 
     private Integer code;
