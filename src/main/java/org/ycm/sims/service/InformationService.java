@@ -1,11 +1,9 @@
 package org.ycm.sims.service;
 
-import org.ycm.sims.VO.CheckVO;
-import org.ycm.sims.VO.NumberAndClassesVO;
-import org.ycm.sims.VO.PageVO;
-import org.ycm.sims.VO.TeacherInformationVO;
+import org.ycm.sims.VO.*;
+import org.ycm.sims.dto.ClassPageDTO;
+import org.ycm.sims.dto.RolePageDTO;
 import org.ycm.sims.dto.TeacherInformationDTO;
-import org.ycm.sims.dto.PageDTO;
 
 /**
  * Create by yangchangmin
@@ -20,12 +18,14 @@ public interface InformationService {
     CheckVO createInformation(TeacherInformationDTO teacherInformationDTO);
 
     /*超管查询所有教师信息*/
-    PageVO<TeacherInformationVO> teacherInformationPage(PageDTO pageDTO);
+    PageVO<TeacherInformationVO> teacherInformationPage(RolePageDTO rolePageDTO);
 
     /*超管修改教师信息*/
     CheckVO updateTeacherInformation(TeacherInformationDTO teacherInformationDTO);
 
-    /*创建班级*/
-    CheckVO createClass(String name);
+    /*班级管理*/
+    CheckVO classManage(ClassPageDTO classPageDTO);
+
+    PageVO<ClassVO> classPage(ClassPageDTO classPageDTO);
 
 }

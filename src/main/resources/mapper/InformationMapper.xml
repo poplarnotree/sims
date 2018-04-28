@@ -23,6 +23,12 @@
         <result column="create_time" property="createTime"/>
     </resultMap>
 
+    <resultMap id="classList" type="org.ycm.sims.entity.Classes">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
     <insert id="createInformation">
         INSERT INTO
           teacher_information
@@ -31,9 +37,13 @@
             (#{loginName}, #{number}, #{name}, #{sex}, #{idCart}, #{positionalTitles}, #{nation}, #{place}, #{address}, #{birthday}, #{phone}, #{department}, #{classes}, #{subject})
     </insert>
 
-    <select id="findClasses" resultType="java.lang.String">
-        SELECT name FROM classes order by name
+    <select id="findClasses" resultMap="classList">
+        SELECT * FROM classes order by name
     </select>
+
+    <update id="updateClass">
+        UPDATE classes SET name = #{name} WHERE id = #{id}
+    </update>
 
     <insert id="createClass">
         INSERT INTO classes(name) values (#{name})
@@ -44,7 +54,7 @@
     </select>
 
     <select id="findByInformation" resultType="org.ycm.sims.entity.TeacherInformation">
-        SELECT * form teacher_information where login_name = #{loginName};
+        SELECT * form teacher_information where login_name = #{loginName}
     </select>
 
     <select id="findInformationLoginName" resultType="java.lang.Integer">
@@ -53,11 +63,14 @@
     <select id="findInformationNumber" resultType="java.lang.Integer">
         SELECT COUNT(number) FROM teacher_information WHERE number = #{number}
     </select>
-    <select id="teacherInformationList" resultMap="teacherInformationList">
+    <select id="informationList" resultMap="teacherInformationList">
         SELECT * FROM teacher_information
+          WHERE login_name IN(
+        SELECT login_name FROM role WHERE role_type = #{roleType} AND role_status = 0
         <if test="loginName != null and loginName != ''">
-            WHERE login_name = #{loginName}
+            AND login_name = #{loginName}
         </if>
+        )
     </select>
     <select id="teacherInformationCount" resultType="java.lang.Integer">
         SELECT count(*) FROM teacher_information
@@ -92,6 +105,15 @@
     
     <select id="findClassByName" resultType="java.lang.Integer">
         select count(*) from classes where name = #{name}
+    </select>
+
+    <select id="findClassCount" resultType="java.lang.Integer">
+        select count(*) from classes
+    </select>
+
+    <select id="findClassTeacher" resultType="java.util.HashMap">
+        SELECT name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%')) ORDER BY FIELD(
+	      subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
     </select>
 
 </mapper>

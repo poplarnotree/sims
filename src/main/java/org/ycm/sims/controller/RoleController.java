@@ -12,6 +12,7 @@ import org.ycm.sims.VO.RoleCheckVO;
 import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.dto.RolePageDTO;
 import org.ycm.sims.dto.UpdatePasswordDTO;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.service.RoleService;
@@ -127,13 +128,13 @@ public class RoleController {
 
     /**
      * 分页
-     * @param pageDTO
+     * @param rolePageDTO
      * @return
      */
     @RequestMapping("/page")
     @ResponseBody
-    public PageVO<RoleVO> page(PageDTO pageDTO){
-        return roleService.rolePage(pageDTO);
+    public PageVO<RoleVO> page(RolePageDTO rolePageDTO){
+        return roleService.rolePage(rolePageDTO);
     }
 
 }

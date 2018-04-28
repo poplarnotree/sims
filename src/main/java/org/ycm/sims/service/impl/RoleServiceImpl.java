@@ -11,6 +11,7 @@ import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dao.RoleDao;
 import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleDTO;
+import org.ycm.sims.dto.RolePageDTO;
 import org.ycm.sims.dto.UpdatePasswordDTO;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.enums.ExceptionEnum;
@@ -167,12 +168,12 @@ public class RoleServiceImpl implements RoleService {
      * @return
      */
     @Override
-    public PageVO<RoleVO> rolePage(PageDTO pageDTO) {
+    public PageVO<RoleVO> rolePage(RolePageDTO rolePageDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-        if (pageDTO.getRoleType() - role.getRoleType() == 1){
-            int count = roleDao.roleCount(new Role(pageDTO.getLoginName(), pageDTO.getRoleType()));
-            PageHelper.startPage(pageDTO.getPage(), pageDTO.getLimit());
-            List<Role> roleList = roleDao.findRole(new Role(pageDTO.getLoginName(), pageDTO.getRoleType()));
+        if (rolePageDTO.getRoleType() - role.getRoleType() == 1){
+            int count = roleDao.roleCount(new Role(rolePageDTO.getLoginName(), rolePageDTO.getRoleType()));
+            PageHelper.startPage(rolePageDTO.getPage(), rolePageDTO.getLimit());
+            List<Role> roleList = roleDao.findRole(new Role(rolePageDTO.getLoginName(), rolePageDTO.getRoleType()));
             List<RoleVO> roleVOList = new ArrayList<RoleVO>();
             for (Role role1: roleList){
                 roleVOList.add(new RoleVO(

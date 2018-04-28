@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.ycm.sims.VO.*;
+import org.ycm.sims.converter.Map2TeacherVO;
 import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
-import org.ycm.sims.dto.PageDTO;
-import org.ycm.sims.dto.RoleDTO;
-import org.ycm.sims.dto.TeacherInformationDTO;
+import org.ycm.sims.dto.*;
+import org.ycm.sims.entity.Classes;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.entity.TeacherInformation;
 import org.ycm.sims.enums.ExceptionEnum;
@@ -24,6 +24,7 @@ import org.ycm.sims.utils.SessionUtil;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Create by yangchangmin
@@ -46,9 +47,13 @@ public class InformationServiceImpl implements InformationService {
 
     @Override
     public NumberAndClassesVO createInformationVO() {
-        List<String> classesList = informationDao.findClasses();
+        List<Classes> classesList = informationDao.findClasses();
+        List<String> classList = new ArrayList<>();
+        for (Classes classes : classesList){
+            classList.add(classes.getName());
+        }
         String maxNumber = informationDao.findNumberMax();
-        NumberAndClassesVO numberAndClassesVO = new NumberAndClassesVO(classesList, maxNumber);
+        NumberAndClassesVO numberAndClassesVO = new NumberAndClassesVO(classList, maxNumber);
         return numberAndClassesVO;
     }
 
@@ -80,12 +85,12 @@ public class InformationServiceImpl implements InformationService {
     }
 
     @Override
-    public PageVO<TeacherInformationVO> teacherInformationPage(PageDTO pageDTO) {
+    public PageVO<TeacherInformationVO> teacherInformationPage(RolePageDTO rolePageDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-        if (pageDTO.getRoleType() - role.getRoleType() == 1){
-            int count = informationDao.teacherInformationCount(new TeacherInformation(pageDTO.getLoginName()));
-            PageHelper.startPage(pageDTO.getPage(), pageDTO.getLimit());
-            List<TeacherInformation> teacherInformationList = informationDao.teacherInformationList(pageDTO);
+        if (rolePageDTO.getRoleType() - role.getRoleType() == 1){
+            int count = informationDao.teacherInformationCount(new TeacherInformation(rolePageDTO.getLoginName()));
+            PageHelper.startPage(rolePageDTO.getPage(), rolePageDTO.getLimit());
+            List<TeacherInformation> teacherInformationList = informationDao.informationList(rolePageDTO);
             List<TeacherInformationVO> teacherInformationVOList = new ArrayList<TeacherInformationVO>();
             for (TeacherInformation teacherInformation: teacherInformationList){
                 TeacherInformationVO teacherInformationVO = new TeacherInformationVO();
@@ -124,19 +129,49 @@ public class InformationServiceImpl implements InformationService {
 
     @Override
     @Transactional
-    public CheckVO createClass(String name) {
+    public CheckVO classManage(ClassPageDTO classPageDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         int departmentCount = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), "学生处"));
-        int classCount = informationDao.findClassByName(name);
+        int classCount = informationDao.findClassByName(classPageDTO.getName());
         if (classCount == 1){
             return new CheckVO(ResultEnum.CLASS_EXIST);
         }
         if (role.getRoleType() == 0 || departmentCount == 1){
-            int row = informationDao.createClass(name);
+            int row;
+            if (classPageDTO.getId() == null){
+                row = informationDao.createClass(classPageDTO.getName());
+            }else{
+                row = informationDao.updateClass(classPageDTO.getId(), classPageDTO.getName());
+            }
             if (row == 1){
                 return new CheckVO(ResultEnum.SUCCESS);
             }
             throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+        }else {
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+    }
+
+    @Override
+    public PageVO<ClassVO> classPage(ClassPageDTO classPageDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        int departmentCount = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), "学生处"));
+        if (role.getRoleType() == 0 || departmentCount == 1){
+            int count = informationDao.findClassCount();
+            PageHelper.startPage(classPageDTO.getPage(), classPageDTO.getLimit());
+            List<Classes> classesList = informationDao.findClasses();
+            List<ClassVO> classVOList = new ArrayList<>();
+            for (int i = 0; i < classesList.size(); i++){
+                ClassVO classVO = new ClassVO();
+                BeanUtils.copyProperties(classesList.get(i), classVO);
+                classVOList.add(classVO);
+                List<Map<String, String>> teacherList = informationDao.findClassTeacher(classesList.get(i).getName());
+                TeacherVO teacherVO = Map2TeacherVO.map2TeacherVO(teacherList);
+                classVOList.get(i).setTeacherVO(teacherVO);
+                classVOList.get(i).setCreateTime(FormatConversionUtil.DateFormatUtil(classesList.get(i).getCreateTime()));
+                /*TODO*//*差一个学生人数*/
+            }
+            return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
         }else {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
