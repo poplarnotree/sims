@@ -27,5 +27,4 @@ public interface InformationService {
     CheckVO classManage(ClassPageDTO classPageDTO);
 
     PageVO<ClassVO> classPage(ClassPageDTO classPageDTO);
-
 }

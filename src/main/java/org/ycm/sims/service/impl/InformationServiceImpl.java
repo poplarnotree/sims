@@ -169,7 +169,6 @@ public class InformationServiceImpl implements InformationService {
                 TeacherVO teacherVO = Map2TeacherVO.map2TeacherVO(teacherList);
                 classVOList.get(i).setTeacherVO(teacherVO);
                 classVOList.get(i).setCreateTime(FormatConversionUtil.DateFormatUtil(classesList.get(i).getCreateTime()));
-                /*TODO*//*差一个学生人数*/
             }
             return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
         }else {

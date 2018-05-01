@@ -1,15 +1,13 @@
 package org.ycm.sims.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.ycm.sims.VO.CheckVO;
-import org.ycm.sims.VO.ClassVO;
-import org.ycm.sims.VO.PageVO;
-import org.ycm.sims.VO.TeacherInformationVO;
+import org.ycm.sims.VO.*;
 import org.ycm.sims.dto.ClassPageDTO;
 import org.ycm.sims.dto.RolePageDTO;
 import org.ycm.sims.service.InformationService;
@@ -31,12 +29,20 @@ public class InformationServiceImplTest {
     @Autowired
     private InformationService informationService;
 
+    /**
+     * 获取班级名称和最大工号
+     * @throws Exception
+     */
     @Test
     public void createInformationVO() throws Exception {
+        NumberAndClassesVO numberAndClassesVO = informationService.createInformationVO();
+        Assert.assertNotNull(numberAndClassesVO);
+        log.info("NumberAndClassesVO = {}", numberAndClassesVO);
     }
 
     @Test
     public void createInformation() throws Exception {
+        request.getSession().setAttribute("loginName","admin");
     }
 
     @Test
@@ -49,8 +55,10 @@ public class InformationServiceImplTest {
         rolePageDTO.setPage(1);
         PageVO<TeacherInformationVO> teacherInformationVOPageVO = informationService.teacherInformationPage(rolePageDTO);
         log.info("teacherInformationVOPageVO = {}", teacherInformationVOPageVO);
+    }
 
-
+    @Test
+    public void updateTeacherInformation() throws Exception {
     }
 
     @Test

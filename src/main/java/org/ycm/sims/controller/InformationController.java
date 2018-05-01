@@ -30,7 +30,7 @@ public class InformationController {
 
     @RequestMapping("/classes")
     @ResponseBody
-    public NumberAndClassesVO department(){
+    public NumberAndClassesVO classes(){
         return informationService.createInformationVO();
     }
 

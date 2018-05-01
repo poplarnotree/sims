@@ -54,7 +54,7 @@
     </select>
 
     <select id="findByInformation" resultType="org.ycm.sims.entity.TeacherInformation">
-        SELECT * form teacher_information where login_name = #{loginName}
+        SELECT * FROM teacher_information where login_name = #{loginName}
     </select>
 
     <select id="findInformationLoginName" resultType="java.lang.Integer">
@@ -102,7 +102,7 @@
     <select id="findTeacherDepartment" resultType="java.lang.Integer">
         SELECT count(*) FROM teacher_information WHERE login_name = #{loginName} and department LIKE CONCAT(CONCAT('%',#{department},'%'))
     </select>
-    
+
     <select id="findClassByName" resultType="java.lang.Integer">
         select count(*) from classes where name = #{name}
     </select>
@@ -111,7 +111,7 @@
         select count(*) from classes
     </select>
 
-    <select id="findClassTeacher" resultType="java.util.HashMap">
+    <select id="findClassTeacher" resultType="java.util.Map">
         SELECT name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%')) ORDER BY FIELD(
 	      subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
     </select>

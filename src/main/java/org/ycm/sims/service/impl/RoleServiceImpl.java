@@ -42,9 +42,6 @@ public class RoleServiceImpl implements RoleService {
     @Autowired
     private RoleDao roleDao;
 
-    @Autowired
-    private InformationService informationService;
-
     /**
      * 登录
      * @param roleDTO
