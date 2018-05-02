@@ -151,93 +151,101 @@
                        $("#subject").val(obj.data.subject);
                    }
                    ,yes: function () {
-                       $(".layui-btn").click();
+                       //            判断工号格式
+                       var reg = new RegExp("^T-\\d{3}$");
+                       if (!reg.test($("#number").val()) || $("#number").val() == '') {
+                           alert('工号格式不正确，正确格式：T-XXX');
+                           return false;
+                       }
+                       //判断姓名
+                       var n = new RegExp("[\u4e00-\u9fa5]");
+                       if (!n.test($("#name").val()) || $("#name").val() == '') {
+                           alert('请检查教师姓名！');
+                           return false;
+                       }
+                       //判断身份证
+                       var i = new RegExp("^(\\d{6})(\\d{4})(\\d{2})(\\d{2})(\\d{3})([0-9]|X)$");
+                       if (!i.test($("#idCart").val()) || $("#idCart").val() == '') {
+                           alert('请检查教师身份证!');
+                           return false;
+                       }
+                       //职称
+                       if ($("#positionalTitles").val() == '') {
+                           alert('请为教师选择职称！');
+                           return false;
+                       }
+                       //民族
+                       if ($("#nation").val() == '') {
+                           alert('请为教师选择民族！');
+                           return false;
+                       }
+                       //籍贯
+                       if ($("#place").val() == '') {
+                           alert('请为教师填写籍贯！');
+                           return false;
+                       }
+                       //地址
+                       if ($("#address").val() == '') {
+                           alert('请为教师填写地址！');
+                           return false;
+                       }
+                       if ($("#birthday").val() == '') {
+                           alert('请为教师选择出生日期！');
+                           return false;
+                       }
+                       //电话
+                       var p = new RegExp("^1\\d{10}$");
+                       if (!p.test($("#phone").val()) || $("#phone").val() == '') {
+                           alert('请为教师填写联系电话！');
+                           return false;
+                       }
+
+                       // 判断部门，班级，学科不为空
+                       if ($("#classes").val() == null) {
+                           alert('请为教师分配班级！');
+                           return false;
+                       }
+                       if ($("#department").val() == null) {
+                           alert('请为教师分配部门!');
+                           return false;
+                       }
+                       if ($("#subject").val() == '') {
+                           alert('请为教师选择学科！');
+                           return false;
+                       }
+
+                       var formObject = {};
+                       var formArray =$("#form").serializeArray();
+                       $.each(formArray,function(i,item){
+                           if (item.name == 'department'){
+                               formObject[item.name] = $('#department').val();
+                               return true;
+                           }
+                           if (item.name == 'classes'){
+                               formObject[item.name] = $('#classes').val();
+                               return true;
+                           }
+                           formObject[item.name] = item.value;
+                       });
+                       $.ajax({
+                           type: 'post',
+                           url: '/information/updateTeacher',
+                           dataType: 'json',
+                           contentType: 'application/json',
+                           data: JSON.stringify(formObject),
+                           success: function (CheckVO) {
+                               if (CheckVO.status == 0) {
+                                   layer.alert(CheckVO.message, {icon: 1});
+                               } else {
+                                   layer.alert(CheckVO.message, {icon: 2});
+                               }
+                           },
+                           error: function (XMLHttpRequest) {
+                               layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                           }
+                       })
                    }
                });
-               form.on('submit(formDemo)', function (data) {
-                   //            判断工号格式
-                   var reg = new RegExp("^T-\\d{3}$");
-                   if (!reg.test($("#number").val()) || $("#number").val() == '') {
-                       alert('工号格式不正确，正确格式：T-XXX');
-                       return false;
-                   }
-                   //判断姓名
-                   var n = new RegExp("[\u4e00-\u9fa5]");
-                   if (!n.test($("#name").val()) || $("#name").val() == '') {
-                       alert('请检查教师姓名！');
-                       return false;
-                   }
-                   //判断身份证
-                   var i = new RegExp("^(\\d{6})(\\d{4})(\\d{2})(\\d{2})(\\d{3})([0-9]|X)$");
-                   if (!i.test($("#idCart").val()) || $("#idCart").val() == '') {
-                       alert('请检查教师身份证!');
-                       return false;
-                   }
-                   //职称
-                   if ($("#positionalTitles").val() == '') {
-                       alert('请为教师选择职称！');
-                       return false;
-                   }
-                   //民族
-                   if ($("#nation").val() == '') {
-                       alert('请为教师选择民族！');
-                       return false;
-                   }
-                   //籍贯
-                   if ($("#place").val() == '') {
-                       alert('请为教师填写籍贯！');
-                       return false;
-                   }
-                   //地址
-                   if ($("#address").val() == '') {
-                       alert('请为教师填写地址！');
-                       return false;
-                   }
-                   if ($("#birthday").val() == '') {
-                       alert('请为教师选择出生日期！');
-                       return false;
-                   }
-                   //电话
-                   var p = new RegExp("^1\\d{10}$");
-                   if (!p.test($("#phone").val()) || $("#phone").val() == '') {
-                       alert('请为教师填写联系电话！');
-                       return false;
-                   }
-
-                   // 判断部门，班级，学科不为空
-                   if ($("#classes").val() == null) {
-                       alert('请为教师分配班级！');
-                       return false;
-                   }
-                   if ($("#department").val() == null) {
-                       alert('请为教师分配部门!');
-                       return false;
-                   }
-                   if ($("#subject").val() == '') {
-                       alert('请为教师选择学科！');
-                       return false;
-                   }
-                   $.ajax({
-                       type: 'post',
-                       url: '/information/updateTeacher',
-                       dataType: 'json',
-                       contentType: 'application/json',
-                       data: JSON.stringify(data.field),
-                       success: function (CheckVO) {
-                           if (CheckVO.status == 0) {
-                               alert(CheckVO.message);
-                               return false;
-                           } else {
-                               alert(CheckVO.message);
-                               return false;
-                           }
-                           return false;
-                       },
-                       error: function (XMLHttpRequest) {
-                           alert(XMLHttpRequest.responseJSON.message);
-                       }
-                   })
-               })
            }
        });
 
@@ -245,7 +253,7 @@
 
 </script>
 <script type="text/html" id="opens">
-    <form id="f" class="layui-form" action="">
+    <form id="form" class="layui-form" action="">
         <div class="layui-form-item">
             <div class="layui-input-inline">
                 <input type="text" id="roleType" name="roleType" autocomplete="off" class="layui-input" value="教师" style="display: none">
@@ -254,7 +262,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">登录帐号</label>
             <div class="layui-input-inline">
-                <input type="text" id="loginName" name="loginName" disabled placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
+                <input type="text" id="loginName" name="loginName" readonly placeholder="请输入登录帐号..." autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">登录帐号不可修改</div>
         </div>
