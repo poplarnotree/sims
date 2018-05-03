@@ -10,22 +10,24 @@ import lombok.Data;
 @Data
 public class TeacherVO {
 
-    private String chinese;
+    private static String NOTEACHER = "暂无教师";
 
-    private String math;
+    private String chinese = NOTEACHER;
 
-    private String english;
+    private String math = NOTEACHER;
 
-    private String physics;
+    private String english = NOTEACHER;
 
-    private String chemistry;
+    private String physics = NOTEACHER;
 
-    private String biology;
+    private String chemistry = NOTEACHER;
 
-    private String politics;
+    private String biology = NOTEACHER;
 
-    private String geography;
+    private String politics = NOTEACHER;
 
-    private String history;
+    private String geography = NOTEACHER;
+
+    private String history = NOTEACHER;
 
 }

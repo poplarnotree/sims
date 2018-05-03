@@ -26,5 +26,6 @@ public interface InformationService {
     /*班级管理*/
     CheckVO classManage(ClassPageDTO classPageDTO);
 
+    /*班级分页*/
     PageVO<ClassVO> classPage(ClassPageDTO classPageDTO);
 }

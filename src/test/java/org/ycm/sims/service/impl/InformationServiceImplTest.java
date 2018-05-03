@@ -64,7 +64,7 @@ public class InformationServiceImplTest {
     @Test
     public void classManage() {
         request.getSession().setAttribute("loginName","admin");
-        CheckVO checkVO = informationService.classManage(new ClassPageDTO("高二(2)班"));
+        CheckVO checkVO = informationService.classManage(new ClassPageDTO("高一(1)班"));
         log.info("checkVO={}" + checkVO);
     }
 

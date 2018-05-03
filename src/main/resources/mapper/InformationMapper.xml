@@ -38,7 +38,7 @@
     </insert>
 
     <select id="findClasses" resultMap="classList">
-        SELECT * FROM classes order by name
+        SELECT * FROM classes WHERE name != '暂无班级' order by name
     </select>
 
     <update id="updateClass">
@@ -108,12 +108,14 @@
     </select>
 
     <select id="findClassCount" resultType="java.lang.Integer">
-        select count(*) from classes
+        select count(*) from classes WHERE name != '暂无班级'
     </select>
 
     <select id="findClassTeacher" resultType="java.util.Map">
-        SELECT name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%')) ORDER BY FIELD(
-	      subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
+        SELECT classes,name,subject FROM teacher_information
+          WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%')) AND classes != '暂无班级'
+          ORDER BY FIELD(
+           subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
     </select>
 
 </mapper>
