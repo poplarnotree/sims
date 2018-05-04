@@ -235,9 +235,15 @@
                            data: JSON.stringify(formObject),
                            success: function (CheckVO) {
                                if (CheckVO.status == 0) {
-                                   layer.alert(CheckVO.message, {icon: 1});
+                                   layer.alert(CheckVO.message, {icon: 1},function () {
+                                       window.parent.location.reload();
+                                       parent.layer.close(index);
+                                   });
                                } else {
-                                   layer.alert(CheckVO.message, {icon: 2});
+                                   layer.alert(CheckVO.message, {icon: 2},function () {
+                                       window.parent.location.reload();
+                                       parent.layer.close(index);
+                                   });
                                }
                            },
                            error: function (XMLHttpRequest) {

@@ -1,7 +1,6 @@
 package org.ycm.sims.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,16 +8,14 @@ import org.ycm.sims.VO.PageVO;
 import org.ycm.sims.VO.RoleCheckVO;
 import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dao.RoleDao;
-import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleDTO;
-import org.ycm.sims.dto.RolePageDTO;
+import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.dto.UpdatePasswordDTO;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.enums.ResultEnum;
 import org.ycm.sims.exception.SimsException;
-import org.ycm.sims.service.InformationService;
 import org.ycm.sims.service.RoleService;
 import org.ycm.sims.utils.FormatConversionUtil;
 import org.ycm.sims.utils.MD5Util;
@@ -165,12 +162,12 @@ public class RoleServiceImpl implements RoleService {
      * @return
      */
     @Override
-    public PageVO<RoleVO> rolePage(RolePageDTO rolePageDTO) {
+    public PageVO<RoleVO> rolePage(RoleManagerDTO roleManagerDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-        if (rolePageDTO.getRoleType() - role.getRoleType() == 1){
-            int count = roleDao.roleCount(new Role(rolePageDTO.getLoginName(), rolePageDTO.getRoleType()));
-            PageHelper.startPage(rolePageDTO.getPage(), rolePageDTO.getLimit());
-            List<Role> roleList = roleDao.findRole(new Role(rolePageDTO.getLoginName(), rolePageDTO.getRoleType()));
+        if (roleManagerDTO.getRoleType() - role.getRoleType() == 1){
+            int count = roleDao.roleCount(new Role(roleManagerDTO.getLoginName(), roleManagerDTO.getRoleType()));
+            PageHelper.startPage(roleManagerDTO.getPage(), roleManagerDTO.getLimit());
+            List<Role> roleList = roleDao.findRole(new Role(roleManagerDTO.getLoginName(), roleManagerDTO.getRoleType()));
             List<RoleVO> roleVOList = new ArrayList<RoleVO>();
             for (Role role1: roleList){
                 roleVOList.add(new RoleVO(

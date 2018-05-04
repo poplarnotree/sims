@@ -1,20 +1,15 @@
 package org.ycm.sims.controller;
 
-import com.github.pagehelper.PageInfo;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.PageVO;
 import org.ycm.sims.VO.RoleCheckVO;
 import org.ycm.sims.VO.RoleVO;
-import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleDTO;
-import org.ycm.sims.dto.RolePageDTO;
+import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.dto.UpdatePasswordDTO;
-import org.ycm.sims.entity.Role;
 import org.ycm.sims.service.RoleService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
@@ -128,13 +123,13 @@ public class RoleController {
 
     /**
      * 分页
-     * @param rolePageDTO
+     * @param roleManagerDTO
      * @return
      */
     @RequestMapping("/page")
     @ResponseBody
-    public PageVO<RoleVO> page(RolePageDTO rolePageDTO){
-        return roleService.rolePage(rolePageDTO);
+    public PageVO<RoleVO> page(RoleManagerDTO roleManagerDTO){
+        return roleService.rolePage(roleManagerDTO);
     }
 
 }

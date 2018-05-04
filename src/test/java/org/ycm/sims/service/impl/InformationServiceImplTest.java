@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.ycm.sims.VO.*;
-import org.ycm.sims.dto.ClassPageDTO;
-import org.ycm.sims.dto.RolePageDTO;
+import org.ycm.sims.dto.ClassManagerDTO;
+import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.service.InformationService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -48,12 +48,12 @@ public class InformationServiceImplTest {
     @Test
     public void teacherInformationPage() throws Exception {
         request.getSession().setAttribute("loginName","admin");
-        RolePageDTO rolePageDTO = new RolePageDTO();
-        rolePageDTO.setLimit(10);
-        rolePageDTO.setLoginName("admin");
-        rolePageDTO.setRoleType(1);
-        rolePageDTO.setPage(1);
-        PageVO<TeacherInformationVO> teacherInformationVOPageVO = informationService.teacherInformationPage(rolePageDTO);
+        RoleManagerDTO roleManagerDTO = new RoleManagerDTO();
+        roleManagerDTO.setLimit(10);
+        roleManagerDTO.setLoginName("admin");
+        roleManagerDTO.setRoleType(1);
+        roleManagerDTO.setPage(1);
+        PageVO<TeacherInformationVO> teacherInformationVOPageVO = informationService.teacherInformationPage(roleManagerDTO);
         log.info("teacherInformationVOPageVO = {}", teacherInformationVOPageVO);
     }
 
@@ -64,14 +64,14 @@ public class InformationServiceImplTest {
     @Test
     public void classManage() {
         request.getSession().setAttribute("loginName","admin");
-        CheckVO checkVO = informationService.classManage(new ClassPageDTO("高一(1)班"));
+        CheckVO checkVO = informationService.classManage(new ClassManagerDTO("高一(1)班"));
         log.info("checkVO={}" + checkVO);
     }
 
     @Test
     public void classPage() {
         request.getSession().setAttribute("loginName","admin");
-        PageVO<ClassVO> classVOPageVO = informationService.classPage(new ClassPageDTO(1,2,""));
+        PageVO<ClassVO> classVOPageVO = informationService.classPage(new ClassManagerDTO(1,2,""));
         log.info("classVOPageVO={}",classVOPageVO);
     }
 }

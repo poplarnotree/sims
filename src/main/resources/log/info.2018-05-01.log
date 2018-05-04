@@ -1,0 +1,93 @@
+2018-05-01 21:33:48,330 - Starting InformationServiceImplTest on yang-PC with PID 10832 (started by yang in E:\study\workspace\sims)
+2018-05-01 21:33:48,333 - No active profile set, falling back to default profiles: default
+2018-05-01 21:33:48,490 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@404bbcbd: startup date [Tue May 01 21:33:48 CST 2018]; root of context hierarchy
+2018-05-01 21:33:55,166 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-01 21:33:55,702 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@404bbcbd: startup date [Tue May 01 21:33:48 CST 2018]; root of context hierarchy
+2018-05-01 21:33:55,792 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-01 21:33:56,051 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-01 21:33:56,061 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-01 21:33:56,061 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-01 21:33:56,064 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-01 21:33:56,068 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-01 21:33:56,076 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-01 21:33:56,092 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-01 21:33:56,092 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-01 21:33:56,092 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-01 21:33:56,092 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-01 21:33:56,093 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-01 21:33:56,094 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-01 21:33:56,094 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-01 21:33:56,095 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-01 21:33:56,095 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-01 21:33:56,095 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-01 21:33:56,106 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-01 21:33:56,112 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-01 21:33:56,224 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-01 21:33:56,225 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-01 21:33:57,461 - Started InformationServiceImplTest in 11.93 seconds (JVM running for 16.331)
+2018-05-01 21:33:58,116 - sims - Starting...
+2018-05-01 21:33:59,430 - sims - Start completed.
+2018-05-01 21:33:59,488 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-01 21:33:59,535 - ==> Parameters: admin(String)
+2018-05-01 21:33:59,793 - <==      Total: 1
+2018-05-01 21:33:59,797 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%'))
+2018-05-01 21:33:59,798 - ==> Parameters: admin(String), 学生处(String)
+2018-05-01 21:33:59,935 - <==      Total: 1
+2018-05-01 21:33:59,936 - ==>  Preparing: select count(*) from classes
+2018-05-01 21:33:59,936 - ==> Parameters:
+2018-05-01 21:33:59,940 - <==      Total: 1
+2018-05-01 21:34:00,020 - ==>  Preparing: SELECT count(0) FROM classes
+2018-05-01 21:34:00,021 - ==> Parameters:
+2018-05-01 21:34:00,043 - <==      Total: 1
+2018-05-01 21:34:00,045 - ==>  Preparing: SELECT * FROM classes order by name LIMIT ?
+2018-05-01 21:34:00,046 - ==> Parameters: 2(Integer)
+2018-05-01 21:34:00,067 - <==      Total: 2
+2018-05-01 21:34:00,072 - ==>  Preparing: SELECT name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
+2018-05-01 21:34:00,072 - ==> Parameters: 暂无班级(String)
+2018-05-01 21:34:00,117 - <==      Total: 13
+2018-05-01 21:34:00,120 - ==>  Preparing: SELECT name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
+2018-05-01 21:34:00,120 - ==> Parameters: 高一(1)班(String)
+2018-05-01 21:34:00,123 - <==      Total: 2
+2018-05-01 21:34:00,125 - classVOPageVO=PageVO(code=0, msg=成功, count=4, data=[ClassVO(id=1000, name=暂无班级, number=null, teacherVO=TeacherVO(chinese=王楠, math=李大, english=null, physics=吴起, chemistry=null, biology=胡彦斌, politics=蜘蛛精, geography=null, history=null), createTime=2018-05-01 09:34:00), ClassVO(id=1003, name=高一(1)班, number=null, teacherVO=TeacherVO(chinese=晃儿, math=null, english=陈六, physics=null, chemistry=null, biology=null, politics=null, geography=null, history=null), createTime=2018-05-01 09:34:00)])
+2018-05-01 21:34:00,158 - Closing org.springframework.web.context.support.GenericWebApplicationContext@404bbcbd: startup date [Tue May 01 21:33:48 CST 2018]; root of context hierarchy
+2018-05-01 21:34:00,162 - sims - Shutdown initiated...
+2018-05-01 21:34:00,214 - sims - Shutdown completed.
+2018-05-01 22:43:50,754 - Starting InformationServiceImplTest on yang-PC with PID 7856 (started by yang in E:\study\workspace\sims)
+2018-05-01 22:43:50,756 - No active profile set, falling back to default profiles: default
+2018-05-01 22:43:50,818 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@27508c5d: startup date [Tue May 01 22:43:50 CST 2018]; root of context hierarchy
+2018-05-01 22:43:54,489 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-01 22:43:54,879 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@27508c5d: startup date [Tue May 01 22:43:50 CST 2018]; root of context hierarchy
+2018-05-01 22:43:54,962 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-01 22:43:55,034 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-01 22:43:55,040 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-01 22:43:55,041 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-01 22:43:55,042 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-01 22:43:55,044 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-01 22:43:55,049 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-01 22:43:55,058 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-01 22:43:55,060 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-01 22:43:55,061 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-01 22:43:55,061 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-01 22:43:55,062 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-01 22:43:55,062 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-01 22:43:55,062 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-01 22:43:55,063 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-01 22:43:55,064 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-01 22:43:55,065 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-01 22:43:55,078 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-01 22:43:55,080 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-01 22:43:55,176 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-01 22:43:55,176 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-01 22:43:56,275 - Started InformationServiceImplTest in 7.046 seconds (JVM running for 9.263)
+2018-05-01 22:43:56,502 - sims - Starting...
+2018-05-01 22:43:56,859 - sims - Start completed.
+2018-05-01 22:43:56,866 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-01 22:43:56,892 - ==> Parameters:
+2018-05-01 22:43:56,942 - <==      Total: 4
+2018-05-01 22:43:56,945 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-01 22:43:56,946 - ==> Parameters:
+2018-05-01 22:43:56,992 - <==      Total: 1
+2018-05-01 22:43:56,993 - NumberAndClassesVO = NumberAndClassesVO(classesName=[暂无班级, 高一(1)班, 高三(1)班, 高二(1)班], maxNumber=T-025)
+2018-05-01 22:43:57,012 - Closing org.springframework.web.context.support.GenericWebApplicationContext@27508c5d: startup date [Tue May 01 22:43:50 CST 2018]; root of context hierarchy
+2018-05-01 22:43:57,033 - sims - Shutdown initiated...
+2018-05-01 22:43:57,060 - sims - Shutdown completed.

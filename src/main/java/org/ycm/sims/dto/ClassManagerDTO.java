@@ -7,25 +7,25 @@ import lombok.Data;
  * on 2018/4/28 10:59
  */
 @Data
-public class ClassPageDTO extends PageDTO {
+public class ClassManagerDTO extends PageDTO {
 
     private Integer id;
 
     private String name;
 
-    public ClassPageDTO() {
+    public ClassManagerDTO() {
     }
 
-    public ClassPageDTO(String name) {
+    public ClassManagerDTO(String name) {
         this.name = name;
     }
 
-    public ClassPageDTO(Integer id, String name) {
+    public ClassManagerDTO(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public ClassPageDTO(Integer page, Integer limit, String name) {
+    public ClassManagerDTO(Integer page, Integer limit, String name) {
         super(page, limit);
         this.name = name;
     }

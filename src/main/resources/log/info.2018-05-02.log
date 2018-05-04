@@ -1,0 +1,1187 @@
+2018-05-02 21:42:55,965 - Starting InformationServiceImplTest on yang-PC with PID 596 (started by yang in E:\study\workspace\sims)
+2018-05-02 21:42:55,966 - No active profile set, falling back to default profiles: default
+2018-05-02 21:42:56,070 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6f6745d6: startup date [Wed May 02 21:42:56 CST 2018]; root of context hierarchy
+2018-05-02 21:42:59,624 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 21:43:00,080 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6f6745d6: startup date [Wed May 02 21:42:56 CST 2018]; root of context hierarchy
+2018-05-02 21:43:00,179 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-02 21:43:00,255 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-02 21:43:00,276 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-02 21:43:00,277 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-02 21:43:00,278 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-02 21:43:00,279 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-02 21:43:00,279 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-02 21:43:00,329 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-02 21:43:00,330 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-02 21:43:00,330 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-02 21:43:00,330 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-02 21:43:00,331 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-02 21:43:00,332 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-02 21:43:00,333 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-02 21:43:00,336 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-02 21:43:00,337 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-02 21:43:00,337 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-02 21:43:00,354 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-02 21:43:00,355 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-02 21:43:00,472 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 21:43:00,473 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 21:43:02,178 - Started InformationServiceImplTest in 7.275 seconds (JVM running for 11.014)
+2018-05-02 21:43:02,598 - sims - Starting...
+2018-05-02 21:43:03,175 - sims - Start completed.
+2018-05-02 21:43:03,184 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 21:43:03,215 - ==> Parameters:
+2018-05-02 21:43:03,291 - <==      Total: 4
+2018-05-02 21:43:03,324 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 21:43:03,324 - ==> Parameters:
+2018-05-02 21:43:03,347 - <==      Total: 1
+2018-05-02 21:43:03,348 - NumberAndClassesVO = NumberAndClassesVO(classesName=[暂无班级, 高一(1)班, 高三(1)班, 高二(1)班], maxNumber=T-025)
+2018-05-02 21:43:03,412 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6f6745d6: startup date [Wed May 02 21:42:56 CST 2018]; root of context hierarchy
+2018-05-02 21:43:03,418 - sims - Shutdown initiated...
+2018-05-02 21:43:03,428 - sims - Shutdown completed.
+2018-05-02 22:15:24,080 - Starting SimsApplication on yang-PC with PID 5204 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-05-02 22:15:24,085 - No active profile set, falling back to default profiles: default
+2018-05-02 22:15:24,278 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@235834f2: startup date [Wed May 02 22:15:24 CST 2018]; root of context hierarchy
+2018-05-02 22:15:26,047 - Tomcat initialized with port(s): 8080 (http)
+2018-05-02 22:15:26,117 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-05-02 22:15:26,127 - Starting service [Tomcat]
+2018-05-02 22:15:26,127 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-02 22:15:26,141 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-05-02 22:15:26,372 - Initializing Spring embedded WebApplicationContext
+2018-05-02 22:15:26,373 - Root WebApplicationContext: initialization completed in 2095 ms
+2018-05-02 22:15:26,513 - Servlet dispatcherServlet mapped to [/]
+2018-05-02 22:15:26,518 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-02 22:15:26,519 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-02 22:15:26,519 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-02 22:15:26,519 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-02 22:15:27,096 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 22:15:27,451 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@235834f2: startup date [Wed May 02 22:15:24 CST 2018]; root of context hierarchy
+2018-05-02 22:15:27,482 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-02 22:15:27,514 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-02 22:15:27,518 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-02 22:15:27,519 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-02 22:15:27,519 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-02 22:15:27,519 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-02 22:15:27,519 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-02 22:15:27,524 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-02 22:15:27,524 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-02 22:15:27,525 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-02 22:15:27,525 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-02 22:15:27,525 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-02 22:15:27,525 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-02 22:15:27,526 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-02 22:15:27,526 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-02 22:15:27,526 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-02 22:15:27,526 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-02 22:15:27,533 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-02 22:15:27,535 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-02 22:15:27,575 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 22:15:27,575 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 22:15:28,019 - Registering beans for JMX exposure on startup
+2018-05-02 22:15:28,021 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-02 22:15:28,026 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-02 22:15:28,065 - Starting ProtocolHandler ["http-nio-8080"]
+2018-05-02 22:15:28,144 - Using a shared selector for servlet write/read
+2018-05-02 22:15:28,201 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-02 22:15:28,205 - Started SimsApplication in 5.206 seconds (JVM running for 6.801)
+2018-05-02 22:18:55,234 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-02 22:18:55,234 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-02 22:18:55,342 - FrameworkServlet 'dispatcherServlet': initialization completed in 108 ms
+2018-05-02 22:18:58,113 - sims - Starting...
+2018-05-02 22:18:58,309 - sims - Start completed.
+2018-05-02 22:18:58,314 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:18:58,336 - ==> Parameters: admin(String)
+2018-05-02 22:18:58,346 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:18:58,346 - ==> Parameters: admin(String)
+2018-05-02 22:18:58,380 - <==      Total: 1
+2018-05-02 22:18:58,380 - <==      Total: 1
+2018-05-02 22:18:58,654 - loginName=admin
+2018-05-02 22:19:01,514 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:19:01,514 - ==> Parameters: admin(String)
+2018-05-02 22:19:01,516 - <==      Total: 1
+2018-05-02 22:19:01,567 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 22:19:01,567 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:01,589 - <==      Total: 1
+2018-05-02 22:19:01,672 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 22:19:01,673 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:01,675 - <==      Total: 1
+2018-05-02 22:19:01,678 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ?
+2018-05-02 22:19:01,679 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 22:19:01,723 - <==      Total: 10
+2018-05-02 22:19:03,955 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:19:03,955 - ==> Parameters: admin(String)
+2018-05-02 22:19:03,957 - <==      Total: 1
+2018-05-02 22:19:03,958 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 22:19:03,958 - ==> Parameters:
+2018-05-02 22:19:03,962 - <==      Total: 1
+2018-05-02 22:19:03,966 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 22:19:03,966 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:04,035 - <==      Total: 1
+2018-05-02 22:19:04,037 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 22:19:04,038 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 22:19:04,044 - <==      Total: 10
+2018-05-02 22:19:05,226 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:19:05,226 - ==> Parameters: admin(String)
+2018-05-02 22:19:05,228 - <==      Total: 1
+2018-05-02 22:19:05,229 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 22:19:05,230 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:05,230 - <==      Total: 1
+2018-05-02 22:19:05,232 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 22:19:05,233 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:05,234 - <==      Total: 1
+2018-05-02 22:19:05,235 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ?
+2018-05-02 22:19:05,235 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 22:19:05,241 - <==      Total: 10
+2018-05-02 22:19:06,892 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:19:06,892 - ==> Parameters: admin(String)
+2018-05-02 22:19:06,894 - <==      Total: 1
+2018-05-02 22:19:06,895 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 22:19:06,896 - ==> Parameters:
+2018-05-02 22:19:06,897 - <==      Total: 1
+2018-05-02 22:19:06,899 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 22:19:06,900 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:06,901 - <==      Total: 1
+2018-05-02 22:19:06,903 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 22:19:06,904 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 22:19:06,912 - <==      Total: 10
+2018-05-02 22:19:09,926 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 22:19:09,927 - ==> Parameters:
+2018-05-02 22:19:09,931 - <==      Total: 4
+2018-05-02 22:19:09,932 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 22:19:09,932 - ==> Parameters:
+2018-05-02 22:19:09,934 - <==      Total: 1
+2018-05-02 22:19:11,358 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:19:11,359 - ==> Parameters: admin(String)
+2018-05-02 22:19:11,365 - <==      Total: 1
+2018-05-02 22:19:11,366 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 22:19:11,366 - ==> Parameters:
+2018-05-02 22:19:11,371 - <==      Total: 1
+2018-05-02 22:19:11,374 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 22:19:11,374 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:11,376 - <==      Total: 1
+2018-05-02 22:19:11,377 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 22:19:11,378 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 22:19:11,381 - <==      Total: 10
+2018-05-02 22:19:11,597 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:19:11,619 - ==> Parameters: admin(String)
+2018-05-02 22:19:11,620 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 22:19:11,620 - <==      Total: 1
+2018-05-02 22:19:11,620 - ==> Parameters: admin(String)
+2018-05-02 22:19:11,621 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 22:19:11,621 - <==      Total: 1
+2018-05-02 22:19:11,622 - ==> Parameters:
+2018-05-02 22:19:11,624 - <==      Total: 1
+2018-05-02 22:19:11,627 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 22:19:11,628 - ==> Parameters: 1(Integer)
+2018-05-02 22:19:11,630 - <==      Total: 1
+2018-05-02 22:19:11,631 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 22:19:11,632 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 22:19:11,633 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 22:19:11,634 - ==> Parameters: T-001(String), 张三(String), 男(String), 522628197706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1977-06-16(String), 18312345678(String), 学生处,教研组(String), 暂无班级(String), 语文(String), zhangsan(String)
+2018-05-02 22:19:11,637 - <==      Total: 10
+2018-05-02 22:19:11,725 - <==    Updates: 1
+2018-05-02 23:01:35,503 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:35,504 - ==> Parameters: admin(String)
+2018-05-02 23:01:35,506 - <==      Total: 1
+2018-05-02 23:01:35,518 - loginName=admin
+2018-05-02 23:01:35,527 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:35,527 - ==> Parameters: admin(String)
+2018-05-02 23:01:35,532 - <==      Total: 1
+2018-05-02 23:01:37,043 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:37,044 - ==> Parameters: admin(String)
+2018-05-02 23:01:37,045 - <==      Total: 1
+2018-05-02 23:01:37,046 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:01:37,046 - ==> Parameters:
+2018-05-02 23:01:37,052 - <==      Total: 1
+2018-05-02 23:01:37,054 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:01:37,055 - ==> Parameters: 1(Integer)
+2018-05-02 23:01:37,056 - <==      Total: 1
+2018-05-02 23:01:37,057 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:01:37,057 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:01:37,060 - <==      Total: 10
+2018-05-02 23:01:38,490 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:38,490 - ==> Parameters: admin(String)
+2018-05-02 23:01:38,491 - <==      Total: 1
+2018-05-02 23:01:38,491 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:01:38,492 - ==> Parameters:
+2018-05-02 23:01:38,492 - <==      Total: 1
+2018-05-02 23:01:38,496 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:01:38,497 - ==> Parameters: 1(Integer)
+2018-05-02 23:01:38,499 - <==      Total: 1
+2018-05-02 23:01:38,501 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:01:38,501 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:01:38,504 - <==      Total: 10
+2018-05-02 23:01:39,938 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:39,938 - ==> Parameters: admin(String)
+2018-05-02 23:01:39,940 - <==      Total: 1
+2018-05-02 23:01:39,940 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 23:01:39,941 - ==> Parameters: 1(Integer)
+2018-05-02 23:01:39,942 - <==      Total: 1
+2018-05-02 23:01:39,943 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 23:01:39,944 - ==> Parameters: 1(Integer)
+2018-05-02 23:01:39,945 - <==      Total: 1
+2018-05-02 23:01:39,946 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ?
+2018-05-02 23:01:39,947 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:01:39,949 - <==      Total: 10
+2018-05-02 23:01:41,876 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:01:41,876 - ==> Parameters:
+2018-05-02 23:01:41,884 - <==      Total: 4
+2018-05-02 23:01:41,885 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:01:41,886 - ==> Parameters:
+2018-05-02 23:01:41,887 - <==      Total: 1
+2018-05-02 23:01:43,054 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:43,056 - ==> Parameters: admin(String)
+2018-05-02 23:01:43,058 - <==      Total: 1
+2018-05-02 23:01:43,059 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 23:01:43,059 - ==> Parameters: 1(Integer)
+2018-05-02 23:01:43,060 - <==      Total: 1
+2018-05-02 23:01:43,062 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0
+2018-05-02 23:01:43,062 - ==> Parameters: 1(Integer)
+2018-05-02 23:01:43,063 - <==      Total: 1
+2018-05-02 23:01:43,064 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ?
+2018-05-02 23:01:43,065 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:01:43,068 - <==      Total: 10
+2018-05-02 23:01:44,806 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:44,806 - ==> Parameters: admin(String)
+2018-05-02 23:01:44,808 - <==      Total: 1
+2018-05-02 23:01:44,808 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:01:44,808 - ==> Parameters:
+2018-05-02 23:01:44,809 - <==      Total: 1
+2018-05-02 23:01:44,811 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:01:44,811 - ==> Parameters: 1(Integer)
+2018-05-02 23:01:44,813 - <==      Total: 1
+2018-05-02 23:01:44,814 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:01:44,814 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:01:44,817 - <==      Total: 10
+2018-05-02 23:01:48,453 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:01:48,454 - ==> Parameters: admin(String)
+2018-05-02 23:01:48,456 - <==      Total: 1
+2018-05-02 23:01:48,457 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ?
+2018-05-02 23:01:48,457 - ==> Parameters: zhangsan(String)
+2018-05-02 23:01:48,458 - <==      Total: 1
+2018-05-02 23:01:48,461 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 AND login_name = ?)
+2018-05-02 23:01:48,461 - ==> Parameters: 1(Integer), zhangsan(String)
+2018-05-02 23:01:48,462 - <==      Total: 1
+2018-05-02 23:01:48,463 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 AND login_name = ? ) LIMIT ?
+2018-05-02 23:01:48,464 - ==> Parameters: 1(Integer), zhangsan(String), 10(Integer)
+2018-05-02 23:01:48,465 - <==      Total: 1
+2018-05-02 23:01:56,114 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:01:56,114 - ==> Parameters:
+2018-05-02 23:01:56,115 - <==      Total: 4
+2018-05-02 23:01:56,116 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:01:56,116 - ==> Parameters:
+2018-05-02 23:01:56,117 - <==      Total: 1
+2018-05-02 23:02:12,190 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:02:12,190 - ==> Parameters: admin(String)
+2018-05-02 23:02:12,191 - <==      Total: 1
+2018-05-02 23:02:12,192 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ?
+2018-05-02 23:02:12,192 - ==> Parameters: zhangsan(String)
+2018-05-02 23:02:12,193 - <==      Total: 1
+2018-05-02 23:02:12,196 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 AND login_name = ?)
+2018-05-02 23:02:12,197 - ==> Parameters: 1(Integer), zhangsan(String)
+2018-05-02 23:02:12,199 - <==      Total: 1
+2018-05-02 23:02:12,200 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 AND login_name = ? ) LIMIT ?
+2018-05-02 23:02:12,201 - ==> Parameters: 1(Integer), zhangsan(String), 10(Integer)
+2018-05-02 23:02:12,203 - <==      Total: 1
+2018-05-02 23:02:12,203 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:02:12,204 - ==> Parameters: admin(String)
+2018-05-02 23:02:12,208 - <==      Total: 1
+2018-05-02 23:02:12,209 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:02:12,210 - ==> Parameters: T-001(String), 张三(String), 男(String), 522628197706162213(String), 中学一级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1977-06-16(String), 18312345678(String), 教研组(String), 暂无班级(String), 语文(String), zhangsan(String)
+2018-05-02 23:02:12,281 - <==    Updates: 1
+2018-05-02 23:02:12,432 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:02:12,433 - ==> Parameters: admin(String)
+2018-05-02 23:02:12,435 - <==      Total: 1
+2018-05-02 23:02:12,436 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:02:12,436 - ==> Parameters:
+2018-05-02 23:02:12,438 - <==      Total: 1
+2018-05-02 23:02:12,440 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:02:12,440 - ==> Parameters: 1(Integer)
+2018-05-02 23:02:12,441 - <==      Total: 1
+2018-05-02 23:02:12,442 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:02:12,442 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:02:12,445 - <==      Total: 10
+2018-05-02 23:07:43,737 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:07:43,737 - ==> Parameters:
+2018-05-02 23:07:43,739 - <==      Total: 4
+2018-05-02 23:07:43,740 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:07:43,740 - ==> Parameters:
+2018-05-02 23:07:43,741 - <==      Total: 1
+2018-05-02 23:09:00,714 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:09:00,714 - ==> Parameters:
+2018-05-02 23:09:00,715 - <==      Total: 4
+2018-05-02 23:09:00,716 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:09:00,716 - ==> Parameters:
+2018-05-02 23:09:00,717 - <==      Total: 1
+2018-05-02 23:09:01,766 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:09:01,766 - ==> Parameters: admin(String)
+2018-05-02 23:09:01,767 - <==      Total: 1
+2018-05-02 23:09:01,768 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:09:01,768 - ==> Parameters:
+2018-05-02 23:09:01,769 - <==      Total: 1
+2018-05-02 23:09:01,771 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:09:01,771 - ==> Parameters: 1(Integer)
+2018-05-02 23:09:01,772 - <==      Total: 1
+2018-05-02 23:09:01,773 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:09:01,773 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:09:01,776 - <==      Total: 10
+2018-05-02 23:09:01,788 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:09:01,788 - ==> Parameters: admin(String)
+2018-05-02 23:09:01,789 - <==      Total: 1
+2018-05-02 23:09:01,790 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:09:01,790 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), mashi(String)
+2018-05-02 23:09:01,792 - <==    Updates: 1
+2018-05-02 23:09:02,686 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:09:02,687 - ==> Parameters: admin(String)
+2018-05-02 23:09:02,688 - <==      Total: 1
+2018-05-02 23:09:02,688 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:09:02,688 - ==> Parameters:
+2018-05-02 23:09:02,689 - <==      Total: 1
+2018-05-02 23:09:02,690 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:09:02,691 - ==> Parameters: 1(Integer)
+2018-05-02 23:09:02,692 - <==      Total: 1
+2018-05-02 23:09:02,693 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:09:02,693 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:09:02,695 - <==      Total: 10
+2018-05-02 23:09:04,629 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:09:04,629 - ==> Parameters:
+2018-05-02 23:09:04,630 - <==      Total: 4
+2018-05-02 23:09:04,632 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:09:04,632 - ==> Parameters:
+2018-05-02 23:09:04,634 - <==      Total: 1
+2018-05-02 23:13:07,854 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:13:07,854 - ==> Parameters: admin(String)
+2018-05-02 23:13:07,856 - <==      Total: 1
+2018-05-02 23:13:07,856 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:13:07,856 - ==> Parameters:
+2018-05-02 23:13:07,857 - <==      Total: 1
+2018-05-02 23:13:07,858 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:13:07,858 - ==> Parameters: 1(Integer)
+2018-05-02 23:13:07,860 - <==      Total: 1
+2018-05-02 23:13:07,861 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:13:07,861 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:13:07,863 - <==      Total: 10
+2018-05-02 23:13:10,439 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:13:10,439 - ==> Parameters:
+2018-05-02 23:13:10,440 - <==      Total: 4
+2018-05-02 23:13:10,441 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:13:10,441 - ==> Parameters:
+2018-05-02 23:13:10,441 - <==      Total: 1
+2018-05-02 23:15:46,437 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:15:46,438 - ==> Parameters:
+2018-05-02 23:15:46,439 - <==      Total: 4
+2018-05-02 23:15:46,439 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:15:46,440 - ==> Parameters:
+2018-05-02 23:15:46,440 - <==      Total: 1
+2018-05-02 23:15:49,554 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:15:49,554 - ==> Parameters: admin(String)
+2018-05-02 23:15:49,555 - <==      Total: 1
+2018-05-02 23:15:49,556 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:15:49,556 - ==> Parameters:
+2018-05-02 23:15:49,557 - <==      Total: 1
+2018-05-02 23:15:49,558 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:15:49,558 - ==> Parameters: 1(Integer)
+2018-05-02 23:15:49,559 - <==      Total: 1
+2018-05-02 23:15:49,560 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:15:49,560 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:15:49,562 - <==      Total: 10
+2018-05-02 23:15:51,106 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:15:51,106 - ==> Parameters:
+2018-05-02 23:15:51,107 - <==      Total: 4
+2018-05-02 23:15:51,108 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:15:51,108 - ==> Parameters:
+2018-05-02 23:15:51,109 - <==      Total: 1
+2018-05-02 23:16:15,285 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:16:15,286 - ==> Parameters: admin(String)
+2018-05-02 23:16:15,287 - <==      Total: 1
+2018-05-02 23:16:15,288 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:16:15,288 - ==> Parameters:
+2018-05-02 23:16:15,289 - <==      Total: 1
+2018-05-02 23:16:15,291 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:16:15,291 - ==> Parameters: 1(Integer)
+2018-05-02 23:16:15,292 - <==      Total: 1
+2018-05-02 23:16:15,293 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:16:15,293 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:16:15,347 - <==      Total: 10
+2018-05-02 23:16:16,234 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:16:16,234 - ==> Parameters: admin(String)
+2018-05-02 23:16:16,236 - <==      Total: 1
+2018-05-02 23:16:16,236 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:16:16,236 - ==> Parameters:
+2018-05-02 23:16:16,237 - <==      Total: 1
+2018-05-02 23:16:16,238 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:16:16,239 - ==> Parameters: 1(Integer)
+2018-05-02 23:16:16,240 - <==      Total: 1
+2018-05-02 23:16:16,241 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:16:16,242 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:16:16,245 - <==      Total: 10
+2018-05-02 23:16:17,546 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:16:17,547 - ==> Parameters:
+2018-05-02 23:16:17,551 - <==      Total: 4
+2018-05-02 23:16:17,552 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:16:17,552 - ==> Parameters:
+2018-05-02 23:16:17,552 - <==      Total: 1
+2018-05-02 23:16:36,708 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:16:36,708 - ==> Parameters:
+2018-05-02 23:16:36,710 - <==      Total: 4
+2018-05-02 23:16:36,710 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:16:36,711 - ==> Parameters:
+2018-05-02 23:16:36,711 - <==      Total: 1
+2018-05-02 23:18:42,801 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:18:42,802 - ==> Parameters: admin(String)
+2018-05-02 23:18:42,825 - <==      Total: 1
+2018-05-02 23:18:42,825 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:18:42,825 - ==> Parameters:
+2018-05-02 23:18:42,844 - <==      Total: 1
+2018-05-02 23:18:42,846 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:18:42,846 - ==> Parameters: 1(Integer)
+2018-05-02 23:18:42,847 - <==      Total: 1
+2018-05-02 23:18:42,847 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:18:42,848 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:18:42,850 - <==      Total: 10
+2018-05-02 23:18:44,377 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:18:44,377 - ==> Parameters:
+2018-05-02 23:18:44,380 - <==      Total: 4
+2018-05-02 23:18:44,380 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:18:44,380 - ==> Parameters:
+2018-05-02 23:18:44,381 - <==      Total: 1
+2018-05-02 23:20:26,021 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:20:26,021 - ==> Parameters: admin(String)
+2018-05-02 23:20:26,022 - <==      Total: 1
+2018-05-02 23:20:26,023 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:20:26,023 - ==> Parameters:
+2018-05-02 23:20:26,024 - <==      Total: 1
+2018-05-02 23:20:26,026 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:20:26,026 - ==> Parameters: 1(Integer)
+2018-05-02 23:20:26,027 - <==      Total: 1
+2018-05-02 23:20:26,028 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:20:26,029 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:20:26,031 - <==      Total: 10
+2018-05-02 23:20:27,709 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:20:27,710 - ==> Parameters:
+2018-05-02 23:20:27,711 - <==      Total: 4
+2018-05-02 23:20:27,711 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:20:27,711 - ==> Parameters:
+2018-05-02 23:20:27,712 - <==      Total: 1
+2018-05-02 23:23:42,154 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:23:42,155 - ==> Parameters: admin(String)
+2018-05-02 23:23:42,156 - <==      Total: 1
+2018-05-02 23:23:42,157 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:23:42,157 - ==> Parameters:
+2018-05-02 23:23:42,158 - <==      Total: 1
+2018-05-02 23:23:42,160 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:23:42,160 - ==> Parameters: 1(Integer)
+2018-05-02 23:23:42,161 - <==      Total: 1
+2018-05-02 23:23:42,162 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:23:42,163 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:23:42,165 - <==      Total: 10
+2018-05-02 23:23:44,135 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:23:44,135 - ==> Parameters: admin(String)
+2018-05-02 23:23:44,136 - <==      Total: 1
+2018-05-02 23:23:44,137 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:23:44,137 - ==> Parameters:
+2018-05-02 23:23:44,138 - <==      Total: 1
+2018-05-02 23:23:44,140 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:23:44,140 - ==> Parameters: 1(Integer)
+2018-05-02 23:23:44,141 - <==      Total: 1
+2018-05-02 23:23:44,142 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:23:44,142 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:23:44,144 - <==      Total: 10
+2018-05-02 23:23:45,460 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:23:45,460 - ==> Parameters:
+2018-05-02 23:23:45,461 - <==      Total: 4
+2018-05-02 23:23:45,462 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:23:45,462 - ==> Parameters:
+2018-05-02 23:23:45,462 - <==      Total: 1
+2018-05-02 23:27:38,351 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:27:38,351 - ==> Parameters: admin(String)
+2018-05-02 23:27:38,354 - <==      Total: 1
+2018-05-02 23:27:38,355 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:27:38,355 - ==> Parameters:
+2018-05-02 23:27:38,355 - <==      Total: 1
+2018-05-02 23:27:38,357 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:27:38,357 - ==> Parameters: 1(Integer)
+2018-05-02 23:27:38,358 - <==      Total: 1
+2018-05-02 23:27:38,359 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:27:38,359 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:27:38,362 - <==      Total: 10
+2018-05-02 23:27:39,927 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:27:39,927 - ==> Parameters:
+2018-05-02 23:27:39,928 - <==      Total: 4
+2018-05-02 23:27:39,928 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:27:39,928 - ==> Parameters:
+2018-05-02 23:27:39,929 - <==      Total: 1
+2018-05-02 23:27:48,264 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:27:48,265 - ==> Parameters: admin(String)
+2018-05-02 23:27:48,266 - <==      Total: 1
+2018-05-02 23:27:48,267 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:27:48,267 - ==> Parameters:
+2018-05-02 23:27:48,268 - <==      Total: 1
+2018-05-02 23:27:48,269 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:27:48,270 - ==> Parameters: 1(Integer)
+2018-05-02 23:27:48,271 - <==      Total: 1
+2018-05-02 23:27:48,273 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:27:48,273 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:27:48,277 - <==      Total: 10
+2018-05-02 23:27:49,783 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:27:49,783 - ==> Parameters:
+2018-05-02 23:27:49,784 - <==      Total: 4
+2018-05-02 23:27:49,785 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:27:49,785 - ==> Parameters:
+2018-05-02 23:27:49,786 - <==      Total: 1
+2018-05-02 23:28:38,806 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:28:38,807 - ==> Parameters: admin(String)
+2018-05-02 23:28:38,808 - <==      Total: 1
+2018-05-02 23:28:38,809 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:28:38,809 - ==> Parameters:
+2018-05-02 23:28:38,810 - <==      Total: 1
+2018-05-02 23:28:38,811 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:28:38,812 - ==> Parameters: 1(Integer)
+2018-05-02 23:28:38,814 - <==      Total: 1
+2018-05-02 23:28:38,817 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:28:38,817 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:28:38,821 - <==      Total: 10
+2018-05-02 23:28:40,239 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:28:40,239 - ==> Parameters: admin(String)
+2018-05-02 23:28:40,240 - <==      Total: 1
+2018-05-02 23:28:40,241 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:28:40,241 - ==> Parameters:
+2018-05-02 23:28:40,242 - <==      Total: 1
+2018-05-02 23:28:40,244 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:28:40,244 - ==> Parameters: 1(Integer)
+2018-05-02 23:28:40,245 - <==      Total: 1
+2018-05-02 23:28:40,247 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:28:40,248 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:28:40,250 - <==      Total: 10
+2018-05-02 23:28:42,226 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:28:42,226 - ==> Parameters:
+2018-05-02 23:28:42,227 - <==      Total: 4
+2018-05-02 23:28:42,227 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:28:42,227 - ==> Parameters:
+2018-05-02 23:28:42,228 - <==      Total: 1
+2018-05-02 23:29:09,956 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:29:09,957 - ==> Parameters: admin(String)
+2018-05-02 23:29:09,958 - <==      Total: 1
+2018-05-02 23:29:09,958 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:29:09,959 - ==> Parameters:
+2018-05-02 23:29:09,959 - <==      Total: 1
+2018-05-02 23:29:09,961 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:29:09,962 - ==> Parameters: 1(Integer)
+2018-05-02 23:29:09,964 - <==      Total: 1
+2018-05-02 23:29:09,965 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:29:09,966 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:29:09,969 - <==      Total: 10
+2018-05-02 23:29:11,748 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:29:11,748 - ==> Parameters:
+2018-05-02 23:29:11,749 - <==      Total: 4
+2018-05-02 23:29:11,749 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:29:11,749 - ==> Parameters:
+2018-05-02 23:29:11,750 - <==      Total: 1
+2018-05-02 23:29:27,185 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:29:27,185 - ==> Parameters: admin(String)
+2018-05-02 23:29:27,186 - <==      Total: 1
+2018-05-02 23:29:27,187 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:29:27,188 - ==> Parameters:
+2018-05-02 23:29:27,190 - <==      Total: 1
+2018-05-02 23:29:27,191 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:29:27,192 - ==> Parameters: 1(Integer)
+2018-05-02 23:29:27,193 - <==      Total: 1
+2018-05-02 23:29:27,194 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:29:27,194 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:29:27,196 - <==      Total: 10
+2018-05-02 23:29:29,119 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:29:29,119 - ==> Parameters:
+2018-05-02 23:29:29,120 - <==      Total: 4
+2018-05-02 23:29:29,121 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:29:29,121 - ==> Parameters:
+2018-05-02 23:29:29,122 - <==      Total: 1
+2018-05-02 23:30:59,465 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:30:59,465 - ==> Parameters: admin(String)
+2018-05-02 23:30:59,468 - <==      Total: 1
+2018-05-02 23:30:59,468 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:30:59,468 - ==> Parameters:
+2018-05-02 23:30:59,469 - <==      Total: 1
+2018-05-02 23:30:59,471 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:30:59,471 - ==> Parameters: 1(Integer)
+2018-05-02 23:30:59,472 - <==      Total: 1
+2018-05-02 23:30:59,473 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:30:59,473 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:30:59,475 - <==      Total: 10
+2018-05-02 23:31:01,979 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:31:01,979 - ==> Parameters:
+2018-05-02 23:31:01,980 - <==      Total: 4
+2018-05-02 23:31:01,980 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:31:01,980 - ==> Parameters:
+2018-05-02 23:31:01,981 - <==      Total: 1
+2018-05-02 23:31:49,712 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:31:49,712 - ==> Parameters: admin(String)
+2018-05-02 23:31:49,713 - <==      Total: 1
+2018-05-02 23:31:49,714 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:31:49,714 - ==> Parameters:
+2018-05-02 23:31:49,715 - <==      Total: 1
+2018-05-02 23:31:49,717 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:31:49,717 - ==> Parameters: 1(Integer)
+2018-05-02 23:31:49,718 - <==      Total: 1
+2018-05-02 23:31:49,719 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:31:49,719 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:31:49,722 - <==      Total: 10
+2018-05-02 23:31:51,657 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:31:51,657 - ==> Parameters:
+2018-05-02 23:31:51,658 - <==      Total: 4
+2018-05-02 23:31:51,658 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:31:51,659 - ==> Parameters:
+2018-05-02 23:31:51,659 - <==      Total: 1
+2018-05-02 23:31:59,645 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:31:59,646 - ==> Parameters: admin(String)
+2018-05-02 23:31:59,647 - <==      Total: 1
+2018-05-02 23:31:59,647 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:31:59,648 - ==> Parameters:
+2018-05-02 23:31:59,648 - <==      Total: 1
+2018-05-02 23:31:59,650 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:31:59,650 - ==> Parameters: 1(Integer)
+2018-05-02 23:31:59,652 - <==      Total: 1
+2018-05-02 23:31:59,652 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:31:59,653 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:31:59,655 - <==      Total: 10
+2018-05-02 23:32:02,002 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:32:02,002 - ==> Parameters:
+2018-05-02 23:32:02,003 - <==      Total: 4
+2018-05-02 23:32:02,004 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:32:02,004 - ==> Parameters:
+2018-05-02 23:32:02,005 - <==      Total: 1
+2018-05-02 23:32:53,015 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:32:53,015 - ==> Parameters: admin(String)
+2018-05-02 23:32:53,016 - <==      Total: 1
+2018-05-02 23:32:53,016 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:32:53,017 - ==> Parameters:
+2018-05-02 23:32:53,017 - <==      Total: 1
+2018-05-02 23:32:53,020 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:32:53,020 - ==> Parameters: 1(Integer)
+2018-05-02 23:32:53,022 - <==      Total: 1
+2018-05-02 23:32:53,023 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:32:53,024 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:32:53,026 - <==      Total: 10
+2018-05-02 23:32:54,829 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:32:54,829 - ==> Parameters:
+2018-05-02 23:32:54,830 - <==      Total: 4
+2018-05-02 23:32:54,830 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:32:54,830 - ==> Parameters:
+2018-05-02 23:32:54,831 - <==      Total: 1
+2018-05-02 23:33:04,568 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:33:04,568 - ==> Parameters: admin(String)
+2018-05-02 23:33:04,569 - <==      Total: 1
+2018-05-02 23:33:04,570 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:33:04,570 - ==> Parameters:
+2018-05-02 23:33:04,571 - <==      Total: 1
+2018-05-02 23:33:04,572 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:33:04,573 - ==> Parameters: 1(Integer)
+2018-05-02 23:33:04,574 - <==      Total: 1
+2018-05-02 23:33:04,575 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:33:04,575 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:33:04,577 - <==      Total: 10
+2018-05-02 23:33:05,116 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:33:05,117 - ==> Parameters: admin(String)
+2018-05-02 23:33:05,118 - <==      Total: 1
+2018-05-02 23:33:05,119 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:33:05,119 - ==> Parameters:
+2018-05-02 23:33:05,119 - <==      Total: 1
+2018-05-02 23:33:05,121 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:33:05,121 - ==> Parameters: 1(Integer)
+2018-05-02 23:33:05,122 - <==      Total: 1
+2018-05-02 23:33:05,123 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:33:05,123 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:33:05,126 - <==      Total: 10
+2018-05-02 23:33:06,588 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:33:06,588 - ==> Parameters:
+2018-05-02 23:33:06,589 - <==      Total: 4
+2018-05-02 23:33:06,590 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:33:06,590 - ==> Parameters:
+2018-05-02 23:33:06,592 - <==      Total: 1
+2018-05-02 23:33:37,574 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:33:37,574 - ==> Parameters: admin(String)
+2018-05-02 23:33:37,575 - <==      Total: 1
+2018-05-02 23:33:37,576 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:33:37,576 - ==> Parameters:
+2018-05-02 23:33:37,578 - <==      Total: 1
+2018-05-02 23:33:37,579 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:33:37,579 - ==> Parameters: 1(Integer)
+2018-05-02 23:33:37,580 - <==      Total: 1
+2018-05-02 23:33:37,581 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:33:37,582 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:33:37,584 - <==      Total: 10
+2018-05-02 23:33:39,249 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:33:39,249 - ==> Parameters:
+2018-05-02 23:33:39,250 - <==      Total: 4
+2018-05-02 23:33:39,250 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:33:39,250 - ==> Parameters:
+2018-05-02 23:33:39,251 - <==      Total: 1
+2018-05-02 23:35:05,000 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:35:05,000 - ==> Parameters: admin(String)
+2018-05-02 23:35:05,001 - <==      Total: 1
+2018-05-02 23:35:05,002 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:35:05,002 - ==> Parameters:
+2018-05-02 23:35:05,003 - <==      Total: 1
+2018-05-02 23:35:05,005 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:35:05,005 - ==> Parameters: 1(Integer)
+2018-05-02 23:35:05,006 - <==      Total: 1
+2018-05-02 23:35:05,007 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:35:05,007 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:35:05,010 - <==      Total: 10
+2018-05-02 23:35:07,591 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:35:07,591 - ==> Parameters:
+2018-05-02 23:35:07,592 - <==      Total: 4
+2018-05-02 23:35:07,592 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:35:07,593 - ==> Parameters:
+2018-05-02 23:35:07,593 - <==      Total: 1
+2018-05-02 23:39:50,009 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:39:50,009 - ==> Parameters: admin(String)
+2018-05-02 23:39:50,011 - <==      Total: 1
+2018-05-02 23:39:50,012 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:39:50,013 - ==> Parameters:
+2018-05-02 23:39:50,014 - <==      Total: 1
+2018-05-02 23:39:50,017 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:39:50,017 - ==> Parameters: 1(Integer)
+2018-05-02 23:39:50,018 - <==      Total: 1
+2018-05-02 23:39:50,019 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:39:50,020 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:39:50,023 - <==      Total: 10
+2018-05-02 23:39:51,422 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:39:51,422 - ==> Parameters:
+2018-05-02 23:39:51,424 - <==      Total: 4
+2018-05-02 23:39:51,424 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:39:51,425 - ==> Parameters:
+2018-05-02 23:39:51,426 - <==      Total: 1
+2018-05-02 23:40:43,731 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:40:43,732 - ==> Parameters: admin(String)
+2018-05-02 23:40:43,733 - <==      Total: 1
+2018-05-02 23:40:43,734 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:40:43,734 - ==> Parameters:
+2018-05-02 23:40:43,735 - <==      Total: 1
+2018-05-02 23:40:43,737 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:40:43,737 - ==> Parameters: 1(Integer)
+2018-05-02 23:40:43,738 - <==      Total: 1
+2018-05-02 23:40:43,739 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:40:43,740 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:40:43,742 - <==      Total: 10
+2018-05-02 23:40:45,516 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:40:45,516 - ==> Parameters:
+2018-05-02 23:40:45,517 - <==      Total: 4
+2018-05-02 23:40:45,517 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:40:45,517 - ==> Parameters:
+2018-05-02 23:40:45,518 - <==      Total: 1
+2018-05-02 23:41:17,262 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:41:17,262 - ==> Parameters: admin(String)
+2018-05-02 23:41:17,264 - <==      Total: 1
+2018-05-02 23:41:17,264 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:41:17,264 - ==> Parameters:
+2018-05-02 23:41:17,265 - <==      Total: 1
+2018-05-02 23:41:17,267 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:41:17,267 - ==> Parameters: 1(Integer)
+2018-05-02 23:41:17,268 - <==      Total: 1
+2018-05-02 23:41:17,269 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:41:17,269 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:41:17,274 - <==      Total: 10
+2018-05-02 23:41:19,579 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:41:19,579 - ==> Parameters:
+2018-05-02 23:41:19,580 - <==      Total: 4
+2018-05-02 23:41:19,580 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:41:19,580 - ==> Parameters:
+2018-05-02 23:41:19,581 - <==      Total: 1
+2018-05-02 23:41:36,038 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:41:36,039 - ==> Parameters: admin(String)
+2018-05-02 23:41:36,040 - <==      Total: 1
+2018-05-02 23:41:36,041 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:41:36,041 - ==> Parameters:
+2018-05-02 23:41:36,042 - <==      Total: 1
+2018-05-02 23:41:36,044 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:41:36,044 - ==> Parameters: 1(Integer)
+2018-05-02 23:41:36,046 - <==      Total: 1
+2018-05-02 23:41:36,047 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:41:36,047 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:41:36,050 - <==      Total: 10
+2018-05-02 23:41:37,740 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:41:37,740 - ==> Parameters:
+2018-05-02 23:41:37,741 - <==      Total: 4
+2018-05-02 23:41:37,742 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:41:37,742 - ==> Parameters:
+2018-05-02 23:41:37,743 - <==      Total: 1
+2018-05-02 23:43:07,372 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:43:07,372 - ==> Parameters: admin(String)
+2018-05-02 23:43:07,373 - <==      Total: 1
+2018-05-02 23:43:07,374 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:43:07,374 - ==> Parameters:
+2018-05-02 23:43:07,375 - <==      Total: 1
+2018-05-02 23:43:07,378 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:43:07,378 - ==> Parameters: 1(Integer)
+2018-05-02 23:43:07,379 - <==      Total: 1
+2018-05-02 23:43:07,380 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:43:07,381 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:43:07,382 - <==      Total: 10
+2018-05-02 23:43:08,990 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:43:08,990 - ==> Parameters:
+2018-05-02 23:43:08,991 - <==      Total: 4
+2018-05-02 23:43:08,991 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:43:08,992 - ==> Parameters:
+2018-05-02 23:43:08,994 - <==      Total: 1
+2018-05-02 23:46:50,595 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:46:50,596 - ==> Parameters: admin(String)
+2018-05-02 23:46:50,597 - <==      Total: 1
+2018-05-02 23:46:50,598 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:46:50,598 - ==> Parameters:
+2018-05-02 23:46:50,599 - <==      Total: 1
+2018-05-02 23:46:50,600 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:46:50,601 - ==> Parameters: 1(Integer)
+2018-05-02 23:46:50,602 - <==      Total: 1
+2018-05-02 23:46:50,603 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:46:50,604 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:46:50,606 - <==      Total: 10
+2018-05-02 23:46:52,078 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:46:52,078 - ==> Parameters:
+2018-05-02 23:46:52,079 - <==      Total: 4
+2018-05-02 23:46:52,079 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:46:52,079 - ==> Parameters:
+2018-05-02 23:46:52,080 - <==      Total: 1
+2018-05-02 23:47:05,631 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:47:05,631 - ==> Parameters: admin(String)
+2018-05-02 23:47:05,632 - <==      Total: 1
+2018-05-02 23:47:05,633 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:47:05,633 - ==> Parameters:
+2018-05-02 23:47:05,634 - <==      Total: 1
+2018-05-02 23:47:05,636 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:47:05,636 - ==> Parameters: 1(Integer)
+2018-05-02 23:47:05,637 - <==      Total: 1
+2018-05-02 23:47:05,638 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:47:05,639 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:47:05,641 - <==      Total: 10
+2018-05-02 23:47:07,348 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:47:07,348 - ==> Parameters:
+2018-05-02 23:47:07,349 - <==      Total: 4
+2018-05-02 23:47:07,350 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:47:07,350 - ==> Parameters:
+2018-05-02 23:47:07,351 - <==      Total: 1
+2018-05-02 23:47:28,230 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:47:28,231 - ==> Parameters: admin(String)
+2018-05-02 23:47:28,232 - <==      Total: 1
+2018-05-02 23:47:28,232 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:47:28,232 - ==> Parameters:
+2018-05-02 23:47:28,233 - <==      Total: 1
+2018-05-02 23:47:28,235 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:47:28,235 - ==> Parameters: 1(Integer)
+2018-05-02 23:47:28,236 - <==      Total: 1
+2018-05-02 23:47:28,237 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:47:28,237 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:47:28,239 - <==      Total: 10
+2018-05-02 23:47:29,574 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:47:29,574 - ==> Parameters:
+2018-05-02 23:47:29,575 - <==      Total: 4
+2018-05-02 23:47:29,575 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:47:29,576 - ==> Parameters:
+2018-05-02 23:47:29,576 - <==      Total: 1
+2018-05-02 23:49:46,806 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:49:46,807 - ==> Parameters: admin(String)
+2018-05-02 23:49:46,840 - <==      Total: 1
+2018-05-02 23:49:46,841 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:49:46,842 - ==> Parameters:
+2018-05-02 23:49:46,850 - <==      Total: 1
+2018-05-02 23:49:46,852 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:49:46,852 - ==> Parameters: 1(Integer)
+2018-05-02 23:49:46,853 - <==      Total: 1
+2018-05-02 23:49:46,854 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:49:46,854 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:49:46,857 - <==      Total: 10
+2018-05-02 23:49:48,776 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:49:48,776 - ==> Parameters:
+2018-05-02 23:49:48,780 - <==      Total: 4
+2018-05-02 23:49:48,780 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:49:48,780 - ==> Parameters:
+2018-05-02 23:49:48,781 - <==      Total: 1
+2018-05-02 23:49:49,745 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:49:49,745 - ==> Parameters: admin(String)
+2018-05-02 23:49:49,746 - <==      Total: 1
+2018-05-02 23:49:49,748 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:49:49,748 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:49:49,749 - <==    Updates: 0
+2018-05-02 23:50:14,179 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:50:14,179 - ==> Parameters: admin(String)
+2018-05-02 23:50:14,180 - <==      Total: 1
+2018-05-02 23:50:14,181 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:50:14,181 - ==> Parameters:
+2018-05-02 23:50:14,182 - <==      Total: 1
+2018-05-02 23:50:14,183 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:50:14,183 - ==> Parameters: 1(Integer)
+2018-05-02 23:50:14,184 - <==      Total: 1
+2018-05-02 23:50:14,186 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:50:14,186 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:50:14,188 - <==      Total: 10
+2018-05-02 23:50:14,763 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:50:14,763 - ==> Parameters: admin(String)
+2018-05-02 23:50:14,764 - <==      Total: 1
+2018-05-02 23:50:14,766 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:50:14,766 - ==> Parameters:
+2018-05-02 23:50:14,766 - <==      Total: 1
+2018-05-02 23:50:14,768 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:50:14,768 - ==> Parameters: 1(Integer)
+2018-05-02 23:50:14,771 - <==      Total: 1
+2018-05-02 23:50:14,772 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:50:14,773 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:50:14,776 - <==      Total: 10
+2018-05-02 23:50:15,815 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:50:15,815 - ==> Parameters:
+2018-05-02 23:50:15,816 - <==      Total: 4
+2018-05-02 23:50:15,816 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:50:15,816 - ==> Parameters:
+2018-05-02 23:50:15,817 - <==      Total: 1
+2018-05-02 23:50:21,008 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:50:21,009 - ==> Parameters: admin(String)
+2018-05-02 23:50:21,010 - <==      Total: 1
+2018-05-02 23:50:21,012 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:50:21,013 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:50:21,014 - <==    Updates: 0
+2018-05-02 23:50:56,991 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:50:56,991 - ==> Parameters: admin(String)
+2018-05-02 23:50:56,992 - <==      Total: 1
+2018-05-02 23:50:56,997 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:50:56,997 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:50:56,998 - <==    Updates: 0
+2018-05-02 23:51:02,287 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:51:02,287 - ==> Parameters: admin(String)
+2018-05-02 23:51:02,288 - <==      Total: 1
+2018-05-02 23:51:02,289 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:51:02,289 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 学生处,教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:51:02,290 - <==    Updates: 0
+2018-05-02 23:51:06,662 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:51:06,663 - ==> Parameters: admin(String)
+2018-05-02 23:51:06,664 - <==      Total: 1
+2018-05-02 23:51:06,665 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:51:06,665 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:51:06,667 - <==    Updates: 0
+2018-05-02 23:51:19,601 - Starting SimsApplication on yang-PC with PID 6856 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-05-02 23:51:19,612 - No active profile set, falling back to default profiles: default
+2018-05-02 23:51:19,773 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49ff7d8c: startup date [Wed May 02 23:51:19 CST 2018]; root of context hierarchy
+2018-05-02 23:51:21,953 - Tomcat initialized with port(s): 8080 (http)
+2018-05-02 23:51:21,970 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-05-02 23:51:21,989 - Starting service [Tomcat]
+2018-05-02 23:51:21,989 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-02 23:51:21,998 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-05-02 23:51:22,179 - Initializing Spring embedded WebApplicationContext
+2018-05-02 23:51:22,179 - Root WebApplicationContext: initialization completed in 2406 ms
+2018-05-02 23:51:22,350 - Servlet dispatcherServlet mapped to [/]
+2018-05-02 23:51:22,357 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-02 23:51:22,357 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-02 23:51:22,357 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-02 23:51:22,357 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-02 23:51:23,072 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 23:51:23,492 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49ff7d8c: startup date [Wed May 02 23:51:19 CST 2018]; root of context hierarchy
+2018-05-02 23:51:23,528 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-02 23:51:23,562 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-02 23:51:23,566 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-02 23:51:23,566 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-02 23:51:23,566 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-02 23:51:23,566 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-02 23:51:23,566 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-02 23:51:23,570 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-02 23:51:23,571 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-02 23:51:23,571 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-02 23:51:23,572 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-02 23:51:23,572 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-02 23:51:23,572 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-02 23:51:23,572 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-02 23:51:23,572 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-02 23:51:23,573 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-02 23:51:23,573 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-02 23:51:23,576 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-02 23:51:23,577 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-02 23:51:23,611 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 23:51:23,612 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-02 23:51:24,042 - Registering beans for JMX exposure on startup
+2018-05-02 23:51:24,044 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-02 23:51:24,050 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-02 23:51:24,062 - Starting ProtocolHandler ["http-nio-8080"]
+2018-05-02 23:51:24,079 - Using a shared selector for servlet write/read
+2018-05-02 23:51:24,102 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-02 23:51:24,107 - Started SimsApplication in 5.243 seconds (JVM running for 8.55)
+2018-05-02 23:51:57,125 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-02 23:51:57,125 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-02 23:51:57,161 - FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2018-05-02 23:51:58,639 - sims - Starting...
+2018-05-02 23:51:58,833 - sims - Start completed.
+2018-05-02 23:51:58,842 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:51:58,862 - ==> Parameters: admin(String)
+2018-05-02 23:51:58,881 - <==      Total: 1
+2018-05-02 23:51:58,881 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:51:58,882 - ==> Parameters: admin(String)
+2018-05-02 23:51:58,911 - <==      Total: 1
+2018-05-02 23:51:58,970 - loginName=admin
+2018-05-02 23:52:02,706 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:52:02,707 - ==> Parameters: admin(String)
+2018-05-02 23:52:02,710 - <==      Total: 1
+2018-05-02 23:52:02,733 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:52:02,733 - ==> Parameters:
+2018-05-02 23:52:02,736 - <==      Total: 1
+2018-05-02 23:52:02,768 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:52:02,768 - ==> Parameters: 1(Integer)
+2018-05-02 23:52:02,770 - <==      Total: 1
+2018-05-02 23:52:02,772 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:52:02,772 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:52:02,779 - <==      Total: 10
+2018-05-02 23:52:07,999 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:52:07,999 - ==> Parameters:
+2018-05-02 23:52:08,047 - <==      Total: 4
+2018-05-02 23:52:08,049 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:52:08,050 - ==> Parameters:
+2018-05-02 23:52:08,052 - <==      Total: 1
+2018-05-02 23:52:14,487 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:52:14,488 - ==> Parameters: admin(String)
+2018-05-02 23:52:14,489 - <==      Total: 1
+2018-05-02 23:52:14,498 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:52:14,500 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:52:14,501 - <==    Updates: 0
+2018-05-02 23:52:25,360 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:52:25,361 - ==> Parameters: admin(String)
+2018-05-02 23:52:25,362 - <==      Total: 1
+2018-05-02 23:52:25,363 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:52:25,364 - ==> Parameters:
+2018-05-02 23:52:25,365 - <==      Total: 1
+2018-05-02 23:52:25,368 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:52:25,369 - ==> Parameters: 1(Integer)
+2018-05-02 23:52:25,371 - <==      Total: 1
+2018-05-02 23:52:25,373 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:52:25,374 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:52:25,389 - <==      Total: 10
+2018-05-02 23:52:27,365 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:52:27,365 - ==> Parameters:
+2018-05-02 23:52:27,373 - <==      Total: 4
+2018-05-02 23:52:27,374 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:52:27,375 - ==> Parameters:
+2018-05-02 23:52:27,383 - <==      Total: 1
+2018-05-02 23:52:29,261 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:52:29,261 - ==> Parameters: admin(String)
+2018-05-02 23:52:29,264 - <==      Total: 1
+2018-05-02 23:54:28,066 - sims - Thread starvation or clock leap detected (housekeeper delta=1m59s130ms376µs136ns).
+2018-05-02 23:54:28,075 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:54:28,075 - ==> Parameters: admin(String)
+2018-05-02 23:54:28,077 - <==      Total: 1
+2018-05-02 23:54:28,080 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:54:28,081 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:54:28,082 - <==    Updates: 0
+2018-05-02 23:54:47,081 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:54:47,081 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:54:47,113 - <==    Updates: 0
+2018-05-02 23:54:50,480 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:54:50,481 - ==> Parameters: admin(String)
+2018-05-02 23:54:50,482 - <==      Total: 1
+2018-05-02 23:54:50,483 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:54:50,484 - ==> Parameters:
+2018-05-02 23:54:50,485 - <==      Total: 1
+2018-05-02 23:54:50,487 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:54:50,488 - ==> Parameters: 1(Integer)
+2018-05-02 23:54:50,490 - <==      Total: 1
+2018-05-02 23:54:50,492 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:54:50,493 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:54:50,497 - <==      Total: 10
+2018-05-02 23:54:52,265 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:54:52,266 - ==> Parameters:
+2018-05-02 23:54:52,267 - <==      Total: 4
+2018-05-02 23:54:52,268 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:54:52,268 - ==> Parameters:
+2018-05-02 23:54:52,269 - <==      Total: 1
+2018-05-02 23:55:00,840 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:55:00,841 - ==> Parameters: admin(String)
+2018-05-02 23:55:00,842 - <==      Total: 1
+2018-05-02 23:55:02,817 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:55:02,825 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), null
+2018-05-02 23:55:02,833 - <==    Updates: 0
+2018-05-02 23:55:41,613 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:55:41,614 - ==> Parameters: admin(String)
+2018-05-02 23:55:41,615 - <==      Total: 1
+2018-05-02 23:55:41,616 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:55:41,616 - ==> Parameters:
+2018-05-02 23:55:41,617 - <==      Total: 1
+2018-05-02 23:55:41,620 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:55:41,620 - ==> Parameters: 1(Integer)
+2018-05-02 23:55:41,621 - <==      Total: 1
+2018-05-02 23:55:41,623 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:55:41,623 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:55:41,627 - <==      Total: 10
+2018-05-02 23:55:49,162 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:55:49,162 - ==> Parameters:
+2018-05-02 23:55:49,165 - <==      Total: 4
+2018-05-02 23:55:49,165 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:55:49,166 - ==> Parameters:
+2018-05-02 23:55:49,167 - <==      Total: 1
+2018-05-02 23:55:55,110 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:55:55,110 - ==> Parameters: admin(String)
+2018-05-02 23:55:55,111 - <==      Total: 1
+2018-05-02 23:55:55,113 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:55:55,114 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), mashi(String)
+2018-05-02 23:55:55,141 - <==    Updates: 1
+2018-05-02 23:57:43,584 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:57:43,584 - ==> Parameters: admin(String)
+2018-05-02 23:57:43,586 - <==      Total: 1
+2018-05-02 23:57:43,587 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:57:43,587 - ==> Parameters:
+2018-05-02 23:57:43,588 - <==      Total: 1
+2018-05-02 23:57:43,591 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:57:43,592 - ==> Parameters: 1(Integer)
+2018-05-02 23:57:43,594 - <==      Total: 1
+2018-05-02 23:57:43,596 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:57:43,597 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:57:43,601 - <==      Total: 10
+2018-05-02 23:57:44,418 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:57:44,418 - ==> Parameters: admin(String)
+2018-05-02 23:57:44,420 - <==      Total: 1
+2018-05-02 23:57:44,421 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:57:44,421 - ==> Parameters:
+2018-05-02 23:57:44,422 - <==      Total: 1
+2018-05-02 23:57:44,426 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:57:44,427 - ==> Parameters: 1(Integer)
+2018-05-02 23:57:44,428 - <==      Total: 1
+2018-05-02 23:57:44,429 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:57:44,429 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:57:44,433 - <==      Total: 10
+2018-05-02 23:57:45,999 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:57:46,000 - ==> Parameters:
+2018-05-02 23:57:46,002 - <==      Total: 4
+2018-05-02 23:57:46,003 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:57:46,004 - ==> Parameters:
+2018-05-02 23:57:46,005 - <==      Total: 1
+2018-05-02 23:57:50,959 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:57:50,959 - ==> Parameters: admin(String)
+2018-05-02 23:57:50,961 - <==      Total: 1
+2018-05-02 23:57:50,965 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:57:50,966 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), mashi(String)
+2018-05-02 23:57:51,021 - <==    Updates: 1
+2018-05-02 23:59:11,898 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:59:11,899 - ==> Parameters: admin(String)
+2018-05-02 23:59:11,900 - <==      Total: 1
+2018-05-02 23:59:11,901 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:59:11,902 - ==> Parameters:
+2018-05-02 23:59:11,903 - <==      Total: 1
+2018-05-02 23:59:11,905 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:59:11,905 - ==> Parameters: 1(Integer)
+2018-05-02 23:59:11,906 - <==      Total: 1
+2018-05-02 23:59:11,907 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:59:11,908 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:59:11,911 - <==      Total: 10
+2018-05-02 23:59:12,559 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:59:12,559 - ==> Parameters: admin(String)
+2018-05-02 23:59:12,563 - <==      Total: 1
+2018-05-02 23:59:12,563 - ==>  Preparing: SELECT count(*) FROM teacher_information
+2018-05-02 23:59:12,564 - ==> Parameters:
+2018-05-02 23:59:12,564 - <==      Total: 1
+2018-05-02 23:59:12,570 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0)
+2018-05-02 23:59:12,570 - ==> Parameters: 1(Integer)
+2018-05-02 23:59:12,572 - <==      Total: 1
+2018-05-02 23:59:12,575 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ?
+2018-05-02 23:59:12,575 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-02 23:59:12,578 - <==      Total: 10
+2018-05-02 23:59:13,952 - ==>  Preparing: SELECT * FROM classes order by name
+2018-05-02 23:59:13,952 - ==> Parameters:
+2018-05-02 23:59:13,953 - <==      Total: 4
+2018-05-02 23:59:13,954 - ==>  Preparing: select MAX(number) number from teacher_information;
+2018-05-02 23:59:13,954 - ==> Parameters:
+2018-05-02 23:59:13,955 - <==      Total: 1
+2018-05-02 23:59:14,926 - ==>  Preparing: SELECT * FROM role WHERE login_name = ?
+2018-05-02 23:59:14,926 - ==> Parameters: admin(String)
+2018-05-02 23:59:14,928 - <==      Total: 1
+2018-05-02 23:59:14,929 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ?
+2018-05-02 23:59:14,929 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), mashi(String)
+2018-05-02 23:59:14,976 - <==    Updates: 1

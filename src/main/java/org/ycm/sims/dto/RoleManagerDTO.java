@@ -7,21 +7,21 @@ import lombok.Data;
  * on 2018/4/28 15:35
  */
 @Data
-public class RolePageDTO extends PageDTO {
+public class RoleManagerDTO extends PageDTO {
 
     private String loginName;
 
     private Integer roleType;
 
-    public RolePageDTO() {
+    public RoleManagerDTO() {
     }
 
-    public RolePageDTO(Integer page, Integer limit, Integer roleType) {
+    public RoleManagerDTO(Integer page, Integer limit, Integer roleType) {
         super(page, limit);
         this.roleType = roleType;
     }
 
-    public RolePageDTO(Integer page, Integer limit, String loginName, Integer roleType) {
+    public RoleManagerDTO(Integer page, Integer limit, String loginName, Integer roleType) {
         super(page, limit);
         this.loginName = loginName;
         this.roleType = roleType;

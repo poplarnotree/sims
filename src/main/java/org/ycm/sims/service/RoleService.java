@@ -1,15 +1,12 @@
 package org.ycm.sims.service;
 
 
-import com.github.pagehelper.PageInfo;
 import org.ycm.sims.VO.PageVO;
 import org.ycm.sims.VO.RoleCheckVO;
 import org.ycm.sims.VO.RoleVO;
-import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleDTO;
-import org.ycm.sims.dto.RolePageDTO;
+import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.dto.UpdatePasswordDTO;
-import org.ycm.sims.entity.Role;
 
 /**
  * Create by yangchangmin
@@ -27,7 +24,7 @@ public interface RoleService {
 
     RoleCheckVO resetPassword(RoleDTO roleDTO);
 
-    PageVO<RoleVO> rolePage(RolePageDTO rolePageDTO);
+    PageVO<RoleVO> rolePage(RoleManagerDTO roleManagerDTO);
 
 
 }

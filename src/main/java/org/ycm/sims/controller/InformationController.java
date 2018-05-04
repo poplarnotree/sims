@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.*;
-import org.ycm.sims.dto.PageDTO;
-import org.ycm.sims.dto.RolePageDTO;
+import org.ycm.sims.dto.ClassManagerDTO;
+import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.dto.TeacherInformationDTO;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.utils.ControllerJumpUtil;
@@ -47,8 +47,8 @@ public class InformationController {
 
     @RequestMapping("/teacherPage")
     @ResponseBody
-    public PageVO<TeacherInformationVO> teacherPage(RolePageDTO rolePageDTO){
-        return informationService.teacherInformationPage(rolePageDTO);
+    public PageVO<TeacherInformationVO> teacherPage(RoleManagerDTO roleManagerDTO){
+        return informationService.teacherInformationPage(roleManagerDTO);
     }
 
     @RequestMapping("/updateTeacher")
@@ -56,5 +56,22 @@ public class InformationController {
     public CheckVO updateTeacher(@RequestBody TeacherInformationDTO teacherInformationDTO){
         System.out.println(teacherInformationDTO);
         return informationService.updateTeacherInformation(teacherInformationDTO);
+    }
+
+    @RequestMapping("/classInformation")
+    public String classInformation(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "admin/class_manager", "role/class_manager");
+    }
+
+    @RequestMapping("/classPage")
+    @ResponseBody
+    public PageVO<ClassVO> classPage(ClassManagerDTO classManagerDTO){
+        return informationService.classPage(classManagerDTO);
+    }
+
+    @RequestMapping("/classManager")
+    @ResponseBody
+    public CheckVO createClass(ClassManagerDTO classManagerDTO){
+        return informationService.classManage(classManagerDTO);
     }
 }

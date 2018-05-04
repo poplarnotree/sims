@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+
+    <!--头部-->
+    <div th:include="@{~/framework/admin_head.html}"></div>
+
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/admin_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">信息 / 班级管理</h1>
+            <div class="demoTable">
+                搜索班级：
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">搜索</button>
+                <button class="layui-btn" id="addClass">创建班级</button>
+            </div>
+            <table id="classPage" class="layui-hide" lay-filter="teacher"></table>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="update">修改</a>
+</script>
+<script th:inline="none">
+    //JavaScript代码区域
+    layui.use(['element', 'table'], function(){
+        var element = layui.element;
+        var table = layui.table;
+        table.render({
+            elem: '#classPage'
+            ,url: '/information/classPage' //数据接口
+            ,page: true //开启分页
+            ,cellMinWidth: 100
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true}
+                ,{field: 'name', title: '班级名称', sort: true}
+                ,{field: 'number', title: '学生人数'}
+                ,{field: 'teacherVO', title: '语文教师', templet: '<div>{{d.teacherVO.chinese}}</div>'}
+                ,{field: 'teacherVO', title: '数学教师', templet: '<div>{{d.teacherVO.math}}</div>'}
+                ,{field: 'teacherVO', title: '英语教师', templet: '<div>{{d.teacherVO.english}}</div>'}
+                ,{field: 'teacherVO', title: '物理教师', templet: '<div>{{d.teacherVO.physics}}</div>'}
+                ,{field: 'teacherVO', title: '化学教师', templet: '<div>{{d.teacherVO.chemistry}}</div>'}
+                ,{field: 'teacherVO', title: '生物教师', templet: '<div>{{d.teacherVO.biology}}</div>'}
+                ,{field: 'teacherVO', title: '政治教师', templet: '<div>{{d.teacherVO.politics}}</div>'}
+                ,{field: 'teacherVO', title: '地理教师', templet: '<div>{{d.teacherVO.geography}}</div>'}
+                ,{field: 'teacherVO', title: '历史教师', templet: '<div>{{d.teacherVO.history}}</div>'}
+                ,{field: 'createTime', title: '创建时间'}
+                ,{field: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
+            ]]
+            ,id: 'Reload'
+        });
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('Reload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        name: demoReload.val()
+                    }
+                });
+            }
+        };
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+        /*添加班级*/
+        $("#addClass").on('click', function () {
+            layer.open({
+                title: '创建班级'
+                ,content: $('#addClassLayer').html()
+                ,area: ['50%']
+                ,btn: ['提交','关闭']
+                ,yes: function () {
+                    var classInput = new RegExp("[\u4e00-\u9fa5]{2}\\(*[1-9][0-9]*\\)[\u4e00-\u9fa5]");
+                    if ($("#addClassInput").val() == ''){
+                        alert('请填写班级名称');
+                        return false;
+                    }
+                    if (!classInput.test($("#addClassInput").val())){
+                        alert('请检查班级格式，正确格式：高一(1)班,括号请小写');
+                        return false;
+                    }
+                    $.ajax({
+                        type: 'post',
+                        url: '/information/classManager',
+                        data: {
+                            name : $("#addClassInput").val()
+                        },
+                        success: function (CheckVO) {
+                            if (CheckVO.status == 0) {
+                                layer.alert(CheckVO.message, {icon: 1},function () {
+                                    window.parent.location.reload();
+                                    parent.layer.close(index);
+                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2},function () {
+                                    window.parent.location.reload();
+                                    parent.layer.close(index);
+                                });
+                            }
+                        },
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                        }
+
+                    });
+                }
+//                ,end: function () {
+//                    location.reload();
+//                }
+            });
+        });
+
+    });
+</script>
+<script type="text/html" id="addClassLayer">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">班级名称</label>
+            <div class="layui-input-inline">
+                <input type="text" id="addClassInput" name="addClassInput" placeholder="请输入需要创建的班级名称..." autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">请输入需要创建的班级名称</div>
+        </div>
+    </form>
+</script>
+</body>
+</html>

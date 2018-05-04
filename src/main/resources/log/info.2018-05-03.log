@@ -1,0 +1,66 @@
+2018-05-03 00:00:05,218 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-03 00:00:05,222 - ==> Parameters: admin(String)
+2018-05-03 00:00:05,223 - <==      Total: 1
+2018-05-03 00:00:05,224 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-05-03 00:00:05,225 - ==> Parameters: 
+2018-05-03 00:00:05,226 - <==      Total: 1
+2018-05-03 00:00:05,231 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0) 
+2018-05-03 00:00:05,232 - ==> Parameters: 1(Integer)
+2018-05-03 00:00:05,234 - <==      Total: 1
+2018-05-03 00:00:05,236 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ? 
+2018-05-03 00:00:05,236 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-03 00:00:05,239 - <==      Total: 10
+2018-05-03 00:00:08,267 - ==>  Preparing: SELECT * FROM classes order by name 
+2018-05-03 00:00:08,267 - ==> Parameters: 
+2018-05-03 00:00:08,268 - <==      Total: 4
+2018-05-03 00:00:08,269 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-05-03 00:00:08,269 - ==> Parameters: 
+2018-05-03 00:00:08,270 - <==      Total: 1
+2018-05-03 00:00:09,231 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-03 00:00:09,232 - ==> Parameters: admin(String)
+2018-05-03 00:00:09,233 - <==      Total: 1
+2018-05-03 00:00:09,234 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ? 
+2018-05-03 00:00:09,234 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), mashi(String)
+2018-05-03 00:00:09,235 - <==    Updates: 1
+2018-05-03 00:00:50,895 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-03 00:00:50,895 - ==> Parameters: admin(String)
+2018-05-03 00:00:50,897 - <==      Total: 1
+2018-05-03 00:00:50,897 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-05-03 00:00:50,897 - ==> Parameters: 
+2018-05-03 00:00:50,898 - <==      Total: 1
+2018-05-03 00:00:50,905 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0) 
+2018-05-03 00:00:50,906 - ==> Parameters: 1(Integer)
+2018-05-03 00:00:50,908 - <==      Total: 1
+2018-05-03 00:00:50,909 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ? 
+2018-05-03 00:00:50,909 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-03 00:00:50,912 - <==      Total: 10
+2018-05-03 00:00:52,069 - ==>  Preparing: SELECT * FROM classes order by name 
+2018-05-03 00:00:52,069 - ==> Parameters: 
+2018-05-03 00:00:52,070 - <==      Total: 4
+2018-05-03 00:00:52,071 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-05-03 00:00:52,071 - ==> Parameters: 
+2018-05-03 00:00:52,072 - <==      Total: 1
+2018-05-03 00:00:53,437 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-03 00:00:53,438 - ==> Parameters: admin(String)
+2018-05-03 00:00:53,439 - <==      Total: 1
+2018-05-03 00:00:53,439 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-05-03 00:00:53,440 - ==> Parameters: 
+2018-05-03 00:00:53,440 - <==      Total: 1
+2018-05-03 00:00:53,443 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0) 
+2018-05-03 00:00:53,443 - ==> Parameters: 1(Integer)
+2018-05-03 00:00:53,444 - <==      Total: 1
+2018-05-03 00:00:53,446 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ? 
+2018-05-03 00:00:53,446 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-03 00:00:53,449 - <==      Total: 10
+2018-05-03 00:00:55,055 - ==>  Preparing: SELECT * FROM classes order by name 
+2018-05-03 00:00:55,055 - ==> Parameters: 
+2018-05-03 00:00:55,056 - <==      Total: 4
+2018-05-03 00:00:55,057 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-05-03 00:00:55,057 - ==> Parameters: 
+2018-05-03 00:00:55,058 - <==      Total: 1
+2018-05-03 00:00:56,094 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-03 00:00:56,095 - ==> Parameters: admin(String)
+2018-05-03 00:00:56,096 - <==      Total: 1
+2018-05-03 00:00:56,097 - ==>  Preparing: UPDATE teacher_information set number = ?, name = ?, sex = ?, id_cart = ?, positional_titles = ?, nation = ?, place = ?, address = ?, birthday = ?, phone = ?, department = ?, classes = ?, subject = ? WHERE login_name = ? 
+2018-05-03 00:00:56,098 - ==> Parameters: T-010(String), 马十(String), 男(String), 522628198706162213(String), 中学高级教师(String), 汉族(String), 天津西青(String), 天津市西青区宾水西道延长线399号天津理工大学(String), 1987-06-16(String), 18312345678(String), 教研组(String), 高三(1)班,高二(1)班(String), 地理(String), mashi(String)
+2018-05-03 00:00:56,133 - <==    Updates: 1
