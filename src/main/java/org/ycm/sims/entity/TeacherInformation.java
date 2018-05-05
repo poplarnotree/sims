@@ -47,6 +47,11 @@ public class TeacherInformation {
     public TeacherInformation() {
     }
 
+    public TeacherInformation(int id, String classes) {
+        this.id = id;
+        this.classes = classes;
+    }
+
     public TeacherInformation(String loginName, String department) {
         this.loginName = loginName;
         this.department = department;
@@ -54,5 +59,9 @@ public class TeacherInformation {
 
     public TeacherInformation(String loginName) {
         this.loginName = loginName;
+    }
+
+    public TeacherInformation(int id) {
+        this.id = id;
     }
 }

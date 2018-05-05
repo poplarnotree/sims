@@ -3,6 +3,7 @@ package org.ycm.sims.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.ycm.sims.dto.ClassManagerDTO;
 import org.ycm.sims.dto.PageDTO;
+import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.entity.Classes;
 import org.ycm.sims.entity.TeacherInformation;
 
@@ -23,9 +24,12 @@ public interface InformationDao {
     Integer createClass(String name);
 
     /*修改班级名称*/
-    Integer updateClass(int id, String name);
+    Integer updateClass(ClassManagerDTO classManagerDTO);
 
-    /*查询班级数*/
+    /*删除班级*/
+    Integer deleteClass(String name);
+
+   /*查询班级数*/
     Integer findClassCount();
 
     /*查询班级人数*/
@@ -37,8 +41,14 @@ public interface InformationDao {
     /*查询最大工号*/
     String findNumberMax();
 
-    /*根据登录名查找教师信息*/
+    /*查找教师信息*/
     TeacherInformation findByInformation(TeacherInformation teacherInformation);
+
+    /*根据班级模糊查询教师信息*/
+    List<TeacherInformation> findTeacherInformationByClasses(String classes);
+
+    /*修改教师班级*/
+    Integer updateTeacherClasses(TeacherInformation teacherInformation);
 
     /*查找登录名是否存在*/
     Integer findInformationLoginName(String loginName);
@@ -50,12 +60,15 @@ public interface InformationDao {
     Integer createInformation(TeacherInformation teacherInformation);
 
     /*查询教师信息*/
-    List<TeacherInformation> informationList(PageDTO pageDTO);
+    List<TeacherInformation> informationList(RoleManagerDTO roleManagerDTO);
+
+    /*根据id查询班级*/
+    String findClassById(Integer id);
 
     /*查询教师信息数*/
     Integer teacherInformationCount(TeacherInformation teacherInformation);
 
-    /*超管修改教师信息*/
+    /*修改教师信息*/
     Integer updateTeacherInformation(TeacherInformation teacherInformation);
 
     /*查询教师部门*/
@@ -63,5 +76,4 @@ public interface InformationDao {
 
     /*查询班级教师*/
     List<Map<String, String>> findClassTeacher(String classes);
-
 }

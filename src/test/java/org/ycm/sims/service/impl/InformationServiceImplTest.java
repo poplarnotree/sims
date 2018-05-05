@@ -13,6 +13,7 @@ import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.service.InformationService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Create by yangchangmin
@@ -22,7 +23,6 @@ import javax.servlet.http.HttpServletRequest;
 @SpringBootTest
 @Slf4j
 public class InformationServiceImplTest {
-
     @Autowired
     private HttpServletRequest request;
 
@@ -64,7 +64,7 @@ public class InformationServiceImplTest {
     @Test
     public void classManage() {
         request.getSession().setAttribute("loginName","admin");
-        CheckVO checkVO = informationService.classManage(new ClassManagerDTO("高一(1)班"));
+        CheckVO checkVO = informationService.classManage(new ClassManagerDTO(1002,"高三(3)班"));
         log.info("checkVO={}" + checkVO);
     }
 
@@ -73,5 +73,19 @@ public class InformationServiceImplTest {
         request.getSession().setAttribute("loginName","admin");
         PageVO<ClassVO> classVOPageVO = informationService.classPage(new ClassManagerDTO(1,2,""));
         log.info("classVOPageVO={}",classVOPageVO);
+    }
+
+    @Test
+    public void deleteClass() throws Exception {
+        request.getSession().setAttribute("loginName","admin");
+        CheckVO checkVO = informationService.deleteClass("高一(7)班");
+        log.info("checkVO={}",checkVO);
+    }
+
+    @Test
+    public void teacherSubNameList() throws Exception {
+        request.getSession().setAttribute("loginName","admin");
+        List<TeacherSubjectNameVO> teacherSubjectNameVOList = informationService.teacherSubNameList(new RoleManagerDTO(1));
+        log.info("teacherSubjectNameVOList={}",teacherSubjectNameVOList);
     }
 }

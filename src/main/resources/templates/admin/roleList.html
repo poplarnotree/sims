@@ -18,7 +18,7 @@
                     <input class="layui-input" name="id" id="demoReload" autocomplete="off">
                 </div>
                 <button class="layui-btn" data-type="reload">搜索</button>
-                <button class="layui-btn" onclick="window.location.href='/role/create'">添加</button>
+                <button class="layui-btn" onclick="window.location.href='/role/create'"><i class="layui-icon">&#xe608;</i>添加</button>
             </div>
             <table id="role" class="layui-hide" lay-filter="role"></table>
         </div>
@@ -28,8 +28,8 @@
     <div th:include="@{~/framework/foot.html}"></div>
 </div>
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-xs" lay-event="resetPassword">重置密码</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="cancelRole">注销</a>
+    <a class="layui-btn layui-btn-xs" lay-event="resetPassword"><i class="layui-icon">&#xe642;</i>重置密码</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="cancelRole"><i class="layui-icon">&#xe640;</i>注销</a>
 </script>
 <script th:inline="none">
     //JavaScript代码区域
@@ -90,29 +90,22 @@
                             roleType: data.roleType
                         },
                         success:function (RoleCheckVO) {
-                            if (RoleCheckVO.status == 0){
-                                layer.open({
-                                    title: '提示'
-                                    ,content: RoleCheckVO.message
+                            if (RoleCheckVO.status == 0) {
+                                layer.alert(RoleCheckVO.message, {icon: 1},function () {
+                                    window.parent.location.reload();
+                                    parent.layer.close(index);
                                 });
-                            }else {
-                                layer.open({
-                                    title: '提示'
-                                    ,content: RoleCheckVO.message
-                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2});
                             }
                         },
-                        error:function () {
-                            layer.open({
-                                title: '提示'
-                                ,content: "系统错误，请稍后重试！"
-                            });
-                            return false;
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
                         }
                     });
-                    layer.close(index);
                 });
-            }else if(obj.event === 'cancelRole'){
+            }
+            if(obj.event === 'cancelRole'){
                 layer.confirm('真的要注销' + data.roleType + data.loginName + "的帐号吗？", function(index){
                     $.ajax({
                         type: 'post',
@@ -121,29 +114,20 @@
                             id: data.id,
                             roleType: data.roleType
                         },
-                        success:function (RoleCheckVO) {
-                            if (RoleCheckVO.status == 0){
-                                layer.open({
-                                    title: '提示'
-                                    ,content: RoleCheckVO.message
+                        success: function (RoleCheckVO) {
+                            if (RoleCheckVO.status == 0) {
+                                layer.alert(RoleCheckVO.message, {icon: 1}, function () {
+                                    window.parent.location.reload();
+                                    parent.layer.close(index);
                                 });
-                                location.reload();
-                            }else {
-                                layer.open({
-                                    title: '提示'
-                                    ,content: RoleCheckVO.message
-                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2});
                             }
                         },
-                        error:function () {
-                            layer.open({
-                                title: '提示'
-                                ,content: "系统错误，请稍后重试！"
-                            });
-                            return false;
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
                         }
                     });
-                    layer.close(index);
                 });
             }
         });

@@ -9,13 +9,9 @@ import lombok.Data;
 @Data
 public class PageDTO {
 
-//    private String loginName;
-
     private Integer page;
 
     private Integer limit;
-
-//    private Integer roleType;
 
     public PageDTO() {
     }

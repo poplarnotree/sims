@@ -141,12 +141,50 @@ public class InformationServiceImpl implements InformationService {
             if (classManagerDTO.getId() == null){
                 row = informationDao.createClass(classManagerDTO.getName());
             }else{
-                row = informationDao.updateClass(classManagerDTO.getId(), classManagerDTO.getName());
+
+                try {
+                    String oldClasses = informationDao.findClassById(classManagerDTO.getId());
+                    List<TeacherInformation> teacherInformationList = informationDao.findTeacherInformationByClasses(oldClasses);
+                    for (TeacherInformation teacherInformation : teacherInformationList){
+                        Integer id = teacherInformation.getId();
+                        String classes = teacherInformation.getClasses();
+                        String newClasses = FormatConversionUtil.teacherClass(classes, oldClasses, classManagerDTO.getName());
+                        int upRow = informationDao.updateTeacherClasses(new TeacherInformation(id, newClasses));
+                        if (upRow != 1){
+                            throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+                        }
+                        /*TODO*//*还需要修改学生班级*/
+                    }
+                    row = informationDao.updateClass(classManagerDTO);
+                }catch (Exception e){
+                    e.printStackTrace();
+                    throw new SimsException(ExceptionEnum.SYSTEM_ERROR);
+                }
             }
             if (row == 1){
                 return new CheckVO(ResultEnum.SUCCESS);
             }
             throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+        }else {
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+    }
+
+    @Override
+    public CheckVO deleteClass(String name) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        int departmentCount = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), "学生处"));
+        int stuCount = informationDao.findClassStuCount(name);
+        List<Map<String, String>> teacherList = informationDao.findClassTeacher(name);
+        if (stuCount != 0 || teacherList.size() != 0){
+            return new CheckVO(ResultEnum.CLASS_EXIST_PERSON);
+        }
+        if (role.getRoleType() == 0 || departmentCount == 1){
+            int row = informationDao.deleteClass(name);
+            if (row == 1){
+                return new CheckVO(ResultEnum.SUCCESS);
+            }
+            throw  new SimsException(ExceptionEnum.DATA_BASE_ERROR);
         }else {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
@@ -173,6 +211,40 @@ public class InformationServiceImpl implements InformationService {
                 classVOList.get(i).setCreateTime(FormatConversionUtil.DateFormatUtil(classesList.get(i).getCreateTime()));
             }
             return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
+        }else {
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+    }
+
+    @Override
+    public List<TeacherSubjectNameVO> teacherSubNameList(RoleManagerDTO roleManagerDTO) {
+        List<TeacherInformation> teacherInformationList = informationDao.informationList(roleManagerDTO);
+        List<TeacherSubjectNameVO> teacherSubjectNameVOList = new ArrayList<>();
+        teacherInformationList.forEach(teacherInformation -> teacherSubjectNameVOList.add(new TeacherSubjectNameVO(teacherInformation.getId(), teacherInformation.getName(), teacherInformation.getSubject())));
+        return teacherSubjectNameVOList;
+    }
+
+    @Override
+    @Transactional
+    public CheckVO updateTeacherClass(UpdateTeacherClassDTO updateTeacherClassDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        int departmentCount = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), "学生处"));
+        if (role.getRoleType() == 0 || departmentCount == 1) {
+            if (updateTeacherClassDTO.getCurrentId() != null){
+                String currentClasses = informationDao.findByInformation(new TeacherInformation(updateTeacherClassDTO.getCurrentId())).getClasses();
+                currentClasses = FormatConversionUtil.cutTeacherClass(currentClasses, updateTeacherClassDTO.getClasses());
+                int currentRow = informationDao.updateTeacherClasses(new TeacherInformation(updateTeacherClassDTO.getCurrentId(), currentClasses));
+                if (currentRow != 1){
+                    new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+                }
+            }
+            String classes = informationDao.findByInformation(new TeacherInformation(updateTeacherClassDTO.getId())).getClasses();
+            classes += "," + updateTeacherClassDTO.getClasses();
+            int row = informationDao.updateTeacherClasses(new TeacherInformation(updateTeacherClassDTO.getId(), classes));
+            if (row == 1){
+                return new CheckVO(ResultEnum.SUCCESS);
+            }
+            throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
         }else {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }

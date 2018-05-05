@@ -9,10 +9,12 @@ import org.ycm.sims.VO.*;
 import org.ycm.sims.dto.ClassManagerDTO;
 import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.dto.TeacherInformationDTO;
+import org.ycm.sims.dto.UpdateTeacherClassDTO;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Create by yangchangmin
@@ -73,5 +75,23 @@ public class InformationController {
     @ResponseBody
     public CheckVO createClass(ClassManagerDTO classManagerDTO){
         return informationService.classManage(classManagerDTO);
+    }
+
+    @RequestMapping("/deleteClass")
+    @ResponseBody
+    public CheckVO deleteClass(String name){
+        return informationService.deleteClass(name);
+    }
+
+    @RequestMapping("/teacherSubjectName")
+    @ResponseBody
+    public List<TeacherSubjectNameVO> teacherSubjectName(Integer roleType){
+        return informationService.teacherSubNameList(new RoleManagerDTO(roleType));
+    }
+
+    @RequestMapping("/updateTeacherClass")
+    @ResponseBody
+    public CheckVO updateTeacherClass(UpdateTeacherClassDTO updateTeacherClassDTO){
+        return informationService.updateTeacherClass(updateTeacherClassDTO);
     }
 }

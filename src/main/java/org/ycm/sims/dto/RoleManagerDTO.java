@@ -16,6 +16,10 @@ public class RoleManagerDTO extends PageDTO {
     public RoleManagerDTO() {
     }
 
+    public RoleManagerDTO(Integer roleType) {
+        this.roleType = roleType;
+    }
+
     public RoleManagerDTO(Integer page, Integer limit, Integer roleType) {
         super(page, limit);
         this.roleType = roleType;

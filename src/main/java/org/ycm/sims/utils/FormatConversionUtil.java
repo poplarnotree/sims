@@ -84,4 +84,61 @@ public class FormatConversionUtil {
         }
         return str;
     }
+
+    /**
+     * 字符串拼装classes
+     * @param classes 数据库中查到的教师classes
+     * @param oldClasses 需要修改的,老的classes
+     * @param newClasses 新的classes
+     * @return
+     */
+    public static String teacherClass(String classes, String oldClasses, String newClasses){
+        String str = "";
+        String[] s = classes.split(",");
+        for (int i = 0; i < s.length; i++) {
+            if (s[i].equals(oldClasses)){
+                str += newClasses;
+                if (i != s.length - 1){
+                    str += ",";
+                }
+            }else {
+                str += s[i];
+                if (i != s.length - 1){
+                    str += ",";
+                }
+            }
+        }
+        return str;
+    }
+
+    /**
+     * 删除当前重复的字符串，用于删除教师执教班级
+     * @param currentClass 当前教师的班级
+     * @param classes 需要删除的班级
+     * @return
+     */
+    public static String cutTeacherClass(String currentClass, String classes){
+        String str = "";
+        if (currentClass == "暂无班级"){
+            str = classes;
+            return str;
+        }
+        String[] s = currentClass.split(",");
+        for (int i = 0; i < s.length; i++){
+            if (!s[i].equals(classes)){
+                str += s[i];
+                if (i != s.length - 1){
+                    str += ",";
+                }
+            }
+        }
+        if (str == ""){
+            str = "暂无班级";
+        }
+        int index = str.length();
+        if (str.charAt(index - 1) == ','){
+            str = str.substring(0, index - 1);
+        }
+        return str;
+    }
 }

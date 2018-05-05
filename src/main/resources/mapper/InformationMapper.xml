@@ -36,11 +36,14 @@
           VALUES
             (#{loginName}, #{number}, #{name}, #{sex}, #{idCart}, #{positionalTitles}, #{nation}, #{place}, #{address}, #{birthday}, #{phone}, #{department}, #{classes}, #{subject})
     </insert>
+    <delete id="deleteClass">
+        DELETE FROM classes WHERE name = #{name}
+    </delete>
 
     <select id="findClasses" resultMap="classList">
-        SELECT * FROM classes WHERE name != '暂无班级'
+        SELECT * FROM classes
          <if test="name != null and name != ''">
-             and name = #{name}
+             WHERE name = #{name}
          </if>
          order by name
     </select>
@@ -58,7 +61,15 @@
     </select>
 
     <select id="findByInformation" resultType="org.ycm.sims.entity.TeacherInformation">
-        SELECT * FROM teacher_information where login_name = #{loginName}
+        SELECT * FROM teacher_information
+          <where>
+              <if test="loginName != null and loginName != ''">
+                  login_name = #{loginName}
+              </if>
+              <if test="id != null and id != ''">
+                  AND id = #{id}
+              </if>
+          </where>
     </select>
 
     <select id="findInformationLoginName" resultType="java.lang.Integer">
@@ -103,6 +114,10 @@
         WHERE login_name = #{loginName}
     </update>
 
+    <update id="updateTeacherClasses">
+        UPDATE teacher_information SET classes = #{classes} WHERE id = #{id}
+    </update>
+
     <select id="findTeacherDepartment" resultType="java.lang.Integer">
         SELECT count(*) FROM teacher_information WHERE login_name = #{loginName} and department LIKE CONCAT(CONCAT('%',#{department},'%'))
     </select>
@@ -112,17 +127,23 @@
     </select>
 
     <select id="findClassCount" resultType="java.lang.Integer">
-        select count(*) from classes WHERE name != '暂无班级'
+        select count(*) from classes
     </select>
 
     <select id="findClassTeacher" resultType="java.util.Map">
         SELECT classes,name,subject FROM teacher_information
-          WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%')) AND classes != '暂无班级'
+          WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%'))
           ORDER BY FIELD(
            subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
     </select>
     <select id="findClassStuCount" resultType="java.lang.Integer">
         SELECT COUNT(*) FROM student_information WHERE classes = #{classes}
+    </select>
+    <select id="findClassById" resultType="java.lang.String">
+        SELECT name FROM classes WHERE id = #{id}
+    </select>
+    <select id="findTeacherInformationByClasses" resultType="org.ycm.sims.entity.TeacherInformation">
+        SELECT id, classes FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%'))
     </select>
 
 </mapper>
