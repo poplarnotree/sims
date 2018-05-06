@@ -158,7 +158,6 @@
                             alert('请检查班级格式，正确格式：高一(1)班,括号请小写');
                             return false;
                         }
-                        alert($("#newClassName").val());
                         $.ajax({
                             type: 'post',
                             url: '/information/classManager',

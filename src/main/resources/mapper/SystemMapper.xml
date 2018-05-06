@@ -17,4 +17,26 @@
             </if>
           )
     </insert>
+    <select id="recordCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM record
+    </select>
+
+    <resultMap id="record" type="org.ycm.sims.entity.Record">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="table_name" property="tableName" />
+        <result column="key_id" property="keyId" />
+        <result column="update_column" property="updateColumn" />
+        <result column="update_value" property="updateValue" />
+        <result column="original_value" property="originalValue" />
+        <result column="type" property="type" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <select id="recordList" resultMap="record">
+        SELECT * FROM record
+        <if test="id != null and id != ''">
+          WHERE id = #{id}
+        </if>
+    </select>
 </mapper>

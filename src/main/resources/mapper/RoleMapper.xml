@@ -58,5 +58,8 @@
             role_type = #{roleType}
             AND role_status = 0
     </select>
+    <select id="findRoleById" resultType="org.ycm.sims.entity.Role">
+        SELECT * FROM role WHERE id = #{id}
+    </select>
 
 </mapper>

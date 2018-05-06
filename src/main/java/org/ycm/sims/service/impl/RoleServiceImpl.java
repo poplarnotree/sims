@@ -79,7 +79,7 @@ public class RoleServiceImpl implements RoleService {
         if (MD5Util.MD5Util(updatePasswordDTO.getOriginalPassword()).equals(role.getLoginPassword())) {
             if (roleDao.updatePassword(new Role(sessionLoginName, MD5Util.MD5Util(updatePasswordDTO.getNewPassword())))==1){
                 systemService.addRecord(new RecordDTO(
-                        role.getLoginName(), TableEnum.ROLE.getValue(), role.getId(), ColumnEnum.LOGINPASSWORD.getValue(),
+                        role.getLoginName(), TableEnum.ROLE.getValue(), role.getId(), ColumnEnum.LOGIN_PASSWORD.getValue(),
                         updatePasswordDTO.getNewPassword(), updatePasswordDTO.getOriginalPassword()));
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else{
@@ -130,8 +130,13 @@ public class RoleServiceImpl implements RoleService {
     @Transactional
     public RoleCheckVO cancelRole(RoleDTO roleDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        String originalValue = roleDao.findRoleById(roleDTO.getId()).getRoleType().toString();
         if (FormatConversionUtil.roleTypeFormatUitl(roleDTO.getRoleType()) - role.getRoleType() == 1) {
             if (roleDao.cancelRole(roleDTO.getId()) == 1){
+                String updateValue = roleDao.findRoleById(roleDTO.getId()).getRoleType().toString();
+                systemService.addRecord(new RecordDTO(
+                        role.getLoginName(), TableEnum.ROLE.getValue(), roleDTO.getId(),
+                        ColumnEnum.ROLE_STATUS.getValue(), updateValue, originalValue));
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
@@ -151,8 +156,12 @@ public class RoleServiceImpl implements RoleService {
     @Transactional
     public RoleCheckVO resetPassword(RoleDTO roleDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        String updateValue = roleDao.findRoleById(roleDTO.getId()).getLoginPassword();
         if (FormatConversionUtil.roleTypeFormatUitl(roleDTO.getRoleType()) - role.getRoleType() == 1) {
             if (roleDao.resetPassword(new Role(roleDTO.getId(), MD5Util.MD5Util(ParameterEnum.RESET_PASSWORD.getValue()))) == 1){
+                systemService.addRecord(new RecordDTO(
+                        role.getLoginName(), TableEnum.ROLE.getValue(), roleDTO.getId(), ColumnEnum.LOGIN_PASSWORD.getValue(),
+                        updateValue, MD5Util.MD5Util(ParameterEnum.RESET_PASSWORD.getValue())));
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);

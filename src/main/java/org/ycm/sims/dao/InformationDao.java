@@ -35,8 +35,11 @@ public interface InformationDao {
     /*查询班级人数*/
     Integer findClassStuCount(String classes);
 
-    /*根据班级名称查询班级*/
+    /*根据班级名称查询班级数*/
     Integer findClassByName(String name);
+
+    /*根据班级名称查询班级ID*/
+    Integer findClassIdByName(String name);
 
     /*查询最大工号*/
     String findNumberMax();

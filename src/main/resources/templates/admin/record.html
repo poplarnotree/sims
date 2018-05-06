@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/admin_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/admin_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">系统 / 查看修改记录</h1>
+            <div class="demoTable">
+                搜索记录ID：
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">搜索</button>
+            </div>
+            <table id="record" class="layui-hide" lay-filter="record"></table>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script th:inline="none">
+    //JavaScript代码区域
+    layui.use(['element','table'], function(){
+        var element = layui.element;
+        var table = layui.table;
+        table.render({
+            elem: '#record'
+            ,url: '/system/recordList' //数据接口
+            ,page: true //开启分页
+            ,cellMinWidth: 100
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true}
+                ,{field: 'loginName', title: '修改人登录帐号'}
+                ,{field: 'tableName', title: '表名'}
+                ,{field: 'keyId', title: '主键ID', sort: true}
+                ,{field: 'updateColumn', title: '修改字段', templet: '#updateColumnTpl', sort: true}
+                ,{field: 'updateValue', title: '修改值', templet: '#updateValueTpl', sort: true}
+                ,{field: 'originalValue', title: '初始值', sort: true}
+                ,{field: 'type', title: '类型', templet: '#typeTpl', sort: true}
+                ,{field: 'createTime', title: '创建时间', sort: true}
+            ]]
+            ,id: 'Reload'
+        });
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('Reload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        id: demoReload.val()
+                    }
+                });
+            }
+        };
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>
+<script id="typeTpl" type="text/html">
+    {{#  if (d.type == 0){  }}
+        修改
+    {{#  }  }}
+    {{#  if (d.type == 1){  }}
+        删除
+    {{#  }  }}
+</script>
+<script id="updateColumnTpl" type="text/html">
+    {{#  if (d.updateColumn == null){  }}
+        无
+    {{#  }else{  }}
+        {{d.updateColumn}}
+    {{#  }  }}
+</script>
+<script id="updateValueTpl" type="text/html">
+    {{#  if (d.updateValue == null){  }}
+        无
+    {{#  }else{  }}
+        {{d.updateValue}}
+    {{#  }  }}
+</script>
+</body>
+</html>

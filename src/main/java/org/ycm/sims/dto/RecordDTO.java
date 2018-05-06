@@ -26,11 +26,17 @@ public class RecordDTO {
     public RecordDTO() {
     }
 
-    public RecordDTO(String loginName, String tableName, Integer keyId) {
+    public RecordDTO(String loginName, String tableName, Integer keyId, String originalValue) {
         this.loginName = loginName;
         this.tableName = tableName;
         this.keyId = keyId;
-        this.type = type;
+        this.originalValue = originalValue;
+    }
+
+    public RecordDTO(String updateColumn, String updateValue, String originalValue) {
+        this.updateColumn = updateColumn;
+        this.updateValue = updateValue;
+        this.originalValue = originalValue;
     }
 
     public RecordDTO(String loginName, String tableName, Integer keyId, String updateColumn, String updateValue, String originalValue) {
@@ -40,6 +46,5 @@ public class RecordDTO {
         this.updateColumn = updateColumn;
         this.updateValue = updateValue;
         this.originalValue = originalValue;
-        this.type = type;
     }
 }

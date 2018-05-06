@@ -17,6 +17,9 @@ public interface RoleDao {
     /*根据loginName查询Role*/
     Role findRoleByLoginName(String loginName);
 
+    /*根据id查询Role*/
+    Role findRoleById(Integer id);
+
     /*修改密码*/
     int updatePassword(Role role);
 

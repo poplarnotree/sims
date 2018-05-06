@@ -9,15 +9,21 @@ import org.ycm.sims.VO.*;
 import org.ycm.sims.converter.Map2TeacherVO;
 import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
+import org.ycm.sims.dao.SystemDao;
 import org.ycm.sims.dto.*;
 import org.ycm.sims.entity.Classes;
+import org.ycm.sims.entity.Record;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.entity.TeacherInformation;
+import org.ycm.sims.enums.ColumnEnum;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ResultEnum;
+import org.ycm.sims.enums.TableEnum;
 import org.ycm.sims.exception.SimsException;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.service.RoleService;
+import org.ycm.sims.service.SystemService;
+import org.ycm.sims.utils.CompareDataUtil;
 import org.ycm.sims.utils.FormatConversionUtil;
 import org.ycm.sims.utils.SessionUtil;
 
@@ -44,6 +50,9 @@ public class InformationServiceImpl implements InformationService {
 
     @Autowired
     private RoleService roleService;
+
+    @Autowired
+    private SystemService systemService;
 
     @Override
     public NumberAndClassesVO createInformationVO() {
@@ -110,6 +119,7 @@ public class InformationServiceImpl implements InformationService {
     @Transactional
     public CheckVO updateTeacherInformation(TeacherInformationDTO teacherInformationDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        TeacherInformation tI = informationDao.findByInformation(new TeacherInformation(teacherInformationDTO.getLoginName()));
         if (FormatConversionUtil.roleTypeFormatUitl(teacherInformationDTO.getRoleType()) - role.getRoleType() == 1){
             TeacherInformation teacherInformation = new TeacherInformation();
             BeanUtils.copyProperties(teacherInformationDTO, teacherInformation);
@@ -117,6 +127,13 @@ public class InformationServiceImpl implements InformationService {
             teacherInformation.setClasses(FormatConversionUtil.ListFormatString(teacherInformationDTO.getClasses()));
             int row = informationDao.updateTeacherInformation(teacherInformation);
             if (row == 1){
+                List<RecordDTO> recordDTOList = CompareDataUtil.CompareTeacherInformationData(tI, teacherInformation);
+                for (RecordDTO recordDTO : recordDTOList){
+                    recordDTO.setLoginName(role.getLoginName());
+                    recordDTO.setTableName(TableEnum.TEACHER_INFORMATION.getValue());
+                    recordDTO.setKeyId(tI.getId());
+                    systemService.addRecord(recordDTO);
+                }
                 return new CheckVO(ResultEnum.SUCCESS);
             }else{
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
@@ -141,7 +158,7 @@ public class InformationServiceImpl implements InformationService {
             if (classManagerDTO.getId() == null){
                 row = informationDao.createClass(classManagerDTO.getName());
             }else{
-
+                String classDate = informationDao.findClassById(classManagerDTO.getId());
                 try {
                     String oldClasses = informationDao.findClassById(classManagerDTO.getId());
                     List<TeacherInformation> teacherInformationList = informationDao.findTeacherInformationByClasses(oldClasses);
@@ -149,13 +166,20 @@ public class InformationServiceImpl implements InformationService {
                         Integer id = teacherInformation.getId();
                         String classes = teacherInformation.getClasses();
                         String newClasses = FormatConversionUtil.teacherClass(classes, oldClasses, classManagerDTO.getName());
+                        String oldClass = informationDao.findByInformation(new TeacherInformation(id)).getClasses();
                         int upRow = informationDao.updateTeacherClasses(new TeacherInformation(id, newClasses));
+                        systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.TEACHER_INFORMATION.getValue(),
+                                id, ColumnEnum.CLASSES.getValue(), newClasses, oldClass));
                         if (upRow != 1){
                             throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
                         }
                         /*TODO*//*还需要修改学生班级*/
                     }
                     row = informationDao.updateClass(classManagerDTO);
+                    if (row == 1){
+                        systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.CLASSES.getValue(),
+                                classManagerDTO.getId(), ColumnEnum.NAME.getValue(), classManagerDTO.getName(), classDate));
+                    }
                 }catch (Exception e){
                     e.printStackTrace();
                     throw new SimsException(ExceptionEnum.SYSTEM_ERROR);
@@ -180,8 +204,10 @@ public class InformationServiceImpl implements InformationService {
             return new CheckVO(ResultEnum.CLASS_EXIST_PERSON);
         }
         if (role.getRoleType() == 0 || departmentCount == 1){
+            int id = informationDao.findClassIdByName(name);
             int row = informationDao.deleteClass(name);
             if (row == 1){
+                systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.CLASSES.getValue(), id, name));
                 return new CheckVO(ResultEnum.SUCCESS);
             }
             throw  new SimsException(ExceptionEnum.DATA_BASE_ERROR);
@@ -232,16 +258,22 @@ public class InformationServiceImpl implements InformationService {
         if (role.getRoleType() == 0 || departmentCount == 1) {
             if (updateTeacherClassDTO.getCurrentId() != null){
                 String currentClasses = informationDao.findByInformation(new TeacherInformation(updateTeacherClassDTO.getCurrentId())).getClasses();
+                String recordClasses = currentClasses;
                 currentClasses = FormatConversionUtil.cutTeacherClass(currentClasses, updateTeacherClassDTO.getClasses());
                 int currentRow = informationDao.updateTeacherClasses(new TeacherInformation(updateTeacherClassDTO.getCurrentId(), currentClasses));
                 if (currentRow != 1){
                     new SimsException(ExceptionEnum.DATA_BASE_ERROR);
                 }
+                systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.TEACHER_INFORMATION.getValue(), updateTeacherClassDTO.getCurrentId(),
+                        ColumnEnum.CLASSES.getValue(), currentClasses, recordClasses));
             }
             String classes = informationDao.findByInformation(new TeacherInformation(updateTeacherClassDTO.getId())).getClasses();
+            String classes1 = classes;
             classes += "," + updateTeacherClassDTO.getClasses();
             int row = informationDao.updateTeacherClasses(new TeacherInformation(updateTeacherClassDTO.getId(), classes));
             if (row == 1){
+                systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.TEACHER_INFORMATION.getValue(), updateTeacherClassDTO.getId(),
+                        ColumnEnum.CLASSES.getValue(), classes, classes1));
                 return new CheckVO(ResultEnum.SUCCESS);
             }
             throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);

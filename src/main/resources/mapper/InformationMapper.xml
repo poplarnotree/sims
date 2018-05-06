@@ -133,6 +133,8 @@
     <select id="findClassTeacher" resultType="java.util.Map">
         SELECT classes,name,subject FROM teacher_information
           WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%'))
+          AND login_name IN
+            (SELECT login_name FROM role WHERE role_status = 0)
           ORDER BY FIELD(
            subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史')
     </select>
@@ -144,6 +146,9 @@
     </select>
     <select id="findTeacherInformationByClasses" resultType="org.ycm.sims.entity.TeacherInformation">
         SELECT id, classes FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',#{classes},'%'))
+    </select>
+    <select id="findClassIdByName" resultType="java.lang.Integer">
+        select id from classes where name = #{name}
     </select>
 
 </mapper>
