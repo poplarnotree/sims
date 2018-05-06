@@ -105,11 +105,13 @@ CREATE TABLE menu(
 -- record表
 CREATE TABLE record(
   id INT NOT NULL auto_increment comment '记录id',
-  information_id INT NOT NULL comment '修改人信息id',
-  update_table VARCHAR (20) NOT NULL comment '修改表',
-  update_column VARCHAR (30) NOT NULL comment '修改字段',
-  update_value VARCHAR (128) NOT NULL comment '修改值',
-  original_value VARCHAR (128) NOT NULL comment '原值',
+  login_name VARCHAR (20) NOT NULL comment '操作人登录名',
+  table_name VARCHAR (20) NOT NULL comment '表名',
+  key_id INT NOT NULL comment '主键id',
+  update_column VARCHAR (30) NULL comment '修改字段',
+  update_value VARCHAR (128) NULL comment '修改值',
+  original_value VARCHAR (128) NULL comment '原值',
+  type INT NOT NULL DEFAULT 0 comment '类型, 0修改, 1删除, 默认为0',
   create_time TIMESTAMP NOT NULL DEFAULT current_timestamp comment '创建时间',
   PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 comment='记录表';

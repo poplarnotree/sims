@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ycm.sims.dao.SystemDao">
+    <insert id="addRecord">
+        INSERT INTO record
+          (login_name, table_name, key_id, update_column, update_value, original_value
+           <if test="type != null and type != ''">
+              ,type
+           </if>
+           )
+        VALUES
+          (#{loginName}, #{tableName}, #{keyId}, #{updateColumn}, #{updateValue}, #{originalValue}
+            <if test="type != null and type != ''">
+              , #{type}
+            </if>
+          )
+    </insert>
+</mapper>

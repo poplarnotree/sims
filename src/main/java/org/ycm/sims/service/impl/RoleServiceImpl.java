@@ -8,15 +8,15 @@ import org.ycm.sims.VO.PageVO;
 import org.ycm.sims.VO.RoleCheckVO;
 import org.ycm.sims.VO.RoleVO;
 import org.ycm.sims.dao.RoleDao;
+import org.ycm.sims.dto.RecordDTO;
 import org.ycm.sims.dto.RoleDTO;
 import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.dto.UpdatePasswordDTO;
 import org.ycm.sims.entity.Role;
-import org.ycm.sims.enums.ExceptionEnum;
-import org.ycm.sims.enums.ParameterEnum;
-import org.ycm.sims.enums.ResultEnum;
+import org.ycm.sims.enums.*;
 import org.ycm.sims.exception.SimsException;
 import org.ycm.sims.service.RoleService;
+import org.ycm.sims.service.SystemService;
 import org.ycm.sims.utils.FormatConversionUtil;
 import org.ycm.sims.utils.MD5Util;
 import org.ycm.sims.utils.SessionUtil;
@@ -38,6 +38,9 @@ public class RoleServiceImpl implements RoleService {
 
     @Autowired
     private RoleDao roleDao;
+
+    @Autowired
+    private SystemService systemService;
 
     /**
      * 登录
@@ -75,6 +78,9 @@ public class RoleServiceImpl implements RoleService {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (MD5Util.MD5Util(updatePasswordDTO.getOriginalPassword()).equals(role.getLoginPassword())) {
             if (roleDao.updatePassword(new Role(sessionLoginName, MD5Util.MD5Util(updatePasswordDTO.getNewPassword())))==1){
+                systemService.addRecord(new RecordDTO(
+                        role.getLoginName(), TableEnum.ROLE.getValue(), role.getId(), ColumnEnum.LOGINPASSWORD.getValue(),
+                        updatePasswordDTO.getNewPassword(), updatePasswordDTO.getOriginalPassword()));
                 return new RoleCheckVO(ResultEnum.SUCCESS);
             }else{
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
