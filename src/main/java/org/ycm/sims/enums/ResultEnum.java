@@ -26,6 +26,8 @@ public enum  ResultEnum {
     ,CLASS_EXIST(7, "班级已存在")
 
     ,CLASS_EXIST_PERSON(8, "班级还存在人员，无法删除")
+
+    ,MENU_EXIST(9, "菜单已存在")
     ;
 
     private Integer code;

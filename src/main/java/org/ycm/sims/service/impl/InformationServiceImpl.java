@@ -56,7 +56,7 @@ public class InformationServiceImpl implements InformationService {
 
     @Override
     public NumberAndClassesVO createInformationVO() {
-        List<Classes> classesList = informationDao.findClasses(new ClassManagerDTO());
+        List<Classes> classesList = informationDao.findClasses(new Classes());
         List<String> classList = new ArrayList<>();
         for (Classes classes : classesList){
             classList.add(classes.getName());
@@ -98,8 +98,10 @@ public class InformationServiceImpl implements InformationService {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (roleManagerDTO.getRoleType() - role.getRoleType() == 1){
             int count = informationDao.teacherInformationCount(new TeacherInformation(roleManagerDTO.getLoginName()));
+            Role roles = new Role();
+            BeanUtils.copyProperties(roleManagerDTO, roles);
             PageHelper.startPage(roleManagerDTO.getPage(), roleManagerDTO.getLimit());
-            List<TeacherInformation> teacherInformationList = informationDao.informationList(roleManagerDTO);
+            List<TeacherInformation> teacherInformationList = informationDao.informationList(roles);
             List<TeacherInformationVO> teacherInformationVOList = new ArrayList<TeacherInformationVO>();
             for (TeacherInformation teacherInformation: teacherInformationList){
                 TeacherInformationVO teacherInformationVO = new TeacherInformationVO();
@@ -156,7 +158,7 @@ public class InformationServiceImpl implements InformationService {
         if (role.getRoleType() == 0 || departmentCount == 1){
             int row;
             if (classManagerDTO.getId() == null){
-                row = informationDao.createClass(classManagerDTO.getName());
+                row = informationDao.createClass(new Classes(classManagerDTO.getName(), role.getId()));
             }else{
                 String classDate = informationDao.findClassById(classManagerDTO.getId());
                 try {
@@ -175,7 +177,9 @@ public class InformationServiceImpl implements InformationService {
                         }
                         /*TODO*//*还需要修改学生班级*/
                     }
-                    row = informationDao.updateClass(classManagerDTO);
+                    Classes classes = new Classes();
+                    BeanUtils.copyProperties(classManagerDTO, classes);
+                    row = informationDao.updateClass(classes);
                     if (row == 1){
                         systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.CLASSES.getValue(),
                                 classManagerDTO.getId(), ColumnEnum.NAME.getValue(), classManagerDTO.getName(), classDate));
@@ -221,9 +225,11 @@ public class InformationServiceImpl implements InformationService {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         int departmentCount = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), "学生处"));
         if (role.getRoleType() == 0 || departmentCount == 1){
-            int count = informationDao.findClassCount();
+            int count = informationDao.findClassCount(classManagerDTO.getName());
+            Classes classes = new Classes();
+            BeanUtils.copyProperties(classManagerDTO, classes);
             PageHelper.startPage(classManagerDTO.getPage(), classManagerDTO.getLimit());
-            List<Classes> classesList = informationDao.findClasses(classManagerDTO);
+            List<Classes> classesList = informationDao.findClasses(classes);
             List<ClassVO> classVOList = new ArrayList<>();
             for (int i = 0; i < classesList.size(); i++){
                 ClassVO classVO = new ClassVO();
@@ -234,6 +240,8 @@ public class InformationServiceImpl implements InformationService {
                 classVOList.get(i).setNumber(stuCount);
                 TeacherVO teacherVO = Map2TeacherVO.map2TeacherVO(teacherList);
                 classVOList.get(i).setTeacherVO(teacherVO);
+                String createName = roleDao.findRoleById(classesList.get(i).getCreateId()).getLoginName();
+                classVOList.get(i).setCreateName(createName);
                 classVOList.get(i).setCreateTime(FormatConversionUtil.DateFormatUtil(classesList.get(i).getCreateTime()));
             }
             return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
@@ -244,7 +252,9 @@ public class InformationServiceImpl implements InformationService {
 
     @Override
     public List<TeacherSubjectNameVO> teacherSubNameList(RoleManagerDTO roleManagerDTO) {
-        List<TeacherInformation> teacherInformationList = informationDao.informationList(roleManagerDTO);
+        Role role = new Role();
+        BeanUtils.copyProperties(roleManagerDTO, role);
+        List<TeacherInformation> teacherInformationList = informationDao.informationList(role);
         List<TeacherSubjectNameVO> teacherSubjectNameVOList = new ArrayList<>();
         teacherInformationList.forEach(teacherInformation -> teacherSubjectNameVOList.add(new TeacherSubjectNameVO(teacherInformation.getId(), teacherInformation.getName(), teacherInformation.getSubject())));
         return teacherSubjectNameVOList;

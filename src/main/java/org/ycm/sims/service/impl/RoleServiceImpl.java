@@ -185,9 +185,10 @@ public class RoleServiceImpl implements RoleService {
             List<Role> roleList = roleDao.findRole(new Role(roleManagerDTO.getLoginName(), roleManagerDTO.getRoleType()));
             List<RoleVO> roleVOList = new ArrayList<RoleVO>();
             for (Role role1: roleList){
+                String createName = roleDao.findRoleById(role1.getId()).getLoginName();
                 roleVOList.add(new RoleVO(
                         role1.getId(), role1.getLoginName(),
-                        FormatConversionUtil.roleTypeFormatUitl(role1.getRoleType()),
+                        FormatConversionUtil.roleTypeFormatUitl(role1.getRoleType()),createName,
                         FormatConversionUtil.DateFormatUtil(role1.getCreateTime()))
                 );
             }

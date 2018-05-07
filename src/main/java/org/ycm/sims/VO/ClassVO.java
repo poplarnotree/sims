@@ -22,6 +22,9 @@ public class ClassVO {
     /*各科教师*/
     private TeacherVO teacherVO;
 
+    /*创建人登录名*/
+    private String createName;
+
     private String createTime;
 
 }

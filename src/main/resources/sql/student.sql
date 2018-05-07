@@ -62,6 +62,7 @@ CREATE TABLE student_information(
 CREATE TABLE classes(
   id INT NOT NULL auto_increment comment '班级id',
   name VARCHAR (10) NOT NULL comment '班级名称',
+  create_id INT NOT NULL comment '创建人角色Id',
   create_time TIMESTAMP NOT NULL DEFAULT current_timestamp comment '创建时间',
   PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 comment='班级表';
@@ -86,18 +87,20 @@ CREATE TABLE achievement(
   subject VARCHAR (10) NOT NULL comment '科目',
   score INT NOT NULL comment '分数',
   status INT NOT NULL comment '成绩状态,0为有效，1为无效',
+  create_id INT NOT NULL comment '创建人角色Id',
   create_time TIMESTAMP NOT NULL DEFAULT current_timestamp comment '创建时间',
   PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 comment='成绩表';
 
 -- menu表
 CREATE TABLE menu(
-  id INT NOT NULL auto_increment comment '菜单表',
+  id INT NOT NULL auto_increment comment '菜单表id',
   name VARCHAR (20) NOT NULL comment '菜单名称',
   modular VARCHAR (10) NOT NULL comment '菜单模块',
   teacher_display INT NOT NULL comment '教师可见，0不可见，1为可见',
   student_display INT NOT NULL comment '学生可见，0不可见，1为可见',
   url VARCHAR(50) NOT NULL comment '菜单url',
+  create_id INT NOT NULL comment '创建人角色Id',
   create_time TIMESTAMP NOT NULL DEFAULT current_timestamp comment '创建时间',
   PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 comment='菜单表';

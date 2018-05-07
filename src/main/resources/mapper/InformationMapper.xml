@@ -53,7 +53,7 @@
     </update>
 
     <insert id="createClass">
-        INSERT INTO classes(name) values (#{name})
+        INSERT INTO classes(name, create_id) values (#{name}, #{createId})
     </insert>
 
     <select id="findNumberMax" resultType="java.lang.String">
@@ -128,6 +128,9 @@
 
     <select id="findClassCount" resultType="java.lang.Integer">
         select count(*) from classes
+        <if test="name != null and name != ''">
+            WHERE name = #{name}
+        </if>
     </select>
 
     <select id="findClassTeacher" resultType="java.util.Map">

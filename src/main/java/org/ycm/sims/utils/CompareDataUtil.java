@@ -1,6 +1,8 @@
 package org.ycm.sims.utils;
 
+import org.ycm.sims.dto.MenuDTO;
 import org.ycm.sims.dto.RecordDTO;
+import org.ycm.sims.entity.Menu;
 import org.ycm.sims.entity.TeacherInformation;
 import org.ycm.sims.enums.ColumnEnum;
 
@@ -62,6 +64,26 @@ public class CompareDataUtil {
         }
         if (!teacherInformationData.getSubject().equals(teacherInformation.getSubject())){
             recordDTOList.add(new RecordDTO(ColumnEnum.SUBJECT.getValue(), teacherInformation.getSubject(), teacherInformationData.getSubject()));
+        }
+        return recordDTOList;
+    }
+
+    public static List<RecordDTO> CompareMenuDataUtil(Menu menuData, Menu menu){
+        List<RecordDTO> recordDTOList = new ArrayList<>();
+        if (!menuData.getName().equals(menu.getName())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.NAME.getValue(), menu.getName(), menuData.getName()));
+        }
+        if (!menuData.getModular().equals(menu.getModular())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.MODULAR.getValue(), menu.getModular(), menuData.getModular()));
+        }
+        if (!menuData.getTeacherDisplay().equals(menu.getTeacherDisplay())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.TEACHER_DISPLAY.getValue(), menu.getTeacherDisplay().toString(), menuData.getTeacherDisplay().toString()));
+        }
+        if (!menuData.getStudentDisplay().equals(menu.getStudentDisplay())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.STUDENT_DISPLAY.getValue(), menu.getStudentDisplay().toString(), menuData.getStudentDisplay().toString()));
+        }
+        if (!menuData.getUrl().equals(menu.getUrl())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.URL.getValue(), menu.getUrl(), menuData.getUrl()));
         }
         return recordDTOList;
     }

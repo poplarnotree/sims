@@ -19,7 +19,7 @@ public enum TableEnum {
 
     ,ACHIEVEMENT(5, "achievement")
 
-    ,menu(6, "menu")
+    ,MENU(6, "menu")
 
     ;
     private Integer code;

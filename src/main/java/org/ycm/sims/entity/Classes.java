@@ -17,7 +17,17 @@ public class Classes {
     /*班级名称*/
     private String name;
 
+    /*创建人id*/
+    private Integer createId;
+
     /*创建时间*/
     private Date createTime;
 
+    public Classes() {
+    }
+
+    public Classes(String name, Integer createId) {
+        this.name = name;
+        this.createId = createId;
+    }
 }

@@ -1,10 +1,12 @@
 package org.ycm.sims.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.ycm.sims.dto.ClassManagerDTO;
 import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.entity.Classes;
+import org.ycm.sims.entity.Role;
 import org.ycm.sims.entity.TeacherInformation;
 
 import java.util.List;
@@ -18,19 +20,19 @@ import java.util.Map;
 public interface InformationDao {
 
     /*查询班级*/
-    List<Classes> findClasses(ClassManagerDTO classManagerDTO);
+    List<Classes> findClasses(Classes classes);
 
     /*创建班级*/
-    Integer createClass(String name);
+    Integer createClass(Classes classes);
 
     /*修改班级名称*/
-    Integer updateClass(ClassManagerDTO classManagerDTO);
+    Integer updateClass(Classes classes);
 
     /*删除班级*/
     Integer deleteClass(String name);
 
    /*查询班级数*/
-    Integer findClassCount();
+    Integer findClassCount(@Param("name") String name);
 
     /*查询班级人数*/
     Integer findClassStuCount(String classes);
@@ -63,7 +65,8 @@ public interface InformationDao {
     Integer createInformation(TeacherInformation teacherInformation);
 
     /*查询教师信息*/
-    List<TeacherInformation> informationList(RoleManagerDTO roleManagerDTO);
+//    List<TeacherInformation> informationList(RoleManagerDTO roleManagerDTO);
+    List<TeacherInformation> informationList(Role role);
 
     /*根据id查询班级*/
     String findClassById(Integer id);

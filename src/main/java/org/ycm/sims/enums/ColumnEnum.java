@@ -41,6 +41,14 @@ public enum ColumnEnum {
 
     ,SUBJECT(16, "subject")
 
+    ,MODULAR(17, "modular")
+
+    ,TEACHER_DISPLAY(18, "teacher_display")
+
+    ,STUDENT_DISPLAY(19, "student_display")
+
+    ,URL(20, "url")
+
     ;
     private Integer code;
 

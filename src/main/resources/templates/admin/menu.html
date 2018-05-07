@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/admin_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/admin_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <div style="padding:15px;">
+                <h1 class="site-h1">系统 / 菜单管理</h1>
+                <div class="demoTable">
+                    搜索菜单ID：
+                    <div class="layui-inline">
+                        <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                    </div>
+                    <button class="layui-btn" data-type="reload">搜索</button>
+                    <button class="layui-btn" onclick="window.location.href='/system/createMenu'"><i class="layui-icon">&#xe608;</i>添加</button>
+                </div>
+                <table id="menu" class="layui-hide" lay-filter="menu"></table>
+            </div>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i>删除</a>
+</script>
+<script th:inline="none">
+    //JavaScript代码区域
+    layui.use(['element', 'table'], function(){
+        var element = layui.element;
+        var table = layui.table;
+        layui.use('table', function() {
+            var table = layui.table;
+            table.render({
+                elem: '#menu'
+                , url: '/system/menuList' //数据接口
+                , page: true //开启分页
+                ,cellMinWidth: 150
+                , text: {
+                    none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+                }
+                , cols: [[ //表头
+                    {field: 'id', title: 'ID', sort: true}
+                    , {field: 'name', title: '菜单名称'}
+                    , {field: 'modular', title: '菜单模块'}
+                    , {field: 'teacherDisplay', title: '教师可见', templet: '#teacherDisplayTpl'}
+                    , {field: 'studentDisplay', title: '学生可见', templet: '#studentDisplayTpl'}
+                    , {field: 'url', title: 'URL'}
+                    , {field: 'createName', title: '创建人登录帐号'}
+                    , {field: 'createTime', title: '创建时间', sort: true}
+                    , {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
+                ]]
+                , id: 'Reload'
+            });
+            var $ = layui.$, active = {
+                reload: function () {
+                    var demoReload = $('#demoReload');
+
+                    //执行重载
+                    table.reload('Reload', {
+                        page: {
+                            curr: 1 //重新从第 1 页开始
+                        }
+                        , where: {
+                            id: demoReload.val()
+                        }
+                    });
+                }
+            }
+            $('.demoTable .layui-btn').on('click', function(){
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+        });
+
+        table.on('tool(menu)', function(obj) {
+            var data = obj.data;
+            if (obj.event === 'delete') {
+                layer.confirm('确定删除菜单“' + data.name + "”吗？", function (index) {
+                    $.ajax({
+                        type: 'post',
+                        url: '/system/deleteMenu',
+                        data: {
+                            id: data.id
+                        },
+                        success: function (CheckVO) {
+                            if (CheckVO.status == 0) {
+                                layer.alert(CheckVO.message, {icon: 1}, function () {
+                                    window.parent.location.reload();
+                                    parent.layer.close(index);
+                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2});
+                            }
+                        },
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                        }
+                    });
+                })
+            }
+        })
+
+    });
+</script>
+<script type="text/html" id="teacherDisplayTpl">
+    {{# if (d.teacherDisplay == 0){ }}
+            否
+    {{#  }  }}
+    {{# if (d.teacherDisplay == 1){ }}
+            是
+    {{#  }  }}
+</script>
+<script type="text/html" id="studentDisplayTpl">
+    {{# if (d.studentDisplay == 0){ }}
+            否
+    {{#  }  }}
+    {{# if (d.studentDisplay == 1){ }}
+            是
+    {{#  }  }}
+</script>
+</body>
+</html>

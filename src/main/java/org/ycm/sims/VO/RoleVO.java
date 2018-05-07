@@ -15,15 +15,19 @@ public class RoleVO {
 
     private String roleType;
 
+    private String createName;
+
     private String createTime;
 
     public RoleVO() {
     }
 
-    public RoleVO(Integer id, String loginName, String roleType, String createTime) {
+    public RoleVO(Integer id, String loginName, String roleType, String createName, String createTime) {
         this.id = id;
         this.loginName = loginName;
         this.roleType = roleType;
+        this.createName = createName;
         this.createTime = createTime;
     }
+
 }
