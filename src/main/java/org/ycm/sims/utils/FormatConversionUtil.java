@@ -20,9 +20,8 @@ public class FormatConversionUtil {
      * @return
      */
     public static String DateFormatUtil(Date date){
-        Date currentTime = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        String dateString = formatter.format(currentTime);
+        String dateString = formatter.format(date);
         return dateString;
     }
 
