@@ -13,6 +13,9 @@ import org.ycm.sims.dto.MenuDTO;
 import org.ycm.sims.dto.MenuPageDTO;
 import org.ycm.sims.dto.RecordPageDTO;
 import org.ycm.sims.service.SystemService;
+import org.ycm.sims.utils.ControllerJumpUtil;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Create by yangchangmin
@@ -25,9 +28,12 @@ public class SystemController {
     @Autowired
     private SystemService systemService;
 
+    @Autowired
+    private HttpServletRequest request;
+
     @RequestMapping("/record")
     public String record(){
-        return "/admin/record";
+        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/record", "");
     }
 
     @RequestMapping("/recordList")
@@ -38,7 +44,7 @@ public class SystemController {
 
     @RequestMapping("/menu")
     public String menu(){
-        return "/admin/menu";
+        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/menu", "");
     }
 
     @RequestMapping("/menuList")
@@ -49,7 +55,7 @@ public class SystemController {
 
     @RequestMapping("/createMenu")
     public String createMenu(){
-        return "/admin/createMenu";
+        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/createMenu", "");
     }
 
     @RequestMapping("/addMenu")
@@ -60,7 +66,7 @@ public class SystemController {
 
     @RequestMapping("/updateMenu")
     @ResponseBody
-    public CheckVO updateMenu(MenuDTO menuDTO){
+    public CheckVO updateMenu(@RequestBody MenuDTO menuDTO){
         return systemService.updateMenu(menuDTO);
     }
 
@@ -68,6 +74,11 @@ public class SystemController {
     @ResponseBody
     public CheckVO deleteMenu(Integer id){
         return systemService.deleteMenu(id);
+    }
+
+    @RequestMapping("/aboutSystem")
+    public String aboutSystem(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/about_system", "/role/about_system");
     }
 
 }

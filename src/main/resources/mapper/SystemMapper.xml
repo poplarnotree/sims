@@ -25,21 +25,21 @@
     </insert>
     <update id="updateMenu">
         UPDATE menu
-        <trim prefix="sex" suffixOverrides=",">
+        <trim prefix="SET" suffixOverrides=",">
             <if test="name != null and name != ''">
-                name = #{name}
+                name = #{name},
             </if>
             <if test="modular != null and modular != ''">
-                modular = #{modular}
+                modular = #{modular},
             </if>
-            <if test="teacherDisplay != null and teacherDisplay != ''">
-                teacher_display = #{teacherDisplay}
+            <if test="teacherDisplay != null">
+                teacher_display = #{teacherDisplay},
             </if>
-            <if test="studentDisplay != null and studentDisplay != ''">
-                student_display = #{studentDisplay}
+            <if test="studentDisplay != null">
+                student_display = #{studentDisplay},
             </if>
             <if test="url != null and url != ''">
-                url = #{url}
+                url = #{url},
             </if>
         </trim>
         WHERE id = #{id}

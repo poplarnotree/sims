@@ -30,13 +30,15 @@
     <div th:include="@{~/framework/foot.html}"></div>
 </div>
 <script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="update"><i class="layui-icon">&#xe642;</i>修改</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i>删除</a>
 </script>
 <script th:inline="none">
     //JavaScript代码区域
-    layui.use(['element', 'table'], function(){
+    layui.use(['element', 'form', 'table'], function(){
         var element = layui.element;
         var table = layui.table;
+        var form = layui.form;
         layui.use('table', function() {
             var table = layui.table;
             table.render({
@@ -83,6 +85,72 @@
 
         table.on('tool(menu)', function(obj) {
             var data = obj.data;
+            if (obj.event === 'update'){
+                layer.open({
+                    title: '修改'
+                    ,content: $('#updateMenu').html()
+                    ,area: ['50%']
+                    ,btn: ['提交','关闭']
+                    ,success: function () {
+                        // 表单重新渲染
+                        function renderForm() {
+                            layui.use('form', function () {
+                                var form = layui.form;//高版本建议把括号去掉，有的低版本，需要加()
+                                form.render();
+                            });
+                        }
+                        $("#id").val(data.id);
+                        $("#name").val(data.name);
+                        $("#modular").val(data.modular);
+                        $("input[name='teacherDisplay'][value = " + data.teacherDisplay + "]").attr("checked", true);
+                        $("input[name='studentDisplay'][value = '" + data.studentDisplay + "']").attr("checked", true);
+                        $("#url").val(data.url);
+                        renderForm();
+                    }
+                    ,yes: function () {
+                        //判断菜单名称
+                        if ($("#name").val() == '') {
+                            alert('菜单名称不能为空');
+                            return false;
+                        }
+                        //模块
+                        if ($("#modular").val() == '') {
+                            alert('请为教师选择民族！');
+                            return false;
+                        }
+                        //URL
+                        if ($("#url").val() == '') {
+                            alert('URL不能为空！');
+                            return false;
+                        }
+                        var formObject = {};
+                        var formArray =$("#form").serializeArray();
+                        $.each(formArray,function(i,item){
+                            formObject[item.name] = item.value;
+                        });
+                        $.ajax({
+                            type: 'post',
+                            url: '/system/updateMenu',
+                            dataType: 'json',
+                            contentType: 'application/json',
+                            data: JSON.stringify(formObject),
+                            success: function (CheckVO) {
+                                if (CheckVO.status == 0) {
+                                    layer.alert(CheckVO.message, {icon: 1},function () {
+                                        window.parent.location.reload();
+                                        parent.layer.close(index);
+                                    });
+                                } else {
+                                    layer.alert(CheckVO.message, {icon: 2});
+                                }
+                            },
+                            error: function (XMLHttpRequest) {
+                                layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                            }
+                        })
+                    }
+                });
+            }
             if (obj.event === 'delete') {
                 layer.confirm('确定删除菜单“' + data.name + "”吗？", function (index) {
                     $.ajax({
@@ -126,6 +194,64 @@
     {{# if (d.studentDisplay == 1){ }}
             是
     {{#  }  }}
+</script>
+<script type="text/html" id="updateMenu">
+    <form id="form" class="layui-form" action="">
+        <fieldset class="layui-elem-field">
+            <legend>
+                <a>菜单信息</a>
+            </legend>
+            <div class="layui-form-item">
+                <label class="layui-form-label">菜单id</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="id" name="id" required  lay-verify="required" readonly placeholder="" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">菜单id不可修改</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">菜单名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" required  lay-verify="required" placeholder="请输入菜单名称..." autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">请填写菜单名称</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">菜单模块</label>
+                <div class="layui-input-inline">
+                    <select id="modular" name="modular" lay-verify="required" lay-search>
+                        <option value="">请选择菜单模块</option>
+                        <option value="角色" selected>角色</option>
+                        <option value="信息">信息</option>
+                        <option value="成绩">成绩</option>
+                        <option value="系统">系统</option>
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">请选择菜单属于的模块</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">教师可见</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="teacherDisplay" value="1" title="是">
+                    <input type="radio" name="teacherDisplay" value="0" title="否">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">学生可见</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="studentDisplay" value="1" title="是">
+                    <input type="radio" name="studentDisplay" value="0" title="否">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">URL</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="url" name="url" required  lay-verify="required" placeholder="请输入菜单访问路径..." autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">请填写菜单的访问路径,请以“ / ”开头</div>
+            </div>
+        </fieldset>
+        <hr>
+    </form>
 </script>
 </body>
 </html>

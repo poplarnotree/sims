@@ -127,6 +127,9 @@ public class InformationServiceImpl implements InformationService {
             BeanUtils.copyProperties(teacherInformationDTO, teacherInformation);
             teacherInformation.setDepartment(FormatConversionUtil.ListFormatString(teacherInformationDTO.getDepartment()));
             teacherInformation.setClasses(FormatConversionUtil.ListFormatString(teacherInformationDTO.getClasses()));
+            if (informationDao.findInformationNumber(teacherInformation.getNumber()) >= 1){
+                throw new SimsException(ResultEnum.NUMBER_EXIST);
+            }
             int row = informationDao.updateTeacherInformation(teacherInformation);
             if (row == 1){
                 List<RecordDTO> recordDTOList = CompareDataUtil.CompareTeacherInformationData(tI, teacherInformation);

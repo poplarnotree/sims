@@ -33,6 +33,10 @@ public class SystemServiceImplTest {
 
     @Test
     public void updateMenu() throws Exception {
+        request.getSession().setAttribute("loginName","admin");
+        MenuDTO menuDTO = new MenuDTO(1000,"角色管理1", "角色", 0, 1, "/role/roleList1");
+        CheckVO checkVO = systemService.updateMenu(menuDTO);
+        log.info("checkVO={}",checkVO);
     }
 
     @Test
@@ -49,5 +53,4 @@ public class SystemServiceImplTest {
         CheckVO checkVO = systemService.addMenu(menuDTO);
         log.info("checkVO={}",checkVO);
     }
-
 }

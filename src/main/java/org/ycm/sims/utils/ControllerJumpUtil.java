@@ -17,9 +17,8 @@ public class ControllerJumpUtil {
         }
         if (roleType == 1 || roleType == 2){
             return url;
-        }else {
-            request.getSession().invalidate();
-            return "/role/login";
         }
+        request.getSession().invalidate();
+        return "/role/login";
     }
 }

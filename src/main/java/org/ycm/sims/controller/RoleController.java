@@ -37,7 +37,7 @@ public class RoleController {
      */
     @RequestMapping("/login")
     public String login(){
-        return "/role/login";
+        return "/framework/login";
     }
 
     /**
