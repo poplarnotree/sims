@@ -4,22 +4,22 @@
         <ul class="layui-nav layui-nav-tree"  lay-filter="test">
             <li class="layui-nav-item" >
                 <a href="javascript:;">角色</a>
-                <dl class="layui-nav-child" id="role">
+                <dl class="layui-nav-child" id="sidebarRole">
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a class="" href="javascript:;">信息</a>
-                <dl class="layui-nav-child" id="information">
+                <dl class="layui-nav-child" id="sidebarInformation">
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a class="" href="javascript:;">成绩</a>
-                <dl class="layui-nav-child" id="achievement">
+                <dl class="layui-nav-child" id="sidebarAchievement">
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">系统</a>
-                <dl class="layui-nav-child" id="system">
+                <dl class="layui-nav-child" id="sidebarSystem">
                 </dl>
             </li>
         </ul>
@@ -33,17 +33,17 @@
             for(var i = 0; i < data.length; i++){
                 switch (data[i].modular){
                     case "角色":
-                        $("ul li #role").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                        $("ul li #sidebarRole").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
                         break;
                     case "信息":
-                        $("ul li #information").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                        $("ul li #sidebarInformation").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
                         break;
                     case "成绩":
-                        $("ul li #achievement").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                        $("ul li #sidebarAchievement").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
                         break;
                     case "系统":
                         break;
-                        $("ul li #system").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                        $("ul li #sidebarSystem").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
                 }
             }
 

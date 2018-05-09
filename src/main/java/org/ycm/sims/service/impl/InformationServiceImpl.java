@@ -294,4 +294,9 @@ public class InformationServiceImpl implements InformationService {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
+
+    @Override
+    public CheckVO createStudentInformation(StudentInformationDTO studentInformationDTO) {
+        return null;
+    }
 }

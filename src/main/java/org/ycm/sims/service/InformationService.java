@@ -1,10 +1,7 @@
 package org.ycm.sims.service;
 
 import org.ycm.sims.VO.*;
-import org.ycm.sims.dto.ClassManagerDTO;
-import org.ycm.sims.dto.RoleManagerDTO;
-import org.ycm.sims.dto.TeacherInformationDTO;
-import org.ycm.sims.dto.UpdateTeacherClassDTO;
+import org.ycm.sims.dto.*;
 
 import java.util.List;
 
@@ -40,4 +37,7 @@ public interface InformationService {
 
     /*修改教师班级*/
     CheckVO updateTeacherClass(UpdateTeacherClassDTO updateTeacherClassDTO);
+
+    /*教师录入StudentInformation*/
+    CheckVO createStudentInformation(StudentInformationDTO studentInformationDTO);
 }
