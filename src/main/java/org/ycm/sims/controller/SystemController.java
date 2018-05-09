@@ -5,10 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.ycm.sims.VO.CheckVO;
-import org.ycm.sims.VO.MenuVO;
-import org.ycm.sims.VO.PageVO;
-import org.ycm.sims.VO.RecordVO;
+import org.ycm.sims.VO.*;
 import org.ycm.sims.dto.MenuDTO;
 import org.ycm.sims.dto.MenuPageDTO;
 import org.ycm.sims.dto.RecordPageDTO;
@@ -16,6 +13,7 @@ import org.ycm.sims.service.SystemService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Create by yangchangmin
@@ -79,6 +77,12 @@ public class SystemController {
     @RequestMapping("/aboutSystem")
     public String aboutSystem(){
         return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/about_system", "/role/about_system");
+    }
+
+    @RequestMapping("/menuTree")
+    @ResponseBody
+    public List<MenuTreeVO> menuTree(){
+        return systemService.menuTree();
     }
 
 }

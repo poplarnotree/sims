@@ -15,7 +15,11 @@ public class MenuDTO {
 
     private String modular;
 
-    private Integer teacherDisplay;
+//    学生处教师可见
+    private Integer teacherDisplay1;
+
+//    教研组教师可见
+    private Integer teacherDisplay2;
 
     private Integer studentDisplay;
 
@@ -24,19 +28,21 @@ public class MenuDTO {
     public MenuDTO() {
     }
 
-    public MenuDTO(String name, String modular, Integer teacherDisplay, Integer studentDisplay, String url) {
+    public MenuDTO(Integer id, String name, String modular, Integer teacherDisplay1, Integer teacherDisplay2, Integer studentDisplay, String url) {
+        this.id = id;
         this.name = name;
         this.modular = modular;
-        this.teacherDisplay = teacherDisplay;
+        this.teacherDisplay1 = teacherDisplay1;
+        this.teacherDisplay2 = teacherDisplay2;
         this.studentDisplay = studentDisplay;
         this.url = url;
     }
 
-    public MenuDTO(Integer id, String name, String modular, Integer teacherDisplay, Integer studentDisplay, String url) {
-        this.id = id;
+    public MenuDTO(String name, String modular, Integer teacherDisplay1, Integer teacherDisplay2, Integer studentDisplay, String url) {
         this.name = name;
         this.modular = modular;
-        this.teacherDisplay = teacherDisplay;
+        this.teacherDisplay1 = teacherDisplay1;
+        this.teacherDisplay2 = teacherDisplay2;
         this.studentDisplay = studentDisplay;
         this.url = url;
     }

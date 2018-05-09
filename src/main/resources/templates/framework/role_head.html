@@ -1,0 +1,23 @@
+<div class="layui-header">
+    <div class="layui-logo">学生信息管理系统</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item"><a href="/"><i class="layui-icon">&#xe68e;</i></a></li>
+        <li class="layui-nav-item"><a href="javascript:location.reload();"><i class="layui-icon">&#x1002;</i></a></li>
+        <li class="layui-nav-item"><a href="javascript:history.go(-1);"><i class="layui-icon">&#xe65c;</i></a></li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item"><p id="headName"></p></li>
+        <li class="layui-nav-item"><a href="/role/logout">退出</a></li>
+    </ul>
+</div>
+<script>
+    $("#role").html("111");
+    $.ajax({
+        type: 'get',
+        url: '/head',
+        success: function (headVO) {
+            $("#headName").html("欢迎您，" + headVO.name + headVO.type);
+        }
+    })
+</script>

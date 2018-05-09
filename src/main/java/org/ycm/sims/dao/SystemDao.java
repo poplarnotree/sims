@@ -39,6 +39,10 @@ public interface SystemDao {
 //    菜单数量
     Integer menuCount(@Param("id") Integer id);
 
+//    菜单列表
     List<Menu> menuList(@Param("id") Integer id);
+
+//    菜单树
+    List<Menu> menuTree(Menu menu);
 
 }

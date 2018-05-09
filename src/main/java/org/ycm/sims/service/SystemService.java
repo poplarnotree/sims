@@ -1,13 +1,12 @@
 package org.ycm.sims.service;
 
-import org.ycm.sims.VO.CheckVO;
-import org.ycm.sims.VO.MenuVO;
-import org.ycm.sims.VO.PageVO;
-import org.ycm.sims.VO.RecordVO;
+import org.ycm.sims.VO.*;
 import org.ycm.sims.dto.MenuDTO;
 import org.ycm.sims.dto.MenuPageDTO;
 import org.ycm.sims.dto.RecordDTO;
 import org.ycm.sims.dto.RecordPageDTO;
+
+import java.util.List;
 
 /**
  * Create by yangchangmin
@@ -32,5 +31,8 @@ public interface SystemService {
 
 //    菜单分页
     PageVO<MenuVO> menuPage(MenuPageDTO menuPageDTO);
+
+//    菜单树
+    List<MenuTreeVO> menuTree();
 
 }

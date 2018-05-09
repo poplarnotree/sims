@@ -1,0 +1,516 @@
+2018-05-10 00:01:46,645 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-10 00:01:46,648 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-10 00:01:46,680 - FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2018-05-10 00:01:48,494 - sims - Starting...
+2018-05-10 00:01:48,744 - sims - Start completed.
+2018-05-10 00:01:48,752 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:01:48,770 - ==> Parameters: admin(String)
+2018-05-10 00:01:48,785 - <==      Total: 1
+2018-05-10 00:01:48,864 - loginName=admin
+2018-05-10 00:01:50,961 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:01:50,962 - ==> Parameters: ad(String)
+2018-05-10 00:01:50,962 - <==      Total: 0
+2018-05-10 00:01:54,876 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:01:54,876 - ==> Parameters: zhangsan(String)
+2018-05-10 00:01:54,878 - <==      Total: 1
+2018-05-10 00:01:54,935 - loginName=zhangsan
+2018-05-10 00:01:59,570 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:01:59,570 - ==> Parameters: zhangsan(String)
+2018-05-10 00:01:59,573 - <==      Total: 1
+2018-05-10 00:01:59,574 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 00:01:59,575 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 00:01:59,581 - <==      Total: 1
+2018-05-10 00:01:59,601 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 00:01:59,601 - ==> Parameters: 1(Integer)
+2018-05-10 00:01:59,622 - <==      Total: 3
+2018-05-10 00:05:42,839 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:05:42,840 - ==> Parameters: zhangsan(String)
+2018-05-10 00:05:42,842 - <==      Total: 1
+2018-05-10 00:05:42,843 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 00:05:42,843 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 00:05:42,844 - <==      Total: 1
+2018-05-10 00:05:42,845 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 00:05:42,846 - ==> Parameters: 1(Integer)
+2018-05-10 00:05:42,848 - <==      Total: 3
+2018-05-10 00:05:44,304 - loginName=zhangsan
+2018-05-10 00:06:14,055 - loginName=zhangsan
+2018-05-10 00:06:15,078 - loginName=zhangsan
+2018-05-10 00:06:15,943 - loginName=zhangsan
+2018-05-10 00:06:16,703 - loginName=zhangsan
+2018-05-10 00:06:17,824 - loginName=zhangsan
+2018-05-10 00:06:18,391 - loginName=zhangsan
+2018-05-10 00:06:18,565 - loginName=zhangsan
+2018-05-10 00:06:18,729 - loginName=zhangsan
+2018-05-10 00:06:18,879 - loginName=zhangsan
+2018-05-10 00:06:28,820 - loginName=zhangsan
+2018-05-10 00:07:26,069 - loginName=zhangsan
+2018-05-10 00:15:34,267 - Loaded expression factory via original TCCL
+2018-05-10 00:15:34,506 - Starting SimsApplication on yang-PC with PID 6072 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-05-10 00:15:34,511 - No active profile set, falling back to default profiles: default
+2018-05-10 00:15:34,779 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@302a07d: startup date [Thu May 10 00:15:34 CST 2018]; root of context hierarchy
+2018-05-10 00:15:36,765 - Tomcat initialized with port(s): 8080 (http)
+2018-05-10 00:15:36,781 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-05-10 00:15:36,795 - Starting service [Tomcat]
+2018-05-10 00:15:36,795 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-10 00:15:36,813 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-05-10 00:15:36,947 - Initializing Spring embedded WebApplicationContext
+2018-05-10 00:15:36,948 - Root WebApplicationContext: initialization completed in 2169 ms
+2018-05-10 00:15:37,105 - Servlet dispatcherServlet mapped to [/]
+2018-05-10 00:15:37,112 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-10 00:15:37,113 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-10 00:15:37,113 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-10 00:15:37,113 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-10 00:15:37,857 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:15:38,232 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@302a07d: startup date [Thu May 10 00:15:34 CST 2018]; root of context hierarchy
+2018-05-10 00:15:38,304 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-10 00:15:38,356 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-10 00:15:38,358 - Mapped "{[/roleName]}" onto public java.lang.String org.ycm.sims.controller.IndexController.roleName()
+2018-05-10 00:15:38,378 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-10 00:15:38,379 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-10 00:15:38,379 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-10 00:15:38,379 - Mapped "{[/information/classManager]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.createClass(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-10 00:15:38,380 - Mapped "{[/information/deleteClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.deleteClass(java.lang.String)
+2018-05-10 00:15:38,380 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-10 00:15:38,380 - Mapped "{[/information/classInformation]}" onto public java.lang.String org.ycm.sims.controller.InformationController.classInformation()
+2018-05-10 00:15:38,380 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-10 00:15:38,381 - Mapped "{[/information/classPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.ClassVO> org.ycm.sims.controller.InformationController.classPage(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-10 00:15:38,381 - Mapped "{[/information/teacherSubjectName]}" onto public java.util.List<org.ycm.sims.VO.TeacherSubjectNameVO> org.ycm.sims.controller.InformationController.teacherSubjectName(java.lang.Integer)
+2018-05-10 00:15:38,381 - Mapped "{[/information/updateTeacherClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacherClass(org.ycm.sims.dto.UpdateTeacherClassDTO)
+2018-05-10 00:15:38,389 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-10 00:15:38,389 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-10 00:15:38,390 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-10 00:15:38,392 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:15:38,392 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:15:38,392 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-10 00:15:38,393 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:15:38,393 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-10 00:15:38,393 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-10 00:15:38,393 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-10 00:15:38,397 - Mapped "{[/system/record]}" onto public java.lang.String org.ycm.sims.controller.SystemController.record()
+2018-05-10 00:15:38,398 - Mapped "{[/system/menu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.menu()
+2018-05-10 00:15:38,399 - Mapped "{[/system/recordList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RecordVO> org.ycm.sims.controller.SystemController.recordList(org.ycm.sims.dto.RecordPageDTO)
+2018-05-10 00:15:38,400 - Mapped "{[/system/menuList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.MenuVO> org.ycm.sims.controller.SystemController.menuList(org.ycm.sims.dto.MenuPageDTO)
+2018-05-10 00:15:38,401 - Mapped "{[/system/createMenu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.createMenu()
+2018-05-10 00:15:38,402 - Mapped "{[/system/deleteMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.deleteMenu(java.lang.Integer)
+2018-05-10 00:15:38,402 - Mapped "{[/system/addMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.addMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-10 00:15:38,402 - Mapped "{[/system/updateMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.updateMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-10 00:15:38,403 - Mapped "{[/system/aboutSystem]}" onto public java.lang.String org.ycm.sims.controller.SystemController.aboutSystem()
+2018-05-10 00:15:38,403 - Mapped "{[/system/menuTree]}" onto public java.util.List<org.ycm.sims.VO.MenuTreeVO> org.ycm.sims.controller.SystemController.menuTree()
+2018-05-10 00:15:38,406 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 00:15:38,407 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 00:15:38,455 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:15:38,456 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:15:38,986 - Registering beans for JMX exposure on startup
+2018-05-10 00:15:38,987 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-10 00:15:38,995 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-10 00:15:39,008 - Starting ProtocolHandler ["http-nio-8080"]
+2018-05-10 00:15:39,020 - Using a shared selector for servlet write/read
+2018-05-10 00:15:39,041 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-10 00:15:39,047 - Started SimsApplication in 5.377 seconds (JVM running for 6.637)
+2018-05-10 00:19:03,988 - Starting SimsApplication on yang-PC with PID 9560 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-05-10 00:19:03,998 - No active profile set, falling back to default profiles: default
+2018-05-10 00:19:04,272 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45fd9a4d: startup date [Thu May 10 00:19:04 CST 2018]; root of context hierarchy
+2018-05-10 00:19:06,451 - Tomcat initialized with port(s): 8080 (http)
+2018-05-10 00:19:06,485 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-05-10 00:19:06,498 - Starting service [Tomcat]
+2018-05-10 00:19:06,499 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-10 00:19:06,503 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-05-10 00:19:06,636 - Initializing Spring embedded WebApplicationContext
+2018-05-10 00:19:06,636 - Root WebApplicationContext: initialization completed in 2365 ms
+2018-05-10 00:19:06,793 - Servlet dispatcherServlet mapped to [/]
+2018-05-10 00:19:06,801 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-10 00:19:06,801 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-10 00:19:06,801 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-10 00:19:06,801 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-10 00:19:07,395 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:19:07,753 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45fd9a4d: startup date [Thu May 10 00:19:04 CST 2018]; root of context hierarchy
+2018-05-10 00:19:07,786 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-10 00:19:07,825 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-10 00:19:07,826 - Mapped "{[/head]}" onto public org.ycm.sims.VO.HeadVO org.ycm.sims.controller.IndexController.head()
+2018-05-10 00:19:07,830 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-10 00:19:07,830 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-10 00:19:07,830 - Mapped "{[/information/teacherSubjectName]}" onto public java.util.List<org.ycm.sims.VO.TeacherSubjectNameVO> org.ycm.sims.controller.InformationController.teacherSubjectName(java.lang.Integer)
+2018-05-10 00:19:07,831 - Mapped "{[/information/updateTeacherClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacherClass(org.ycm.sims.dto.UpdateTeacherClassDTO)
+2018-05-10 00:19:07,831 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-10 00:19:07,831 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-10 00:19:07,832 - Mapped "{[/information/classPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.ClassVO> org.ycm.sims.controller.InformationController.classPage(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-10 00:19:07,832 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-10 00:19:07,832 - Mapped "{[/information/classInformation]}" onto public java.lang.String org.ycm.sims.controller.InformationController.classInformation()
+2018-05-10 00:19:07,832 - Mapped "{[/information/classManager]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.createClass(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-10 00:19:07,833 - Mapped "{[/information/deleteClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.deleteClass(java.lang.String)
+2018-05-10 00:19:07,841 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-10 00:19:07,841 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-10 00:19:07,841 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-10 00:19:07,842 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:19:07,842 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:19:07,842 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:19:07,843 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-10 00:19:07,843 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-10 00:19:07,844 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-10 00:19:07,845 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-10 00:19:07,849 - Mapped "{[/system/record]}" onto public java.lang.String org.ycm.sims.controller.SystemController.record()
+2018-05-10 00:19:07,850 - Mapped "{[/system/addMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.addMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-10 00:19:07,850 - Mapped "{[/system/recordList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RecordVO> org.ycm.sims.controller.SystemController.recordList(org.ycm.sims.dto.RecordPageDTO)
+2018-05-10 00:19:07,851 - Mapped "{[/system/menu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.menu()
+2018-05-10 00:19:07,851 - Mapped "{[/system/createMenu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.createMenu()
+2018-05-10 00:19:07,851 - Mapped "{[/system/deleteMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.deleteMenu(java.lang.Integer)
+2018-05-10 00:19:07,851 - Mapped "{[/system/menuTree]}" onto public java.util.List<org.ycm.sims.VO.MenuTreeVO> org.ycm.sims.controller.SystemController.menuTree()
+2018-05-10 00:19:07,852 - Mapped "{[/system/updateMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.updateMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-10 00:19:07,852 - Mapped "{[/system/menuList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.MenuVO> org.ycm.sims.controller.SystemController.menuList(org.ycm.sims.dto.MenuPageDTO)
+2018-05-10 00:19:07,852 - Mapped "{[/system/aboutSystem]}" onto public java.lang.String org.ycm.sims.controller.SystemController.aboutSystem()
+2018-05-10 00:19:07,854 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 00:19:07,855 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 00:19:07,887 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:19:07,887 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:19:08,299 - Registering beans for JMX exposure on startup
+2018-05-10 00:19:08,301 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-10 00:19:08,307 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-10 00:19:08,320 - Starting ProtocolHandler ["http-nio-8080"]
+2018-05-10 00:19:08,335 - Using a shared selector for servlet write/read
+2018-05-10 00:19:08,360 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-10 00:19:08,364 - Started SimsApplication in 5.462 seconds (JVM running for 6.789)
+2018-05-10 00:20:13,003 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-10 00:20:13,003 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-10 00:20:13,028 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-05-10 00:20:14,447 - sims - Starting...
+2018-05-10 00:20:14,714 - sims - Start completed.
+2018-05-10 00:20:14,740 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:20:14,740 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:20:14,773 - ==> Parameters: admin(String)
+2018-05-10 00:20:14,773 - ==> Parameters: admin(String)
+2018-05-10 00:20:14,799 - <==      Total: 1
+2018-05-10 00:20:14,800 - <==      Total: 1
+2018-05-10 00:20:22,736 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:20:22,736 - ==> Parameters: admi(String)
+2018-05-10 00:20:22,737 - <==      Total: 0
+2018-05-10 00:20:27,798 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:20:27,798 - ==> Parameters: zhangsan(String)
+2018-05-10 00:20:27,800 - <==      Total: 1
+2018-05-10 00:24:39,916 - Starting SimsApplication on yang-PC with PID 9804 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-05-10 00:24:39,950 - No active profile set, falling back to default profiles: default
+2018-05-10 00:24:40,110 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46268f08: startup date [Thu May 10 00:24:40 CST 2018]; root of context hierarchy
+2018-05-10 00:24:41,999 - Tomcat initialized with port(s): 8080 (http)
+2018-05-10 00:24:42,015 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-05-10 00:24:42,028 - Starting service [Tomcat]
+2018-05-10 00:24:42,028 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-10 00:24:42,033 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-05-10 00:24:42,193 - Initializing Spring embedded WebApplicationContext
+2018-05-10 00:24:42,193 - Root WebApplicationContext: initialization completed in 2083 ms
+2018-05-10 00:24:42,356 - Servlet dispatcherServlet mapped to [/]
+2018-05-10 00:24:42,361 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-10 00:24:42,361 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-10 00:24:42,361 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-10 00:24:42,361 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-10 00:24:42,962 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:24:43,308 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46268f08: startup date [Thu May 10 00:24:40 CST 2018]; root of context hierarchy
+2018-05-10 00:24:43,341 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-10 00:24:43,375 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-10 00:24:43,376 - Mapped "{[/head]}" onto public org.ycm.sims.VO.HeadVO org.ycm.sims.controller.IndexController.head()
+2018-05-10 00:24:43,380 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-10 00:24:43,380 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-10 00:24:43,380 - Mapped "{[/information/teacherList]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-10 00:24:43,380 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-10 00:24:43,380 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-10 00:24:43,380 - Mapped "{[/information/classInformation]}" onto public java.lang.String org.ycm.sims.controller.InformationController.classInformation()
+2018-05-10 00:24:43,381 - Mapped "{[/information/classManager]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.createClass(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-10 00:24:43,381 - Mapped "{[/information/deleteClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.deleteClass(java.lang.String)
+2018-05-10 00:24:43,381 - Mapped "{[/information/classPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.ClassVO> org.ycm.sims.controller.InformationController.classPage(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-10 00:24:43,381 - Mapped "{[/information/teacherSubjectName]}" onto public java.util.List<org.ycm.sims.VO.TeacherSubjectNameVO> org.ycm.sims.controller.InformationController.teacherSubjectName(java.lang.Integer)
+2018-05-10 00:24:43,381 - Mapped "{[/information/updateTeacherClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacherClass(org.ycm.sims.dto.UpdateTeacherClassDTO)
+2018-05-10 00:24:43,390 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-10 00:24:43,390 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:24:43,390 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:24:43,391 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-10 00:24:43,391 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-10 00:24:43,391 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-10 00:24:43,391 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-10 00:24:43,392 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-10 00:24:43,392 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-10 00:24:43,392 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-10 00:24:43,394 - Mapped "{[/system/record]}" onto public java.lang.String org.ycm.sims.controller.SystemController.record()
+2018-05-10 00:24:43,394 - Mapped "{[/system/recordList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RecordVO> org.ycm.sims.controller.SystemController.recordList(org.ycm.sims.dto.RecordPageDTO)
+2018-05-10 00:24:43,395 - Mapped "{[/system/menu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.menu()
+2018-05-10 00:24:43,395 - Mapped "{[/system/createMenu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.createMenu()
+2018-05-10 00:24:43,395 - Mapped "{[/system/updateMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.updateMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-10 00:24:43,395 - Mapped "{[/system/addMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.addMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-10 00:24:43,395 - Mapped "{[/system/deleteMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.deleteMenu(java.lang.Integer)
+2018-05-10 00:24:43,395 - Mapped "{[/system/menuList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.MenuVO> org.ycm.sims.controller.SystemController.menuList(org.ycm.sims.dto.MenuPageDTO)
+2018-05-10 00:24:43,396 - Mapped "{[/system/aboutSystem]}" onto public java.lang.String org.ycm.sims.controller.SystemController.aboutSystem()
+2018-05-10 00:24:43,396 - Mapped "{[/system/menuTree]}" onto public java.util.List<org.ycm.sims.VO.MenuTreeVO> org.ycm.sims.controller.SystemController.menuTree()
+2018-05-10 00:24:43,398 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 00:24:43,399 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 00:24:43,433 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:24:43,434 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 00:24:43,858 - Registering beans for JMX exposure on startup
+2018-05-10 00:24:43,860 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-10 00:24:43,868 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-10 00:24:43,880 - Starting ProtocolHandler ["http-nio-8080"]
+2018-05-10 00:24:43,893 - Using a shared selector for servlet write/read
+2018-05-10 00:24:43,914 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-10 00:24:43,920 - Started SimsApplication in 4.949 seconds (JVM running for 6.27)
+2018-05-10 00:25:17,926 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-10 00:25:17,926 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-10 00:25:17,963 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2018-05-10 00:25:19,621 - sims - Starting...
+2018-05-10 00:25:19,824 - sims - Start completed.
+2018-05-10 00:25:19,836 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:25:19,861 - ==> Parameters: admin(String)
+2018-05-10 00:25:19,878 - <==      Total: 1
+2018-05-10 00:25:23,240 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:25:23,241 - ==> Parameters: admin(String)
+2018-05-10 00:25:23,242 - <==      Total: 1
+2018-05-10 00:25:43,993 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:25:43,994 - ==> Parameters: zhangsan(String)
+2018-05-10 00:25:43,996 - <==      Total: 1
+2018-05-10 00:25:44,070 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:25:44,070 - ==> Parameters: zhangsan(String)
+2018-05-10 00:25:44,072 - <==      Total: 1
+2018-05-10 00:25:44,105 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 00:25:44,105 - ==> Parameters: zhangsan(String)
+2018-05-10 00:25:44,110 - <==      Total: 1
+2018-05-10 00:26:21,975 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:26:21,975 - ==> Parameters: zhangsan(String)
+2018-05-10 00:26:21,977 - <==      Total: 1
+2018-05-10 00:26:21,978 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 00:26:21,978 - ==> Parameters: zhangsan(String)
+2018-05-10 00:26:21,980 - <==      Total: 1
+2018-05-10 00:26:38,145 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:26:38,145 - ==> Parameters: zhangsan(String)
+2018-05-10 00:26:38,148 - <==      Total: 1
+2018-05-10 00:26:38,149 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 00:26:38,149 - ==> Parameters: zhangsan(String)
+2018-05-10 00:26:38,151 - <==      Total: 1
+2018-05-10 00:26:57,459 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:26:57,459 - ==> Parameters: zhangsan(String)
+2018-05-10 00:26:57,461 - <==      Total: 1
+2018-05-10 00:26:57,462 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 00:26:57,462 - ==> Parameters: zhangsan(String)
+2018-05-10 00:26:57,464 - <==      Total: 1
+2018-05-10 00:58:03,979 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:58:03,980 - ==> Parameters: zhangsan(String)
+2018-05-10 00:58:03,984 - <==      Total: 1
+2018-05-10 00:58:04,061 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:58:04,061 - ==> Parameters: zhangsan(String)
+2018-05-10 00:58:04,063 - <==      Total: 1
+2018-05-10 00:58:04,064 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 00:58:04,065 - ==> Parameters: zhangsan(String)
+2018-05-10 00:58:04,111 - <==      Total: 1
+2018-05-10 00:58:53,138 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:58:53,139 - ==> Parameters: zhangsan(String)
+2018-05-10 00:58:53,141 - <==      Total: 1
+2018-05-10 00:58:53,143 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 00:58:53,144 - ==> Parameters: zhangsan(String)
+2018-05-10 00:58:53,148 - <==      Total: 1
+2018-05-10 00:58:54,494 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 00:58:54,495 - ==> Parameters: zhangsan(String)
+2018-05-10 00:58:54,497 - <==      Total: 1
+2018-05-10 00:58:54,498 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 00:58:54,498 - ==> Parameters: zhangsan(String)
+2018-05-10 00:58:54,500 - <==      Total: 1
+2018-05-10 01:01:05,594 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:01:05,595 - ==> Parameters: zhangsan(String)
+2018-05-10 01:01:05,596 - <==      Total: 1
+2018-05-10 01:01:05,598 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:01:05,598 - ==> Parameters: zhangsan(String)
+2018-05-10 01:01:05,600 - <==      Total: 1
+2018-05-10 01:01:51,942 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:01:51,943 - ==> Parameters: zhangsan(String)
+2018-05-10 01:01:51,945 - <==      Total: 1
+2018-05-10 01:01:51,946 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:01:51,947 - ==> Parameters: zhangsan(String)
+2018-05-10 01:01:51,948 - <==      Total: 1
+2018-05-10 01:03:11,409 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:03:11,409 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:11,412 - <==      Total: 1
+2018-05-10 01:03:11,413 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:03:11,413 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:11,415 - <==      Total: 1
+2018-05-10 01:03:13,591 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:03:13,592 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:13,593 - <==      Total: 1
+2018-05-10 01:03:13,594 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:03:13,594 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:13,596 - <==      Total: 1
+2018-05-10 01:03:24,115 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:03:24,115 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:24,120 - <==      Total: 1
+2018-05-10 01:03:24,120 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:03:24,121 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:24,123 - <==      Total: 1
+2018-05-10 01:03:58,827 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:03:58,828 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:58,829 - <==      Total: 1
+2018-05-10 01:03:58,830 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:03:58,830 - ==> Parameters: zhangsan(String)
+2018-05-10 01:03:58,832 - <==      Total: 1
+2018-05-10 01:05:29,762 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:05:29,762 - ==> Parameters: zhangsan(String)
+2018-05-10 01:05:29,764 - <==      Total: 1
+2018-05-10 01:05:29,765 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:05:29,765 - ==> Parameters: zhangsan(String)
+2018-05-10 01:05:29,767 - <==      Total: 1
+2018-05-10 01:05:29,800 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:05:29,800 - ==> Parameters: zhangsan(String)
+2018-05-10 01:05:29,804 - <==      Total: 1
+2018-05-10 01:05:29,807 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:05:29,808 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:05:29,812 - <==      Total: 1
+2018-05-10 01:05:29,816 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:05:29,816 - ==> Parameters: 1(Integer)
+2018-05-10 01:05:29,844 - <==      Total: 3
+2018-05-10 01:05:33,469 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:05:33,469 - ==> Parameters: zhangsan(String)
+2018-05-10 01:05:33,471 - <==      Total: 1
+2018-05-10 01:05:33,471 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:05:33,472 - ==> Parameters: zhangsan(String)
+2018-05-10 01:05:33,473 - <==      Total: 1
+2018-05-10 01:05:33,517 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:05:33,517 - ==> Parameters: zhangsan(String)
+2018-05-10 01:05:33,519 - <==      Total: 1
+2018-05-10 01:05:33,521 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:05:33,522 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:05:33,524 - <==      Total: 1
+2018-05-10 01:05:33,525 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:05:33,525 - ==> Parameters: 1(Integer)
+2018-05-10 01:05:33,527 - <==      Total: 3
+2018-05-10 01:09:03,871 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:09:03,871 - ==> Parameters: zhangsan(String)
+2018-05-10 01:09:03,873 - <==      Total: 1
+2018-05-10 01:09:03,874 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:09:03,875 - ==> Parameters: zhangsan(String)
+2018-05-10 01:09:03,882 - <==      Total: 1
+2018-05-10 01:09:03,932 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:09:03,932 - ==> Parameters: zhangsan(String)
+2018-05-10 01:09:03,934 - <==      Total: 1
+2018-05-10 01:09:03,934 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:09:03,935 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:09:03,936 - <==      Total: 1
+2018-05-10 01:09:03,937 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:09:03,937 - ==> Parameters: 1(Integer)
+2018-05-10 01:09:03,939 - <==      Total: 3
+2018-05-10 01:10:26,089 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:10:26,090 - ==> Parameters: zhangsan(String)
+2018-05-10 01:10:26,091 - <==      Total: 1
+2018-05-10 01:10:26,092 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:10:26,092 - ==> Parameters: zhangsan(String)
+2018-05-10 01:10:26,094 - <==      Total: 1
+2018-05-10 01:10:26,121 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:10:26,121 - ==> Parameters: zhangsan(String)
+2018-05-10 01:10:26,126 - <==      Total: 1
+2018-05-10 01:10:26,128 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:10:26,129 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:10:26,130 - <==      Total: 1
+2018-05-10 01:10:26,131 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:10:26,131 - ==> Parameters: 1(Integer)
+2018-05-10 01:10:26,133 - <==      Total: 3
+2018-05-10 01:11:39,057 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:11:39,057 - ==> Parameters: zhangsan(String)
+2018-05-10 01:11:39,058 - <==      Total: 1
+2018-05-10 01:11:39,059 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:11:39,060 - ==> Parameters: zhangsan(String)
+2018-05-10 01:11:39,061 - <==      Total: 1
+2018-05-10 01:11:39,072 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:11:39,072 - ==> Parameters: zhangsan(String)
+2018-05-10 01:11:39,074 - <==      Total: 1
+2018-05-10 01:11:39,074 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:11:39,074 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:11:39,076 - <==      Total: 1
+2018-05-10 01:11:39,076 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:11:39,077 - ==> Parameters: 1(Integer)
+2018-05-10 01:11:39,078 - <==      Total: 3
+2018-05-10 01:11:46,719 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:11:46,720 - ==> Parameters: zhangsan(String)
+2018-05-10 01:11:46,721 - <==      Total: 1
+2018-05-10 01:11:46,723 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:11:46,724 - ==> Parameters: zhangsan(String)
+2018-05-10 01:11:46,726 - <==      Total: 1
+2018-05-10 01:11:46,752 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:11:46,753 - ==> Parameters: zhangsan(String)
+2018-05-10 01:11:46,756 - <==      Total: 1
+2018-05-10 01:11:46,757 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:11:46,758 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:11:46,759 - <==      Total: 1
+2018-05-10 01:11:46,760 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:11:46,761 - ==> Parameters: 1(Integer)
+2018-05-10 01:11:46,765 - <==      Total: 3
+2018-05-10 01:12:06,752 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:12:06,753 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:06,754 - <==      Total: 1
+2018-05-10 01:12:06,755 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:12:06,755 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:06,756 - <==      Total: 1
+2018-05-10 01:12:06,763 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:12:06,763 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:06,764 - <==      Total: 1
+2018-05-10 01:12:06,766 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:12:06,767 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:12:06,769 - <==      Total: 1
+2018-05-10 01:12:06,770 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:12:06,771 - ==> Parameters: 1(Integer)
+2018-05-10 01:12:06,772 - <==      Total: 3
+2018-05-10 01:12:21,840 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:12:21,840 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:21,841 - <==      Total: 1
+2018-05-10 01:12:21,842 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:12:21,842 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:21,845 - <==      Total: 1
+2018-05-10 01:12:21,859 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:12:21,859 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:21,860 - <==      Total: 1
+2018-05-10 01:12:21,861 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:12:21,862 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:12:21,864 - <==      Total: 1
+2018-05-10 01:12:21,864 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:12:21,865 - ==> Parameters: 1(Integer)
+2018-05-10 01:12:21,866 - <==      Total: 3
+2018-05-10 01:12:28,189 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:12:28,190 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:28,191 - <==      Total: 1
+2018-05-10 01:12:28,192 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:12:28,192 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:28,194 - <==      Total: 1
+2018-05-10 01:12:41,010 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:12:41,010 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:41,011 - <==      Total: 1
+2018-05-10 01:12:41,012 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:12:41,012 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:41,014 - <==      Total: 1
+2018-05-10 01:12:41,028 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:12:41,029 - ==> Parameters: zhangsan(String)
+2018-05-10 01:12:41,032 - <==      Total: 1
+2018-05-10 01:12:41,032 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:12:41,033 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:12:41,034 - <==      Total: 1
+2018-05-10 01:12:41,036 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:12:41,036 - ==> Parameters: 1(Integer)
+2018-05-10 01:12:41,037 - <==      Total: 3
+2018-05-10 01:13:29,857 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:13:29,857 - ==> Parameters: zhangsan(String)
+2018-05-10 01:13:29,859 - <==      Total: 1
+2018-05-10 01:13:29,859 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:13:29,860 - ==> Parameters: zhangsan(String)
+2018-05-10 01:13:29,861 - <==      Total: 1
+2018-05-10 01:13:29,919 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:13:29,919 - ==> Parameters: zhangsan(String)
+2018-05-10 01:13:29,920 - <==      Total: 1
+2018-05-10 01:13:29,921 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:13:29,921 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:13:29,923 - <==      Total: 1
+2018-05-10 01:13:29,924 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:13:29,925 - ==> Parameters: 1(Integer)
+2018-05-10 01:13:29,926 - <==      Total: 3
+2018-05-10 01:13:30,892 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:13:30,893 - ==> Parameters: zhangsan(String)
+2018-05-10 01:13:30,896 - <==      Total: 1
+2018-05-10 01:13:30,897 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-10 01:13:30,897 - ==> Parameters: zhangsan(String)
+2018-05-10 01:13:30,898 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-10 01:13:30,898 - <==      Total: 1
+2018-05-10 01:13:30,899 - ==> Parameters: zhangsan(String)
+2018-05-10 01:13:30,930 - <==      Total: 1
+2018-05-10 01:13:30,931 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-10 01:13:30,931 - ==> Parameters: zhangsan(String), 学生处(String)
+2018-05-10 01:13:30,948 - <==      Total: 1
+2018-05-10 01:13:30,948 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_2 = ? 
+2018-05-10 01:13:30,949 - ==> Parameters: 1(Integer)
+2018-05-10 01:13:30,953 - <==      Total: 3

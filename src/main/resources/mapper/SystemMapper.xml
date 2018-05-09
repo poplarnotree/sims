@@ -19,9 +19,9 @@
     </insert>
     <insert id="addMenu">
         INSERT INTO menu
-        (name, modular, teacher_display, student_display, url, create_id)
+        (name, modular, teacher_display_1, teacher_display_2, student_display, url, create_id)
         VALUES
-        (#{name}, #{modular}, #{teacherDisplay}, #{studentDisplay}, #{url}, #{createId})
+        (#{name}, #{modular}, #{teacherDisplay1}, #{teacherDisplay2}, #{studentDisplay}, #{url}, #{createId})
     </insert>
     <update id="updateMenu">
         UPDATE menu
@@ -32,8 +32,11 @@
             <if test="modular != null and modular != ''">
                 modular = #{modular},
             </if>
-            <if test="teacherDisplay != null">
-                teacher_display = #{teacherDisplay},
+            <if test="teacherDisplay1 != null">
+                teacher_display_1 = #{teacherDisplay1},
+            </if>
+            <if test="teacherDisplay2 != null">
+                teacher_display_2 = #{teacherDisplay2},
             </if>
             <if test="studentDisplay != null">
                 student_display = #{studentDisplay},
@@ -82,7 +85,8 @@
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="modular" property="modular" />
-        <result column="teacher_display" property="teacherDisplay" />
+        <result column="teacher_display_1" property="teacherDisplay1" />
+        <result column="teacher_display_2" property="teacherDisplay2" />
         <result column="student_display" property="studentDisplay" />
         <result column="url" property="url" />
         <result column="createId" property="createId" />
@@ -93,5 +97,19 @@
         <if test="id != null and id != ''">
             WHERE id = #{id}
         </if>
+    </select>
+    <select id="menuTree" resultMap="menu">
+        SELECT * FROM menu
+          <where>
+              <if test="teacherDisplay1 != null">
+                  teacher_display_1 = #{teacherDisplay1}
+              </if>
+              <if test="teacherDisplay2 != null">
+                  teacher_display_2 = #{teacherDisplay2}
+              </if>
+              <if test="studentDisplay != null">
+                  student_display = #{studentDisplay}
+              </if>
+          </where>
     </select>
 </mapper>

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.ycm.sims.VO.*;
+import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
 import org.ycm.sims.dao.SystemDao;
 import org.ycm.sims.dto.MenuDTO;
@@ -15,7 +16,9 @@ import org.ycm.sims.dto.RecordPageDTO;
 import org.ycm.sims.entity.Menu;
 import org.ycm.sims.entity.Record;
 import org.ycm.sims.entity.Role;
+import org.ycm.sims.entity.TeacherInformation;
 import org.ycm.sims.enums.ExceptionEnum;
+import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.enums.ResultEnum;
 import org.ycm.sims.enums.TableEnum;
 import org.ycm.sims.exception.SimsException;
@@ -46,6 +49,9 @@ public class SystemServiceImpl implements SystemService {
 
     @Autowired
     private SystemService systemService;
+
+    @Autowired
+    private InformationDao informationDao;
 
     @Override
     @Transactional
@@ -172,5 +178,34 @@ public class SystemServiceImpl implements SystemService {
             request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
+    }
+
+    @Override
+    public List<MenuTreeVO> menuTree() {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        Menu menu = new Menu();
+        if (role.getRoleType() == 0){
+            throw new SimsException(ExceptionEnum.SYSTEM_ERROR);
+        }
+        if (role.getRoleType() == 1){
+            int isAffairs = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), ParameterEnum.STUDENTS_AFFAIRS.getValue()));
+            if (isAffairs == 1){
+                menu.setTeacherDisplay1(1);
+            }
+            if (isAffairs == 0){
+                menu.setTeacherDisplay2(1);
+            }
+        }
+        if (role.getRoleType() == 2){
+            menu.setStudentDisplay(1);
+        }
+        List<Menu> menuList = systemDao.menuTree(menu);
+        List<MenuTreeVO> menuTreeVO = new ArrayList<>();
+        for (Menu m : menuList){
+            MenuTreeVO menuTree = new MenuTreeVO();
+            BeanUtils.copyProperties(m, menuTree);
+            menuTreeVO.add(menuTree);
+        }
+        return menuTreeVO;
     }
 }

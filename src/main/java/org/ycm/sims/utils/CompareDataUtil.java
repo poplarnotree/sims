@@ -76,8 +76,11 @@ public class CompareDataUtil {
         if (!menuData.getModular().equals(menu.getModular())){
             recordDTOList.add(new RecordDTO(ColumnEnum.MODULAR.getValue(), menu.getModular(), menuData.getModular()));
         }
-        if (!menuData.getTeacherDisplay().equals(menu.getTeacherDisplay())){
-            recordDTOList.add(new RecordDTO(ColumnEnum.TEACHER_DISPLAY.getValue(), menu.getTeacherDisplay().toString(), menuData.getTeacherDisplay().toString()));
+        if (!menuData.getTeacherDisplay1().equals(menu.getTeacherDisplay1())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.TEACHER_DISPLAY.getValue(), menu.getTeacherDisplay1().toString(), menuData.getTeacherDisplay1().toString()));
+        }
+        if (!menuData.getTeacherDisplay2().equals(menu.getTeacherDisplay2())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.TEACHER_DISPLAY.getValue(), menu.getTeacherDisplay2().toString(), menuData.getTeacherDisplay2().toString()));
         }
         if (!menuData.getStudentDisplay().equals(menu.getStudentDisplay())){
             recordDTOList.add(new RecordDTO(ColumnEnum.STUDENT_DISPLAY.getValue(), menu.getStudentDisplay().toString(), menuData.getStudentDisplay().toString()));

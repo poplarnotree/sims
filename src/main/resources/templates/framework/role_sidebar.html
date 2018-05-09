@@ -1,0 +1,52 @@
+<div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+            <li class="layui-nav-item" >
+                <a href="javascript:;">角色</a>
+                <dl class="layui-nav-child" id="role">
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a class="" href="javascript:;">信息</a>
+                <dl class="layui-nav-child" id="information">
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a class="" href="javascript:;">成绩</a>
+                <dl class="layui-nav-child" id="achievement">
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">系统</a>
+                <dl class="layui-nav-child" id="system">
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $.ajax({
+        type: 'get',
+        url: '/system/menuTree',
+        success: function (data) {
+            for(var i = 0; i < data.length; i++){
+                switch (data[i].modular){
+                    case "角色":
+                        $("ul li #role").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                        break;
+                    case "信息":
+                        $("ul li #information").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                        break;
+                    case "成绩":
+                        $("ul li #achievement").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                        break;
+                    case "系统":
+                        break;
+                        $("ul li #system").append("<dd><a href='" + data[i].url + "'>" + data[i].name + "</a></dd>");
+                }
+            }
+
+        }
+    });
+</script>

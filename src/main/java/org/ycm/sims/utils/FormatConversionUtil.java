@@ -47,6 +47,24 @@ public class FormatConversionUtil {
     }
 
     /**
+     * int type 转 String type
+     * @param type
+     * @returnt
+     */
+    public static String typeFormatUitl(Integer type){
+        String roletype = "";
+        switch (type) {
+            case 1:
+                roletype = "老师";
+                break;
+            case 2:
+                roletype = "同学";
+                break;
+        }
+        return roletype;
+    }
+
+    /**
      * String roletype 转 int roleType
      * @param roleType
      * @return

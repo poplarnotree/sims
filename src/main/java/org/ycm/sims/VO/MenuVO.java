@@ -17,7 +17,11 @@ public class MenuVO {
 
     private String modular;
 
-    private Integer teacherDisplay;
+    //    学生处教师可见
+    private Integer teacherDisplay1;
+
+    //    教研组教师可见
+    private Integer teacherDisplay2;
 
     private Integer studentDisplay;
 

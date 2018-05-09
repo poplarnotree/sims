@@ -4,7 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.ycm.sims.VO.HeadVO;
 import org.ycm.sims.enums.ParameterEnum;
+import org.ycm.sims.service.IndexService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +24,9 @@ public class IndexController {
     @Autowired
     private HttpServletRequest request;
 
+    @Autowired
+    private IndexService indexService;
+
     /**
      * 首页
      * @param loginName
@@ -28,7 +34,12 @@ public class IndexController {
      */
     @RequestMapping("/")
     public String index(String loginName){
-        log.info("loginName={}",request.getSession().getAttribute("loginName"));
         return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/index", "role/index");
+    }
+
+    @RequestMapping("/head")
+    @ResponseBody
+    public HeadVO head(){
+        return indexService.roleName();
     }
 }

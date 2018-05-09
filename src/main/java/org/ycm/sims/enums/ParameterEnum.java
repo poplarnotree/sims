@@ -16,11 +16,16 @@ public enum ParameterEnum {
 
     STUDENT_TYPE(2, "学生"),
 
+    STUDENTS_AFFAIRS(3, "学生处"),
+
+    TEACHING_GROUP(4, "教研组"),
+
     LOGIN_NAME(100,"loginName"),
 
     RESET_PASSWORD(101,"123456"),
 
     ROLE_TYPE(102, "role_type")
+
     ;
 
     private Integer code;

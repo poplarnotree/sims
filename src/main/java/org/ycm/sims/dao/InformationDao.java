@@ -65,7 +65,6 @@ public interface InformationDao {
     Integer createInformation(TeacherInformation teacherInformation);
 
     /*查询教师信息*/
-//    List<TeacherInformation> informationList(RoleManagerDTO roleManagerDTO);
     List<TeacherInformation> informationList(Role role);
 
     /*根据id查询班级*/
