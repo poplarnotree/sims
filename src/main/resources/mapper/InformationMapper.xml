@@ -55,6 +55,13 @@
     <insert id="createClass">
         INSERT INTO classes(name, create_id) values (#{name}, #{createId})
     </insert>
+    <insert id="createStudentInformation">
+        INSERT INTO
+          student_information
+            (login_name, number, name, sex, id_cart, nation, place, address, birthday, phone, classes, enrolment_time)
+          VALUES
+            (#{loginName}, #{number}, #{name}, #{sex}, #{idCart}, #{nation}, #{place}, #{address}, #{birthday}, #{phone}, #{classes}, #{enrolmentTime})
+    </insert>
 
     <select id="findNumberMax" resultType="java.lang.String">
         select MAX(number) number from teacher_information;
@@ -152,6 +159,12 @@
     </select>
     <select id="findClassIdByName" resultType="java.lang.Integer">
         select id from classes where name = #{name}
+    </select>
+    <select id="findStudentNumberMax" resultType="java.lang.String">
+        select MAX(number) number from student_information
+    </select>
+    <select id="findStudentNumber" resultType="java.lang.Integer">
+        SELECT COUNT(number) FROM student_information WHERE number = #{number}
     </select>
 
 </mapper>

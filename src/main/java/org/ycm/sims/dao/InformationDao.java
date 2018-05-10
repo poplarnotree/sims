@@ -7,6 +7,7 @@ import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleManagerDTO;
 import org.ycm.sims.entity.Classes;
 import org.ycm.sims.entity.Role;
+import org.ycm.sims.entity.StudentInformation;
 import org.ycm.sims.entity.TeacherInformation;
 
 import java.util.List;
@@ -46,6 +47,9 @@ public interface InformationDao {
     /*查询最大工号*/
     String findNumberMax();
 
+    /*查询最大学号*/
+    String findStudentNumberMax();
+
     /*查找教师信息*/
     TeacherInformation findByInformation(TeacherInformation teacherInformation);
 
@@ -61,8 +65,14 @@ public interface InformationDao {
     /*查找工号是否存在*/
     Integer findInformationNumber(String number);
 
-    /*写入信息*/
+    /*查找学号是否存在*/
+    Integer findStudentNumber(String number);
+
+    /*写入教师信息*/
     Integer createInformation(TeacherInformation teacherInformation);
+
+    /*写入学生信息*/
+    Integer createStudentInformation(StudentInformation studentInformation);
 
     /*查询教师信息*/
     List<TeacherInformation> informationList(Role role);

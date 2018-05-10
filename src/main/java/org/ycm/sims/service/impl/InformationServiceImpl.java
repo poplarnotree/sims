@@ -9,12 +9,8 @@ import org.ycm.sims.VO.*;
 import org.ycm.sims.converter.Map2TeacherVO;
 import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
-import org.ycm.sims.dao.SystemDao;
 import org.ycm.sims.dto.*;
-import org.ycm.sims.entity.Classes;
-import org.ycm.sims.entity.Record;
-import org.ycm.sims.entity.Role;
-import org.ycm.sims.entity.TeacherInformation;
+import org.ycm.sims.entity.*;
 import org.ycm.sims.enums.ColumnEnum;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ResultEnum;
@@ -56,12 +52,22 @@ public class InformationServiceImpl implements InformationService {
 
     @Override
     public NumberAndClassesVO createInformationVO() {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         List<Classes> classesList = informationDao.findClasses(new Classes());
         List<String> classList = new ArrayList<>();
         for (Classes classes : classesList){
             classList.add(classes.getName());
         }
-        String maxNumber = informationDao.findNumberMax();
+        String maxNumber = null;
+        if (role.getRoleType() == 0){
+            maxNumber = informationDao.findNumberMax();
+        }
+        if (role.getRoleType() == 1){
+            maxNumber = informationDao.findStudentNumberMax();
+        }
+        if (role.getRoleType() != 0 && role.getRoleType() != 1){
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
         NumberAndClassesVO numberAndClassesVO = new NumberAndClassesVO(classList, maxNumber);
         return numberAndClassesVO;
     }
@@ -296,7 +302,27 @@ public class InformationServiceImpl implements InformationService {
     }
 
     @Override
+    @Transactional
     public CheckVO createStudentInformation(StudentInformationDTO studentInformationDTO) {
-        return null;
+        RoleCheckVO roleCheckVO = roleService.createRole(new RoleDTO(
+                studentInformationDTO.getLoginName(),
+                studentInformationDTO.getLoginPassword(),
+                studentInformationDTO.getRoleType()));
+        if (roleCheckVO.getStatus() != 0){
+            return new CheckVO(roleCheckVO.getStatus(), roleCheckVO.getMessage());
+        }
+        if (informationDao.findInformationLoginName(studentInformationDTO.getLoginName()) >= 1){
+            throw new SimsException(ResultEnum.INFORMATION_EXIST);
+        }
+        if (informationDao.findStudentNumber(studentInformationDTO.getNumber()) >= 1){
+            throw new SimsException(ResultEnum.NUMBER_EXIST);
+        }
+        StudentInformation studentInformation = new StudentInformation();
+        BeanUtils.copyProperties(studentInformationDTO, studentInformation);
+            if (informationDao.createStudentInformation(studentInformation) == 1){
+            return new CheckVO(ResultEnum.SUCCESS);
+        }else {
+            throw new SimsException(ExceptionEnum.SYSTEM_ERROR);
+        }
     }
 }

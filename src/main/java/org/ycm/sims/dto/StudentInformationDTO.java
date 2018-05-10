@@ -11,6 +11,10 @@ public class StudentInformationDTO {
 
     private String loginName;
 
+    private String loginPassword;
+
+    private String roleType;
+
     private String number;
 
     private String name;

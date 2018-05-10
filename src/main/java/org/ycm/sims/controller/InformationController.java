@@ -6,10 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.*;
-import org.ycm.sims.dto.ClassManagerDTO;
-import org.ycm.sims.dto.RoleManagerDTO;
-import org.ycm.sims.dto.TeacherInformationDTO;
-import org.ycm.sims.dto.UpdateTeacherClassDTO;
+import org.ycm.sims.dto.*;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
@@ -40,6 +37,12 @@ public class InformationController {
     @ResponseBody
     public CheckVO create(@RequestBody TeacherInformationDTO teacherInformationDTO){
         return informationService.createInformation(teacherInformationDTO);
+    }
+
+    @RequestMapping("/createStudent")
+    @ResponseBody
+    public CheckVO createStudent(@RequestBody StudentInformationDTO studentInformationDTO){
+        return informationService.createStudentInformation(studentInformationDTO);
     }
 
     @RequestMapping("/teacherList")

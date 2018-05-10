@@ -104,7 +104,7 @@ public class RoleServiceImpl implements RoleService {
         }
         String roleType = roleDTO.getRoleType();
         if (FormatConversionUtil.roleTypeFormatUitl(roleType) - role.getRoleType() == 1){
-            Role newRole = new Role(roleDTO.getLoginName(), MD5Util.MD5Util(roleDTO.getLoginName()), role.getCreateId(), FormatConversionUtil.roleTypeFormatUitl(roleDTO.getRoleType()));
+            Role newRole = new Role(roleDTO.getLoginName(), MD5Util.MD5Util(roleDTO.getLoginName()), role.getId(), FormatConversionUtil.roleTypeFormatUitl(roleDTO.getRoleType()));
             int row = roleDao.createRole(newRole);
             if (row == 0){
                 return new RoleCheckVO(ResultEnum.ROLE_EXIST);
@@ -185,7 +185,7 @@ public class RoleServiceImpl implements RoleService {
             List<Role> roleList = roleDao.findRole(new Role(roleManagerDTO.getLoginName(), roleManagerDTO.getRoleType()));
             List<RoleVO> roleVOList = new ArrayList<RoleVO>();
             for (Role role1: roleList){
-                String createName = roleDao.findRoleById(role1.getId()).getLoginName();
+                String createName = roleDao.findRoleById(role1.getCreateId()).getLoginName();
                 roleVOList.add(new RoleVO(
                         role1.getId(), role1.getLoginName(),
                         FormatConversionUtil.roleTypeFormatUitl(role1.getRoleType()),createName,

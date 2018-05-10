@@ -87,7 +87,7 @@ public class RoleController {
      */
     @RequestMapping("/create")
     public String create(){
-        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/create_teacher", "role/crate_student");
+        return ControllerJumpUtil.ControllerJumpUtil(request, "/admin/create_teacher", "/role/create_student");
     }
 
     /**
