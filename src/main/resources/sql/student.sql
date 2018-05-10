@@ -42,7 +42,7 @@ CREATE TABLE teacher_information(
 CREATE TABLE student_information(
   id INT NOT NULL AUTO_INCREMENT comment '学生信息id',
   login_name VARCHAR (20) NOT NULL UNIQUE comment '登录名',
-  number VARCHAR(8) NOT NULL unique comment '学号',
+  number VARCHAR(10) NOT NULL unique comment '学号',
   name VARCHAR(10) NOT NULL comment '姓名',
   sex VARCHAR(2) NOT NULL comment '性别',
   id_cart VARCHAR(18) NOT NULL comment '身份证号',

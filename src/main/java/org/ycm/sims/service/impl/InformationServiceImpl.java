@@ -11,10 +11,7 @@ import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
 import org.ycm.sims.dto.*;
 import org.ycm.sims.entity.*;
-import org.ycm.sims.enums.ColumnEnum;
-import org.ycm.sims.enums.ExceptionEnum;
-import org.ycm.sims.enums.ResultEnum;
-import org.ycm.sims.enums.TableEnum;
+import org.ycm.sims.enums.*;
 import org.ycm.sims.exception.SimsException;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.service.RoleService;
@@ -136,6 +133,9 @@ public class InformationServiceImpl implements InformationService {
             if (informationDao.findInformationNumber(teacherInformation.getNumber()) >= 1){
                 throw new SimsException(ResultEnum.NUMBER_EXIST);
             }
+            if (teacherInformation.getClasses() == ""){
+                teacherInformation.setClasses(ParameterEnum.NO_CLASSES.getValue());
+            }
             int row = informationDao.updateTeacherInformation(teacherInformation);
             if (row == 1){
                 List<RecordDTO> recordDTOList = CompareDataUtil.CompareTeacherInformationData(tI, teacherInformation);
@@ -254,9 +254,29 @@ public class InformationServiceImpl implements InformationService {
                 classVOList.get(i).setCreateTime(FormatConversionUtil.DateFormatUtil(classesList.get(i).getCreateTime()));
             }
             return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
-        }else {
-            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
+        if (role.getRoleType() == 1 && departmentCount == 0){
+            PageHelper.startPage(classManagerDTO.getPage(), classManagerDTO.getLimit());
+            List<Classes> classesList = informationDao.findTeaClassCount(role.getLoginName(), classManagerDTO.getName());
+            int count = classesList.size();
+            List<ClassVO> classVOList = new ArrayList<>();
+            for (int i = 0; i < classesList.size(); i++){
+                ClassVO classVO = new ClassVO();
+                BeanUtils.copyProperties(classesList.get(i), classVO);
+                classVOList.add(classVO);
+                List<Map<String, String>> teacherList = informationDao.findClassTeacher(classesList.get(i).getName());
+                int stuCount = informationDao.findClassStuCount(classesList.get(i).getName());
+                classVOList.get(i).setNumber(stuCount);
+                TeacherVO teacherVO = Map2TeacherVO.map2TeacherVO(teacherList);
+                classVOList.get(i).setTeacherVO(teacherVO);
+                String createName = roleDao.findRoleById(classesList.get(i).getCreateId()).getLoginName();
+                classVOList.get(i).setCreateName(createName);
+                classVOList.get(i).setCreateTime(FormatConversionUtil.DateFormatUtil(classesList.get(i).getCreateTime()));
+            }
+            return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
+        }
+        throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+
     }
 
     @Override
@@ -315,7 +335,7 @@ public class InformationServiceImpl implements InformationService {
             throw new SimsException(ResultEnum.INFORMATION_EXIST);
         }
         if (informationDao.findStudentNumber(studentInformationDTO.getNumber()) >= 1){
-            throw new SimsException(ResultEnum.NUMBER_EXIST);
+            throw new SimsException(ResultEnum.STUDENT_NUMBER_EXIST);
         }
         StudentInformation studentInformation = new StudentInformation();
         BeanUtils.copyProperties(studentInformationDTO, studentInformation);
@@ -323,6 +343,63 @@ public class InformationServiceImpl implements InformationService {
             return new CheckVO(ResultEnum.SUCCESS);
         }else {
             throw new SimsException(ExceptionEnum.SYSTEM_ERROR);
+        }
+    }
+
+    @Override
+    public PageVO<StudentInformationVO> studentInformationPage(RoleManagerDTO roleManagerDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        if (roleManagerDTO.getRoleType() - role.getRoleType() == 1){
+            int count = informationDao.studentInformationCount(new StudentInformation(roleManagerDTO.getLoginName()));
+            Role roles = new Role();
+            BeanUtils.copyProperties(roleManagerDTO, roles);
+            PageHelper.startPage(roleManagerDTO.getPage(), roleManagerDTO.getLimit());
+            List<StudentInformation> studentInformationList = informationDao.studentList(roles);
+            List<StudentInformationVO> studentInformationVOList = new ArrayList<StudentInformationVO>();
+            for (StudentInformation studentInformation: studentInformationList){
+                StudentInformationVO studentInformationVO = new StudentInformationVO();
+                BeanUtils.copyProperties(studentInformation, studentInformationVO);
+                studentInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(studentInformation.getCreateTime()));
+                studentInformationVOList.add(studentInformationVO);
+            }
+            PageVO<StudentInformationVO> pageVO = new PageVO(ResultEnum.SUCCESS, count,studentInformationVOList);
+            return pageVO;
+        }else {
+            request.getSession().invalidate();
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+    }
+
+    @Override
+    @Transactional
+    public CheckVO updateStudentInformation(StudentInformationDTO studentInformationDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        StudentInformation si = informationDao.findStudentInformation(new StudentInformation(studentInformationDTO.getLoginName()));
+        if (FormatConversionUtil.roleTypeFormatUitl(studentInformationDTO.getRoleType()) - role.getRoleType() == 1){
+            StudentInformation studentInformation = new StudentInformation();
+            BeanUtils.copyProperties(studentInformationDTO, studentInformation);
+            if (informationDao.findInformationNumber(studentInformation.getNumber()) >= 1){
+                throw new SimsException(ResultEnum.STUDENT_NUMBER_EXIST);
+            }
+            if (studentInformation.getClasses() == ""){
+                studentInformation.setClasses(ParameterEnum.NO_CLASSES.getValue());
+            }
+            int row = informationDao.updateStudentInformation(studentInformation);
+            if (row == 1){
+                List<RecordDTO> recordDTOList = CompareDataUtil.CompareStudentInformationData(si, studentInformation);
+                for (RecordDTO recordDTO : recordDTOList){
+                    recordDTO.setLoginName(role.getLoginName());
+                    recordDTO.setTableName(TableEnum.STUDENT_INFORMATION.getValue());
+                    recordDTO.setKeyId(si.getId());
+                    systemService.addRecord(recordDTO);
+                }
+                return new CheckVO(ResultEnum.SUCCESS);
+            }else{
+                throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+            }
+        }else {
+            request.getSession().invalidate();
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
 }

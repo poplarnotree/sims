@@ -32,7 +32,7 @@ public interface InformationDao {
     /*删除班级*/
     Integer deleteClass(String name);
 
-   /*查询班级数*/
+    /*查询班级数*/
     Integer findClassCount(@Param("name") String name);
 
     /*查询班级人数*/
@@ -91,4 +91,21 @@ public interface InformationDao {
 
     /*查询班级教师*/
     List<Map<String, String>> findClassTeacher(String classes);
+
+    /*查询学生信息数*/
+    Integer studentInformationCount(StudentInformation studentInformation);
+
+    /*查询学生信息*/
+    List<StudentInformation> studentList(Role role);
+
+    /*查找学生信息*/
+    StudentInformation findStudentInformation(StudentInformation studentInformation);
+
+    /*修改学生信息*/
+    Integer updateStudentInformation(StudentInformation studentInformation);
+
+    /*教研组教师查询班级数量*/
+    List<Classes> findTeaClassCount(@Param("loginName") String loginName,
+                              @Param("name") String name);
+
 }

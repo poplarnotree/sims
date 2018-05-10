@@ -49,6 +49,8 @@ public enum ColumnEnum {
 
     ,URL(20, "url")
 
+    ,ENROLMENT_TIME(21, "enrolment_time")
+
     ;
     private Integer code;
 

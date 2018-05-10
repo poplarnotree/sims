@@ -5,9 +5,9 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <!--头部-->
-    <div th:include="@{~/framework/admin_head.html}"></div>
+    <div th:include="@{~/framework/role_head.html}"></div>
     <!--侧边导航栏-->
-    <div th:include="@{~/framework/admin_sidebar.html}"></div>
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
@@ -21,7 +21,7 @@
                 <button class="layui-btn" data-type="reload">搜索</button>
                 <button class="layui-btn" onclick="window.location.href='/role/create'"><i class="layui-icon">&#xe608;</i>添加</button>
             </div>
-            <table id="teacherPage" class="layui-hide" lay-filter="teacher"></table>
+            <table id="studentPage" class="layui-hide" lay-filter="student"></table>
         </div>
     </div>
 
@@ -40,11 +40,11 @@
         var table = layui.table;
         var laydate = layui.laydate;
         table.render({
-            elem: '#teacherPage'
-            ,url: '/information/teacherPage' //数据接口
+            elem: '#studentPage'
+            ,url: '/information/studentPage' //数据接口
             ,page: true //开启分页
             ,where: {
-                roleType: 1
+                roleType: 2
             }
             ,cellMinWidth: 100
             ,text: {
@@ -53,19 +53,17 @@
             ,cols: [[ //表头
                 {field: 'id', title: 'ID', sort: true}
                 ,{field: 'loginName', title: '登录帐号'}
-                ,{field: 'number', title: '工号', sort: true}
+                ,{field: 'number', title: '学号', sort: true}
                 ,{field: 'name', title: '姓名'}
                 ,{field: 'sex', title: '性别'}
                 ,{field: 'idCart', title: '身份证号'}
-                ,{field: 'positionalTitles', title: '职称'}
                 ,{field: 'nation', title: '民族'}
                 ,{field: 'place', title: '籍贯'}
                 ,{field: 'address', title: '地址'}
                 ,{field: 'birthday', title: '出生日期'}
                 ,{field: 'phone', title: '联系电话'}
-                ,{field: 'department', title: '所属部门'}
-                ,{field: 'classes', title: '执教班级'}
-                ,{field: 'subject', title: '执教科目'}
+                ,{field: 'classes', title: '班级'}
+                ,{field: 'enrolmentTime', title: '入学时间'}
                 ,{field: 'createTime', title: '创建时间', sort: true}
                 ,{field: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
             ]]
@@ -92,7 +90,7 @@
             active[type] ? active[type].call(this) : '';
         });
         //监听工具条
-       table.on('tool(teacher)', function(obj) {
+       table.on('tool(student)', function(obj) {
            if(obj.event === 'update'){
                layer.open({
                    title: '修改'
@@ -102,6 +100,9 @@
                    ,success: function () {
                        laydate.render({
                            elem: '#birthday' //指定元素
+                       });
+                       laydate.render({
+                           elem: '#enrolmentTime' //指定元素
                        });
                        $.ajax({
                            type: 'get',
@@ -123,7 +124,7 @@
                                        }
                                    }
                                }
-                               $("#numberdiv").html("工号格式：T-XXX，当前最大工号：" + classes.maxNumber);
+                               $("#numberdiv").html("学号格式：S-(8位数字)，当前最大学号：" + classes.maxNumber);
                                renderForm();
 
                            }
@@ -142,95 +143,72 @@
                        $("#name").val(obj.data.name);
                        $("input[name='sex'][value = " + obj.data.sex + "]").attr("checked", true);
                        $("#idCart").val(obj.data.idCart);
-                       $("#positionalTitles").val(obj.data.positionalTitles);
                        $("#nation").val(obj.data.nation);
                        $("#place").val(obj.data.place);
                        $("#address").val(obj.data.address);
                        $("#birthday").val(obj.data.birthday);
-                       $("#phone").val(obj.data.phone)
-                       var dep = obj.data.department;
-                       var department = dep.split(",");
-                       for (var i = 0; i < department.length; i++) {
-                           $("#department").find("option[value=" + department[i] + "]").attr("selected", true);
-                       }
-                       $("#subject").val(obj.data.subject);
+                       $("#phone").val(obj.data.phone);
+                       $("#enrolmentTime").val(obj.data.enrolmentTime)
                    }
                    ,yes: function () {
-                       //            判断工号格式
-                       var reg = new RegExp("^T-\\d{3}$");
+                       //            判断学号格式
+                       var reg = new RegExp("^S-\\d{8}$");
                        if (!reg.test($("#number").val()) || $("#number").val() == '') {
-                           alert('工号格式不正确，正确格式：T-XXX');
+                           alert('学号格式不正确，正确格式：S-(8位数字)');
                            return false;
                        }
                        //判断姓名
                        var n = new RegExp("[\u4e00-\u9fa5]");
                        if (!n.test($("#name").val()) || $("#name").val() == '') {
-                           alert('请检查教师姓名！');
+                           alert('请检查学生姓名！');
                            return false;
                        }
                        //判断身份证
                        var i = new RegExp("^(\\d{6})(\\d{4})(\\d{2})(\\d{2})(\\d{3})([0-9]|X)$");
                        if (!i.test($("#idCart").val()) || $("#idCart").val() == '') {
-                           alert('请检查教师身份证!');
-                           return false;
-                       }
-                       //职称
-                       if ($("#positionalTitles").val() == '') {
-                           alert('请为教师选择职称！');
+                           alert('请检查学生身份证!');
                            return false;
                        }
                        //民族
                        if ($("#nation").val() == '') {
-                           alert('请为教师选择民族！');
+                           alert('请为学生选择民族！');
                            return false;
                        }
                        //籍贯
                        if ($("#place").val() == '') {
-                           alert('请为教师填写籍贯！');
+                           alert('请为学生填写籍贯！');
                            return false;
                        }
                        //地址
                        if ($("#address").val() == '') {
-                           alert('请为教师填写地址！');
+                           alert('请为学生填写地址！');
                            return false;
                        }
                        if ($("#birthday").val() == '') {
-                           alert('请为教师选择出生日期！');
+                           alert('请为学生选择出生日期！');
                            return false;
                        }
                        //电话
                        var p = new RegExp("^1\\d{10}$");
                        if (!p.test($("#phone").val()) || $("#phone").val() == '') {
-                           alert('请为教师填写联系电话！');
+                           alert('请为学生填写联系电话！');
                            return false;
                        }
 
-                       // 判断部门，班级，学科不为空
-                       if ($("#department").val() == null) {
-                           alert('请为教师分配部门!');
+                       if ($("#enrolmentTime").val() == '') {
+                           alert('请为学生选择入学日期！');
                            return false;
                        }
-                       if ($("#subject").val() == '') {
-                           alert('请为教师选择学科！');
-                           return false;
-                       }
+
 
                        var formObject = {};
                        var formArray =$("#form").serializeArray();
                        $.each(formArray,function(i,item){
-                           if (item.name == 'department'){
-                               formObject[item.name] = $('#department').val();
-                               return true;
-                           }
-                           if (item.name == 'classes'){
-                               formObject[item.name] = $('#classes').val();
-                               return true;
-                           }
                            formObject[item.name] = item.value;
                        });
                        $.ajax({
                            type: 'post',
-                           url: '/information/updateTeacher',
+                           url: '/information/updateStudent',
                            dataType: 'json',
                            contentType: 'application/json',
                            data: JSON.stringify(formObject),
@@ -260,11 +238,11 @@
     <form id="form" class="layui-form" action="">
         <fieldset class="layui-elem-field">
             <legend>
-                <a>教师信息</a>
+                <a>学生信息</a>
             </legend>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
-                    <input type="text" id="roleType" name="roleType" autocomplete="off" class="layui-input" value="教师" style="display: none">
+                    <input type="text" id="roleType" name="roleType" autocomplete="off" class="layui-input" value="学生" style="display: none">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -275,18 +253,18 @@
                 <div class="layui-form-mid layui-word-aux">登录帐号不可修改</div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">工号</label>
+                <label class="layui-form-label">学号</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="number" name="number" placeholder="请输入工号..." autocomplete="off" class="layui-input">
+                    <input type="text" id="number" name="number" placeholder="请输入学号..." autocomplete="off" class="layui-input">
                 </div>
                 <div id="numberdiv" class="layui-form-mid layui-word-aux"></div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">姓名</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="name" name="name" placeholder="请输入教师姓名..." autocomplete="off" class="layui-input">
+                    <input type="text" id="name" name="name" placeholder="请输入学生姓名..." autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">请填写教师姓名</div>
+                <div class="layui-form-mid layui-word-aux">请填写学生姓名</div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">性别</label>
@@ -300,21 +278,7 @@
                 <div class="layui-input-inline">
                     <input type="text" id="idCart" name="idCart" placeholder="请输入身份证号..." autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">请填写教师身份证号</div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">职称</label>
-                <div class="layui-input-inline">
-                    <select id="positionalTitles" name="positionalTitles">
-                        <option value="">请选择职称</option>
-                        <option value="中学正高级教师">中学正高级教师</option>
-                        <option value="中学高级教师">中学高级教师</option>
-                        <option value="中学一级教师">中学一级教师</option>
-                        <option value="中学二级教师">中学二级教师</option>
-                        <option value="中学三级教师">中学三级教师</option>
-                    </select>
-                </div>
-                <div class="layui-form-mid layui-word-aux">请选择教师职称</div>
+                <div class="layui-form-mid layui-word-aux">请填写学生身份证号</div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">民族</label>
@@ -338,73 +302,51 @@
                         <option value="朝鲜族">朝鲜族</option>
                     </select>
                 </div>
-                <div class="layui-form-mid layui-word-aux">请选择教师民族</div>
+                <div class="layui-form-mid layui-word-aux">请选择学生民族</div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">籍贯</label>
                 <div class="layui-input-inline">
                     <input type="text" id="place" name="place" placeholder="请输入籍贯..." autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">请填写教师籍贯</div>
+                <div class="layui-form-mid layui-word-aux">请填写学生籍贯</div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">地址</label>
                 <div class="layui-input-inline" style="width: 500px;">
                     <input type="text" id="address" name="address" placeholder="请输入地址..." autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">请填写教师地址</div>
+                <div class="layui-form-mid layui-word-aux">请填写学生地址</div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">出生日期</label>
                 <div class="layui-input-inline">
                     <input type="text"  id="birthday" name="birthday" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">请选择教师出生日期</div>
+                <div class="layui-form-mid layui-word-aux">请选择学生出生日期</div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">联系电话</label>
                 <div class="layui-input-inline">
                     <input type="text" id="phone" name="phone" placeholder="请输入联系电话..." autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">请填写教师联系电话</div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">部门</label>
-                <div class="layui-input-inline">
-                    <select id="department" name="department" multiple>
-                        <option value="">请选择部门</option>
-                        <option value="学生处">学生处</option>
-                        <option value="教研组">教研组</option>
-                    </select>
-                </div>
-                <div class="layui-form-mid layui-word-aux">请选择教师部门</div>
+                <div class="layui-form-mid layui-word-aux">请填写学生联系电话</div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">班级</label>
                 <div class="layui-input-inline">
-                    <select id="classes" name="classes" multiple lay-search>
+                    <select id="classes" name="classes" lay-search>
                         <option value="">请选择班级</option>
                     </select>
                 </div>
-                <div class="layui-form-mid layui-word-aux">请选择教师执教的班级</div>
+                <div class="layui-form-mid layui-word-aux">请选择学生的班级</div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">学科</label>
+                <label class="layui-form-label">入学日期</label>
                 <div class="layui-input-inline">
-                    <select id="subject" name="subject" lay-search>
-                        <option value="">请选择学科</option>
-                        <option value="语文">语文</option>
-                        <option value="数学">数学</option>
-                        <option value="英语">英语</option>
-                        <option value="物理">物理</option>
-                        <option value="化学">化学</option>
-                        <option value="生物">生物</option>
-                        <option value="政治">政治</option>
-                        <option value="地理">地理</option>
-                        <option value="历史">历史</option>
-                    </select>
+                    <input type="text"  id="enrolmentTime" name="enrolmentTime" required lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">请选择教师执教的学科</div>
+                <div class="layui-form-mid layui-word-aux">请选择学生入学日期</div>
             </div>
         </fieldset>
     </form>

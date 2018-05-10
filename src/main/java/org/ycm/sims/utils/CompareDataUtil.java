@@ -3,6 +3,7 @@ package org.ycm.sims.utils;
 import org.ycm.sims.dto.MenuDTO;
 import org.ycm.sims.dto.RecordDTO;
 import org.ycm.sims.entity.Menu;
+import org.ycm.sims.entity.StudentInformation;
 import org.ycm.sims.entity.TeacherInformation;
 import org.ycm.sims.enums.ColumnEnum;
 
@@ -68,6 +69,59 @@ public class CompareDataUtil {
         return recordDTOList;
     }
 
+    /**
+     * 比较两个StudentInformation对象哪些字段不同
+     * @param studentInformationData 数据库中原始的StudentInformation
+     * @param studentInformation 修改的StudentInformation
+     * @return
+     */
+    public static List<RecordDTO> CompareStudentInformationData(StudentInformation studentInformationData, StudentInformation studentInformation){
+        List<RecordDTO> recordDTOList = new ArrayList<>();
+        if (!studentInformationData.getLoginName().equals(studentInformation.getLoginName())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.LOGIN_NAME.getValue(), studentInformation.getLoginName(), studentInformationData.getLoginName()));
+        }
+        if (!studentInformationData.getNumber().equals(studentInformation.getNumber())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.NUMBER.getValue(), studentInformation.getNumber(), studentInformationData.getNumber()));
+        }
+        if (!studentInformationData.getName().equals(studentInformation.getName())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.NAME.getValue(), studentInformation.getName(), studentInformationData.getName()));
+        }
+        if (!studentInformationData.getSex().equals(studentInformation.getSex())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.SEX.getValue(), studentInformation.getSex(), studentInformationData.getSex()));
+        }
+        if (!studentInformationData.getIdCart().equals(studentInformation.getIdCart())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.ID_CART.getValue(), studentInformation.getIdCart(), studentInformationData.getIdCart()));
+        }
+        if (!studentInformationData.getNation().equals(studentInformation.getNation())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.NATION.getValue(), studentInformation.getNation(), studentInformationData.getNation()));
+        }
+        if (!studentInformationData.getPlace().equals(studentInformation.getPlace())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.PLACE.getValue(), studentInformation.getPlace(), studentInformationData.getPlace()));
+        }
+        if (!studentInformationData.getAddress().equals(studentInformation.getAddress())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.ADDRESS.getValue(), studentInformation.getAddress(), studentInformationData.getAddress()));
+        }
+        if (!studentInformationData.getBirthday().equals(studentInformation.getBirthday())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.BIRTHDAY.getValue(), studentInformation.getBirthday(), studentInformationData.getBirthday()));
+        }
+        if (!studentInformationData.getPhone().equals(studentInformation.getPhone())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.PHONE.getValue(), studentInformation.getPhone(), studentInformationData.getPhone()));
+        }
+        if (!studentInformationData.getClasses().equals(studentInformation.getClasses())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.CLASSES.getValue(), studentInformation.getClasses(), studentInformationData.getClasses()));
+        }
+        if (!studentInformationData.getEnrolmentTime().equals(studentInformation.getEnrolmentTime())){
+            recordDTOList.add(new RecordDTO(ColumnEnum.ENROLMENT_TIME.getValue(), studentInformation.getEnrolmentTime(), studentInformationData.getEnrolmentTime()));
+        }
+        return recordDTOList;
+    }
+
+    /**
+     * 比较两个菜单的不同
+     * @param menuData
+     * @param menu
+     * @return
+     */
     public static List<RecordDTO> CompareMenuDataUtil(Menu menuData, Menu menu){
         List<RecordDTO> recordDTOList = new ArrayList<>();
         if (!menuData.getName().equals(menu.getName())){

@@ -158,4 +158,13 @@ public class FormatConversionUtil {
         }
         return str;
     }
+
+    public static List<String> ClassFormatList(String classes){
+        List<String> list = new ArrayList<>();
+        String[] s = classes.split(",");
+        for (String str: s){
+            list.add(str);
+        }
+        return list;
+    }
 }

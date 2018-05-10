@@ -20,6 +20,8 @@ public enum ParameterEnum {
 
     TEACHING_GROUP(4, "教研组"),
 
+    NO_CLASSES(5, "暂无班级"),
+
     LOGIN_NAME(100,"loginName"),
 
     RESET_PASSWORD(101,"123456"),

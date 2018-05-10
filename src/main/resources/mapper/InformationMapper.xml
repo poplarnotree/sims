@@ -124,6 +124,23 @@
     <update id="updateTeacherClasses">
         UPDATE teacher_information SET classes = #{classes} WHERE id = #{id}
     </update>
+    <update id="updateStudentInformation">
+        UPDATE student_information
+        <trim prefix="set" suffixOverrides=",">
+            <if test="number != null and number != ''">number = #{number},</if>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="sex != null and sex != ''">sex = #{sex},</if>
+            <if test="idCart != null and idCart != ''">id_cart = #{idCart},</if>
+            <if test="nation != null and nation != ''">nation = #{nation},</if>
+            <if test="place != null and place != ''">place = #{place},</if>
+            <if test="address != null and address != ''">address = #{address},</if>
+            <if test="birthday != null and birthday != ''">birthday = #{birthday},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="classes != null and classes != ''">classes = #{classes},</if>
+            <if test="enrolmentTime != null and enrolmentTime != ''">enrolment_time = #{enrolmentTime},</if>
+        </trim>
+        WHERE login_name = #{loginName}
+    </update>
 
     <select id="findTeacherDepartment" resultType="java.lang.Integer">
         SELECT count(*) FROM teacher_information WHERE login_name = #{loginName} and department LIKE CONCAT(CONCAT('%',#{department},'%'))
@@ -165,6 +182,52 @@
     </select>
     <select id="findStudentNumber" resultType="java.lang.Integer">
         SELECT COUNT(number) FROM student_information WHERE number = #{number}
+    </select>
+    <select id="studentInformationCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM student_information
+        <if test="loginName != null and loginName != ''">
+            WHERE login_name = #{loginName}
+        </if>
+    </select>
+
+    <resultMap id="studentInformationList" type="org.ycm.sims.entity.StudentInformation">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="number" property="number" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="id_cart" property="idCart" />
+        <result column="nation" property="nation" />
+        <result column="place" property="place" />
+        <result column="address" property="address" />
+        <result column="birthday" property="birthday" />
+        <result column="phone" property="phone" />
+        <result column="classes" property="classes"/>
+        <result column="enrolment_time" property="enrolmentTime"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+    <select id="studentList" resultMap="studentInformationList">
+        SELECT * FROM student_information
+        WHERE login_name IN(
+        SELECT login_name FROM role WHERE role_type = #{roleType} AND role_status = 0
+        <if test="loginName != null and loginName != ''">
+            AND login_name = #{loginName}
+        </if>
+        )
+    </select>
+    <select id="findStudentInformation" resultType="org.ycm.sims.entity.StudentInformation">
+        SELECT * FROM student_information WHERE login_name = #{loginName}
+    </select>
+    <select id="findTeaClassCount" resultType="org.ycm.sims.entity.Classes">
+        select * from classes WHERE name IN (SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(t.classes,',',b.help_topic_id+1),',',-1)
+          FROM teacher_information t
+          JOIN
+        mysql.help_topic b
+          on b.help_topic_id &lt; (LENGTH(t.classes)-LENGTH(REPLACE(t.classes,',',''))+1)
+        WHERE login_name = #{loginName} ORDER BY t.name)
+        <if test="name != null and name != ''">
+            AND name = #{name}
+        </if>
     </select>
 
 </mapper>

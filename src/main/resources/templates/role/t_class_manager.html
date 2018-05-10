@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+
+    <!--头部-->
+    <div th:include="@{~/framework/role_head.html}"></div>
+
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">信息 / 班级管理</h1>
+            <div class="demoTable">
+                搜索班级：
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">搜索</button>
+            </div>
+            <table id="classPage" class="layui-hide" lay-filter="classPage"></table>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+
+<script th:inline="none">
+    //JavaScript代码区域
+    layui.use(['element','form', 'table'], function(){
+        var element = layui.element;
+        var table = layui.table;
+        var form = layui.form;
+        table.render({
+            elem: '#classPage'
+            ,url: '/information/classPage' //数据接口
+            ,page: true //开启分页
+            ,cellMinWidth: 150
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true}
+                ,{field: 'name', title: '班级名称',templet: '<div>{{d.name}}</div>', sort: true}
+
+                ,{field: 'number', title: '学生人数',templet: '<div>{{d.number}}<a style="float: right" class="layui-btn layui-btn-xs" lay-event="show">查看</a></div>'}
+
+                ,{field: 'teacherVO', title: '语文教师', templet: '<div>{{d.teacherVO.chinese}}</div>'}
+
+                ,{field: 'teacherVO', title: '数学教师', templet: '<div>{{d.teacherVO.math}}</div>'}
+
+                ,{field: 'teacherVO', title: '英语教师', templet: '<div>{{d.teacherVO.english}}</div>'}
+
+                ,{field: 'teacherVO', title: '物理教师', templet: '<div>{{d.teacherVO.physics}}</div>'}
+
+                ,{field: 'teacherVO', title: '化学教师', templet: '<div>{{d.teacherVO.chemistry}}</div>'}
+
+                ,{field: 'teacherVO', title: '生物教师', templet: '<div>{{d.teacherVO.biology}}</div>'}
+
+                ,{field: 'teacherVO', title: '政治教师', templet: '<div>{{d.teacherVO.politics}}</div>'}
+
+                ,{field: 'teacherVO', title: '地理教师', templet: '<div>{{d.teacherVO.geography}}</div>'}
+
+                ,{field: 'teacherVO', title: '历史教师', templet: '<div>{{d.teacherVO.history}}</div>'}
+
+                ,{field: 'createName', title: '创建人登录帐号'}
+                ,{field: 'createTime', title: '创建时间'}
+            ]]
+            ,id: 'Reload'
+        });
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('Reload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        name: demoReload.val()
+                    }
+                });
+            }
+        };
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+//        监听工具条
+        table.on('tool(classPage)', function(obj) {
+            var data = obj.data;
+
+        });
+
+    });
+</script>
+</body>
+</html>

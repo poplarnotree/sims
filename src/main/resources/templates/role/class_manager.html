@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+
+    <!--头部-->
+    <div th:include="@{~/framework/role_head.html}"></div>
+
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">信息 / 班级管理</h1>
+            <div class="demoTable">
+                搜索班级：
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">搜索</button>
+                <button class="layui-btn" id="addClass"><i class="layui-icon">&#xe608;</i>创建班级</button>
+            </div>
+            <table id="classPage" class="layui-hide" lay-filter="classPage"></table>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i>删除</a>
+</script>
+<script th:inline="none">
+    //JavaScript代码区域
+    layui.use(['element','form', 'table'], function(){
+        var element = layui.element;
+        var table = layui.table;
+        var form = layui.form;
+        table.render({
+            elem: '#classPage'
+            ,url: '/information/classPage' //数据接口
+            ,page: true //开启分页
+            ,cellMinWidth: 150
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true}
+                ,{field: 'name', title: '班级名称',templet:
+                    '<div>{{d.name}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs"' +
+                    ' lay-event="updateClassName" data-id="name"><i class="layui-icon">&#xe642;</i>修改</a></div>', sort: true}
+
+                ,{field: 'number', title: '学生人数',templet:
+                    '<div>{{d.number}}<a style="float: right" class="layui-btn layui-btn-xs" lay-event="show">查看</a></div>'}
+
+                ,{field: 'teacherVO', title: '语文教师', templet:
+                    '<div>{{d.teacherVO.chinese}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="语文" data-name={{d.teacherVO.chinese}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '数学教师', templet:
+                    '<div>{{d.teacherVO.math}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="数学" data-name={{d.teacherVO.math}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '英语教师', templet:
+                    '<div>{{d.teacherVO.english}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="英语" data-name={{d.teacherVO.english}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '物理教师', templet:
+                    '<div>{{d.teacherVO.physics}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="物理" data-name={{d.teacherVO.physics}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '化学教师', templet:
+                    '<div>{{d.teacherVO.chemistry}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="化学" data-name={{d.teacherVO.chemistry}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '生物教师', templet:
+                    '<div>{{d.teacherVO.biology}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="生物" data-name={{d.teacherVO.biology}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '政治教师', templet:
+                    '<div>{{d.teacherVO.politics}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="政治" data-name={{d.teacherVO.politics}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '地理教师', templet:
+                    '<div>{{d.teacherVO.geography}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="地理" data-name={{d.teacherVO.geography}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'teacherVO', title: '历史教师', templet:
+                    '<div>{{d.teacherVO.history}}<a title="aa" style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
+                    'lay-event="update" data-title="历史" data-name={{d.teacherVO.history}}><i class="layui-icon">&#xe642;</i>修改</a></div>'}
+
+                ,{field: 'createName', title: '创建人登录帐号'}
+                ,{field: 'createTime', title: '创建时间'}
+                ,{field: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
+            ]]
+            ,id: 'Reload'
+        });
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('Reload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        name: demoReload.val()
+                    }
+                });
+            }
+        };
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+//        监听工具条
+        table.on('tool(classPage)', function(obj) {
+            var data = obj.data;
+            if (obj.event === 'delete'){
+                layer.confirm('确定删除班级“' + data.name + "”吗？(删除班级前请确定班级中是否还存在人员)", function(index) {
+                    $.ajax({
+                        type: 'post',
+                        url: '/information/deleteClass',
+                        data: {
+                            name : data.name
+                        },
+                        success: function (CheckVO) {
+                            if (CheckVO.status == 0) {
+                                layer.alert(CheckVO.message, {icon: 1},function () {
+                                    window.parent.location.reload();
+                                    parent.layer.close(index);
+                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2});
+                            }
+                        },
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                        }
+                    });
+                })
+            }
+            if (obj.event === 'updateClassName'){
+                layer.open({
+                    title: '修改班级('+data.name+')'
+                    ,content: $('#updateClassName').html()
+                    ,area: ['50%']
+                    ,btn: ['提交','关闭']
+                    ,yes: function () {
+                        if ($("#newClassName").val() == ''){
+                            alert('请填写班级名称');
+                            return false;
+                        }
+                        var classInput = new RegExp("[\u4e00-\u9fa5]{2}\\(*[1-9][0-9]*\\)[\u4e00-\u9fa5]");
+                        if (!classInput.test($("#newClassName").val())){
+                            alert('请检查班级格式，正确格式：高一(1)班,括号请小写');
+                            return false;
+                        }
+                        $.ajax({
+                            type: 'post',
+                            url: '/information/classManager',
+                            data: {
+                                id: data.id,
+                                name : $("#newClassName").val()
+                            },
+                            success: function (CheckVO) {
+                                if (CheckVO.status == 0) {
+                                    layer.alert(CheckVO.message, {icon: 1},function () {
+                                        window.parent.location.reload();
+                                        parent.layer.close(index);
+                                    });
+                                } else {
+                                    layer.alert(CheckVO.message, {icon: 2});
+                                }
+                            },
+                            error: function (XMLHttpRequest) {
+                                layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                            }
+                        });
+
+                    }
+                });
+            }
+            if (obj.event === 'update'){
+                var title = $(this).data("title");
+                var name = $(this).data("name");
+                var currentId;
+                $.ajax({
+                    type: 'get',
+                    url: '/information/teacherSubjectName',
+                    data: {
+                        roleType: 1
+                    },
+                    success: function (teacherSubjectName) {
+                        switch (title){
+                            case '语文':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '数学':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '英语':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '物理':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '化学':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '生物':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '政治':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '地理':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                            case '历史':
+                                selectLoad(teacherSubjectName, title);
+                                break;
+                        }
+                    }
+                });
+                function selectLoad(teacherSubjectName, title) {
+                    for (var i = 0; i < teacherSubjectName.length; i++) {
+                        if (teacherSubjectName[i].subject == title){
+                            $("#teacherClass").append("<option data-id='" + teacherSubjectName[i].id + "' value='" + teacherSubjectName[i].name + "'>" + teacherSubjectName[i].name +'(' + title +')' + "</option>");
+                        }
+                    }
+                    renderForm();
+                    $("#teacherClass").val(name);
+                    form.render('select');
+                    currentId = $("#teacherClass option:selected").data("id");
+                }
+                // 表单重新渲染
+                function renderForm() {
+                    layui.use('form', function () {
+                        var form = layui.form;//高版本建议把括号去掉，有的低版本，需要加()
+                        form.render();
+                    });
+                }
+                layer.open({
+                    title: '为班级“' + data.name + '”分配'+$(this).data("title")+'教师'
+                    , content: $('#updateTeacherClassLayer').html()
+                    ,area: ['500px', '500px']
+                    ,btn: ['提交', '关闭']
+                    ,yes: function () {
+                        if ($("#teacherClass").val() == '' || $("#teacherClass").val() == null) {
+                            alert('请为教师分配班级！');
+                            return false;
+                        }
+                        $.ajax({
+                            type: 'post',
+                            url: '/information/updateTeacherClass',
+                            data: {
+                                id: $("#teacherClass option:selected").data("id"),
+                                currentId: currentId,
+                                classes: data.name
+                            },
+                            success: function (CheckVO) {
+                                if (CheckVO.status == 0) {
+                                    layer.alert(CheckVO.message, {icon: 1},function () {
+                                        window.parent.location.reload();
+                                        parent.layer.close(index);
+                                    });
+                                } else {
+                                    layer.alert(CheckVO.message, {icon: 2});
+                                }
+                            },
+                            error: function (XMLHttpRequest) {
+                                layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                            }
+                        })
+                    }
+                });
+            }
+        });
+
+        /*添加班级*/
+        $("#addClass").on('click', function () {
+            layer.open({
+                title: '创建班级'
+                ,content: $('#addClassLayer').html()
+                ,area: ['50%']
+                ,btn: ['提交','关闭']
+                ,yes: function () {
+                    if ($("#addClassInput").val() == ''){
+                        alert('请填写班级名称');
+                        return false;
+                    }
+                    var classInput = new RegExp("[\u4e00-\u9fa5]{2}\\(*[1-9][0-9]*\\)[\u4e00-\u9fa5]");
+                    if (!classInput.test($("#addClassInput").val())){
+                        alert('请检查班级格式，正确格式：高一(1)班,括号请小写');
+                        return false;
+                    }
+                    $.ajax({
+                        type: 'post',
+                        url: '/information/classManager',
+                        data: {
+                            name : $("#addClassInput").val()
+                        },
+                        success: function (CheckVO) {
+                            if (CheckVO.status == 0) {
+                                layer.alert(CheckVO.message, {icon: 1},function () {
+                                    window.parent.location.reload();
+                                    parent.layer.close(index);
+                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2});
+                            }
+                        },
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                        }
+                    });
+                }
+            });
+        });
+
+    });
+</script>
+<script type="text/html" id="addClassLayer">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">班级名称</label>
+            <div class="layui-input-inline">
+                <input type="text" id="addClassInput" name="addClassInput" placeholder="请输入需要创建的班级名称..." autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">请输入需要创建的班级名称</div>
+        </div>
+    </form>
+</script>
+<script type="text/html" id="updateClassName">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">班级名称</label>
+            <div class="layui-input-inline">
+                <input type="text" id="newClassName" name="newClassName" placeholder="请输入新的班级名称..." autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">请输入新的班级名称</div>
+        </div>
+    </form>
+</script>
+<script type="text/html" id="updateTeacherLayer">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label"><div id="title"></div></label>
+            <div class="layui-input-inline">
+                <input type="text" id="updateClass" name="addClassInput" placeholder="请输入需要创建的班级名称..." autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">请输入需要创建的班级名称</div>
+        </div>
+    </form>
+</script>
+<script type="text/html" id="updateTeacherClassLayer">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">教师</label>
+            <div class="layui-input-inline">
+                <select id="teacherClass" name="teacherClass" lay-search>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="layui-form-mid layui-word-aux">请选择教师</div>
+        </div>
+    </form>
+</script>
+
+</body>
+</html>

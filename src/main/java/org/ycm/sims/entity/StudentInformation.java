@@ -38,4 +38,11 @@ public class StudentInformation {
     private String enrolmentTime;
 
     private Date createTime;
+
+    public StudentInformation() {
+    }
+
+    public StudentInformation(String loginName) {
+        this.loginName = loginName;
+    }
 }

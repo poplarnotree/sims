@@ -40,4 +40,10 @@ public interface InformationService {
 
     /*教师录入StudentInformation*/
     CheckVO createStudentInformation(StudentInformationDTO studentInformationDTO);
+
+    /*查询学生信息*/
+    PageVO<StudentInformationVO> studentInformationPage(RoleManagerDTO roleManagerDTO);
+
+    /*修改学生信息*/
+    CheckVO updateStudentInformation(StudentInformationDTO studentInformationDTO);
 }

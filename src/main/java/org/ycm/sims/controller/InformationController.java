@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.*;
 import org.ycm.sims.dto.*;
+import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.utils.ControllerJumpUtil;
 
@@ -45,7 +46,7 @@ public class InformationController {
         return informationService.createStudentInformation(studentInformationDTO);
     }
 
-    @RequestMapping("/teacherList")
+    @RequestMapping("/page")
     public String teacherList(){
         return ControllerJumpUtil.ControllerJumpUtil(request, "admin/information", "role/information");
     }
@@ -59,7 +60,6 @@ public class InformationController {
     @RequestMapping("/updateTeacher")
     @ResponseBody
     public CheckVO updateTeacher(@RequestBody TeacherInformationDTO teacherInformationDTO){
-        System.out.println(teacherInformationDTO);
         return informationService.updateTeacherInformation(teacherInformationDTO);
     }
 
@@ -96,5 +96,22 @@ public class InformationController {
     @ResponseBody
     public CheckVO updateTeacherClass(UpdateTeacherClassDTO updateTeacherClassDTO){
         return informationService.updateTeacherClass(updateTeacherClassDTO);
+    }
+
+    @RequestMapping("/studentPage")
+    @ResponseBody
+    public PageVO<StudentInformationVO> studentPage(RoleManagerDTO roleManagerDTO){
+        return informationService.studentInformationPage(roleManagerDTO);
+    }
+
+    @RequestMapping("/updateStudent")
+    @ResponseBody
+    public CheckVO updateStudent(@RequestBody StudentInformationDTO studentInformationDTO){
+        return informationService.updateStudentInformation(studentInformationDTO);
+    }
+
+    @RequestMapping("/tClassManager")
+    public String tClassManager(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/t_class_manager");
     }
 }
