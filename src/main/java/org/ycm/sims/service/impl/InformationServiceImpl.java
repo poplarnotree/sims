@@ -402,4 +402,17 @@ public class InformationServiceImpl implements InformationService {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
+
+    @Override
+    public TeacherInformationVO MyInformationT() {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        TeacherInformation teacherInformation = informationDao.findByInformation(new TeacherInformation(role.getLoginName()));
+        if (teacherInformation == null) {
+            throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+        }
+        TeacherInformationVO teacherInformationVO = new TeacherInformationVO();
+        BeanUtils.copyProperties(teacherInformation, teacherInformationVO);
+        teacherInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(teacherInformation.getCreateTime()));
+        return teacherInformationVO;
+    }
 }

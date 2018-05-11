@@ -46,4 +46,7 @@ public interface InformationService {
 
     /*修改学生信息*/
     CheckVO updateStudentInformation(StudentInformationDTO studentInformationDTO);
+
+    /*教师查看个人信息*/
+    TeacherInformationVO MyInformationT();
 }

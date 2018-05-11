@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.*;
 import org.ycm.sims.dto.*;
+import org.ycm.sims.entity.TeacherInformation;
 import org.ycm.sims.enums.ParameterEnum;
 import org.ycm.sims.service.InformationService;
 import org.ycm.sims.utils.ControllerJumpUtil;
@@ -114,4 +115,16 @@ public class InformationController {
     public String tClassManager(){
         return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/t_class_manager");
     }
+
+    @RequestMapping("/myInformationHtmlT")
+    public String myInformationHtml(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/my_information_t");
+    }
+
+    @RequestMapping("/myInformationVOT")
+    @ResponseBody
+    public TeacherInformationVO myInformationVOT(){
+        return informationService.MyInformationT();
+    }
+
 }

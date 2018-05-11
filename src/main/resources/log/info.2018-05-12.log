@@ -1,0 +1,399 @@
+2018-05-12 00:00:41,543 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:00:41,546 - ==> Parameters: lisi(String)
+2018-05-12 00:00:41,549 - <==      Total: 1
+2018-05-12 00:00:41,551 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:00:41,551 - ==> Parameters: lisi(String)
+2018-05-12 00:00:41,552 - <==      Total: 1
+2018-05-12 00:00:41,575 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:00:41,576 - ==> Parameters: lisi(String)
+2018-05-12 00:00:41,577 - <==      Total: 1
+2018-05-12 00:00:41,578 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:00:41,578 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:00:41,580 - <==      Total: 1
+2018-05-12 00:00:41,582 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:00:41,582 - ==> Parameters: 1(Integer)
+2018-05-12 00:00:41,584 - <==      Total: 6
+2018-05-12 00:00:41,848 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:00:41,849 - ==> Parameters: lisi(String)
+2018-05-12 00:00:41,850 - <==      Total: 1
+2018-05-12 00:00:41,851 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:00:41,851 - ==> Parameters: lisi(String)
+2018-05-12 00:00:41,853 - <==      Total: 1
+2018-05-12 00:01:14,076 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:01:14,077 - ==> Parameters: lisi(String)
+2018-05-12 00:01:14,078 - <==      Total: 1
+2018-05-12 00:01:14,078 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:01:14,079 - ==> Parameters: lisi(String)
+2018-05-12 00:01:14,082 - <==      Total: 1
+2018-05-12 00:01:14,109 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:01:14,109 - ==> Parameters: lisi(String)
+2018-05-12 00:01:14,110 - <==      Total: 1
+2018-05-12 00:01:14,111 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:01:14,111 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:01:14,113 - <==      Total: 1
+2018-05-12 00:01:14,114 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:01:14,115 - ==> Parameters: 1(Integer)
+2018-05-12 00:01:14,119 - <==      Total: 6
+2018-05-12 00:01:14,352 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:01:14,353 - ==> Parameters: lisi(String)
+2018-05-12 00:01:14,354 - <==      Total: 1
+2018-05-12 00:01:14,354 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:01:14,355 - ==> Parameters: lisi(String)
+2018-05-12 00:01:14,356 - <==      Total: 1
+2018-05-12 00:01:15,410 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:01:15,410 - ==> Parameters: lisi(String)
+2018-05-12 00:01:15,411 - <==      Total: 1
+2018-05-12 00:01:15,412 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:01:15,412 - ==> Parameters: lisi(String)
+2018-05-12 00:01:15,414 - <==      Total: 1
+2018-05-12 00:01:15,439 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:01:15,439 - ==> Parameters: lisi(String)
+2018-05-12 00:01:15,440 - <==      Total: 1
+2018-05-12 00:01:15,441 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:01:15,441 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:01:15,442 - <==      Total: 1
+2018-05-12 00:01:15,442 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:01:15,443 - ==> Parameters: 1(Integer)
+2018-05-12 00:01:15,444 - <==      Total: 6
+2018-05-12 00:01:15,798 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:01:15,799 - ==> Parameters: lisi(String)
+2018-05-12 00:01:15,800 - <==      Total: 1
+2018-05-12 00:01:15,801 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:01:15,801 - ==> Parameters: lisi(String)
+2018-05-12 00:01:15,802 - <==      Total: 1
+2018-05-12 00:03:08,074 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:08,074 - ==> Parameters: lisi(String)
+2018-05-12 00:03:08,076 - <==      Total: 1
+2018-05-12 00:03:08,077 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:08,077 - ==> Parameters: lisi(String)
+2018-05-12 00:03:08,078 - <==      Total: 1
+2018-05-12 00:03:08,104 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:08,105 - ==> Parameters: lisi(String)
+2018-05-12 00:03:08,106 - <==      Total: 1
+2018-05-12 00:03:08,107 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:03:08,107 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:03:08,108 - <==      Total: 1
+2018-05-12 00:03:08,109 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:03:08,109 - ==> Parameters: 1(Integer)
+2018-05-12 00:03:08,110 - <==      Total: 6
+2018-05-12 00:03:08,279 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:08,279 - ==> Parameters: lisi(String)
+2018-05-12 00:03:08,280 - <==      Total: 1
+2018-05-12 00:03:08,281 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:08,281 - ==> Parameters: lisi(String)
+2018-05-12 00:03:08,283 - <==      Total: 1
+2018-05-12 00:03:09,031 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:09,032 - ==> Parameters: lisi(String)
+2018-05-12 00:03:09,034 - <==      Total: 1
+2018-05-12 00:03:09,036 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:09,036 - ==> Parameters: lisi(String)
+2018-05-12 00:03:09,037 - <==      Total: 1
+2018-05-12 00:03:09,066 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:09,067 - ==> Parameters: lisi(String)
+2018-05-12 00:03:09,068 - <==      Total: 1
+2018-05-12 00:03:09,069 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:03:09,070 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:03:09,071 - <==      Total: 1
+2018-05-12 00:03:09,071 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:03:09,072 - ==> Parameters: 1(Integer)
+2018-05-12 00:03:09,073 - <==      Total: 6
+2018-05-12 00:03:09,246 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:09,247 - ==> Parameters: lisi(String)
+2018-05-12 00:03:09,248 - <==      Total: 1
+2018-05-12 00:03:09,249 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:09,249 - ==> Parameters: lisi(String)
+2018-05-12 00:03:09,250 - <==      Total: 1
+2018-05-12 00:03:31,418 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:31,418 - ==> Parameters: lisi(String)
+2018-05-12 00:03:31,420 - <==      Total: 1
+2018-05-12 00:03:31,420 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:31,421 - ==> Parameters: lisi(String)
+2018-05-12 00:03:31,422 - <==      Total: 1
+2018-05-12 00:03:31,448 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:31,448 - ==> Parameters: lisi(String)
+2018-05-12 00:03:31,450 - <==      Total: 1
+2018-05-12 00:03:31,451 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:03:31,452 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:03:31,452 - <==      Total: 1
+2018-05-12 00:03:31,453 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:03:31,453 - ==> Parameters: 1(Integer)
+2018-05-12 00:03:31,455 - <==      Total: 6
+2018-05-12 00:03:31,713 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:31,714 - ==> Parameters: lisi(String)
+2018-05-12 00:03:31,715 - <==      Total: 1
+2018-05-12 00:03:31,716 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:31,716 - ==> Parameters: lisi(String)
+2018-05-12 00:03:31,718 - <==      Total: 1
+2018-05-12 00:03:32,576 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:32,576 - ==> Parameters: lisi(String)
+2018-05-12 00:03:32,577 - <==      Total: 1
+2018-05-12 00:03:32,577 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:32,578 - ==> Parameters: lisi(String)
+2018-05-12 00:03:32,579 - <==      Total: 1
+2018-05-12 00:03:32,603 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:32,603 - ==> Parameters: lisi(String)
+2018-05-12 00:03:32,605 - <==      Total: 1
+2018-05-12 00:03:32,605 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:03:32,606 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:03:32,606 - <==      Total: 1
+2018-05-12 00:03:32,608 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:03:32,608 - ==> Parameters: 1(Integer)
+2018-05-12 00:03:32,610 - <==      Total: 6
+2018-05-12 00:03:32,960 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:03:32,960 - ==> Parameters: lisi(String)
+2018-05-12 00:03:32,961 - <==      Total: 1
+2018-05-12 00:03:32,962 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:03:32,962 - ==> Parameters: lisi(String)
+2018-05-12 00:03:32,963 - <==      Total: 1
+2018-05-12 00:04:22,731 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:04:22,732 - ==> Parameters: lisi(String)
+2018-05-12 00:04:22,733 - <==      Total: 1
+2018-05-12 00:04:22,734 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:04:22,734 - ==> Parameters: lisi(String)
+2018-05-12 00:04:22,736 - <==      Total: 1
+2018-05-12 00:04:22,758 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:04:22,759 - ==> Parameters: lisi(String)
+2018-05-12 00:04:22,760 - <==      Total: 1
+2018-05-12 00:04:22,760 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:04:22,760 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:04:22,761 - <==      Total: 1
+2018-05-12 00:04:22,762 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:04:22,762 - ==> Parameters: 1(Integer)
+2018-05-12 00:04:22,765 - <==      Total: 6
+2018-05-12 00:04:23,027 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:04:23,028 - ==> Parameters: lisi(String)
+2018-05-12 00:04:23,029 - <==      Total: 1
+2018-05-12 00:04:23,030 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:04:23,030 - ==> Parameters: lisi(String)
+2018-05-12 00:04:23,031 - <==      Total: 1
+2018-05-12 00:07:52,813 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:07:52,813 - ==> Parameters: lisi(String)
+2018-05-12 00:07:52,814 - <==      Total: 1
+2018-05-12 00:07:52,815 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:07:52,815 - ==> Parameters: lisi(String)
+2018-05-12 00:07:52,817 - <==      Total: 1
+2018-05-12 00:07:52,860 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:07:52,861 - ==> Parameters: lisi(String)
+2018-05-12 00:07:52,862 - <==      Total: 1
+2018-05-12 00:07:52,862 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:07:52,863 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:07:52,866 - <==      Total: 1
+2018-05-12 00:07:52,867 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:07:52,867 - ==> Parameters: 1(Integer)
+2018-05-12 00:07:52,868 - <==      Total: 6
+2018-05-12 00:07:53,211 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:07:53,212 - ==> Parameters: lisi(String)
+2018-05-12 00:07:53,213 - <==      Total: 1
+2018-05-12 00:07:53,213 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:07:53,213 - ==> Parameters: lisi(String)
+2018-05-12 00:07:53,215 - <==      Total: 1
+2018-05-12 00:07:53,921 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:07:53,922 - ==> Parameters: lisi(String)
+2018-05-12 00:07:53,923 - <==      Total: 1
+2018-05-12 00:07:53,924 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:07:53,924 - ==> Parameters: lisi(String)
+2018-05-12 00:07:53,926 - <==      Total: 1
+2018-05-12 00:07:53,945 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:07:53,947 - ==> Parameters: lisi(String)
+2018-05-12 00:07:53,949 - <==      Total: 1
+2018-05-12 00:07:53,950 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:07:53,950 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:07:53,951 - <==      Total: 1
+2018-05-12 00:07:53,953 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:07:53,953 - ==> Parameters: 1(Integer)
+2018-05-12 00:07:53,955 - <==      Total: 6
+2018-05-12 00:07:54,104 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:07:54,105 - ==> Parameters: lisi(String)
+2018-05-12 00:07:54,105 - <==      Total: 1
+2018-05-12 00:07:54,106 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:07:54,107 - ==> Parameters: lisi(String)
+2018-05-12 00:07:54,108 - <==      Total: 1
+2018-05-12 00:08:06,753 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:06,753 - ==> Parameters: lisi(String)
+2018-05-12 00:08:06,754 - <==      Total: 1
+2018-05-12 00:08:06,755 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:06,755 - ==> Parameters: lisi(String)
+2018-05-12 00:08:06,756 - <==      Total: 1
+2018-05-12 00:08:06,778 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:06,779 - ==> Parameters: lisi(String)
+2018-05-12 00:08:06,780 - <==      Total: 1
+2018-05-12 00:08:06,781 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:08:06,782 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:08:06,783 - <==      Total: 1
+2018-05-12 00:08:06,784 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:08:06,784 - ==> Parameters: 1(Integer)
+2018-05-12 00:08:06,786 - <==      Total: 6
+2018-05-12 00:08:07,007 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:07,007 - ==> Parameters: lisi(String)
+2018-05-12 00:08:07,008 - <==      Total: 1
+2018-05-12 00:08:07,009 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:07,009 - ==> Parameters: lisi(String)
+2018-05-12 00:08:07,010 - <==      Total: 1
+2018-05-12 00:08:08,853 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:08,853 - ==> Parameters: lisi(String)
+2018-05-12 00:08:08,854 - <==      Total: 1
+2018-05-12 00:08:08,854 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:08,855 - ==> Parameters: lisi(String)
+2018-05-12 00:08:08,856 - <==      Total: 1
+2018-05-12 00:08:08,891 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:08,891 - ==> Parameters: lisi(String)
+2018-05-12 00:08:08,892 - <==      Total: 1
+2018-05-12 00:08:08,893 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:08:08,893 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:08:08,894 - <==      Total: 1
+2018-05-12 00:08:08,894 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:08:08,894 - ==> Parameters: 1(Integer)
+2018-05-12 00:08:08,896 - <==      Total: 6
+2018-05-12 00:08:09,036 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:09,036 - ==> Parameters: lisi(String)
+2018-05-12 00:08:09,037 - <==      Total: 1
+2018-05-12 00:08:09,037 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:09,037 - ==> Parameters: lisi(String)
+2018-05-12 00:08:09,038 - <==      Total: 1
+2018-05-12 00:08:16,725 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:16,725 - ==> Parameters: lisi(String)
+2018-05-12 00:08:16,726 - <==      Total: 1
+2018-05-12 00:08:16,727 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:16,727 - ==> Parameters: lisi(String)
+2018-05-12 00:08:16,729 - <==      Total: 1
+2018-05-12 00:08:16,746 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:16,746 - ==> Parameters: lisi(String)
+2018-05-12 00:08:16,747 - <==      Total: 1
+2018-05-12 00:08:16,748 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:08:16,748 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:08:16,748 - <==      Total: 1
+2018-05-12 00:08:16,749 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:08:16,749 - ==> Parameters: 1(Integer)
+2018-05-12 00:08:16,750 - <==      Total: 6
+2018-05-12 00:08:16,963 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:16,963 - ==> Parameters: lisi(String)
+2018-05-12 00:08:16,965 - <==      Total: 1
+2018-05-12 00:08:16,965 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:16,965 - ==> Parameters: lisi(String)
+2018-05-12 00:08:16,966 - <==      Total: 1
+2018-05-12 00:08:17,612 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:17,613 - ==> Parameters: lisi(String)
+2018-05-12 00:08:17,615 - <==      Total: 1
+2018-05-12 00:08:17,616 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:17,616 - ==> Parameters: lisi(String)
+2018-05-12 00:08:17,619 - <==      Total: 1
+2018-05-12 00:08:17,650 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:17,650 - ==> Parameters: lisi(String)
+2018-05-12 00:08:17,652 - <==      Total: 1
+2018-05-12 00:08:17,653 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:08:17,653 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:08:17,654 - <==      Total: 1
+2018-05-12 00:08:17,654 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:08:17,654 - ==> Parameters: 1(Integer)
+2018-05-12 00:08:17,659 - <==      Total: 6
+2018-05-12 00:08:17,860 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:17,861 - ==> Parameters: lisi(String)
+2018-05-12 00:08:17,863 - <==      Total: 1
+2018-05-12 00:08:17,864 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:17,864 - ==> Parameters: lisi(String)
+2018-05-12 00:08:17,865 - <==      Total: 1
+2018-05-12 00:08:18,260 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:18,260 - ==> Parameters: lisi(String)
+2018-05-12 00:08:18,261 - <==      Total: 1
+2018-05-12 00:08:18,262 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:18,262 - ==> Parameters: lisi(String)
+2018-05-12 00:08:18,264 - <==      Total: 1
+2018-05-12 00:08:18,289 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:18,289 - ==> Parameters: lisi(String)
+2018-05-12 00:08:18,290 - <==      Total: 1
+2018-05-12 00:08:18,291 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:08:18,291 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:08:18,292 - <==      Total: 1
+2018-05-12 00:08:18,293 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:08:18,293 - ==> Parameters: 1(Integer)
+2018-05-12 00:08:18,295 - <==      Total: 6
+2018-05-12 00:08:18,516 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:18,516 - ==> Parameters: lisi(String)
+2018-05-12 00:08:18,517 - <==      Total: 1
+2018-05-12 00:08:18,517 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:18,518 - ==> Parameters: lisi(String)
+2018-05-12 00:08:18,519 - <==      Total: 1
+2018-05-12 00:08:32,223 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:32,223 - ==> Parameters: lisi(String)
+2018-05-12 00:08:32,224 - <==      Total: 1
+2018-05-12 00:08:32,225 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:32,225 - ==> Parameters: lisi(String)
+2018-05-12 00:08:32,226 - <==      Total: 1
+2018-05-12 00:08:32,249 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:32,250 - ==> Parameters: lisi(String)
+2018-05-12 00:08:32,251 - <==      Total: 1
+2018-05-12 00:08:32,252 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:08:32,252 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:08:32,253 - <==      Total: 1
+2018-05-12 00:08:32,254 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:08:32,254 - ==> Parameters: 1(Integer)
+2018-05-12 00:08:32,255 - <==      Total: 6
+2018-05-12 00:08:32,434 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:32,434 - ==> Parameters: lisi(String)
+2018-05-12 00:08:32,435 - <==      Total: 1
+2018-05-12 00:08:32,436 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:32,436 - ==> Parameters: lisi(String)
+2018-05-12 00:08:32,437 - <==      Total: 1
+2018-05-12 00:08:33,108 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:33,109 - ==> Parameters: lisi(String)
+2018-05-12 00:08:33,110 - <==      Total: 1
+2018-05-12 00:08:33,110 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:33,110 - ==> Parameters: lisi(String)
+2018-05-12 00:08:33,111 - <==      Total: 1
+2018-05-12 00:08:33,165 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:33,166 - ==> Parameters: lisi(String)
+2018-05-12 00:08:33,167 - <==      Total: 1
+2018-05-12 00:08:33,168 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:08:33,168 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:08:33,169 - <==      Total: 1
+2018-05-12 00:08:33,169 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:08:33,169 - ==> Parameters: 1(Integer)
+2018-05-12 00:08:33,170 - <==      Total: 6
+2018-05-12 00:08:33,500 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:08:33,500 - ==> Parameters: lisi(String)
+2018-05-12 00:08:33,501 - <==      Total: 1
+2018-05-12 00:08:33,502 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:08:33,502 - ==> Parameters: lisi(String)
+2018-05-12 00:08:33,503 - <==      Total: 1
+2018-05-12 00:09:46,001 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:09:46,002 - ==> Parameters: lisi(String)
+2018-05-12 00:09:46,003 - <==      Total: 1
+2018-05-12 00:09:46,003 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:09:46,004 - ==> Parameters: lisi(String)
+2018-05-12 00:09:46,005 - <==      Total: 1
+2018-05-12 00:09:46,028 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:09:46,028 - ==> Parameters: lisi(String)
+2018-05-12 00:09:46,030 - <==      Total: 1
+2018-05-12 00:09:46,031 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:09:46,031 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:09:46,033 - <==      Total: 1
+2018-05-12 00:09:46,034 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:09:46,034 - ==> Parameters: 1(Integer)
+2018-05-12 00:09:46,035 - <==      Total: 6
+2018-05-12 00:09:46,297 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:09:46,297 - ==> Parameters: lisi(String)
+2018-05-12 00:09:46,298 - <==      Total: 1
+2018-05-12 00:09:46,299 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:09:46,299 - ==> Parameters: lisi(String)
+2018-05-12 00:09:46,300 - <==      Total: 1
+2018-05-12 00:09:47,199 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:09:47,200 - ==> Parameters: lisi(String)
+2018-05-12 00:09:47,202 - <==      Total: 1
+2018-05-12 00:09:47,202 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:09:47,202 - ==> Parameters: lisi(String)
+2018-05-12 00:09:47,204 - <==      Total: 1
+2018-05-12 00:09:47,227 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:09:47,227 - ==> Parameters: lisi(String)
+2018-05-12 00:09:47,228 - <==      Total: 1
+2018-05-12 00:09:47,229 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 00:09:47,229 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 00:09:47,231 - <==      Total: 1
+2018-05-12 00:09:47,232 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 00:09:47,233 - ==> Parameters: 1(Integer)
+2018-05-12 00:09:47,235 - <==      Total: 6
+2018-05-12 00:09:47,425 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 00:09:47,426 - ==> Parameters: lisi(String)
+2018-05-12 00:09:47,427 - <==      Total: 1
+2018-05-12 00:09:47,427 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 00:09:47,427 - ==> Parameters: lisi(String)
+2018-05-12 00:09:47,429 - <==      Total: 1

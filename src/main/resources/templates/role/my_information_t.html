@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/role_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">信息 / 我的信息</h1>
+            <form class="layui-form" action="">
+                <fieldset class="layui-elem-field">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">id</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="id" name="id"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">登录帐号</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="loginName"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">工号</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="number"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">教师姓名</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="name"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">性别</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="sex"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">身份证号</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="idCart"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">职称</label>
+                        <div class="layui-input-inline" >
+                            <label class="layui-form-label" id="positionalTitles"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">民族</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="nation"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">籍贯</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="place"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">地址</label>
+                        <div class="layui-input-inline" style="width: 500px;">
+                            <label class="layui-form-label" id="address"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">出生日期</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="birthday"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系电话</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="phone"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">部门</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="department"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">班级</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="classes"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学科</label>
+                        <div class="layui-input-inline">
+                            <label class="layui-form-label" id="subject"></label>
+                        </div>
+                    </div>
+                </fieldset>
+                <hr>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script>
+    //JavaScript代码区域
+    layui.use(['element','form'], function(){
+        var element = layui.element;
+        var form = layui.form;
+        $.ajax({
+            type: 'get',
+            url: '/information/myInformationVOT',
+            success: function (data) {
+                $("#id").html(data.id);
+                $("#loginName").html(data.loginName);
+                $("#number").html(data.number);
+                $("#name").html(data.name);
+                $("#sex").html(data.sex);
+                $("#idCart").html(data.idCart);
+                $("#positionalTitles").html(data.positionalTitles);
+                $("#nation").html(data.nation);
+                $("#place").html(data.place);
+                $("#address").html(data.address);
+                $("#birthday").html(data.birthday);
+                $("#phone").html(data.phone);
+                $("#department").html(data.department);
+                $("#classes").html(data.classes);
+                $("#subject").html(data.subject);
+                renderForm();
+            }
+        });
+        // 表单重新渲染
+        function renderForm(){
+            layui.use('form', function(){
+                var form = layui.form;//高版本建议把括号去掉，有的低版本，需要加()
+                form.render();
+            });
+        }
+    });
+</script>
+</body>
+</html>
