@@ -10,15 +10,15 @@ import org.ycm.sims.enums.ResultEnum;
  */
 @Data
 public class SimsException extends RuntimeException {
-    private Integer code;
+    private Integer status;
 
     public SimsException(ExceptionEnum exceptionEnum) {
         super(exceptionEnum.getMessage());
-        this.code = exceptionEnum.getCode();
+        this.status = exceptionEnum.getStatus();
     }
 
     public SimsException(ResultEnum resultEnum){
         super(resultEnum.getMessage());
-        this.code = resultEnum.getCode();
+        this.status = resultEnum.getCode();
     }
 }

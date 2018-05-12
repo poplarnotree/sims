@@ -70,7 +70,10 @@ public class FormatConversionUtil {
      * @return
      */
     public static Integer roleTypeFormatUitl(String roleType){
-        int roletype = 0;
+        int roletype = -1;
+        if (roleType == null){
+            return -1;
+        }
         switch (roleType) {
             case "超级管理员":
                 roletype = 0;
@@ -92,6 +95,9 @@ public class FormatConversionUtil {
      */
     public static String ListFormatString(List list){
         String str = "";
+        if (list == null){
+            return null;
+        }
         for(int i = 0; i < list.size(); i++){
             if (i == list.size() - 1){
                 str += list.get(i);

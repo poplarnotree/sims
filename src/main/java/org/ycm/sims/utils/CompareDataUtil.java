@@ -24,46 +24,46 @@ public class CompareDataUtil {
      */
     public static List<RecordDTO> CompareTeacherInformationData(TeacherInformation teacherInformationData, TeacherInformation teacherInformation){
         List<RecordDTO> recordDTOList = new ArrayList<>();
-        if (!teacherInformationData.getLoginName().equals(teacherInformation.getLoginName())){
+        if (teacherInformation.getLoginName() != null && !teacherInformationData.getLoginName().equals(teacherInformation.getLoginName())){
             recordDTOList.add(new RecordDTO(ColumnEnum.LOGIN_NAME.getValue(), teacherInformation.getLoginName(), teacherInformationData.getLoginName()));
         }
-        if (!teacherInformationData.getNumber().equals(teacherInformation.getNumber())){
+        if (teacherInformation.getNumber() != null && !teacherInformationData.getNumber().equals(teacherInformation.getNumber())){
             recordDTOList.add(new RecordDTO(ColumnEnum.NUMBER.getValue(), teacherInformation.getNumber(), teacherInformationData.getNumber()));
         }
-        if (!teacherInformationData.getName().equals(teacherInformation.getName())){
+        if (teacherInformation.getName() != null && !teacherInformationData.getName().equals(teacherInformation.getName())){
             recordDTOList.add(new RecordDTO(ColumnEnum.NAME.getValue(), teacherInformation.getName(), teacherInformationData.getName()));
         }
-        if (!teacherInformationData.getSex().equals(teacherInformation.getSex())){
+        if (teacherInformation.getSex() != null && !teacherInformationData.getSex().equals(teacherInformation.getSex())){
             recordDTOList.add(new RecordDTO(ColumnEnum.SEX.getValue(), teacherInformation.getSex(), teacherInformationData.getSex()));
         }
-        if (!teacherInformationData.getIdCart().equals(teacherInformation.getIdCart())){
+        if (teacherInformation.getIdCart() != null && !teacherInformationData.getIdCart().equals(teacherInformation.getIdCart())){
             recordDTOList.add(new RecordDTO(ColumnEnum.ID_CART.getValue(), teacherInformation.getIdCart(), teacherInformationData.getIdCart()));
         }
-        if (!teacherInformationData.getPositionalTitles().equals(teacherInformation.getPositionalTitles())){
+        if (teacherInformation.getPositionalTitles() != null && !teacherInformationData.getPositionalTitles().equals(teacherInformation.getPositionalTitles())){
             recordDTOList.add(new RecordDTO(ColumnEnum.POSITIONAL_TITLES.getValue(), teacherInformation.getPositionalTitles(), teacherInformationData.getPositionalTitles()));
         }
-        if (!teacherInformationData.getNation().equals(teacherInformation.getNation())){
+        if (teacherInformation.getNation() != null && !teacherInformationData.getNation().equals(teacherInformation.getNation())){
             recordDTOList.add(new RecordDTO(ColumnEnum.NATION.getValue(), teacherInformation.getNation(), teacherInformationData.getNation()));
         }
-        if (!teacherInformationData.getPlace().equals(teacherInformation.getPlace())){
+        if (teacherInformation.getPlace() != null && !teacherInformationData.getPlace().equals(teacherInformation.getPlace())){
             recordDTOList.add(new RecordDTO(ColumnEnum.PLACE.getValue(), teacherInformation.getPlace(), teacherInformationData.getPlace()));
         }
-        if (!teacherInformationData.getAddress().equals(teacherInformation.getAddress())){
+        if (teacherInformation.getAddress() != null && !teacherInformationData.getAddress().equals(teacherInformation.getAddress())){
             recordDTOList.add(new RecordDTO(ColumnEnum.ADDRESS.getValue(), teacherInformation.getAddress(), teacherInformationData.getAddress()));
         }
-        if (!teacherInformationData.getBirthday().equals(teacherInformation.getBirthday())){
+        if (teacherInformation.getBirthday() != null && !teacherInformationData.getBirthday().equals(teacherInformation.getBirthday())){
             recordDTOList.add(new RecordDTO(ColumnEnum.BIRTHDAY.getValue(), teacherInformation.getBirthday(), teacherInformationData.getBirthday()));
         }
-        if (!teacherInformationData.getPhone().equals(teacherInformation.getPhone())){
+        if (teacherInformation.getPhone() != null && !teacherInformationData.getPhone().equals(teacherInformation.getPhone())){
             recordDTOList.add(new RecordDTO(ColumnEnum.PHONE.getValue(), teacherInformation.getPhone(), teacherInformationData.getPhone()));
         }
-        if (!teacherInformationData.getDepartment().equals(teacherInformation.getDepartment())){
+        if (teacherInformation.getDepartment() != null && !teacherInformationData.getDepartment().equals(teacherInformation.getDepartment())){
             recordDTOList.add(new RecordDTO(ColumnEnum.DEPARTMENT.getValue(), teacherInformation.getDepartment(), teacherInformationData.getDepartment()));
         }
-        if (!teacherInformationData.getClasses().equals(teacherInformation.getClasses())){
+        if (teacherInformation.getClasses() != null && !teacherInformationData.getClasses().equals(teacherInformation.getClasses())){
             recordDTOList.add(new RecordDTO(ColumnEnum.CLASSES.getValue(), teacherInformation.getClasses(), teacherInformationData.getClasses()));
         }
-        if (!teacherInformationData.getSubject().equals(teacherInformation.getSubject())){
+        if (teacherInformation.getSubject() != null && !teacherInformationData.getSubject().equals(teacherInformation.getSubject())){
             recordDTOList.add(new RecordDTO(ColumnEnum.SUBJECT.getValue(), teacherInformation.getSubject(), teacherInformationData.getSubject()));
         }
         return recordDTOList;
@@ -77,40 +77,40 @@ public class CompareDataUtil {
      */
     public static List<RecordDTO> CompareStudentInformationData(StudentInformation studentInformationData, StudentInformation studentInformation){
         List<RecordDTO> recordDTOList = new ArrayList<>();
-        if (!studentInformationData.getLoginName().equals(studentInformation.getLoginName())){
+        if (studentInformation.getLoginName() != null && !studentInformationData.getLoginName().equals(studentInformation.getLoginName())){
             recordDTOList.add(new RecordDTO(ColumnEnum.LOGIN_NAME.getValue(), studentInformation.getLoginName(), studentInformationData.getLoginName()));
         }
-        if (!studentInformationData.getNumber().equals(studentInformation.getNumber())){
+        if (studentInformation.getNumber() != null && !studentInformationData.getNumber().equals(studentInformation.getNumber())){
             recordDTOList.add(new RecordDTO(ColumnEnum.NUMBER.getValue(), studentInformation.getNumber(), studentInformationData.getNumber()));
         }
-        if (!studentInformationData.getName().equals(studentInformation.getName())){
+        if (studentInformation.getName() != null && !studentInformationData.getName().equals(studentInformation.getName())){
             recordDTOList.add(new RecordDTO(ColumnEnum.NAME.getValue(), studentInformation.getName(), studentInformationData.getName()));
         }
-        if (!studentInformationData.getSex().equals(studentInformation.getSex())){
+        if (studentInformation.getSex() != null && !studentInformationData.getSex().equals(studentInformation.getSex())){
             recordDTOList.add(new RecordDTO(ColumnEnum.SEX.getValue(), studentInformation.getSex(), studentInformationData.getSex()));
         }
-        if (!studentInformationData.getIdCart().equals(studentInformation.getIdCart())){
+        if (studentInformation.getIdCart() != null && !studentInformationData.getIdCart().equals(studentInformation.getIdCart())){
             recordDTOList.add(new RecordDTO(ColumnEnum.ID_CART.getValue(), studentInformation.getIdCart(), studentInformationData.getIdCart()));
         }
-        if (!studentInformationData.getNation().equals(studentInformation.getNation())){
+        if (studentInformation.getNation() != null && !studentInformationData.getNation().equals(studentInformation.getNation())){
             recordDTOList.add(new RecordDTO(ColumnEnum.NATION.getValue(), studentInformation.getNation(), studentInformationData.getNation()));
         }
-        if (!studentInformationData.getPlace().equals(studentInformation.getPlace())){
+        if (studentInformation.getPlace() != null && !studentInformationData.getPlace().equals(studentInformation.getPlace())){
             recordDTOList.add(new RecordDTO(ColumnEnum.PLACE.getValue(), studentInformation.getPlace(), studentInformationData.getPlace()));
         }
-        if (!studentInformationData.getAddress().equals(studentInformation.getAddress())){
+        if (studentInformation.getAddress() != null && !studentInformationData.getAddress().equals(studentInformation.getAddress())){
             recordDTOList.add(new RecordDTO(ColumnEnum.ADDRESS.getValue(), studentInformation.getAddress(), studentInformationData.getAddress()));
         }
-        if (!studentInformationData.getBirthday().equals(studentInformation.getBirthday())){
+        if (studentInformation.getBirthday() != null && !studentInformationData.getBirthday().equals(studentInformation.getBirthday())){
             recordDTOList.add(new RecordDTO(ColumnEnum.BIRTHDAY.getValue(), studentInformation.getBirthday(), studentInformationData.getBirthday()));
         }
-        if (!studentInformationData.getPhone().equals(studentInformation.getPhone())){
+        if (studentInformation.getPhone() != null && !studentInformationData.getPhone().equals(studentInformation.getPhone())){
             recordDTOList.add(new RecordDTO(ColumnEnum.PHONE.getValue(), studentInformation.getPhone(), studentInformationData.getPhone()));
         }
-        if (!studentInformationData.getClasses().equals(studentInformation.getClasses())){
+        if (studentInformation.getClasses() != null && !studentInformationData.getClasses().equals(studentInformation.getClasses())){
             recordDTOList.add(new RecordDTO(ColumnEnum.CLASSES.getValue(), studentInformation.getClasses(), studentInformationData.getClasses()));
         }
-        if (!studentInformationData.getEnrolmentTime().equals(studentInformation.getEnrolmentTime())){
+        if (studentInformation.getEnrolmentTime() != null && !studentInformationData.getEnrolmentTime().equals(studentInformation.getEnrolmentTime())){
             recordDTOList.add(new RecordDTO(ColumnEnum.ENROLMENT_TIME.getValue(), studentInformation.getEnrolmentTime(), studentInformationData.getEnrolmentTime()));
         }
         return recordDTOList;

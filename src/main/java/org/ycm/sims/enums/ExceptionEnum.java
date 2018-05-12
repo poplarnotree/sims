@@ -17,12 +17,12 @@ public enum ExceptionEnum {
     SYSTEM_ERROR(500, "系统异常,请稍后再试")
     ;
 
-    private Integer code;
+    private Integer status;
 
     private String message;
 
-    ExceptionEnum(Integer code, String message) {
-        this.code = code;
+    ExceptionEnum(Integer status, String message) {
+        this.status = status;
         this.message = message;
     }
 }

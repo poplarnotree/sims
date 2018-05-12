@@ -115,7 +115,6 @@ public class InformationServiceImpl implements InformationService {
             PageVO<TeacherInformationVO> pageVO = new PageVO(ResultEnum.SUCCESS, count,teacherInformationVOList);
             return pageVO;
         }else {
-            request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
@@ -125,7 +124,7 @@ public class InformationServiceImpl implements InformationService {
     public CheckVO updateTeacherInformation(TeacherInformationDTO teacherInformationDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         TeacherInformation tI = informationDao.findByInformation(new TeacherInformation(teacherInformationDTO.getLoginName()));
-        if (FormatConversionUtil.roleTypeFormatUitl(teacherInformationDTO.getRoleType()) - role.getRoleType() == 1){
+        if (FormatConversionUtil.roleTypeFormatUitl(teacherInformationDTO.getRoleType()) - role.getRoleType() == 1 || teacherInformationDTO.getLoginName().equals(role.getLoginName())){
             TeacherInformation teacherInformation = new TeacherInformation();
             BeanUtils.copyProperties(teacherInformationDTO, teacherInformation);
             teacherInformation.setDepartment(FormatConversionUtil.ListFormatString(teacherInformationDTO.getDepartment()));
@@ -150,7 +149,6 @@ public class InformationServiceImpl implements InformationService {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
             }
         }else {
-            request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
@@ -365,7 +363,6 @@ public class InformationServiceImpl implements InformationService {
             PageVO<StudentInformationVO> pageVO = new PageVO(ResultEnum.SUCCESS, count,studentInformationVOList);
             return pageVO;
         }else {
-            request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }
@@ -398,7 +395,6 @@ public class InformationServiceImpl implements InformationService {
                 throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
             }
         }else {
-            request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
     }

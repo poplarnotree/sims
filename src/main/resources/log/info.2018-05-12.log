@@ -397,3 +397,619 @@
 2018-05-12 00:09:47,427 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
 2018-05-12 00:09:47,427 - ==> Parameters: lisi(String)
 2018-05-12 00:09:47,429 - <==      Total: 1
+2018-05-12 23:25:50,256 - Starting SimsApplication on yang-PC with PID 2636 (E:\study\workspace\sims\target\classes started by yang in E:\study\workspace\sims)
+2018-05-12 23:25:50,287 - No active profile set, falling back to default profiles: default
+2018-05-12 23:25:50,334 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59474f18: startup date [Sat May 12 23:25:50 CST 2018]; root of context hierarchy
+2018-05-12 23:25:52,224 - Tomcat initialized with port(s): 8080 (http)
+2018-05-12 23:25:52,303 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-05-12 23:25:52,349 - Starting service [Tomcat]
+2018-05-12 23:25:52,349 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-12 23:25:52,381 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\mysql\bin;D:\Java\jdk\bin;D:\Java\jdk\jre\bin;D:\Program Files\nodejs\;D:\apache-maven-3.5.0\bin;D:\Program Files\Git\cmd;D:\gradle\gradle-2.5\bin;C:\Users\yang\AppData\Local\Microsoft\WindowsApps;C:\Users\yang\AppData\Roaming\npm;;.]
+2018-05-12 23:25:52,615 - Initializing Spring embedded WebApplicationContext
+2018-05-12 23:25:52,615 - Root WebApplicationContext: initialization completed in 2281 ms
+2018-05-12 23:25:52,865 - Servlet dispatcherServlet mapped to [/]
+2018-05-12 23:25:52,881 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-12 23:25:52,881 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-12 23:25:52,881 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-12 23:25:52,881 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-12 23:25:53,678 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-12 23:25:54,021 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59474f18: startup date [Sat May 12 23:25:50 CST 2018]; root of context hierarchy
+2018-05-12 23:25:54,053 - >>>>>>>>>>>>>>>拦截器生效
+2018-05-12 23:25:54,084 - Mapped "{[/]}" onto public java.lang.String org.ycm.sims.controller.IndexController.index(java.lang.String)
+2018-05-12 23:25:54,084 - Mapped "{[/head]}" onto public org.ycm.sims.VO.HeadVO org.ycm.sims.controller.IndexController.head()
+2018-05-12 23:25:54,084 - Mapped "{[/information/classes]}" onto public org.ycm.sims.VO.NumberAndClassesVO org.ycm.sims.controller.InformationController.classes()
+2018-05-12 23:25:54,084 - Mapped "{[/information/create]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.create(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-12 23:25:54,084 - Mapped "{[/information/deleteClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.deleteClass(java.lang.String)
+2018-05-12 23:25:54,084 - Mapped "{[/information/classManager]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.createClass(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-12 23:25:54,084 - Mapped "{[/information/createStudent]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.createStudent(org.ycm.sims.dto.StudentInformationDTO)
+2018-05-12 23:25:54,084 - Mapped "{[/information/teacherPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.TeacherInformationVO> org.ycm.sims.controller.InformationController.teacherPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/information/page]}" onto public java.lang.String org.ycm.sims.controller.InformationController.teacherList()
+2018-05-12 23:25:54,099 - Mapped "{[/information/updateTeacher]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacher(org.ycm.sims.dto.TeacherInformationDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/information/classInformation]}" onto public java.lang.String org.ycm.sims.controller.InformationController.classInformation()
+2018-05-12 23:25:54,099 - Mapped "{[/information/studentPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.StudentInformationVO> org.ycm.sims.controller.InformationController.studentPage(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/information/updateStudent]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateStudent(org.ycm.sims.dto.StudentInformationDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/information/classPage]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.ClassVO> org.ycm.sims.controller.InformationController.classPage(org.ycm.sims.dto.ClassManagerDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/information/tClassManager]}" onto public java.lang.String org.ycm.sims.controller.InformationController.tClassManager()
+2018-05-12 23:25:54,099 - Mapped "{[/information/myInformationVOT]}" onto public org.ycm.sims.VO.TeacherInformationVO org.ycm.sims.controller.InformationController.myInformationVOT()
+2018-05-12 23:25:54,099 - Mapped "{[/information/myInformationHtmlT]}" onto public java.lang.String org.ycm.sims.controller.InformationController.myInformationHtml()
+2018-05-12 23:25:54,099 - Mapped "{[/information/teacherSubjectName]}" onto public java.util.List<org.ycm.sims.VO.TeacherSubjectNameVO> org.ycm.sims.controller.InformationController.teacherSubjectName(java.lang.Integer)
+2018-05-12 23:25:54,099 - Mapped "{[/information/updateTeacherClass]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.InformationController.updateTeacherClass(org.ycm.sims.dto.UpdateTeacherClassDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/role/create]}" onto public java.lang.String org.ycm.sims.controller.RoleController.create()
+2018-05-12 23:25:54,099 - Mapped "{[/role/checkLogin]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.checkLogin(org.ycm.sims.dto.RoleDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/role/login]}" onto public java.lang.String org.ycm.sims.controller.RoleController.login()
+2018-05-12 23:25:54,099 - Mapped "{[/role/roleList]}" onto public java.lang.String org.ycm.sims.controller.RoleController.roleList()
+2018-05-12 23:25:54,099 - Mapped "{[/role/resetPassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.resetPassword(org.ycm.sims.dto.RoleDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/role/page]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RoleVO> org.ycm.sims.controller.RoleController.page(org.ycm.sims.dto.RoleManagerDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/role/updatePassword]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.updatePassword(org.ycm.sims.dto.UpdatePasswordDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/role/password]}" onto public java.lang.String org.ycm.sims.controller.RoleController.updatePassword()
+2018-05-12 23:25:54,099 - Mapped "{[/role/logout]}" onto public java.lang.String org.ycm.sims.controller.RoleController.logout()
+2018-05-12 23:25:54,099 - Mapped "{[/role/cancelRole]}" onto public org.ycm.sims.VO.RoleCheckVO org.ycm.sims.controller.RoleController.cancelRole(org.ycm.sims.dto.RoleDTO)
+2018-05-12 23:25:54,099 - Mapped "{[/system/record]}" onto public java.lang.String org.ycm.sims.controller.SystemController.record()
+2018-05-12 23:25:54,099 - Mapped "{[/system/menuTree]}" onto public java.util.List<org.ycm.sims.VO.MenuTreeVO> org.ycm.sims.controller.SystemController.menuTree()
+2018-05-12 23:25:54,099 - Mapped "{[/system/createMenu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.createMenu()
+2018-05-12 23:25:54,099 - Mapped "{[/system/addMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.addMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-12 23:25:54,115 - Mapped "{[/system/deleteMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.deleteMenu(java.lang.Integer)
+2018-05-12 23:25:54,115 - Mapped "{[/system/recordList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.RecordVO> org.ycm.sims.controller.SystemController.recordList(org.ycm.sims.dto.RecordPageDTO)
+2018-05-12 23:25:54,115 - Mapped "{[/system/updateMenu]}" onto public org.ycm.sims.VO.CheckVO org.ycm.sims.controller.SystemController.updateMenu(org.ycm.sims.dto.MenuDTO)
+2018-05-12 23:25:54,115 - Mapped "{[/system/menuList]}" onto public org.ycm.sims.VO.PageVO<org.ycm.sims.VO.MenuVO> org.ycm.sims.controller.SystemController.menuList(org.ycm.sims.dto.MenuPageDTO)
+2018-05-12 23:25:54,115 - Mapped "{[/system/aboutSystem]}" onto public java.lang.String org.ycm.sims.controller.SystemController.aboutSystem()
+2018-05-12 23:25:54,115 - Mapped "{[/system/menu]}" onto public java.lang.String org.ycm.sims.controller.SystemController.menu()
+2018-05-12 23:25:54,115 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-12 23:25:54,115 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-12 23:25:54,131 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-12 23:25:54,131 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-12 23:25:54,490 - Registering beans for JMX exposure on startup
+2018-05-12 23:25:54,490 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-12 23:25:54,506 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-12 23:25:54,521 - Starting ProtocolHandler ["http-nio-8080"]
+2018-05-12 23:25:54,537 - Using a shared selector for servlet write/read
+2018-05-12 23:25:54,553 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-12 23:25:54,568 - Started SimsApplication in 5.469 seconds (JVM running for 8.61)
+2018-05-12 23:26:15,157 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-12 23:26:15,157 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-12 23:26:15,188 - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2018-05-12 23:26:16,982 - sims - Starting...
+2018-05-12 23:26:17,205 - sims - Start completed.
+2018-05-12 23:26:17,215 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:26:17,215 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:26:17,234 - ==> Parameters: lisi(String)
+2018-05-12 23:26:17,234 - ==> Parameters: lisi(String)
+2018-05-12 23:26:17,268 - <==      Total: 1
+2018-05-12 23:26:17,268 - <==      Total: 1
+2018-05-12 23:26:17,502 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:26:17,503 - ==> Parameters: lisi(String)
+2018-05-12 23:26:17,505 - <==      Total: 1
+2018-05-12 23:26:17,530 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:26:17,531 - ==> Parameters: lisi(String)
+2018-05-12 23:26:17,538 - <==      Total: 1
+2018-05-12 23:26:17,547 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:26:17,549 - ==> Parameters: lisi(String)
+2018-05-12 23:26:17,551 - <==      Total: 1
+2018-05-12 23:26:17,553 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:26:17,553 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:26:17,556 - <==      Total: 1
+2018-05-12 23:26:17,559 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:26:17,559 - ==> Parameters: 1(Integer)
+2018-05-12 23:26:17,565 - <==      Total: 6
+2018-05-12 23:26:18,648 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:26:18,649 - ==> Parameters: lisi(String)
+2018-05-12 23:26:18,650 - <==      Total: 1
+2018-05-12 23:26:18,651 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:26:18,652 - ==> Parameters: lisi(String)
+2018-05-12 23:26:18,655 - <==      Total: 1
+2018-05-12 23:26:18,661 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:26:18,661 - ==> Parameters: lisi(String)
+2018-05-12 23:26:18,663 - <==      Total: 1
+2018-05-12 23:26:18,663 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:26:18,664 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:26:18,665 - <==      Total: 1
+2018-05-12 23:26:18,665 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:26:18,666 - ==> Parameters: 1(Integer)
+2018-05-12 23:26:18,669 - <==      Total: 6
+2018-05-12 23:26:18,785 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:26:18,786 - ==> Parameters: lisi(String)
+2018-05-12 23:26:18,787 - <==      Total: 1
+2018-05-12 23:26:18,788 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:26:18,788 - ==> Parameters: lisi(String)
+2018-05-12 23:26:18,789 - <==      Total: 1
+2018-05-12 23:28:33,945 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:33,946 - ==> Parameters: lisi(String)
+2018-05-12 23:28:33,947 - <==      Total: 1
+2018-05-12 23:28:33,948 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:33,950 - ==> Parameters: lisi(String)
+2018-05-12 23:28:33,954 - <==      Total: 1
+2018-05-12 23:28:33,960 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:33,961 - ==> Parameters: lisi(String)
+2018-05-12 23:28:33,963 - <==      Total: 1
+2018-05-12 23:28:33,965 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:28:33,965 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:28:33,966 - <==      Total: 1
+2018-05-12 23:28:33,967 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:28:33,968 - ==> Parameters: 1(Integer)
+2018-05-12 23:28:33,973 - <==      Total: 6
+2018-05-12 23:28:34,281 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:34,281 - ==> Parameters: lisi(String)
+2018-05-12 23:28:34,283 - <==      Total: 1
+2018-05-12 23:28:34,284 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:34,284 - ==> Parameters: lisi(String)
+2018-05-12 23:28:34,286 - <==      Total: 1
+2018-05-12 23:28:35,210 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:35,210 - ==> Parameters: lisi(String)
+2018-05-12 23:28:35,216 - <==      Total: 1
+2018-05-12 23:28:35,217 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:35,218 - ==> Parameters: lisi(String)
+2018-05-12 23:28:35,217 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:35,218 - ==> Parameters: lisi(String)
+2018-05-12 23:28:35,219 - <==      Total: 1
+2018-05-12 23:28:35,222 - <==      Total: 1
+2018-05-12 23:28:35,223 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:28:35,224 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:28:35,228 - <==      Total: 1
+2018-05-12 23:28:35,229 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:28:35,229 - ==> Parameters: 1(Integer)
+2018-05-12 23:28:35,234 - <==      Total: 6
+2018-05-12 23:28:35,359 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:35,359 - ==> Parameters: lisi(String)
+2018-05-12 23:28:35,360 - <==      Total: 1
+2018-05-12 23:28:35,362 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:35,362 - ==> Parameters: lisi(String)
+2018-05-12 23:28:35,364 - <==      Total: 1
+2018-05-12 23:28:42,374 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:42,374 - ==> Parameters: lisi(String)
+2018-05-12 23:28:42,376 - <==      Total: 1
+2018-05-12 23:28:42,377 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:42,378 - ==> Parameters: lisi(String)
+2018-05-12 23:28:42,380 - <==      Total: 1
+2018-05-12 23:28:42,385 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:42,385 - ==> Parameters: lisi(String)
+2018-05-12 23:28:42,387 - <==      Total: 1
+2018-05-12 23:28:42,387 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:28:42,388 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:28:42,389 - <==      Total: 1
+2018-05-12 23:28:42,390 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:28:42,390 - ==> Parameters: 1(Integer)
+2018-05-12 23:28:42,393 - <==      Total: 6
+2018-05-12 23:28:42,499 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:42,500 - ==> Parameters: lisi(String)
+2018-05-12 23:28:42,502 - <==      Total: 1
+2018-05-12 23:28:42,503 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:42,504 - ==> Parameters: lisi(String)
+2018-05-12 23:28:42,505 - <==      Total: 1
+2018-05-12 23:28:43,124 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:43,124 - ==> Parameters: lisi(String)
+2018-05-12 23:28:43,126 - <==      Total: 1
+2018-05-12 23:28:43,127 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:43,128 - ==> Parameters: lisi(String)
+2018-05-12 23:28:43,129 - <==      Total: 1
+2018-05-12 23:28:43,130 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:43,130 - ==> Parameters: lisi(String)
+2018-05-12 23:28:43,131 - <==      Total: 1
+2018-05-12 23:28:43,132 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:28:43,132 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:28:43,133 - <==      Total: 1
+2018-05-12 23:28:43,135 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:28:43,136 - ==> Parameters: 1(Integer)
+2018-05-12 23:28:43,138 - <==      Total: 6
+2018-05-12 23:28:43,232 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:28:43,233 - ==> Parameters: lisi(String)
+2018-05-12 23:28:43,235 - <==      Total: 1
+2018-05-12 23:28:43,235 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:28:43,236 - ==> Parameters: lisi(String)
+2018-05-12 23:28:43,237 - <==      Total: 1
+2018-05-12 23:32:29,054 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:29,055 - ==> Parameters: lisi(String)
+2018-05-12 23:32:29,056 - <==      Total: 1
+2018-05-12 23:32:29,057 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:29,057 - ==> Parameters: lisi(String)
+2018-05-12 23:32:29,059 - <==      Total: 1
+2018-05-12 23:32:29,077 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:29,077 - ==> Parameters: lisi(String)
+2018-05-12 23:32:29,079 - <==      Total: 1
+2018-05-12 23:32:29,079 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:29,080 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:29,081 - <==      Total: 1
+2018-05-12 23:32:29,081 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:32:29,081 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:29,084 - <==      Total: 6
+2018-05-12 23:32:29,288 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:29,288 - ==> Parameters: lisi(String)
+2018-05-12 23:32:29,289 - <==      Total: 1
+2018-05-12 23:32:29,290 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:29,291 - ==> Parameters: lisi(String)
+2018-05-12 23:32:29,292 - <==      Total: 1
+2018-05-12 23:32:30,141 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:30,141 - ==> Parameters: lisi(String)
+2018-05-12 23:32:30,142 - <==      Total: 1
+2018-05-12 23:32:30,143 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:30,143 - ==> Parameters: lisi(String)
+2018-05-12 23:32:30,145 - <==      Total: 1
+2018-05-12 23:32:30,152 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:30,153 - ==> Parameters: lisi(String)
+2018-05-12 23:32:30,155 - <==      Total: 1
+2018-05-12 23:32:30,155 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:30,156 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:30,157 - <==      Total: 1
+2018-05-12 23:32:30,158 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:32:30,158 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:30,159 - <==      Total: 6
+2018-05-12 23:32:30,244 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:30,244 - ==> Parameters: lisi(String)
+2018-05-12 23:32:30,245 - <==      Total: 1
+2018-05-12 23:32:30,247 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:30,247 - ==> Parameters: lisi(String)
+2018-05-12 23:32:30,248 - <==      Total: 1
+2018-05-12 23:32:32,853 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:32,854 - ==> Parameters: lisi(String)
+2018-05-12 23:32:32,855 - <==      Total: 1
+2018-05-12 23:32:32,856 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:32,857 - ==> Parameters: lisi(String)
+2018-05-12 23:32:32,864 - <==      Total: 1
+2018-05-12 23:32:32,874 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:32,875 - ==> Parameters: lisi(String)
+2018-05-12 23:32:32,876 - <==      Total: 1
+2018-05-12 23:32:32,877 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:32,877 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:32,878 - <==      Total: 1
+2018-05-12 23:32:32,879 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:32:32,879 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:32,882 - <==      Total: 6
+2018-05-12 23:32:33,012 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:33,015 - ==> Parameters: lisi(String)
+2018-05-12 23:32:33,017 - <==      Total: 1
+2018-05-12 23:32:33,018 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0 
+2018-05-12 23:32:33,018 - ==> Parameters: 2(Integer)
+2018-05-12 23:32:33,019 - <==      Total: 1
+2018-05-12 23:32:33,088 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0 
+2018-05-12 23:32:33,089 - ==> Parameters: 2(Integer)
+2018-05-12 23:32:33,090 - <==      Total: 1
+2018-05-12 23:32:33,091 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
+2018-05-12 23:32:33,092 - ==> Parameters: 2(Integer), 10(Integer)
+2018-05-12 23:32:33,093 - <==      Total: 3
+2018-05-12 23:32:33,093 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:33,093 - ==> Parameters: 1059(Integer)
+2018-05-12 23:32:33,094 - <==      Total: 1
+2018-05-12 23:32:33,095 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:33,095 - ==> Parameters: 1059(Integer)
+2018-05-12 23:32:33,096 - <==      Total: 1
+2018-05-12 23:32:33,096 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:33,096 - ==> Parameters: 1059(Integer)
+2018-05-12 23:32:33,097 - <==      Total: 1
+2018-05-12 23:32:34,152 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:34,152 - ==> Parameters: lisi(String)
+2018-05-12 23:32:34,154 - <==      Total: 1
+2018-05-12 23:32:34,155 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:34,155 - ==> Parameters: lisi(String)
+2018-05-12 23:32:34,156 - <==      Total: 1
+2018-05-12 23:32:34,160 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:34,161 - ==> Parameters: lisi(String)
+2018-05-12 23:32:34,163 - <==      Total: 1
+2018-05-12 23:32:34,163 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:34,163 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:34,164 - <==      Total: 1
+2018-05-12 23:32:34,164 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:32:34,165 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:34,166 - <==      Total: 6
+2018-05-12 23:32:35,329 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:35,329 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:35,329 - ==> Parameters: lisi(String)
+2018-05-12 23:32:35,329 - ==> Parameters: lisi(String)
+2018-05-12 23:32:35,330 - <==      Total: 1
+2018-05-12 23:32:35,330 - <==      Total: 1
+2018-05-12 23:32:35,330 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:35,331 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:35,331 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:35,331 - ==> Parameters: lisi(String)
+2018-05-12 23:32:35,331 - <==      Total: 1
+2018-05-12 23:32:35,332 - <==      Total: 1
+2018-05-12 23:32:35,332 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:32:35,332 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:35,336 - <==      Total: 6
+2018-05-12 23:32:35,439 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:35,439 - ==> Parameters: lisi(String)
+2018-05-12 23:32:35,440 - <==      Total: 1
+2018-05-12 23:32:35,441 - ==>  Preparing: SELECT * FROM classes order by name 
+2018-05-12 23:32:35,441 - ==> Parameters: 
+2018-05-12 23:32:35,445 - <==      Total: 7
+2018-05-12 23:32:35,446 - ==>  Preparing: select MAX(number) number from student_information 
+2018-05-12 23:32:35,446 - ==> Parameters: 
+2018-05-12 23:32:35,449 - <==      Total: 1
+2018-05-12 23:32:36,722 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:36,722 - ==> Parameters: lisi(String)
+2018-05-12 23:32:36,723 - <==      Total: 1
+2018-05-12 23:32:36,724 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:36,724 - ==> Parameters: lisi(String)
+2018-05-12 23:32:36,726 - <==      Total: 1
+2018-05-12 23:32:36,728 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:36,728 - ==> Parameters: lisi(String)
+2018-05-12 23:32:36,731 - <==      Total: 1
+2018-05-12 23:32:36,731 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:36,732 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:36,732 - <==      Total: 1
+2018-05-12 23:32:36,733 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:32:36,733 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:36,736 - <==      Total: 6
+2018-05-12 23:32:36,799 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:36,800 - ==> Parameters: lisi(String)
+2018-05-12 23:32:36,801 - <==      Total: 1
+2018-05-12 23:32:36,802 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:36,802 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:36,804 - <==      Total: 1
+2018-05-12 23:32:36,806 - ==>  Preparing: select count(*) from classes 
+2018-05-12 23:32:36,806 - ==> Parameters: 
+2018-05-12 23:32:36,807 - <==      Total: 1
+2018-05-12 23:32:36,811 - ==>  Preparing: SELECT count(0) FROM classes 
+2018-05-12 23:32:36,811 - ==> Parameters: 
+2018-05-12 23:32:36,812 - <==      Total: 1
+2018-05-12 23:32:36,813 - ==>  Preparing: SELECT * FROM classes order by name LIMIT ? 
+2018-05-12 23:32:36,813 - ==> Parameters: 10(Integer)
+2018-05-12 23:32:36,816 - <==      Total: 7
+2018-05-12 23:32:36,821 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:36,821 - ==> Parameters: 高一(1)班(String)
+2018-05-12 23:32:36,822 - <==      Total: 4
+2018-05-12 23:32:36,823 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:36,823 - ==> Parameters: 高一(1)班(String)
+2018-05-12 23:32:36,823 - <==      Total: 1
+2018-05-12 23:32:36,824 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:36,824 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:36,825 - <==      Total: 1
+2018-05-12 23:32:36,825 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:36,826 - ==> Parameters: 高一(2)班(String)
+2018-05-12 23:32:36,826 - <==      Total: 2
+2018-05-12 23:32:36,827 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:36,827 - ==> Parameters: 高一(2)班(String)
+2018-05-12 23:32:36,827 - <==      Total: 1
+2018-05-12 23:32:36,827 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:36,828 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:36,828 - <==      Total: 1
+2018-05-12 23:32:36,828 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:36,829 - ==> Parameters: 高一(3)班(String)
+2018-05-12 23:32:36,829 - <==      Total: 1
+2018-05-12 23:32:36,830 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:36,830 - ==> Parameters: 高一(3)班(String)
+2018-05-12 23:32:36,831 - <==      Total: 1
+2018-05-12 23:32:36,831 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:36,831 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:36,832 - <==      Total: 1
+2018-05-12 23:32:36,832 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:36,832 - ==> Parameters: 高一(4)班(String)
+2018-05-12 23:32:36,833 - <==      Total: 0
+2018-05-12 23:32:36,833 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 高一(4)班(String)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 1059(Integer)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:36,834 - ==> Parameters: 高一(8)班(String)
+2018-05-12 23:32:36,834 - <==      Total: 0
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 高一(8)班(String)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:36,834 - ==> Parameters: 高三(1)班(String)
+2018-05-12 23:32:36,834 - <==      Total: 7
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 高三(1)班(String)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:36,834 - ==> Parameters: 高二(1)班(String)
+2018-05-12 23:32:36,834 - <==      Total: 6
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 高二(1)班(String)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:36,834 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:36,834 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:36,834 - <==      Total: 1
+2018-05-12 23:32:42,282 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:42,283 - ==> Parameters: admin(String)
+2018-05-12 23:32:42,284 - <==      Total: 1
+2018-05-12 23:32:43,957 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:43,957 - ==> Parameters: admin(String)
+2018-05-12 23:32:43,957 - <==      Total: 1
+2018-05-12 23:32:43,958 - ==>  Preparing: SELECT COUNT(*) FROM menu 
+2018-05-12 23:32:43,958 - ==> Parameters: 
+2018-05-12 23:32:43,959 - <==      Total: 1
+2018-05-12 23:32:43,959 - ==>  Preparing: SELECT count(0) FROM menu 
+2018-05-12 23:32:43,959 - ==> Parameters: 
+2018-05-12 23:32:43,960 - <==      Total: 1
+2018-05-12 23:32:43,960 - ==>  Preparing: SELECT * FROM menu LIMIT ? 
+2018-05-12 23:32:43,960 - ==> Parameters: 10(Integer)
+2018-05-12 23:32:43,962 - <==      Total: 7
+2018-05-12 23:32:43,965 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:43,965 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:43,966 - <==      Total: 1
+2018-05-12 23:32:43,967 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:43,967 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:43,969 - <==      Total: 1
+2018-05-12 23:32:43,969 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:43,969 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:43,970 - <==      Total: 1
+2018-05-12 23:32:43,971 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:43,971 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:43,972 - <==      Total: 1
+2018-05-12 23:32:43,973 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:43,973 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:43,973 - <==      Total: 1
+2018-05-12 23:32:43,974 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:43,974 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:43,974 - <==      Total: 1
+2018-05-12 23:32:43,975 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:43,975 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:43,976 - <==      Total: 1
+2018-05-12 23:32:45,609 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:45,609 - ==> Parameters: admin(String)
+2018-05-12 23:32:45,610 - <==      Total: 1
+2018-05-12 23:32:45,611 - ==>  Preparing: SELECT COUNT(*) FROM record 
+2018-05-12 23:32:45,611 - ==> Parameters: 
+2018-05-12 23:32:45,614 - <==      Total: 1
+2018-05-12 23:32:45,615 - ==>  Preparing: SELECT count(0) FROM record 
+2018-05-12 23:32:45,615 - ==> Parameters: 
+2018-05-12 23:32:45,616 - <==      Total: 1
+2018-05-12 23:32:45,616 - ==>  Preparing: SELECT * FROM record LIMIT ? 
+2018-05-12 23:32:45,616 - ==> Parameters: 10(Integer)
+2018-05-12 23:32:45,619 - <==      Total: 10
+2018-05-12 23:32:46,813 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:46,813 - ==> Parameters: admin(String)
+2018-05-12 23:32:46,814 - <==      Total: 1
+2018-05-12 23:32:46,814 - ==>  Preparing: SELECT count(*) FROM role WHERE role_type = ? AND role_status = 0 
+2018-05-12 23:32:46,814 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:46,815 - <==      Total: 1
+2018-05-12 23:32:46,817 - ==>  Preparing: SELECT count(0) FROM role WHERE role_type = ? AND role_status = 0 
+2018-05-12 23:32:46,817 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:46,819 - <==      Total: 1
+2018-05-12 23:32:46,820 - ==>  Preparing: SELECT * FROM role WHERE role_type = ? AND role_status = 0 LIMIT ? 
+2018-05-12 23:32:46,820 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-12 23:32:46,822 - <==      Total: 10
+2018-05-12 23:32:46,822 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,823 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,823 - <==      Total: 1
+2018-05-12 23:32:46,824 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,824 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,824 - <==      Total: 1
+2018-05-12 23:32:46,825 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,825 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,825 - <==      Total: 1
+2018-05-12 23:32:46,826 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,826 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,826 - <==      Total: 1
+2018-05-12 23:32:46,827 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,827 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,827 - <==      Total: 1
+2018-05-12 23:32:46,827 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,828 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,828 - <==      Total: 1
+2018-05-12 23:32:46,828 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,829 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,829 - <==      Total: 1
+2018-05-12 23:32:46,830 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,830 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,831 - <==      Total: 1
+2018-05-12 23:32:46,831 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,831 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,832 - <==      Total: 1
+2018-05-12 23:32:46,832 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:46,832 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:46,833 - <==      Total: 1
+2018-05-12 23:32:49,457 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:49,457 - ==> Parameters: admin(String)
+2018-05-12 23:32:49,458 - <==      Total: 1
+2018-05-12 23:32:49,459 - ==>  Preparing: SELECT * FROM classes order by name 
+2018-05-12 23:32:49,459 - ==> Parameters: 
+2018-05-12 23:32:49,464 - <==      Total: 7
+2018-05-12 23:32:49,464 - ==>  Preparing: select MAX(number) number from teacher_information; 
+2018-05-12 23:32:49,465 - ==> Parameters: 
+2018-05-12 23:32:49,465 - <==      Total: 1
+2018-05-12 23:32:50,986 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:50,986 - ==> Parameters: admin(String)
+2018-05-12 23:32:50,988 - <==      Total: 1
+2018-05-12 23:32:50,988 - ==>  Preparing: SELECT count(*) FROM teacher_information 
+2018-05-12 23:32:50,988 - ==> Parameters: 
+2018-05-12 23:32:50,989 - <==      Total: 1
+2018-05-12 23:32:50,994 - ==>  Preparing: SELECT count(0) FROM teacher_information WHERE login_name IN (SELECT login_name FROM role WHERE role_type = ? AND role_status = 0) 
+2018-05-12 23:32:50,994 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:50,995 - <==      Total: 1
+2018-05-12 23:32:50,996 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name IN( SELECT login_name FROM role WHERE role_type = ? AND role_status = 0 ) LIMIT ? 
+2018-05-12 23:32:50,996 - ==> Parameters: 1(Integer), 10(Integer)
+2018-05-12 23:32:50,999 - <==      Total: 10
+2018-05-12 23:32:52,427 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:52,427 - ==> Parameters: admin(String)
+2018-05-12 23:32:52,428 - <==      Total: 1
+2018-05-12 23:32:52,428 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:52,428 - ==> Parameters: admin(String), 学生处(String)
+2018-05-12 23:32:52,429 - <==      Total: 1
+2018-05-12 23:32:52,429 - ==>  Preparing: select count(*) from classes 
+2018-05-12 23:32:52,429 - ==> Parameters: 
+2018-05-12 23:32:52,430 - <==      Total: 1
+2018-05-12 23:32:52,432 - ==>  Preparing: SELECT count(0) FROM classes 
+2018-05-12 23:32:52,432 - ==> Parameters: 
+2018-05-12 23:32:52,433 - <==      Total: 1
+2018-05-12 23:32:52,434 - ==>  Preparing: SELECT * FROM classes order by name LIMIT ? 
+2018-05-12 23:32:52,434 - ==> Parameters: 10(Integer)
+2018-05-12 23:32:52,437 - <==      Total: 7
+2018-05-12 23:32:52,438 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:52,438 - ==> Parameters: 高一(1)班(String)
+2018-05-12 23:32:52,439 - <==      Total: 4
+2018-05-12 23:32:52,439 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:52,439 - ==> Parameters: 高一(1)班(String)
+2018-05-12 23:32:52,440 - <==      Total: 1
+2018-05-12 23:32:52,440 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:52,440 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:52,441 - <==      Total: 1
+2018-05-12 23:32:52,441 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:52,441 - ==> Parameters: 高一(2)班(String)
+2018-05-12 23:32:52,442 - <==      Total: 2
+2018-05-12 23:32:52,442 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:52,442 - ==> Parameters: 高一(2)班(String)
+2018-05-12 23:32:52,443 - <==      Total: 1
+2018-05-12 23:32:52,443 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:52,443 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:52,444 - <==      Total: 1
+2018-05-12 23:32:52,444 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:52,445 - ==> Parameters: 高一(3)班(String)
+2018-05-12 23:32:52,447 - <==      Total: 1
+2018-05-12 23:32:52,447 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:52,448 - ==> Parameters: 高一(3)班(String)
+2018-05-12 23:32:52,448 - <==      Total: 1
+2018-05-12 23:32:52,448 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:52,449 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:52,449 - <==      Total: 1
+2018-05-12 23:32:52,451 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:52,451 - ==> Parameters: 高一(4)班(String)
+2018-05-12 23:32:52,452 - <==      Total: 0
+2018-05-12 23:32:52,453 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:52,453 - ==> Parameters: 高一(4)班(String)
+2018-05-12 23:32:52,453 - <==      Total: 1
+2018-05-12 23:32:52,454 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:52,454 - ==> Parameters: 1059(Integer)
+2018-05-12 23:32:52,455 - <==      Total: 1
+2018-05-12 23:32:52,455 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:52,455 - ==> Parameters: 高一(8)班(String)
+2018-05-12 23:32:52,456 - <==      Total: 0
+2018-05-12 23:32:52,456 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:52,456 - ==> Parameters: 高一(8)班(String)
+2018-05-12 23:32:52,457 - <==      Total: 1
+2018-05-12 23:32:52,457 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:52,458 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:52,458 - <==      Total: 1
+2018-05-12 23:32:52,459 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:52,459 - ==> Parameters: 高三(1)班(String)
+2018-05-12 23:32:52,460 - <==      Total: 7
+2018-05-12 23:32:52,461 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:52,461 - ==> Parameters: 高三(1)班(String)
+2018-05-12 23:32:52,461 - <==      Total: 1
+2018-05-12 23:32:52,462 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:52,462 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:52,463 - <==      Total: 1
+2018-05-12 23:32:52,463 - ==>  Preparing: SELECT classes,name,subject FROM teacher_information WHERE classes LIKE CONCAT(CONCAT('%',?,'%')) AND login_name IN (SELECT login_name FROM role WHERE role_status = 0) ORDER BY FIELD( subject, '语文', '数学', '英语', '物理', '化学', '生物', '政治', '地理', '历史') 
+2018-05-12 23:32:52,463 - ==> Parameters: 高二(1)班(String)
+2018-05-12 23:32:52,465 - <==      Total: 6
+2018-05-12 23:32:52,465 - ==>  Preparing: SELECT COUNT(*) FROM student_information WHERE classes = ? 
+2018-05-12 23:32:52,465 - ==> Parameters: 高二(1)班(String)
+2018-05-12 23:32:52,466 - <==      Total: 1
+2018-05-12 23:32:52,466 - ==>  Preparing: SELECT * FROM role WHERE id = ? 
+2018-05-12 23:32:52,466 - ==> Parameters: 1000(Integer)
+2018-05-12 23:32:52,468 - <==      Total: 1
+2018-05-12 23:32:56,753 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:56,753 - ==> Parameters: lisi(String)
+2018-05-12 23:32:56,755 - <==      Total: 1
+2018-05-12 23:32:56,814 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:56,814 - ==> Parameters: lisi(String)
+2018-05-12 23:32:56,815 - <==      Total: 1
+2018-05-12 23:32:56,816 - ==>  Preparing: SELECT * FROM role WHERE login_name = ? 
+2018-05-12 23:32:56,816 - ==> Parameters: lisi(String)
+2018-05-12 23:32:56,817 - ==>  Preparing: SELECT * FROM teacher_information WHERE login_name = ? 
+2018-05-12 23:32:56,817 - ==> Parameters: lisi(String)
+2018-05-12 23:32:56,818 - <==      Total: 1
+2018-05-12 23:32:56,819 - ==>  Preparing: SELECT count(*) FROM teacher_information WHERE login_name = ? and department LIKE CONCAT(CONCAT('%',?,'%')) 
+2018-05-12 23:32:56,819 - <==      Total: 1
+2018-05-12 23:32:56,819 - ==> Parameters: lisi(String), 学生处(String)
+2018-05-12 23:32:56,820 - <==      Total: 1
+2018-05-12 23:32:56,821 - ==>  Preparing: SELECT * FROM menu WHERE teacher_display_1 = ? 
+2018-05-12 23:32:56,821 - ==> Parameters: 1(Integer)
+2018-05-12 23:32:56,822 - <==      Total: 6
