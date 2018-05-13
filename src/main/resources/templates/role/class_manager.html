@@ -138,7 +138,13 @@
                             }
                         },
                         error: function (XMLHttpRequest) {
-                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                                if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                                    location.href = '/role/logout';
+                                }
+                                var index = layer.alert();
+                                layer.close(index);
+                            });
                         }
                     });
                 })
@@ -177,7 +183,13 @@
                                 }
                             },
                             error: function (XMLHttpRequest) {
-                                layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                                layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                                    if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                                        location.href = '/role/logout';
+                                    }
+                                    var index = layer.alert();
+                                    layer.close(index);
+                                });
                             }
                         });
 
@@ -273,7 +285,13 @@
                                 }
                             },
                             error: function (XMLHttpRequest) {
-                                layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                                layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                                    if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                                        location.href = '/role/logout';
+                                    }
+                                    var index = layer.alert();
+                                    layer.close(index);
+                                });
                             }
                         })
                     }
@@ -315,7 +333,13 @@
                             }
                         },
                         error: function (XMLHttpRequest) {
-                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2});
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                                if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                                    location.href = '/role/logout';
+                                }
+                                var index = layer.alert();
+                                layer.close(index);
+                            });
                         }
                     });
                 }

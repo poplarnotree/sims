@@ -111,9 +111,12 @@
                     }
                 },
                 error: function (XMLHttpRequest) {
-                    layer.open({
-                        title: '提示'
-                        ,content: XMLHttpRequest.responseJSON.message
+                    layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                        if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                            location.href = '/role/logout';
+                        }
+                        var index = layer.alert();
+                        layer.close(index);
                     });
                 }
             })
