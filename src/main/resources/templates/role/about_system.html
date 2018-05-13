@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/role_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">系统 / 关于系统</h1>
+            <div>
+                <p class="site-h3">
+                    首先感谢您使用本系统，本系统是为中小学开发的一款学生信息管理系统，<br>
+                    希望当前页面的介绍能让您对本系统有一个基本的了解！</p>
+                <p class="site-h3">
+                    当前版本：SIMS V.1.0<br>
+                    后端开发技术：Spring boot 2.0.1.RELEASE + SpringMVC + Mybatis<br>
+                    前端开发技术：layui-v2.2.6<br>
+                    数据库：MySQL 5.7<br>
+                    开发工具：IDEA 2017.2<br>
+                    开发人员：天津理工大学-华信软件学院-2018届3班-杨昌敏-20144779<br>
+                    源码下载：<a href="https://github.com/poplarnotree/sims">https://github.com/poplarnotree/sims</a>
+                </p>
+                <p class="site-h3">
+                    如果您使用在使用中发现什么问题，或者有什么好的建议，希望您联系我，向我提出您宝贵的建议！<br>
+                    Email：546837635@qq.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+</body>
+</html>

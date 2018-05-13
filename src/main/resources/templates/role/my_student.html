@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<link th:href="@{~/layui/css/select.css}" rel="stylesheet">
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/role_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">信息 / 信息管理</h1>
+            <div class="demoTable">
+                搜索登录帐号：
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">搜索</button>
+            </div>
+            <table id="myStudent" class="layui-hide" lay-filter="student"></table>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+
+<script th:inline="none">
+    //JavaScript代码区域
+    layui.use(['element', 'table'], function(){
+        var element = layui.element;
+        var table = layui.table;
+        table.render({
+            elem: '#myStudent'
+            ,url: '/information/myStudent' //数据接口
+            ,page: true //开启分页
+            ,cellMinWidth: 100
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true}
+                ,{field: 'loginName', title: '登录帐号'}
+                ,{field: 'number', title: '学号', sort: true}
+                ,{field: 'name', title: '姓名'}
+                ,{field: 'sex', title: '性别'}
+                ,{field: 'idCart', title: '身份证号'}
+                ,{field: 'nation', title: '民族'}
+                ,{field: 'place', title: '籍贯'}
+                ,{field: 'address', title: '地址'}
+                ,{field: 'birthday', title: '出生日期'}
+                ,{field: 'phone', title: '联系电话'}
+                ,{field: 'classes', title: '班级'}
+                ,{field: 'enrolmentTime', title: '入学时间'}
+                ,{field: 'createTime', title: '创建时间', sort: true}
+            ]]
+            ,id: 'Reload'
+        });
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('Reload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        loginName: demoReload.val()
+                    }
+                });
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+    });
+</script>
+</body>
+</html>
