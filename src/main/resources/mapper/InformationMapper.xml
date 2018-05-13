@@ -141,6 +141,11 @@
         </trim>
         WHERE login_name = #{loginName}
     </update>
+    <update id="updateStudentClasses">
+        UPDATE student_information
+          SET classes = #{classes}
+          WHERE login_name = #{loginName}
+    </update>
 
     <select id="findTeacherDepartment" resultType="java.lang.Integer">
         SELECT count(*) FROM teacher_information WHERE login_name = #{loginName} and department LIKE CONCAT(CONCAT('%',#{department},'%'))
@@ -235,9 +240,19 @@
         JOIN
         mysql.help_topic b
         on b.help_topic_id &lt; (LENGTH(t.classes)-LENGTH(REPLACE(t.classes,',',''))+1)
-        WHERE login_name = #{loginNameT} ORDER BY t.name))
-        <if test="loginNameS == null and loginNameS == ''">
-            AND login_name = {#loginNameS}
+        <if test="loginNameT != null and loginNameT != ''">
+            WHERE login_name = #{loginNameT}
         </if>
+        ORDER BY t.name))
+        <if test="loginNameS != null and loginNameS != ''">
+            AND login_name = #{loginNameS}
+        </if>
+        <if test="classes != null and classes != ''">
+            AND classes = #{classes}
+        </if>
+        ORDER BY id
+    </select>
+    <select id="findClassesStudent" resultType="org.ycm.sims.entity.StudentInformation">
+        SELECT * FROM student_information WHERE classes = #{classes}
     </select>
 </mapper>

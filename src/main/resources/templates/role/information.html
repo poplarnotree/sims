@@ -19,6 +19,14 @@
                     <input class="layui-input" name="id" id="demoReload" autocomplete="off">
                 </div>
                 <button class="layui-btn" data-type="reload">搜索</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                选择班级：
+                <div class="layui-inline layui-form">
+                    <select id="selectClasses" name="selectClasses" lay-filter="selectClasses" lay-search>
+                        <option value="">请选择班级</option>
+                    </select>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <button class="layui-btn" onclick="window.location.href='/role/create'"><i class="layui-icon">&#xe608;</i>添加</button>
             </div>
             <table id="studentPage" class="layui-hide" lay-filter="student"></table>
@@ -41,7 +49,7 @@
         var laydate = layui.laydate;
         table.render({
             elem: '#studentPage'
-            ,url: '/information/studentPage' //数据接口
+            ,url: '/information/classesStudent' //数据接口
             ,page: true //开启分页
             ,where: {
                 roleType: 2
@@ -79,7 +87,7 @@
                         curr: 1 //重新从第 1 页开始
                     }
                     ,where: {
-                        loginName: demoReload.val()
+                        loginNameS: demoReload.val()
                     }
                 });
             }
@@ -240,6 +248,27 @@
                });
            }
        });
+
+        $.ajax({
+            type: 'get',
+            url: '/information/classes',
+            success: function (classes) {
+                for(var i = 0; i < classes.classesName.length; i++){
+                    $("#selectClasses").append("<option value='"+classes.classesName[i]+"'>"+classes.classesName[i]+"</option>");
+                }
+                form.render();
+            }
+        });
+        form.on('select(selectClasses)', function(data){
+            table.reload('Reload', {
+                page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+                ,where: {
+                    classes: data.value
+                }
+            });
+        });
 
     });
 

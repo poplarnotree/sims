@@ -23,6 +23,7 @@ import java.util.List;
 @SpringBootTest
 @Slf4j
 public class InformationServiceImplTest {
+
     @Autowired
     private HttpServletRequest request;
 
@@ -38,6 +39,11 @@ public class InformationServiceImplTest {
         NumberAndClassesVO numberAndClassesVO = informationService.createInformationVO();
         Assert.assertNotNull(numberAndClassesVO);
         log.info("NumberAndClassesVO = {}", numberAndClassesVO);
+    }
+
+    @Test
+    public void teacherClasses() throws Exception {
+
     }
 
     @Test

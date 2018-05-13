@@ -12,13 +12,20 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding:15px;">
-            <h1 class="site-h1">信息 / 信息管理</h1>
+            <h1 class="site-h1">信息 / 我的学生信息</h1>
             <div class="demoTable">
                 搜索登录帐号：
                 <div class="layui-inline">
                     <input class="layui-input" name="id" id="demoReload" autocomplete="off">
                 </div>
                 <button class="layui-btn" data-type="reload">搜索</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                选择班级：
+                <div class="layui-inline layui-form">
+                    <select id="classes" name="classes" lay-filter="classes" lay-search>
+                        <option value="">请选择班级</option>
+                    </select>
+                </div>
             </div>
             <table id="myStudent" class="layui-hide" lay-filter="student"></table>
         </div>
@@ -30,9 +37,10 @@
 
 <script th:inline="none">
     //JavaScript代码区域
-    layui.use(['element', 'table'], function(){
+    layui.use(['element', 'table','form'], function(){
         var element = layui.element;
         var table = layui.table;
+        var form = layui.form;
         table.render({
             elem: '#myStudent'
             ,url: '/information/myStudent' //数据接口
@@ -69,7 +77,7 @@
                         curr: 1 //重新从第 1 页开始
                     }
                     ,where: {
-                        loginName: demoReload.val()
+                        loginNameS: demoReload.val()
                     }
                 });
             }
@@ -80,7 +88,28 @@
             active[type] ? active[type].call(this) : '';
         });
 
+        $.ajax({
+            type: 'get',
+            url: '/information/teacherClasses',
+            success: function (classes) {
+                for(var i = 0; i < classes.classesName.length; i++){
+                    $("#classes").append("<option value='"+classes.classesName[i]+"'>"+classes.classesName[i]+"</option>");
+                }
+                form.render();
+            }
+        });
+        form.on('select(classes)', function(data){
+            table.reload('Reload', {
+                page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+                ,where: {
+                    classes: data.value
+                }
+            });
+        });
     });
+
 </script>
 </body>
 </html>

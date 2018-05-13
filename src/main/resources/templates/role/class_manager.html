@@ -53,7 +53,7 @@
                     ' lay-event="updateClassName" data-id="name"><i class="layui-icon">&#xe642;</i>修改</a></div>', sort: true}
 
                 ,{field: 'number', title: '学生人数',templet:
-                    '<div>{{d.number}}<a style="float: right" class="layui-btn layui-btn-xs" lay-event="show">查看</a></div>'}
+                    '<div>{{d.number}}<a style="float: right" class="layui-btn layui-btn-xs" data-classes={{d.name}} lay-event="show">查看</a></div>'}
 
                 ,{field: 'teacherVO', title: '语文教师', templet:
                     '<div>{{d.teacherVO.chinese}}<a style="float: right" class="layui-btn layui-btn-danger layui-btn-xs" ' +
@@ -297,6 +297,69 @@
                     }
                 });
             }
+            if (obj.event === 'show'){
+                var classes = $(this).data('classes');
+                layer.open({
+                    title: $(this).data('classes') + '学生详情'
+                    ,content: $('#studentDetailsTpl').html()
+                    ,area: ['70%','70%']
+                    ,btn: ['关闭']
+                    ,success: function () {
+                        table.render({
+                            elem: '#studentDetails'
+                            ,url: '/information/classesStudent' //数据接口
+                            ,page: true //开启分页
+                            ,where: {
+                                classes : classes
+                            }
+                            ,cellMinWidth: 100
+                            ,text: {
+                                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+                            }
+                            ,cols: [[ //表头
+                                {field: 'id', title: 'ID', sort: true}
+                                ,{field: 'loginName', title: '登录帐号'}
+                                ,{field: 'number', title: '学号', sort: true}
+                                ,{field: 'name', title: '姓名'}
+                                ,{field: 'sex', title: '性别'}
+                                ,{field: 'idCart', title: '身份证号'}
+                                ,{field: 'nation', title: '民族'}
+                                ,{field: 'place', title: '籍贯'}
+                                ,{field: 'address', title: '地址'}
+                                ,{field: 'birthday', title: '出生日期'}
+                                ,{field: 'phone', title: '联系电话'}
+                                ,{field: 'classes', title: '班级'}
+                                ,{field: 'enrolmentTime', title: '入学时间'}
+                                ,{field: 'createTime', title: '创建时间', sort: true}
+                            ]]
+                            ,id: 'ReloadDetails'
+                        });
+                        var active = {
+                            reload: function(){
+                                var demoReloadTpl = $('#demoReloadTpl');
+
+                                //执行重载
+                                table.reload('ReloadDetails', {
+                                    page: {
+                                        curr: 1 //重新从第 1 页开始
+                                    }
+                                    ,where: {
+                                        loginNameS: demoReloadTpl.val()
+                                    }
+                                });
+                            }
+                        };
+                        $('.demoTable .layui-btn').on('click', function(){
+                            var type = $(this).data('type');
+                            active[type] ? active[type].call(this) : '';
+                        });
+                    }
+                    ,yes: function () {
+                        var index = layer.open();
+                        layer.close(index);
+                    }
+                })
+            }
         });
 
         /*添加班级*/
@@ -393,6 +456,16 @@
             <div class="layui-form-mid layui-word-aux">请选择教师</div>
         </div>
     </form>
+</script>
+<script type="text/html" id="studentDetailsTpl">
+    <div class="demoTable">
+        搜索登录帐号：
+        <div class="layui-inline">
+            <input class="layui-input" name="id" id="demoReloadTpl" autocomplete="off">
+        </div>
+        <button class="layui-btn" data-type="reload">搜索</button>
+    </div>
+    <table id="studentDetails" class="layui-hide" lay-filter="student"></table>
 </script>
 
 </body>

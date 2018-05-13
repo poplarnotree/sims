@@ -21,6 +21,10 @@ public class NumberAndClassesVO {
     public NumberAndClassesVO() {
     }
 
+    public NumberAndClassesVO(List<String> classesName) {
+        this.classesName = classesName;
+    }
+
     public NumberAndClassesVO(List<String> classesName, String maxNumber) {
         this.classesName = classesName;
         this.maxNumber = maxNumber;

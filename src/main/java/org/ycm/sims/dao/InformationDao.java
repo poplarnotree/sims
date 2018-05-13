@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import org.ycm.sims.dto.ClassManagerDTO;
 import org.ycm.sims.dto.PageDTO;
 import org.ycm.sims.dto.RoleManagerDTO;
+import org.ycm.sims.dto.StudentInformationPageDTO;
 import org.ycm.sims.entity.Classes;
 import org.ycm.sims.entity.Role;
 import org.ycm.sims.entity.StudentInformation;
@@ -104,12 +105,16 @@ public interface InformationDao {
     /*修改学生信息*/
     Integer updateStudentInformation(StudentInformation studentInformation);
 
-    /*教研组教师查询班级数量*/
+    /*修改学生班级*/
+    Integer updateStudentClasses(StudentInformation studentInformation);
+
+    /*查询教师班级*/
     List<Classes> findTeaClassCount(@Param("loginName") String loginName,
                               @Param("name") String name);
 
     /*根据班级查询学生信息*/
-    List<StudentInformation> findTeacherOfStudent(@Param("loginNameT") String loginNameT,
-                                                  @Param("loginNameS") String loginNameS);
+    List<StudentInformation> findTeacherOfStudent(StudentInformationPageDTO studentInformationPageDTO);
 
+    /*根据班级查询学生信息*/
+    List<StudentInformation> findClassesStudent(@Param("classes") String classes);
 }
