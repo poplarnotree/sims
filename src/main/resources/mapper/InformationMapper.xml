@@ -229,5 +229,15 @@
             AND name = #{name}
         </if>
     </select>
-
+    <select id="findTeacherOfStudent" resultType="org.ycm.sims.entity.StudentInformation">
+        SELECT * FROM student_information WHERE classes IN(select name from classes WHERE name IN (SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(t.classes,',',b.help_topic_id+1),',',-1)
+        FROM teacher_information t
+        JOIN
+        mysql.help_topic b
+        on b.help_topic_id &lt; (LENGTH(t.classes)-LENGTH(REPLACE(t.classes,',',''))+1)
+        WHERE login_name = #{loginNameT} ORDER BY t.name))
+        <if test="loginNameS == null and loginNameS == ''">
+            AND login_name = {#loginNameS}
+        </if>
+    </select>
 </mapper>

@@ -127,4 +127,14 @@ public class InformationController {
         return informationService.MyInformationT();
     }
 
+    @RequestMapping("/myStudentHtml")
+    public String myStudentHtml(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/my_student");
+    }
+
+    @RequestMapping("/myStudent")
+    @ResponseBody
+    public PageVO<StudentInformationVO> myStudent(RoleManagerDTO roleManagerDTO){
+        return informationService.MyStudent(roleManagerDTO);
+    }
 }

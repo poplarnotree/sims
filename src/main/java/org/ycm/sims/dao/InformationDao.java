@@ -108,4 +108,8 @@ public interface InformationDao {
     List<Classes> findTeaClassCount(@Param("loginName") String loginName,
                               @Param("name") String name);
 
+    /*根据班级查询学生信息*/
+    List<StudentInformation> findTeacherOfStudent(@Param("loginNameT") String loginNameT,
+                                                  @Param("loginNameS") String loginNameS);
+
 }

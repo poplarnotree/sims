@@ -132,9 +132,8 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">班级</label>
                         <div class="layui-input-inline">
-                            <select id="classes" name="classes" lay-search>
+                            <select id="classes" name="classes" required lay-search>
                                 <option value="">请选择班级</option>
-                                <option value="暂无班级" selected>暂无班级</option>
                             </select>
                         </div>
                         <div class="layui-form-mid layui-word-aux">请选择学生的班级</div>
@@ -184,7 +183,7 @@
         //监听提交
         form.on('submit(formDemo)', function(data){
             // 判断部门，班级不为空
-            if (data.field.classes == null){
+            if (data.field.classes == ''){
                 layer.open({
                     title: '提示'
                     ,content: '请为学生分配班级!'

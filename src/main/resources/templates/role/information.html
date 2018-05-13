@@ -195,11 +195,15 @@
                            return false;
                        }
 
+                       if ($("#classes").val() == '') {
+                           alert('请为学生选择班级！');
+                           return false;
+                       }
+
                        if ($("#enrolmentTime").val() == '') {
                            alert('请为学生选择入学日期！');
                            return false;
                        }
-
 
                        var formObject = {};
                        var formArray =$("#form").serializeArray();

@@ -411,4 +411,25 @@ public class InformationServiceImpl implements InformationService {
         teacherInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(teacherInformation.getCreateTime()));
         return teacherInformationVO;
     }
+
+    @Override
+    public PageVO<StudentInformationVO> MyStudent(RoleManagerDTO roleManagerDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        if (role.getRoleType() == 1) {
+            int count = informationDao.findTeacherOfStudent(role.getLoginName(), roleManagerDTO.getLoginName()).size();
+            PageHelper.startPage(roleManagerDTO.getPage(), roleManagerDTO.getLimit());
+            List<StudentInformation> studentInformationList = informationDao.findTeacherOfStudent(role.getLoginName(), roleManagerDTO.getLoginName());
+            List<StudentInformationVO> studentInformationVOList = new ArrayList<StudentInformationVO>();
+            for (StudentInformation studentInformation: studentInformationList){
+                StudentInformationVO studentInformationVO = new StudentInformationVO();
+                BeanUtils.copyProperties(studentInformation, studentInformationVO);
+                studentInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(studentInformation.getCreateTime()));
+                studentInformationVOList.add(studentInformationVO);
+            }
+            PageVO<StudentInformationVO> pageVO = new PageVO(ResultEnum.SUCCESS, count,studentInformationVOList);
+            return pageVO;
+        }else {
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+    }
 }

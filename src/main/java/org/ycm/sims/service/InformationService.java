@@ -49,4 +49,7 @@ public interface InformationService {
 
     /*教师查看个人信息*/
     TeacherInformationVO MyInformationT();
+
+    /*教师的学生*/
+    PageVO<StudentInformationVO> MyStudent(RoleManagerDTO roleManagerDTO);
 }
