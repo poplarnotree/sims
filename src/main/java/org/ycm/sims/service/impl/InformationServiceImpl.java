@@ -275,12 +275,18 @@ public class InformationServiceImpl implements InformationService {
             }
             return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
         }
-        if (role.getRoleType() == 1 && departmentCount == 0){
+        throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+    }
+
+    @Override
+    public PageVO<ClassVO> myClassPage(ClassManagerDTO classManagerDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        if (role.getRoleType() == 1) {
             PageHelper.startPage(classManagerDTO.getPage(), classManagerDTO.getLimit());
             List<Classes> classesList = informationDao.findTeaClassCount(role.getLoginName(), classManagerDTO.getName());
             int count = classesList.size();
             List<ClassVO> classVOList = new ArrayList<>();
-            for (int i = 0; i < classesList.size(); i++){
+            for (int i = 0; i < classesList.size(); i++) {
                 ClassVO classVO = new ClassVO();
                 BeanUtils.copyProperties(classesList.get(i), classVO);
                 classVOList.add(classVO);
@@ -293,10 +299,9 @@ public class InformationServiceImpl implements InformationService {
                 classVOList.get(i).setCreateName(createName);
                 classVOList.get(i).setCreateTime(FormatConversionUtil.DateFormatUtil(classesList.get(i).getCreateTime()));
             }
-            return new PageVO<ClassVO>(ResultEnum.SUCCESS, count,classVOList);
+            return new PageVO<ClassVO>(ResultEnum.SUCCESS, count, classVOList);
         }
         throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
-
     }
 
     @Override
@@ -326,16 +331,26 @@ public class InformationServiceImpl implements InformationService {
                 systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.TEACHER_INFORMATION.getValue(), updateTeacherClassDTO.getCurrentId(),
                         ColumnEnum.CLASSES.getValue(), currentClasses, recordClasses));
             }
-            String classes = informationDao.findByInformation(new TeacherInformation(updateTeacherClassDTO.getId())).getClasses();
-            String classes1 = classes;
-            classes += "," + updateTeacherClassDTO.getClasses();
-            int row = informationDao.updateTeacherClasses(new TeacherInformation(updateTeacherClassDTO.getId(), classes));
-            if (row == 1){
-                systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.TEACHER_INFORMATION.getValue(), updateTeacherClassDTO.getId(),
-                        ColumnEnum.CLASSES.getValue(), classes, classes1));
+            String classes;
+            String classes1;
+            if (updateTeacherClassDTO.getId() == null){
                 return new CheckVO(ResultEnum.SUCCESS);
+            }else {
+                classes = informationDao.findByInformation(new TeacherInformation(updateTeacherClassDTO.getId())).getClasses();
+                classes1 = classes;
+                if (classes.equals("暂无班级")){
+                    classes = updateTeacherClassDTO.getClasses();
+                }else {
+                    classes += "," + updateTeacherClassDTO.getClasses();
+                }
+                int row = informationDao.updateTeacherClasses(new TeacherInformation(updateTeacherClassDTO.getId(), classes));
+                if (row == 1){
+                    systemService.addRecord(new RecordDTO(role.getLoginName(), TableEnum.TEACHER_INFORMATION.getValue(), updateTeacherClassDTO.getId(),
+                            ColumnEnum.CLASSES.getValue(), classes, classes1));
+                    return new CheckVO(ResultEnum.SUCCESS);
+                }
+                throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
             }
-            throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
         }else {
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }

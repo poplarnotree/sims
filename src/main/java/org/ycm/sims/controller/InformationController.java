@@ -75,6 +75,12 @@ public class InformationController {
         return informationService.classPage(classManagerDTO);
     }
 
+    @RequestMapping("/myClassPage")
+    @ResponseBody
+    public PageVO<ClassVO> myClassPage(ClassManagerDTO classManagerDTO){
+        return informationService.myClassPage(classManagerDTO);
+    }
+
     @RequestMapping("/classManager")
     @ResponseBody
     public CheckVO createClass(ClassManagerDTO classManagerDTO){

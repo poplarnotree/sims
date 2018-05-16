@@ -36,6 +36,9 @@ public interface InformationService {
     /*班级分页*/
     PageVO<ClassVO> classPage(ClassManagerDTO classManagerDTO);
 
+    /*班级分页*/
+    PageVO<ClassVO> myClassPage(ClassManagerDTO classManagerDTO);
+
     /*查询教师姓名科目*/
     List<TeacherSubjectNameVO> teacherSubNameList(RoleManagerDTO roleManagerDTO);
 
