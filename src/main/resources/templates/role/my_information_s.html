@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/role_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">信息 / 我的个人信息</h1>
+            <form class="layui-form" action="">
+                <fieldset class="layui-elem-field">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">id</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="id" name="id" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">登录帐号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="loginName" name="loginName" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">工号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="number" name="number" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">教师姓名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="name" name="name" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">性别</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="sex" name="sex" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">身份证号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="idCart" name="idCart" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">民族</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="nation" name="nation" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">籍贯</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="place" name="place" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">地址</label>
+                        <div class="layui-input-inline" style="width: 500px;">
+                            <input type="text" id="address" name="address" readonly autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline">
+                            <a id="updateAddress" class="layui-btn layui-btn-danger layui-btn" lay-event="update"><i class="layui-icon">&#xe642;</i>修改</a>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">出生日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="birthday" name="birthday" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系电话</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="phone" name="phone" readonly autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline">
+                            <a id="updatePhone" class="layui-btn layui-btn-danger layui-btn" lay-event="update"><i class="layui-icon">&#xe642;</i>修改</a>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">班级</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="classes" name="classes" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">入学日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="enrolmentTime" name="enrolmentTime" readonly autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script>
+    //JavaScript代码区域
+    layui.use(['element','form'], function(){
+        var element = layui.element;
+        var form = layui.form;
+        $.ajax({
+            type: 'get',
+            url: '/information/myInformationVOS',
+            success: function (data) {
+                $("#id").val(data.id);
+                $("#loginName").val(data.loginName);
+                $("#number").val(data.number);
+                $("#name").val(data.name);
+                $("#sex").val(data.sex);
+                $("#idCart").val(data.idCart);
+                $("#positionalTitles").val(data.positionalTitles);
+                $("#nation").val(data.nation);
+                $("#place").val(data.place);
+                $("#address").val(data.address);
+                $("#birthday").val(data.birthday);
+                $("#phone").val(data.phone);
+                $("#department").val(data.department);
+                $("#classes").val(data.classes);
+                $("#subject").val(data.subject);
+                $("#enrolmentTime").val(data.enrolmentTime);
+                renderForm();
+            }
+        });
+        // 表单重新渲染
+        function renderForm(){
+            layui.use('form', function(){
+                var form = layui.form;//高版本建议把括号去掉，有的低版本，需要加()
+                form.render();
+            });
+        }
+        $("#updateAddress").click(function () {
+            layer.open({
+                title: '修改地址'
+                ,content: $('#updateAddressTpl').html()
+                ,area: ['70%']
+                ,btn: ['提交','关闭']
+                ,success: function () {
+                    $("#updateAddressInput").val($("#address").val());
+                }
+                ,yes: function () {
+                    //地址不为空
+                    var address = $("#updateAddressInput").val();
+                    if (address == '' || !address.trim()) {
+                        alert('请填写地址！');
+                        return false;
+                    }
+                    var formObject = {};
+                    formObject['loginName'] = $("#loginName").val();
+                    formObject['address'] = address;
+                    $.ajax({
+                        type: 'post',
+                        url: '/information/updateStudent',
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: JSON.stringify(formObject),
+                        success: function (CheckVO) {
+                            if (CheckVO.status == 0) {
+                                layer.alert(CheckVO.message, {icon: 1},function () {
+                                    window.parent.location.reload();
+                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2});
+                            }
+                        },
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                                if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                                    location.href = '/role/logout';
+                                }
+                                var index = layer.alert();
+                                layer.close(index);
+                            });
+
+                        }
+                    })
+                }
+            });
+        });
+        $("#updatePhone").click(function () {
+            layer.open({
+                title: '修改联系电话'
+                ,content: $('#updatePhoneTpl').html()
+                ,area: ['50%']
+                ,btn: ['提交','关闭']
+                ,success: function () {
+                    $("#updatePhoneInput").val($("#phone").val());
+                }
+                ,yes: function () {
+                    //电话不为空
+                    var phone = $("#updatePhoneInput").val();
+                    if (phone == '' || !phone.trim()) {
+                        alert('请填写联系电话！');
+                        return false;
+                    }
+                    var formObject = {};
+                    formObject['loginName'] = $("#loginName").val();
+                    formObject['phone'] = phone;
+                    $.ajax({
+                        type: 'post',
+                        url: '/information/updateStudent',
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: JSON.stringify(formObject),
+                        success: function (CheckVO) {
+                            if (CheckVO.status == 0) {
+                                layer.alert(CheckVO.message, {icon: 1},function () {
+                                    window.parent.location.reload();
+                                });
+                            } else {
+                                layer.alert(CheckVO.message, {icon: 2});
+                            }
+                        },
+                        error: function (XMLHttpRequest) {
+                            layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                                if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                                    location.href = '/role/logout';
+                                }
+                                var index = layer.alert();
+                                layer.close(index);
+                            });
+                        }
+                    })
+                }
+            })
+        })
+    });
+</script>
+<script type="text/html" id="updateAddressTpl">
+    <div class="layui-form-item">
+        <label class="layui-form-label">地址</label>
+        <div class="layui-input-inline" style="width: 500px;">
+            <input type="text" id="updateAddressInput" name="updateAddressInput" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">请填写新的地址</div>
+    </div>
+</script>
+<script type="text/html" id="updatePhoneTpl">
+    <div class="layui-form-item">
+        <label class="layui-form-label">联系电话</label>
+        <div class="layui-input-inline">
+            <input type="text" id="updatePhoneInput" name="updatePhoneInput" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">请填写新的联系电话</div>
+    </div>
+</script>
+</body>
+</html>

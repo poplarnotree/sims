@@ -6,6 +6,7 @@ import org.ycm.sims.VO.HeadVO;
 import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
 import org.ycm.sims.entity.Role;
+import org.ycm.sims.entity.StudentInformation;
 import org.ycm.sims.entity.TeacherInformation;
 import org.ycm.sims.service.IndexService;
 import org.ycm.sims.utils.FormatConversionUtil;
@@ -32,7 +33,13 @@ public class IndexServiceImpl implements IndexService {
     @Override
     public HeadVO roleName() {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-        String name = informationDao.findByInformation(new TeacherInformation(role.getLoginName())).getName();
+        String name = null;
+        if (role.getRoleType() == 1){
+            name = informationDao.findByInformation(new TeacherInformation(role.getLoginName())).getName();
+        }
+        if (role.getRoleType() == 2){
+            name = informationDao.findStudentInformation(new StudentInformation(role.getLoginName())).getName();
+        }
         String type = FormatConversionUtil.typeFormatUitl(role.getRoleType());
         return new HeadVO(name, type);
     }

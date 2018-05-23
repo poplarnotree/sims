@@ -105,12 +105,6 @@ public class InformationController {
         return informationService.updateTeacherClass(updateTeacherClassDTO);
     }
 
-//    @RequestMapping("/studentPage")
-//    @ResponseBody
-//    public PageVO<StudentInformationVO> studentPage(RoleManagerDTO roleManagerDTO){
-//        return informationService.studentInformationPage(roleManagerDTO);
-//    }
-
     @RequestMapping("/updateStudent")
     @ResponseBody
     public CheckVO updateStudent(@RequestBody StudentInformationDTO studentInformationDTO){
@@ -127,10 +121,21 @@ public class InformationController {
         return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/my_information_t");
     }
 
+    @RequestMapping("/myInformationHtmlS")
+    public String myInformationHtmlS(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/my_information_s");
+    }
+
     @RequestMapping("/myInformationVOT")
     @ResponseBody
     public TeacherInformationVO myInformationVOT(){
         return informationService.myInformationT();
+    }
+
+    @RequestMapping("/myInformationVOS")
+    @ResponseBody
+    public StudentInformationVO myInformationVOS(){
+        return informationService.myInformationS();
     }
 
     @RequestMapping("/myStudentHtml")

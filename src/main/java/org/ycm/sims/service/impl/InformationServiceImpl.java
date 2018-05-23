@@ -381,35 +381,12 @@ public class InformationServiceImpl implements InformationService {
         }
     }
 
-//    @Override
-//    public PageVO<StudentInformationVO> studentInformationPage(RoleManagerDTO roleManagerDTO) {
-//        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
-//        if (roleManagerDTO.getRoleType() - role.getRoleType() == 1){
-//            int count = informationDao.studentInformationCount(new StudentInformation(roleManagerDTO.getLoginName()));
-//            Role roles = new Role();
-//            BeanUtils.copyProperties(roleManagerDTO, roles);
-//            PageHelper.startPage(roleManagerDTO.getPage(), roleManagerDTO.getLimit());
-//            List<StudentInformation> studentInformationList = informationDao.studentList(roles);
-//            List<StudentInformationVO> studentInformationVOList = new ArrayList<StudentInformationVO>();
-//            for (StudentInformation studentInformation: studentInformationList){
-//                StudentInformationVO studentInformationVO = new StudentInformationVO();
-//                BeanUtils.copyProperties(studentInformation, studentInformationVO);
-//                studentInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(studentInformation.getCreateTime()));
-//                studentInformationVOList.add(studentInformationVO);
-//            }
-//            PageVO<StudentInformationVO> pageVO = new PageVO(ResultEnum.SUCCESS, count,studentInformationVOList);
-//            return pageVO;
-//        }else {
-//            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
-//        }
-//    }
-
     @Override
     @Transactional
     public CheckVO updateStudentInformation(StudentInformationDTO studentInformationDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         StudentInformation si = informationDao.findStudentInformation(new StudentInformation(studentInformationDTO.getLoginName()));
-        if (FormatConversionUtil.roleTypeFormatUitl(studentInformationDTO.getRoleType()) - role.getRoleType() == 1){
+        if (FormatConversionUtil.roleTypeFormatUitl(studentInformationDTO.getRoleType()) - role.getRoleType() == 1 || role.getLoginName().equals(si.getLoginName())){
             StudentInformation studentInformation = new StudentInformation();
             BeanUtils.copyProperties(studentInformationDTO, studentInformation);
             if (informationDao.findInformationNumber(studentInformation.getNumber()) >= 1){
@@ -447,6 +424,19 @@ public class InformationServiceImpl implements InformationService {
         BeanUtils.copyProperties(teacherInformation, teacherInformationVO);
         teacherInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(teacherInformation.getCreateTime()));
         return teacherInformationVO;
+    }
+
+    @Override
+    public StudentInformationVO myInformationS() {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        StudentInformation studentInformation = informationDao.findStudentInformation(new StudentInformation(role.getLoginName()));
+        if (studentInformation == null) {
+            throw new SimsException(ExceptionEnum.DATA_BASE_ERROR);
+        }
+        StudentInformationVO studentInformationVO = new StudentInformationVO();
+        BeanUtils.copyProperties(studentInformation, studentInformationVO);
+        studentInformationVO.setCreateTime(FormatConversionUtil.DateFormatUtil(studentInformation.getCreateTime()));
+        return studentInformationVO;
     }
 
     @Override
