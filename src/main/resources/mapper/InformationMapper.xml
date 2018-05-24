@@ -221,7 +221,15 @@
         )
     </select>
     <select id="findStudentInformation" resultType="org.ycm.sims.entity.StudentInformation">
-        SELECT * FROM student_information WHERE login_name = #{loginName}
+        SELECT * FROM student_information
+        <where>
+            <if test="loginName != null and loginName != ''">
+                login_name = #{loginName}
+            </if>
+            <if test="id != null and id != ''">
+                AND id = #{id}
+            </if>
+        </where>
     </select>
     <select id="findTeaClassCount" resultType="org.ycm.sims.entity.Classes">
         select * from classes WHERE name IN (SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(t.classes,',',b.help_topic_id+1),',',-1)

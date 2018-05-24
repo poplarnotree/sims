@@ -47,6 +47,10 @@ public class StudentInformation {
         this.classes = classes;
     }
 
+    public StudentInformation(int id) {
+        this.id = id;
+    }
+
     public StudentInformation(String loginName) {
         this.loginName = loginName;
     }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ycm.sims.dao.AchievementDao">
+
+    <insert id="insertAchievement">
+        INSERT INTO
+          achievement(s_information_id, t_information_id, classes, year, mouth, num, subject, score, status, create_id)
+         VALUES (#{sInformationId}, #{tInformationId}, #{classes}, #{year}, #{mouth}, #{num}, #{subject}, #{score}, #{status}, #{createId})
+    </insert>
+
+
+</mapper>
