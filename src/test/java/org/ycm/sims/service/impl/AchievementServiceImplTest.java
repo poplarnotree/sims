@@ -31,13 +31,13 @@ public class AchievementServiceImplTest {
 
     @Test
     public void addAchievement() {
-        request.getSession().setAttribute("loginName","lisi");
+        request.getSession().setAttribute("loginName","liuba");
         AchievementDTO achievementDTO = new AchievementDTO();
-        achievementDTO.setSInformationId(3);
+        achievementDTO.setSInformationId(13);
         achievementDTO.setYear("2018-2019");
         achievementDTO.setMouth("6");
-        achievementDTO.setNum("1");
-        achievementDTO.setScore(90);
+        achievementDTO.setNum("2");
+        achievementDTO.setScore(75);
         CheckVO checkVO = achievementService.addAchievement(achievementDTO);
         log.info("checkVO={}", checkVO);
 

@@ -11,8 +11,24 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding:15px;">
-            欢迎进入学生管理系统
+            <h1 class="site-h1">成绩 / 成绩管理</h1>
+            <div class="demoTable">
+                搜索学号：
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">搜索</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                选择班级：
+                <div class="layui-inline layui-form">
+                    <select id="selectClasses" name="selectClasses" lay-filter="selectClasses" lay-search>
+                        <option value="">请选择班级</option>
+                    </select>
+                </div>
+            </div>
+            <table id="achievementPage" class="layui-hide" lay-filter="achievement"></table>
         </div>
+    </div>
     </div>
 
     <!--尾部-->
@@ -20,8 +36,10 @@
 </div>
 <script>
     //JavaScript代码区域
-    layui.use('element', function(){
+    layui.use(['element', 'table'], function(){
         var element = layui.element;
+        var table = layui.table;
+
 
     });
 </script>

@@ -23,7 +23,7 @@ public class AchievementController {
     private HttpServletRequest request;
 
     @RequestMapping("/index")
-    public String index(String loginName){
+    public String index(){
         return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/achievement");
     }
 
