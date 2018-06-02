@@ -1,7 +1,9 @@
 package org.ycm.sims.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.ycm.sims.dto.AchievementPageDTO;
 import org.ycm.sims.entity.Achievement;
+import org.ycm.sims.pojo.AchievementPojo;
 
 import java.util.List;
 
@@ -15,7 +17,8 @@ public interface AchievementDao {
     /*添加成绩记录*/
     Integer insertAchievement(Achievement achievement);
 
-    List<Achievement> findAchievement();
+
+    List<AchievementPojo> findAchievement(AchievementPageDTO achievementPageDTO);
 
 
 }

@@ -29,17 +29,38 @@
             <table id="achievementPage" class="layui-hide" lay-filter="achievement"></table>
         </div>
     </div>
-    </div>
 
     <!--尾部-->
     <div th:include="@{~/framework/foot.html}"></div>
 </div>
-<script>
+<script th:inline="none">
     //JavaScript代码区域
     layui.use(['element', 'table'], function(){
         var element = layui.element;
         var table = layui.table;
-
+        table.render({
+            elem: '#achievementPage'
+            ,url: '/achievement/achievementList' //数据接口
+            ,page: true //开启分页
+            ,cellMinWidth: 100
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'number', title: '学号', sort: true}
+                ,{field: 'studentName', title: '姓名'}
+                ,{field: 'classes', title: '班级'}
+                ,{field: 'subject', title: '学科'}
+                ,{field: 'teacherName', title: '教师'}
+                ,{field: 'year', title: '学年'}
+                ,{field: 'mouth', title: '月'}
+                ,{field: 'num', title: '次数'}
+                ,{field: 'score', title: '分数', sort: true}
+                ,{field: 'classes', title: '班级'}
+                ,{field: 'createTime', title: '创建时间', sort: true}
+            ]]
+            ,id: 'Reload'
+        });
 
     });
 </script>

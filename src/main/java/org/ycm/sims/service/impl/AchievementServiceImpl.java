@@ -1,23 +1,30 @@
 package org.ycm.sims.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.ycm.sims.VO.AchievementVO;
 import org.ycm.sims.VO.CheckVO;
+import org.ycm.sims.VO.PageVO;
 import org.ycm.sims.dao.AchievementDao;
 import org.ycm.sims.dao.InformationDao;
 import org.ycm.sims.dao.RoleDao;
 import org.ycm.sims.dto.AchievementDTO;
+import org.ycm.sims.dto.AchievementPageDTO;
 import org.ycm.sims.entity.*;
 import org.ycm.sims.enums.ExceptionEnum;
 import org.ycm.sims.enums.ResultEnum;
 import org.ycm.sims.exception.SimsException;
+import org.ycm.sims.pojo.AchievementPojo;
 import org.ycm.sims.service.AchievementService;
 import org.ycm.sims.service.SystemService;
+import org.ycm.sims.utils.FormatConversionUtil;
 import org.ycm.sims.utils.SessionUtil;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -84,5 +91,26 @@ public class AchievementServiceImpl implements AchievementService {
             request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
+    }
+
+    @Override
+    public PageVO<AchievementVO> achievementPage(AchievementPageDTO achievementPageDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        if (role.getRoleType() == 0){
+            request.getSession().invalidate();
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+        PageHelper.startPage(achievementPageDTO.getPage(), achievementPageDTO.getLimit());
+        List<AchievementPojo> achievementPojoList = achievementDao.findAchievement(achievementPageDTO);
+        List<AchievementVO> achievementVOList = new ArrayList<>();
+        int count = achievementPojoList.size();
+        for (AchievementPojo achievementPojo : achievementPojoList){
+            AchievementVO achievementVO = new AchievementVO();
+            BeanUtils.copyProperties(achievementPojo, achievementVO);
+            achievementVO.setCreateTime(FormatConversionUtil.DateFormatUtil(achievementPojo.getCreateTime()));
+            achievementVOList.add(achievementVO);
+        }
+        PageVO<AchievementVO> achievementVOPageVO = new PageVO(ResultEnum.SUCCESS, count, achievementVOList);
+        return achievementVOPageVO;
     }
 }
