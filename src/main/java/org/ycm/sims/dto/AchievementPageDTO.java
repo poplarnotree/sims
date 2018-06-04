@@ -9,7 +9,23 @@ import lombok.Data;
 @Data
 public class AchievementPageDTO extends PageDTO {
 
+    private String number;
+
+    private Integer sInformationId;
+
+    private Integer tInformationId;
+
     public AchievementPageDTO() {
+    }
+
+    public AchievementPageDTO(Integer page, Integer limit, Integer sInformationId) {
+        super(page, limit);
+        this.sInformationId = sInformationId;
+    }
+
+    public AchievementPageDTO(Integer page, Integer limit, String number) {
+        super(page, limit);
+        this.number = number;
     }
 
     public AchievementPageDTO(Integer page, Integer limit) {

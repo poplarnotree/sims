@@ -11,7 +11,7 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding:15px;">
-            <h1 class="site-h1">成绩 / 成绩管理</h1>
+            <h1 class="site-h1">成绩 / 我的成绩</h1>
             <div class="demoTable">
                 搜索学号：
                 <div class="layui-inline">
@@ -40,9 +40,7 @@
                 none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
             }
             ,cols: [[ //表头
-                {field: 'number', title: '学号', sort: true}
-                ,{field: 'studentName', title: '姓名'}
-                ,{field: 'classes', title: '班级'}
+                {field: 'classes', title: '班级'}
                 ,{field: 'subject', title: '学科'}
                 ,{field: 'teacherName', title: '教师'}
                 ,{field: 'year', title: '学年'}
@@ -53,26 +51,6 @@
             ]]
             ,id: 'Reload'
         });
-        var $ = layui.$, active = {
-            reload: function(){
-                var demoReload = $('#demoReload');
-
-                //执行重载
-                table.reload('Reload', {
-                    page: {
-                        curr: 1 //重新从第 1 页开始
-                    }
-                    ,where: {
-                        number: demoReload.val()
-                    }
-                });
-            }
-        };
-        $('.demoTable .layui-btn').on('click', function(){
-            var type = $(this).data('type');
-            active[type] ? active[type].call(this) : '';
-        });
-
     });
 </script>
 </body>

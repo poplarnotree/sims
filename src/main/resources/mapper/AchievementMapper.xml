@@ -14,8 +14,24 @@
         SELECT s.number, s.name student_name, s.classes, t.subject, t.name teacher_name, a.year, a.mouth, a.num, a.score, s.create_time
         FROM achievement a, student_information s,teacher_information t
         WHERE a.s_information_id = s.id AND a.t_information_id = t.id
+        <if test="sInformationId != null and sInformationId != ''">
+            AND a.s_information_id = #{sInformationId}
+        </if>
+        <if test="tInformationId != null and tInformationId != ''">
+            AND a.t_information_id = #{tInformationId}
+        </if>
+        <if test="number != null and number != ''">
+            AND s.number = #{number}
+        </if>
         ORDER BY a.year DESC, a.mouth, a.num
     </select>
-
-
+    <select id="achievementCount" parameterType="java.lang.String" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM achievement a, student_information s,teacher_information t
+        WHERE a.s_information_id = s.id AND a.t_information_id = t.id
+        <if test="number != null and number != ''">
+            AND s.number = #{number}
+        </if>
+        ORDER BY a.year DESC, a.mouth, a.num
+    </select>
 </mapper>

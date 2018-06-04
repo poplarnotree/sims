@@ -11,13 +11,15 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding:15px;">
-            <h1 class="site-h1">成绩 / 成绩管理</h1>
+            <h1 class="site-h1">成绩 / 我的学生成绩</h1>
             <div class="demoTable">
                 搜索学号：
                 <div class="layui-inline">
                     <input class="layui-input" name="number" id="demoReload" autocomplete="off">
                 </div>
                 <button class="layui-btn" data-type="reload">搜索</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="layui-btn" onclick="window.location.href='/role/create'"><i class="layui-icon">&#xe608;</i>录入学生成绩</button>
             </div>
             <table id="achievementPage" class="layui-hide" lay-filter="achievement"></table>
         </div>
@@ -33,7 +35,7 @@
         var table = layui.table;
         table.render({
             elem: '#achievementPage'
-            ,url: '/achievement/achievementList' //数据接口
+            ,url: '/achievement/myStudentAchievementList' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 100
             ,text: {

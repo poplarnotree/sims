@@ -100,10 +100,46 @@ public class AchievementServiceImpl implements AchievementService {
             request.getSession().invalidate();
             throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
         }
+        if (role.getRoleType() == 1){
+            TeacherInformation teacherInformation = informationDao.findByInformation(new TeacherInformation(role.getLoginName()));
+            int teacherDepartment = informationDao.findTeacherDepartment(new TeacherInformation(role.getLoginName(), "学生处"));
+            if (teacherDepartment != 1){
+                achievementPageDTO.setSInformationId(teacherInformation.getId());
+            }
+        }
+        if (role.getRoleType() == 2){
+            int sInformationId = informationDao.findStudentInformation(new StudentInformation(role.getLoginName())).getId();
+            achievementPageDTO.setSInformationId(sInformationId);
+        }
         PageHelper.startPage(achievementPageDTO.getPage(), achievementPageDTO.getLimit());
         List<AchievementPojo> achievementPojoList = achievementDao.findAchievement(achievementPageDTO);
         List<AchievementVO> achievementVOList = new ArrayList<>();
-        int count = achievementPojoList.size();
+        int count = achievementDao.achievementCount(achievementPageDTO.getNumber());
+        for (AchievementPojo achievementPojo : achievementPojoList){
+            AchievementVO achievementVO = new AchievementVO();
+            BeanUtils.copyProperties(achievementPojo, achievementVO);
+            achievementVO.setCreateTime(FormatConversionUtil.DateFormatUtil(achievementPojo.getCreateTime()));
+            achievementVOList.add(achievementVO);
+        }
+        PageVO<AchievementVO> achievementVOPageVO = new PageVO(ResultEnum.SUCCESS, count, achievementVOList);
+        return achievementVOPageVO;
+    }
+
+    @Override
+    public PageVO<AchievementVO> myStudentAchievementPage(AchievementPageDTO achievementPageDTO) {
+        Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
+        if (role.getRoleType() == 0 || role.getRoleType() == 2){
+            request.getSession().invalidate();
+            throw new SimsException(ExceptionEnum.UNAUTHORIZED_OPERATION);
+        }
+        if (role.getRoleType() == 1){
+            TeacherInformation teacherInformation = informationDao.findByInformation(new TeacherInformation(role.getLoginName()));
+            achievementPageDTO.setTInformationId(teacherInformation.getId());
+        }
+        PageHelper.startPage(achievementPageDTO.getPage(), achievementPageDTO.getLimit());
+        List<AchievementPojo> achievementPojoList = achievementDao.findAchievement(achievementPageDTO);
+        List<AchievementVO> achievementVOList = new ArrayList<>();
+        int count = achievementDao.achievementCount(achievementPageDTO.getNumber());
         for (AchievementPojo achievementPojo : achievementPojoList){
             AchievementVO achievementVO = new AchievementVO();
             BeanUtils.copyProperties(achievementPojo, achievementVO);

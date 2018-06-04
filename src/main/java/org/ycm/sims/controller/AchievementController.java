@@ -31,10 +31,26 @@ public class AchievementController {
         return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/achievement");
     }
 
+    @RequestMapping("/myAchievement")
+    public String myAchievement(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/my_achievement");
+    }
+
     @RequestMapping("/achievementList")
     @ResponseBody
     public PageVO<AchievementVO> achievementList(AchievementPageDTO achievementPageDTO){
         return achievementService.achievementPage(achievementPageDTO);
+    }
+
+    @RequestMapping("/myStudentAchievement")
+    public String myStudentAchievement(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/my_student_achievement");
+    }
+
+    @RequestMapping("/myStudentAchievementList")
+    @ResponseBody
+    public PageVO<AchievementVO> myStudentAchievementList(AchievementPageDTO achievementPageDTO){
+        return achievementService.myStudentAchievementPage(achievementPageDTO);
     }
 
 }

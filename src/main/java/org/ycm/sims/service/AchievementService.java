@@ -5,7 +5,6 @@ import org.ycm.sims.VO.CheckVO;
 import org.ycm.sims.VO.PageVO;
 import org.ycm.sims.dto.AchievementDTO;
 import org.ycm.sims.dto.AchievementPageDTO;
-import org.ycm.sims.entity.Achievement;
 
 /**
  * Create by yangchangmin
@@ -13,8 +12,25 @@ import org.ycm.sims.entity.Achievement;
  */
 public interface AchievementService {
 
+    /**
+     * 添加成绩
+     * @param achievementDTO
+     * @return
+     */
     CheckVO addAchievement(AchievementDTO achievementDTO);
 
+    /**
+     * 查询成绩分页
+     * @param achievementPageDTO
+     * @return
+     */
     PageVO<AchievementVO> achievementPage(AchievementPageDTO achievementPageDTO);
+
+    /**
+     * 教师查询我的学生成绩
+     * @param achievementPageDTO
+     * @return
+     */
+    PageVO<AchievementVO> myStudentAchievementPage(AchievementPageDTO achievementPageDTO);
 
 }
