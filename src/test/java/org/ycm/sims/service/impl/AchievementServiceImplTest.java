@@ -41,7 +41,7 @@ public class AchievementServiceImplTest {
         achievementDTO.setMouth("6");
         achievementDTO.setNum("2");
         achievementDTO.setScore(75);
-        CheckVO checkVO = achievementService.addAchievement(achievementDTO);
+        CheckVO checkVO = achievementService.achievementManage(achievementDTO);
         log.info("checkVO={}", checkVO);
 
     }

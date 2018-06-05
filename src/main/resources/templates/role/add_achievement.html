@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="@{~/framework/head.html}"></head>
+<link th:href="@{~/layui/css/select.css}" rel="stylesheet">
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--头部-->
+    <div th:include="@{~/framework/role_head.html}"></div>
+    <!--侧边导航栏-->
+    <div th:include="@{~/framework/role_sidebar.html}"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding:15px;">
+            <h1 class="site-h1">成绩 / 录入学生成绩</h1>
+            <div>
+                选择班级：
+                <div class="layui-inline layui-form">
+                    <select id="selectClasses" name="selectClasses" lay-filter="selectClasses" lay-search>
+                        <option value="">请选择班级</option>
+                    </select>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="layui-text" id="year">2018-2019</a>学年
+                <a class="layui-text" id="m"></a>月
+                第<a class="layui-text" id="n"></a>次考试
+            </div>
+            <table id="achievementPage" class="layui-hide" lay-filter="achievement"></table>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div th:include="@{~/framework/foot.html}"></div>
+</div>
+<script th:inline="none">
+
+    window.onload = function(){
+        open();
+    };
+
+    function open(){
+        layer.open({
+            title: '选择成绩的时间'
+            ,content: $('#opens').html()
+            ,area: ['30%','30%']
+            ,btn: ['确定']
+            ,success:function () {
+            }
+            ,yes: function () {
+                if ($("#mouth").val() != '' && $("#num").val()) {
+                    $("#m").html($("#mouth").val());
+                    $("#n").html($("#num").val());
+                    layer.close(layer.open());
+                }
+            }
+        })
+    }
+
+
+    //JavaScript代码区域
+    layui.use(['element','form', 'table'], function(){
+        var element = layui.element;
+        var form = layui.form;
+        var table = layui.table;
+        var $ = layui.$;
+
+        table.render({
+            elem: '#achievementPage'
+            ,url: '/information/myStudent' //数据接口
+            ,where: {
+                roleType: 2
+            }
+            ,width: 500
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,cols: [[ //表头
+                {field: 'number', title: '学号', sort: true}
+                ,{field: 'name', title: '姓名'}
+                ,{field: 'classes', title: '班级'}
+                ,{field: 'score', title: '分数', edit: 'text'}
+            ]]
+            ,id: 'Reload'
+        });
+
+        table.on('edit(achievement)', function(obj){
+            $.ajax({
+                type: 'post',
+                url: '/achievement/achievementManage',
+                data: {
+                    sInformationId: obj.data.id,
+                    year: $("#year").text(),
+                    mouth: $("#m").text(),
+                    num: $("#n").text(),
+                    score: obj.value,
+                    type: 0
+                },
+                success: function (CheckVO) {
+                    if (CheckVO.status == 0) {
+
+                    } else {
+                        layer.alert(CheckVO.message, {icon: 2});
+                    }
+                },
+                error: function (XMLHttpRequest) {
+                    layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                        if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                            location.href = '/role/logout';
+                        }
+                        var index = layer.alert();
+                        layer.close(index);
+                    });
+                }
+            })
+        });
+
+        $.ajax({
+            type: 'get',
+            url: '/information/teacherClasses',
+            success: function (classes) {
+                for(var i = 0; i < classes.classesName.length; i++){
+                    $("#selectClasses").append("<option value='"+classes.classesName[i]+"'>"+classes.classesName[i]+"</option>");
+                }
+                form.render();
+            }
+        });
+        form.on('select(selectClasses)', function(data){
+            table.reload('Reload', {
+                where: {
+                    classes: data.value
+                }
+            });
+        });
+
+    });
+</script>
+<script type="text/html" id="opens">
+    <form  class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-form-item">
+                <label class="layui-form-label">月份</label>
+                <div class="layui-input-inline">
+                    <select id="mouth" name="mouth" lay-search>
+                        <option value="">请选择月份</option>
+                        <option value="1">1月</option>
+                        <option value="2">2月</option>
+                        <option value="3">3月</option>
+                        <option value="4">4月</option>
+                        <option value="5">5月</option>
+                        <option value="6">6月</option>
+                        <option value="7">7月</option>
+                        <option value="8">8月</option>
+                        <option value="9">9月</option>
+                        <option value="10">10月</option>
+                        <option value="11">11月</option>
+                        <option value="12">12月</option>
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">请选择月份</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">次数</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="num" name="num" placeholder="请输入次数..." autocomplete="off" class="layui-input">
+                </div>
+                <div id="numberdiv" class="layui-form-mid layui-word-aux"></div>
+            </div>
+        </div>
+    </form>
+
+</script>
+</body>
+</html>

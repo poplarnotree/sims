@@ -56,7 +56,7 @@ public class AchievementServiceImpl implements AchievementService {
      */
     @Override
     @Transactional
-    public CheckVO addAchievement(AchievementDTO achievementDTO) {
+    public CheckVO achievementManage(AchievementDTO achievementDTO) {
         Role role = SessionUtil.LoginNameCheckSession(request, roleDao);
         if (role.getRoleType() == 1){
             Achievement achievement = new Achievement();
@@ -82,7 +82,13 @@ public class AchievementServiceImpl implements AchievementService {
             achievement.setSubject(subject);
             achievement.setStatus(0);
             achievement.setCreateId(role.getId());
-            int row = achievementDao.insertAchievement(achievement);
+            int row = 0;
+            if (achievementDTO.getType() == 0){
+                row = achievementDao.insertAchievement(achievement);
+            }
+            if (achievementDTO.getType() == 1){
+                row = achievementDao.updateAchievement(achievementDTO);
+            }
             if (row == 1){
                 return new CheckVO(ResultEnum.SUCCESS);
             }

@@ -11,6 +11,8 @@ import java.util.Date;
 @Data
 public class AchievementPojo {
 
+    private Integer id;
+
     private String number;
 
     private String studentName;

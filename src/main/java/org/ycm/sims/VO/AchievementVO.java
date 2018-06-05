@@ -9,6 +9,8 @@ import lombok.Data;
 @Data
 public class AchievementVO {
 
+    private Integer id;
+
     private String number;
 
     private String studentName;

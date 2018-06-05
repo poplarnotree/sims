@@ -5,7 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ycm.sims.VO.AchievementVO;
+import org.ycm.sims.VO.CheckVO;
 import org.ycm.sims.VO.PageVO;
+import org.ycm.sims.dto.AchievementDTO;
 import org.ycm.sims.dto.AchievementPageDTO;
 import org.ycm.sims.service.AchievementService;
 import org.ycm.sims.utils.ControllerJumpUtil;
@@ -52,5 +54,17 @@ public class AchievementController {
     public PageVO<AchievementVO> myStudentAchievementList(AchievementPageDTO achievementPageDTO){
         return achievementService.myStudentAchievementPage(achievementPageDTO);
     }
+
+    @RequestMapping("/addAchievement")
+    public String addAchievement(){
+        return ControllerJumpUtil.ControllerJumpUtil(request, "", "role/add_achievement");
+    }
+
+    @RequestMapping("/achievementManage")
+    @ResponseBody
+    public CheckVO achievementManage(AchievementDTO achievementDTO){
+        return achievementService.achievementManage(achievementDTO);
+    }
+
 
 }

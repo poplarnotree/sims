@@ -13,11 +13,11 @@ import org.ycm.sims.dto.AchievementPageDTO;
 public interface AchievementService {
 
     /**
-     * 添加成绩
+     * 成绩管理
      * @param achievementDTO
      * @return
      */
-    CheckVO addAchievement(AchievementDTO achievementDTO);
+    CheckVO achievementManage(AchievementDTO achievementDTO);
 
     /**
      * 查询成绩分页

@@ -21,4 +21,6 @@ public class AchievementDTO {
 
     private Integer score;
 
+    private Integer type;
+
 }

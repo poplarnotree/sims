@@ -2,6 +2,7 @@ package org.ycm.sims.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.ycm.sims.dto.AchievementDTO;
 import org.ycm.sims.dto.AchievementPageDTO;
 import org.ycm.sims.entity.Achievement;
 import org.ycm.sims.pojo.AchievementPojo;
@@ -21,6 +22,13 @@ public interface AchievementDao {
      * @return
      */
     Integer insertAchievement(Achievement achievement);
+
+    /**
+     * 修改学生成绩
+     * @param achievementDTO
+     * @return
+     */
+    Integer updateAchievement(AchievementDTO achievementDTO);
 
     /**
      * 查找学生分页成绩

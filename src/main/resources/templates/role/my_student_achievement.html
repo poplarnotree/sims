@@ -19,7 +19,7 @@
                 </div>
                 <button class="layui-btn" data-type="reload">搜索</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="layui-btn" onclick="window.location.href='/role/create'"><i class="layui-icon">&#xe608;</i>录入学生成绩</button>
+                <button class="layui-btn" onclick="window.location.href='/achievement/addAchievement'"><i class="layui-icon">&#xe608;</i>录入学生成绩</button>
             </div>
             <table id="achievementPage" class="layui-hide" lay-filter="achievement"></table>
         </div>
@@ -50,7 +50,7 @@
                 ,{field: 'year', title: '学年'}
                 ,{field: 'mouth', title: '月'}
                 ,{field: 'num', title: '次数'}
-                ,{field: 'score', title: '分数', sort: true}
+                ,{field: 'score', title: '分数',edit: 'text', sort: true}
                 ,{field: 'createTime', title: '创建时间', sort: true}
             ]]
             ,id: 'Reload'
@@ -75,6 +75,38 @@
             active[type] ? active[type].call(this) : '';
         });
 
+        table.on('edit(achievement)', function(obj){
+            $.ajax({
+                type: 'post',
+                url: '/achievement/achievementManage',
+                data: {
+                    sInformationId: obj.data.id,
+                    year: obj.data.year,
+                    mouth: obj.data.mouth,
+                    num: obj.data.num,
+                    score: obj.value,
+                    type: 1
+                },
+                success: function (CheckVO) {
+                    if (CheckVO.status == 0) {
+                        layer.alert(CheckVO.message, {icon: 1},function () {
+                            layer.close(layer.alert());
+                        });
+                    } else {
+                        layer.alert(CheckVO.message, {icon: 2});
+                    }
+                },
+                error: function (XMLHttpRequest) {
+                    layer.alert(XMLHttpRequest.responseJSON.message, {icon: 2},function () {
+                        if (XMLHttpRequest.responseJSON.message == '越权操作,请重新登录'){
+                            location.href = '/role/logout';
+                        }
+                        var index = layer.alert();
+                        layer.close(index);
+                    });
+                }
+            });
+        });
     });
 </script>
 </body>

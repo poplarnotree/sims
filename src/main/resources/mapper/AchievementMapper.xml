@@ -9,9 +9,12 @@
           achievement(s_information_id, t_information_id, classes, year, mouth, num, subject, score, status, create_id)
          VALUES (#{sInformationId}, #{tInformationId}, #{classes}, #{year}, #{mouth}, #{num}, #{subject}, #{score}, #{status}, #{createId})
     </insert>
+    <update id="updateAchievement">
+        UPDATE achievement SET score = #{score} WHERE s_information_id = #{sInformationId} AND year = #{year} AND mouth = #{mouth} AND num = #{num}
+    </update>
 
     <select id="findAchievement" resultType="org.ycm.sims.pojo.AchievementPojo">
-        SELECT s.number, s.name student_name, s.classes, t.subject, t.name teacher_name, a.year, a.mouth, a.num, a.score, s.create_time
+        SELECT s.id, s.number, s.name student_name, s.classes, t.subject, t.name teacher_name, a.year, a.mouth, a.num, a.score, s.create_time
         FROM achievement a, student_information s,teacher_information t
         WHERE a.s_information_id = s.id AND a.t_information_id = t.id
         <if test="sInformationId != null and sInformationId != ''">

@@ -11,8 +11,6 @@ import java.util.Date;
 @Data
 public class Achievement {
 
-    private Integer id;
-
     private Integer sInformationId;
 
     private Integer tInformationId;
